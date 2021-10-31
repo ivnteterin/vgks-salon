@@ -149,6 +149,7 @@ body {
   display: block;
   width: 75%;
   height: 100%;
+  min-height: 15rem;
   max-width: 120rem;
   margin: 0 auto;
 }
@@ -159,7 +160,7 @@ body {
 }
 @media (max-width: 56.25em) and (max-height: 28.5em) {
   .poster {
-    width: 75%;
+    width: 70%;
   }
 }
 
