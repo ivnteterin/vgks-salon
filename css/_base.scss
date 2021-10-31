@@ -1,0 +1,24 @@
+$color-primary-pink: #f4e4f0;
+$color-secondary: linear-gradient(to bottom right, #f4e4f0 30%, #f2b8d9);
+$color-btn-main: linear-gradient(to bottom left, #bb84e6, #da7db3);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  // overflow-x: hidden;
+
+  font-family: 'Spartan', Times, serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777;
+  //   padding: 3rem;
+}

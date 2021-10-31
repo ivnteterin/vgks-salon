@@ -1,0 +1,39 @@
+.btn {
+  position: relative;
+  padding: 1rem 1rem 1rem;
+  border: 2px solid #000;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-decoration: none;
+  background: transparent;
+
+  //   font-size: $font-size-normal-lrg;
+  //   font-family: $font-primary;
+
+  //   color: $color-white;
+
+  transition: all 0.4s;
+
+  //   &:hover {
+  //     // background-position: 100%;
+  //     cursor: pointer;
+  //     transform: translateY(-0.2rem);
+
+  //     &::before {
+  //       content: '';
+  //       position: absolute;
+  //       top: -20%;
+  //       left: -8%;
+  //       height: 130%;
+  //       width: 116%;
+  //       background: transparent;
+  //       border: 2px solid #ca7dc3;
+  //       z-index: -1;
+  //     }
+  //   }
+
+  &:active {
+    transform: translateY(0.5rem);
+    box-shadow: 0px 10px 20px -15px rgba(0, 0, 0, 0.75);
+  }
+}
