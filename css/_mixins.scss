@@ -58,6 +58,18 @@
 ////////HEIGHT////////
 
 @mixin h-respond($breakpoint) {
+  @if $breakpoint == little-phone {
+    @media (max-height: 17em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == small-phone {
+    @media (max-height: 22em) {
+      @content;
+    }
+  }
+
   @if $breakpoint == phone {
     @media (max-height: 28.5em) {
       @content;
