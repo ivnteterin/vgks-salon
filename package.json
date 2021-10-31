@@ -2,7 +2,7 @@
   "name": "vgks",
   "version": "1.0.0",
   "description": "Beauty salons",
-  "main": "index.js",
+  "default": "dist/index.html",
   "scripts": {
     "watch:sass": "nodemon -e scss -x \"npm run compile:sass\"",
     "devserver": "live-server",
