@@ -69,6 +69,11 @@ body {
     transform: translate(-50%) scale(1.2);
   }
 }
+@media (max-width: 37.5em) and (max-height: 28.5em) {
+  .poster {
+    transform: translate(-50%) scale(0.8);
+  }
+}
 
 .splitter {
   position: relative;
@@ -87,6 +92,11 @@ body {
     transform: translateX(-50%);
     height: 70%;
     width: auto;
+  }
+}
+@media (max-width: 46.875em) and (max-height: 28.5em) {
+  .splitter img {
+    height: 100%;
   }
 }
 

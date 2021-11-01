@@ -50,6 +50,9 @@
 
   @include respond(phone) {
     transform: translate(-50%) scale(1.2);
+    @include h-respond(phone) {
+      transform: translate(-50%) scale(0.8);
+    }
   }
 }
 
@@ -68,6 +71,11 @@
       transform: translateX(-50%);
       height: 70%;
       width: auto;
+
+      @include h-respond(phone) {
+        // width: 101%;
+        height: 100%;
+      }
     }
   }
 }
