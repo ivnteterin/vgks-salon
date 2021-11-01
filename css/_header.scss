@@ -16,18 +16,12 @@
   background-position: top;
 
   @include respond(tab-land) {
-    @include h-respond(little-phone) {
-      height: 30rem;
+    @include h-respond(small-phone) {
+      height: 360px;
     }
   }
 
   @include respond(desktop) {
-    @include h-respond(large-phone) {
-      height: 60rem;
-    }
-  }
-
-  @include respond(big-desktop) {
     @include h-respond(large-phone) {
       height: 60rem;
     }
