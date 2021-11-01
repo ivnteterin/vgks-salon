@@ -48,6 +48,13 @@
       @content;
     }
   }
+
+  @if $breakpoint == desktop {
+    @media (min-width: 75em) {
+      @content;
+    }
+  }
+
   @if $breakpoint == big-desktop {
     @media (min-width: 112.5em) {
       @content;
@@ -59,7 +66,7 @@
 
 @mixin h-respond($breakpoint) {
   @if $breakpoint == little-phone {
-    @media (max-height: 17em) {
+    @media (max-height: 18.75em) {
       @content;
     }
   }
@@ -72,6 +79,11 @@
 
   @if $breakpoint == phone {
     @media (max-height: 28.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == large-phone {
+    @media (max-height: 37.5em) {
       @content;
     }
   }

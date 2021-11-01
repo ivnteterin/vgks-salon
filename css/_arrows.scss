@@ -1,20 +1,20 @@
 //ARROW
 
 .center-con {
-  @include absCenter;
+  // @include absCenter;
 
-  @include h-respond(little-phone) {
-    visibility: hidden;
-  }
+  // @include h-respond(little-phone) {
+  //   visibility: hidden;
+  // }
 
-  visibility: unset;
-  top: unset;
-  bottom: 1rem;
+  // // visibility: unset;
+  // top: unset;
+  // bottom: 1rem;
 
   width: min-content;
   height: min-content;
-  transform: translateX(-50%);
-  // margin: 0 auto 2rem;
+  // transform: translateX(-50%);
+  margin: 0 auto 1rem;
 }
 
 .round {

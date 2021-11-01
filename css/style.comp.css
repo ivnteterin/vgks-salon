@@ -25,33 +25,55 @@ body {
   overflow-x: hidden;
 }
 
-.content {
-  height: 40rem;
-}
-
 .header {
   display: flex;
   position: relative;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-flow: column;
   grid-gap: 1rem;
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
-  min-height: max-content;
   background-image: linear-gradient(to bottom, #f4e4f0 40%, #f4e4f080), url(../img/main-image.jpg);
   background-size: cover;
   background-position: top;
 }
-@media (max-height: 17em) {
+@media (max-width: 75em) and (max-height: 22em) {
   .header {
-    background-image: unset;
-    background: #f4e4f0;
+    height: 352px;
+  }
+}
+@media (min-width: 75em) and (max-height: 37.5em) {
+  .header {
+    height: 60rem;
+  }
+}
+@media (min-width: 112.5em) and (max-height: 37.5em) {
+  .header {
+    height: 60rem;
   }
 }
 
 .logo-small {
   vertical-align: middle;
   margin-right: 2rem;
+}
+
+.poster-container {
+  flex: 1;
+  position: relative;
+  background: green;
+}
+
+.poster {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 50%;
+  max-width: 110rem;
+  transform: translate(-50%);
+}
+@media (max-width: 37.5em) {
+  .poster {
+    transform: translate(-50%) scale(1.2);
+  }
 }
 
 .navigation {
@@ -153,54 +175,6 @@ body {
   -webkit-animation: neonClosed 1.5s ease-in-out infinite alternate;
   -moz-animation: neonClosed 1.5s ease-in-out infinite alternate;
   animation: neonClosed 1.5s ease-in-out infinite alternate;
-}
-
-.img-container {
-  width: 100%;
-  height: 100%;
-}
-
-.poster {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  width: 75%;
-  height: 100%;
-  max-width: 120rem;
-  margin: 0 auto;
-}
-@media (max-height: 17em) {
-  .poster {
-    visibility: hidden;
-  }
-}
-@media (min-width: 112.5em) and (max-height: 17em) {
-  .poster {
-    visibility: hidden;
-  }
-}
-@media (max-width: 75em) and (max-height: 17em) {
-  .poster {
-    visibility: hidden;
-  }
-}
-@media (max-width: 75em) and (max-height: 28.5em) {
-  .poster {
-    height: 60%;
-  }
-}
-@media (max-width: 46.875em) {
-  .poster {
-    width: 115%;
-  }
-}
-@media (max-width: 46.875em) and (max-height: 28.5em) {
-  .poster {
-    width: 70%;
-    min-height: 12rem;
-  }
 }
 
 @-webkit-keyframes neonClosed {
@@ -406,21 +380,9 @@ body {
 }
 
 .center-con {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  visibility: unset;
-  top: unset;
-  bottom: 1rem;
   width: min-content;
   height: min-content;
-  transform: translateX(-50%);
-}
-@media (max-height: 17em) {
-  .center-con {
-    visibility: hidden;
-  }
+  margin: 0 auto 1rem;
 }
 
 .round {
