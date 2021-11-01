@@ -16,8 +16,8 @@
   background-position: top;
 
   @include respond(tab-land) {
-    @include h-respond(small-phone) {
-      height: 352px;
+    @include h-respond(little-phone) {
+      height: 30rem;
     }
   }
 

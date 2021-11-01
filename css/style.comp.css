@@ -35,9 +35,9 @@ body {
   background-size: cover;
   background-position: top;
 }
-@media (max-width: 75em) and (max-height: 22em) {
+@media (max-width: 75em) and (max-height: 18.75em) {
   .header {
-    height: 352px;
+    height: 30rem;
   }
 }
 @media (min-width: 75em) and (max-height: 37.5em) {
