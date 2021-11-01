@@ -5,7 +5,7 @@
   // justify-content: space-between;
   grid-gap: 1rem;
   // height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
+  height: calc(var(--vh, 1vh) * 110);
   background-image: linear-gradient(
       to bottom,
       $color-primary-pink 40%,
@@ -50,6 +50,25 @@
 
   @include respond(phone) {
     transform: translate(-50%) scale(1.2);
+  }
+}
+
+.splitter {
+  position: relative;
+  height: 10vh;
+  img {
+    position: absolute;
+    bottom: -0.2rem;
+    height: auto;
+    width: 101%;
+
+    @include respond(large-phone) {
+      bottom: -0.2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 70%;
+      width: auto;
+    }
   }
 }
 

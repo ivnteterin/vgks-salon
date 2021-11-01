@@ -30,7 +30,7 @@ body {
   position: relative;
   flex-flow: column;
   grid-gap: 1rem;
-  height: calc(var(--vh, 1vh) * 100);
+  height: calc(var(--vh, 1vh) * 110);
   background-image: linear-gradient(to bottom, #f4e4f0 40%, #f4e4f080), url(../img/main-image.jpg);
   background-size: cover;
   background-position: top;
@@ -67,6 +67,26 @@ body {
 @media (max-width: 37.5em) {
   .poster {
     transform: translate(-50%) scale(1.2);
+  }
+}
+
+.splitter {
+  position: relative;
+  height: 10vh;
+}
+.splitter img {
+  position: absolute;
+  bottom: -0.2rem;
+  height: auto;
+  width: 101%;
+}
+@media (max-width: 46.875em) {
+  .splitter img {
+    bottom: -0.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 70%;
+    width: auto;
   }
 }
 
@@ -356,6 +376,11 @@ body {
 }
 .sidebar__coming-soon:hover {
   transform: translateY(-5rem) scaleY(0) !important;
+}
+
+.content {
+  height: 50rem;
+  background-color: #fff;
 }
 
 .btn {
