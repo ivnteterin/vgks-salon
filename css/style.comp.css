@@ -90,7 +90,7 @@ body {
     bottom: -0.2rem;
     left: 50%;
     transform: translateX(-50%);
-    height: 70%;
+    height: 100%;
     width: auto;
   }
 }
