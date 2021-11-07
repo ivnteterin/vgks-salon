@@ -63,7 +63,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 window.addEventListener('resize', () => {
   // We execute the same script as before
-  if (window.innerWidth < 767 && window.innerHeight < 500) return;
+  if (window.innerWidth < 550 && window.innerHeight < 768) return;
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 });

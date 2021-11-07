@@ -37,12 +37,12 @@ body {
 }
 @media (max-width: 75em) and (max-height: 28.5em) {
   .header {
-    height: 456px;
+    height: 50rem;
   }
 }
 @media (min-width: 75em) and (max-height: 37.5em) {
   .header {
-    height: 60rem;
+    height: 66rem;
   }
 }
 
@@ -64,20 +64,15 @@ body {
   max-width: 110rem;
   transform: translate(-50%);
 }
-@media (max-width: 37.5em) {
+@media (max-width: 29em) {
   .poster {
     transform: translate(-50%) scale(1.2);
   }
 }
-@media (max-width: 37.5em) and (max-height: 28.5em) {
-  .poster {
-    transform: translate(-50%) scale(0.8);
-  }
-}
-
 .splitter {
   position: relative;
   height: 10vh;
+  min-height: 4rem;
 }
 .splitter img {
   position: absolute;
@@ -99,20 +94,30 @@ body {
     height: 100%;
   }
 }
+@media (max-width: 75em) and (max-height: 28.5em) {
+  .splitter {
+    height: 4.5rem;
+  }
+}
+@media (min-width: 75em) and (max-height: 37.5em) {
+  .splitter {
+    min-height: 7rem;
+  }
+}
 
 .navigation {
   display: flex;
   max-width: 120rem;
   width: 100%;
   padding: 0 2rem;
-  margin: 3rem auto 0;
+  margin: 2.5rem auto 0;
   z-index: 1000;
   align-items: center;
   color: #000;
 }
-@media (max-width: 56.25em) and (max-height: 28.5em) {
+@media (max-width: 24em) {
   .navigation {
-    margin: 2rem auto 0;
+    height: 4.2rem;
   }
 }
 .navigation__logo-box {

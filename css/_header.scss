@@ -17,13 +17,13 @@
 
   @include respond(tab-land) {
     @include h-respond(phone) {
-      height: 456px;
+      height: 50rem;
     }
   }
 
   @include respond(desktop) {
     @include h-respond(large-phone) {
-      height: 60rem;
+      height: 66rem;
     }
   }
 }
@@ -48,10 +48,10 @@
   max-width: 110rem;
   transform: translate(-50%);
 
-  @include respond(phone) {
+  @include respond(mid-phone) {
     transform: translate(-50%) scale(1.2);
     @include h-respond(phone) {
-      transform: translate(-50%) scale(0.8);
+      // transform: translate(-50%) scale(0.8);
     }
   }
 }
@@ -59,6 +59,7 @@
 .splitter {
   position: relative;
   height: 10vh;
+  min-height: 4rem;
   img {
     position: absolute;
     bottom: -0.2rem;
@@ -78,6 +79,18 @@
       }
     }
   }
+
+  @include respond(tab-land) {
+    @include h-respond(phone) {
+      height: 4.5rem;
+    }
+  }
+
+  @include respond(desktop) {
+    @include h-respond(large-phone) {
+      min-height: 7rem;
+    }
+  }
 }
 
 .navigation {
@@ -86,15 +99,18 @@
   max-width: 120rem; //100% if screen is smaller than 1200px
   width: 100%;
   padding: 0 2rem;
-  margin: 3rem auto 0;
+  margin: 2.5rem auto 0;
 
   z-index: 1000;
 
   @include respond(tab-port) {
     // transform: scale(1.6);
     @include h-respond(phone) {
-      margin: 2rem auto 0;
+      // margin: 2rem auto 0;
     }
+  }
+  @include respond(small-phone) {
+    height: 4.2rem;
   }
 
   // background: red; //test
