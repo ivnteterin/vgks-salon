@@ -70,6 +70,8 @@ window.addEventListener('resize', () => {
   console.log('prev = ', prevVw);
   if (currVw < prevVw) {
     document.documentElement.style.setProperty('--vh', `${prevVh}px`);
+    prevVw = currVw;
+    return;
   }
   if (window.innerWidth < 550 && window.innerHeight < 768) return;
 
