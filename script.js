@@ -65,7 +65,9 @@ document.documentElement.style.setProperty('--vh', `${prevVh}px`);
 
 window.addEventListener('resize', () => {
   const currVw = window.innerWidth * 0.01;
-
+  prevVh = window.innerHeight * 0.01;
+  console.log('curr = ', currVw);
+  console.log('prev = ', prevVw);
   if (currVw < prevVw) {
     document.documentElement.style.setProperty('--vh', `${prevVh}px`);
   }
