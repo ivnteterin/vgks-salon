@@ -2,10 +2,14 @@
   position: relative;
   padding: 1rem 1rem 1rem;
   border: 2px solid #000;
+  // border: none;
   font-weight: 700;
   font-size: 1.6rem;
   text-decoration: none;
   background: transparent;
+  color: #000;
+  background-image: linear-gradient(-120deg, #303030 50%, transparent 50%);
+  background-size: 300%;
 
   //   font-size: $font-size-normal-lrg;
   //   font-family: $font-primary;
@@ -13,6 +17,27 @@
   //   color: $color-white;
 
   transition: all 0.4s;
+
+  &:hover {
+    background-position: 100%;
+    cursor: pointer;
+    border: 2px solid #303030;
+
+    color: #fff;
+    transform: translateY(-0.2rem);
+
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   top: -17%;
+    //   left: -6%;
+    //   height: 123%;
+    //   width: 110%;
+    //   background: none;
+    //   border: 2px solid rgba(0, 0, 0, 0.185);
+    //   z-index: -1;
+    // }
+  }
 
   //   &:hover {
   //     // background-position: 100%;

@@ -8,96 +8,126 @@
     <meta name="author" content="@ivnteterin" />
 
     <link rel="stylesheet" href="css/style.comp.css" />
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=MuseoModerno:wght@100&family=Spartan:wght@200;400;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=MuseoModerno:wght@100&family=Spartan:wght@200;400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <title>VGKS | Beauty Salons</title>
   </head>
   <body>
     <div class="container">
-        <header class="header">
+      <header class="header">
+        <nav class="navigation">
+          <div class="navigation__logo-box">
+            <img class="logo-small" src="img/logo-small.svg" alt="logo" />
+          </div>
 
-            <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__list--item">
+              <a href="#services" class="navigation__list--item__link"
+                >Paslaugos</a
+              >
+            </li>
+            <li class="navigation__list--item">
+              <a href="#" class="navigation__list--item__link"
+                >El. parduotuvė</a
+              >
+              <span class="coming-soon">Coming soon</span>
+            </li>
+            <li class="navigation__list--item">
+              <a
+                href="#contacts"
+                class="navigation__list--item__link"
+                id="js--scroll-to-contacts"
+                >Kontaktai</a
+              >
+            </li>
+            <li class="navigation__list--item">
+              <a class="navigation__list--item__link--btn" href=""
+                ><button class="btn">Rezervuoti</button></a
+              >
+            </li>
+          </ul>
 
-                <div class="navigation__logo-box">
-                    <img class="logo-small" src="img/logo-small.svg" alt="logo" />
-                </div>
-
-                <ul class="navigation__list">
-                    <li class="navigation__list--item">
-                        <a href="#services" class="navigation__list--item__link">Paslaugos</a>
-                    </li>
-                    <li class="navigation__list--item">
-                        <a href="#" class="navigation__list--item__link">El. parduotuvė</a>
-                        <span class="coming-soon">Coming soon</span>
-                    </li>
-                    <li class="navigation__list--item">
-                        <a href="#contacts" class="navigation__list--item__link" id='js--scroll-to-contacts'>Kontaktai</a>
-                    </li>
-                    <li class="navigation__list--item ">
-                        <a class="navigation__list--item__link--btn" href=""><button class="btn"> Rezervuoti</button></a>
-                    </li>
-                </ul>
-
-                <div class="sidebar">
-                    <input type="checkbox" class="sidebar__checkbox" id="sidebar-toggle">
-                    <label for="sidebar-toggle" class="sidebar__button">
-                        <span class="sidebar__icon"></span>
-                    </label>
-                    <div class="wrapper">
-                        <nav class="sidebar__nav">
-                            <ul class="sidebar__list">
-                                <li class="sidebar__item">
-                                    <a href="#services" class="sidebar__link"><span>Paslaugos</span></a>
-                                </li>
-                                <li class="sidebar__item">
-                                    <a href="#" class="sidebar__link sidebar__link-go "><span>El.parduotuvė</span></a>    
-                                    <span class="coming-soon">Coming soon</span>
-                                </li>
-                                <li class="sidebar__item">
-                                    <a href="#contacts" class="sidebar__link "><span>Kontaktai</span></a>
-                                </li>
-                                <!-- <li class="sidebar__item">
+          <div class="sidebar">
+            <input
+              type="checkbox"
+              class="sidebar__checkbox"
+              id="sidebar-toggle"
+            />
+            <label for="sidebar-toggle" class="sidebar__button">
+              <span class="sidebar__icon"></span>
+            </label>
+            <div class="wrapper">
+              <nav class="sidebar__nav">
+                <ul class="sidebar__list">
+                  <li class="sidebar__item">
+                    <a href="#services" class="sidebar__link"
+                      ><span>Paslaugos</span></a
+                    >
+                  </li>
+                  <li class="sidebar__item">
+                    <a href="#" class="sidebar__link sidebar__link-go"
+                      ><span>El.parduotuvė</span></a
+                    >
+                    <span class="coming-soon">Coming soon</span>
+                  </li>
+                  <li class="sidebar__item">
+                    <a href="#contacts" class="sidebar__link"
+                      ><span>Kontaktai</span></a
+                    >
+                  </li>
+                  <!-- <li class="sidebar__item">
                                     <a href="#about-us" class="sidebar__link js--about-us-btn"><span>Apie mus</span></a>
                                 </li> -->
-                                <a href="#" class="sidebar__item">
-                                    <button class="btn">Rezervuoti</button>
-                                </a>
-                            </ul>
-                           
-                            <img src="img/logo-small.svg" alt="VGKS Logo" class="sidebar__logo">
-                        </nav>
-                    </div>
-                </div>
+                  <a href="#" class="sidebar__item">
+                    <button class="btn">Rezervuoti</button>
+                  </a>
+                </ul>
 
-                <div class="work-days">
-                    <p>
-                        Darbo laikas<br>I-VI
-                        <span class="work-days__hours">10 - 18</span><br>VII<span class="work-days__hours">10 - 16</span>
-                    </p>
-                    <span class="work-days__hours-open hidden" id="open">OPEN</span>
-                    <span class="work-days__hours-closed hidden" id="closed">CLOSED</span>
-                </div>
-            </nav>
-            <div class="poster-container">
-                <img class="poster" src="img/logo-large.svg" alt="Poster VGKS">
+                <img
+                  src="img/logo-small.svg"
+                  alt="VGKS Logo"
+                  class="sidebar__logo"
+                />
+              </nav>
             </div>
-            <div class="center-con">
-                <div class="round">
-                    <div id="cta">
-                        <span class="arrow primera next "></span>
-                        <span class="arrow segunda next "></span>
-                    </div>
-                </div>
-            </div>
-            <div class="splitter">
-                <img src="img/split-section.png" alt="Split page image">
-            </div>  
+          </div>
 
-        </header>
-        <div class="content"></div>
+          <div class="work-days">
+            <p>
+              Darbo laikas<br />I-VI
+              <span class="work-days__hours">10 - 18</span><br />VII<span
+                class="work-days__hours"
+                >10 - 16</span
+              >
+            </p>
+            <span class="work-days__hours-open hidden" id="open">OPEN</span>
+            <span class="work-days__hours-closed hidden" id="closed"
+              >CLOSED</span
+            >
+          </div>
+        </nav>
+        <div class="poster-container">
+          <img class="poster" src="img/logo-large.svg" alt="Poster VGKS" />
         </div>
-    </div>
+        <div class="center-con">
+          <div class="round">
+            <div id="cta">
+              <span class="arrow primera next"></span>
+              <span class="arrow segunda next"></span>
+            </div>
+          </div>
+        </div>
+        <div class="splitter">
+          <img src="img/split-section.png" alt="Split page image" />
+        </div>
+      </header>
+      <section class="services">
+        <h1 class="heading-1">Paslaugos</h1>
+      </section>
   </body>
   <script type="text/javascript" src="script.js"></script>
 </html>
