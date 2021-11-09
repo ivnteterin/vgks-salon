@@ -72,8 +72,8 @@ document.documentElement.style.setProperty('--vh', `${prevVh}px`);
 window.addEventListener('resize', () => {
   const currVw = window.innerWidth * 0.01;
   prevVh = window.innerHeight * 0.01;
-  console.log('curr = ', currVw);
-  console.log('prev = ', prevVw);
+  // console.log('curr = ', currVw);
+  // console.log('prev = ', prevVw);
   if (currVw < prevVw) {
     document.documentElement.style.setProperty('--vh', `${prevVh}px`);
     prevVw = currVw;
@@ -108,15 +108,26 @@ function mouseOut() {
 //FOOTER ANIMATIONS (COLLAPSE FOR SMALL SCREEN)
 
 const checkSize = function () {
+  const buttons = document.querySelectorAll('.footer__item__header__button');
   const checkbox = document.querySelectorAll('.footer__item__checkbox');
   if (window.innerWidth < 1030) {
     checkbox.forEach((item) => {
       item.checked = true;
+      item.disabled = false;
+      buttons.forEach((button) => {
+        button.style.cursor = 'pointer';
+      });
     });
   } else {
     checkbox.forEach((item) => {
       item.checked = false;
+      item.disabled = true;
+      buttons.forEach((button) => {
+        button.style.cursor = 'unset';
+      });
     });
+    const x = document.querySelector('.footer__item__header__button');
+    console.log(x);
   }
   if (window.innerWidth < 321) {
     document.querySelector('.copyright__address').innerHTML = '';
