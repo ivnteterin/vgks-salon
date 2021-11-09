@@ -1,0 +1,323 @@
+.footer {
+  position: relative;
+  background-color: #202020;
+  padding: 5rem;
+  height: max-content;
+  min-width: 20rem;
+
+  @include respond(phone) {
+    padding: 4rem 2rem;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0.7rem;
+    width: 100%;
+    background: linear-gradient(70deg, #ddbcec, #f1b8c9);
+    z-index: 1600;
+  }
+
+  // TOP STUFF
+
+  &__media {
+    position: relative;
+    max-width: 130rem;
+    min-width: 15rem;
+    margin: 0 auto;
+  }
+
+  &__button {
+    margin: 0;
+  }
+
+  &__form {
+    // max-width: 28rem;
+    font-size: 0;
+    display: flex;
+    align-self: flex-start;
+    border: 2px solid #fff;
+  }
+
+  &__content {
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    @include respond(footer1030) {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    text-decoration: none;
+    color: white;
+    height: 2.5rem;
+
+    &-mail {
+      text-decoration: none;
+      color: white;
+      height: min-content;
+      margin-left: 0.6rem;
+      &:hover {
+        border-bottom: 2px solid #e7a3ca;
+      }
+    }
+  }
+
+  &__newsletter__email {
+    // width: 75%;
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    font-size: 1.2rem;
+    background-color: #505050;
+    color: #202020;
+    border: 2px solid #505050;
+  }
+
+  &__item:nth-of-type(1) > &__item__content {
+    height: 17rem;
+  }
+  &__item:nth-of-type(2) > &__item__content {
+    height: 16rem;
+  }
+  &__item:nth-of-type(3) > &__item__content {
+    height: 13rem;
+  }
+  &__item:nth-of-type(4) > &__item__content {
+    height: 17rem;
+  }
+
+  &__item {
+    width: 25rem;
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+    // overflow: hidden;
+    @include respond(tab-land) {
+      width: 19rem;
+    }
+    @include respond(tab-port) {
+      //   width: 16rem;
+    }
+
+    &__sub-item-info {
+      display: flex;
+      gap: 1rem;
+      font-size: 1.3rem;
+      color: white;
+
+      &-mail {
+        height: 2.5rem;
+      }
+
+      @include respond(tab-land) {
+        font-size: 1.2rem;
+      }
+    }
+
+    &__checkbox {
+      display: none;
+    }
+
+    &__checkbox:checked + &__header &__header--collapse {
+      transform: rotate(-90deg);
+    }
+
+    &__checkbox:checked ~ &__content {
+      transform: translateY(-100%) scaleY(0);
+      opacity: 0;
+      height: 0;
+    }
+
+    &__header {
+      background-color: #202020;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      z-index: 1000;
+
+      &--heading {
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        color: rgb(255, 255, 255);
+
+        @include respond(tab-land) {
+          font-size: 1.4rem;
+        }
+      }
+
+      &__button {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      &--collapse {
+        opacity: 0.7;
+        display: none;
+        width: 1.2rem;
+        transform: rotate(0deg);
+        height: auto;
+        margin-bottom: 0.1rem;
+        transition: all 0.2s ease-in-out;
+        margin-bottom: 0.4rem;
+
+        @include respond(footer1030) {
+          display: block;
+        }
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-flow: column;
+      gap: 1rem;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  //ADDRESS
+
+  //BOTTOM STUFF
+
+  &__icon {
+    height: 1.8rem;
+    width: 1.8rem;
+    fill: $color-primary-dark-pink;
+  }
+
+  //   &__logobox {
+  //     background-color: yellow;
+  //     position: relative;
+  //   }
+
+  &__logo-large {
+    display: none;
+    @include respond(footer1030) {
+      display: block;
+      position: absolute;
+      height: 24rem;
+      top: -5rem;
+      right: -5rem;
+      z-index: 1500;
+    }
+    @include respond(phone) {
+      height: 19rem;
+      top: -3rem;
+      right: -2rem;
+    }
+    @include respond(mid-phone) {
+      height: 13rem;
+    }
+    @include respond(small-phone) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin: 0 auto;
+
+    @include respond(footer1030) {
+      display: none;
+    }
+
+    @include respond(small-phone) {
+      display: block;
+      position: absolute;
+      top: 6.5rem;
+      right: 2rem;
+    }
+    @include respond(little-phone) {
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      top: unset;
+      right: unset;
+    }
+  }
+}
+
+.payment-icons {
+  opacity: 60%;
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  &__visa {
+    height: 1.2rem;
+  }
+
+  &__mastercard {
+    height: 2.5rem;
+  }
+}
+
+.privacy-policy {
+}
+
+.copyright {
+  opacity: 0.5;
+  display: flex;
+  padding: 0 4.5rem;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  gap: 1rem;
+
+  @include respond(phone) {
+    padding: 0;
+  }
+  @include respond(little-phone) {
+    margin-top: 0;
+  }
+
+  &__info,
+  &__address {
+    width: max-content;
+  }
+
+  &__address {
+    @include respond(footer415) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__info {
+    @include respond(footer415) {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.2rem;
+      align-items: center;
+    }
+  }
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  &__divider {
+    font-family: Arial, sans-serif;
+    margin: 0 1rem;
+
+    @include respond(footer415) {
+      display: none;
+    }
+  }
+}
+
+.vip-card {
+  width: 100%;
+}
+
+//CHECKBOX

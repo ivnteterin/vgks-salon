@@ -1,4 +1,5 @@
 $color-primary-pink: #f4e4f0;
+$color-primary-dark-pink: #ad7fc1;
 $color-secondary: linear-gradient(to bottom right, #f4e4f0 30%, #f2b8d9);
 $color-btn-main: linear-gradient(to bottom left, #bb84e6, #da7db3);
 
@@ -12,6 +13,10 @@ html {
   font-size: 62.5%;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   // overflow-x: hidden;
   background: $color-primary-pink;
@@ -20,6 +25,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.7;
   color: #777;
+  text-decoration: none;
   //   padding: 3rem;
 }
 

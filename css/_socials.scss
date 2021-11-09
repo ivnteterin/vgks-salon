@@ -1,0 +1,140 @@
+$block-expand-width: 13rem;
+$block-color: rgb(10, 10, 10);
+$block-radius: 4rem;
+$stretch-speed: 0.2s;
+
+.footer__social {
+  //   grid-column: 1 / 3;
+  width: 30rem;
+  display: grid;
+  grid-template-rows: $block-radius;
+  grid-template-columns: repeat(2, max-content);
+  align-items: flex-end;
+
+  &-fb,
+  &-ig {
+    align-items: center;
+    display: grid;
+    height: 100%;
+    width: $block-radius;
+    background: none;
+    transition: width $stretch-speed;
+    &:hover {
+      transform-origin: 0;
+      width: $block-expand-width;
+    }
+  }
+
+  &-fb {
+    grid-column: 1 / 2;
+    &:hover {
+      .fb-container {
+        background: $block-color;
+        width: 12rem;
+      }
+    }
+  }
+
+  &-ig {
+    grid-column: 2 / 3;
+    &:hover {
+      .ig-container {
+        width: 12.5rem;
+        background: $block-color;
+      }
+    }
+  }
+
+  &-link {
+  }
+}
+
+//Social icons
+
+.fb,
+.ig {
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    align-items: center;
+    justify-items: flex-start;
+    background: none;
+    height: 3.5rem;
+    width: 3.5rem;
+    overflow: hidden;
+    border-radius: 10rem;
+    transition: width $stretch-speed ease-in-out,
+      background $stretch-speed ease-in;
+
+    svg {
+      filter: grayscale(30%);
+    }
+
+    &:hover {
+      svg {
+        stop {
+          filter: grayscale(0%);
+          stop-color: #fff;
+        }
+      }
+    }
+  }
+
+  &-text {
+    margin-top: 0.2rem;
+    margin-left: 0.8rem;
+    grid-row: 1 / 2;
+    font-family: 'Spartan', sans-serif;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    opacity: 90%;
+  }
+
+  &-logo {
+    grid-row: 1 / 2;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-size: 2.5rem 2.5rem;
+  }
+
+  &-logobox {
+    grid-row: 1 / 2;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-left: 0.5rem;
+    background-size: 2.5rem 2.5rem;
+  }
+}
+
+.fb {
+  &-logo {
+    // background-image: url(https://www.freepnglogos.com/uploads/facebook-icons/facebook-icon-basic-round-social-iconset-icons-4.png);
+  }
+  &-text {
+    text-decoration: none;
+    background: linear-gradient(20deg, #0079ff 10%, #00b6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.ig {
+  &-logo {
+    // background-image: url(https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/instagram-512.png);
+  }
+
+  &-text {
+    text-decoration: none;
+    background: linear-gradient(
+      70deg,
+      #f9a546 5%,
+      #f68629 10%,
+      #dd2a7b,
+      #933bc6,
+      #515ad4
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

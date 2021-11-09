@@ -26,6 +26,13 @@
       @content;
     }
   }
+
+  @if $breakpoint == footer415 {
+    @media (max-width: 25.95em) {
+      @content;
+    }
+  }
+
   @if $breakpoint == mid-phone {
     @media (max-width: 29em) {
       @content;
@@ -48,6 +55,13 @@
       @content;
     }
   }
+
+  @if $breakpoint == footer1030 {
+    @media (max-width: 64.375em) {
+      @content;
+    }
+  }
+
   @if $breakpoint == tab-land {
     @media (max-width: 75em) {
       @content;

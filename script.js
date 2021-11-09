@@ -23,6 +23,8 @@ function reqListener() {
 
   const closed = document.getElementById('closed');
   const open = document.getElementById('open');
+  // const closed1 = document.getElementById('closed-1');
+  // const open1 = document.getElementById('open-1');
   if (
     (week !== 0 && week < 7 && hours < 18 && hours >= 9) ||
     (week === 0 && hours < 16 && hours >= 10)
@@ -35,6 +37,8 @@ function reqListener() {
     }
     open.classList.remove('hidden');
     closed.classList.add('hidden');
+    // open1.classList.remove('hidden');
+    // closed1.classList.add('hidden');
   } else {
     if (
       !closed.classList.contains('hidden') &&
@@ -44,6 +48,8 @@ function reqListener() {
     }
     closed.classList.remove('hidden');
     open.classList.add('hidden');
+    // closed1.classList.remove('hidden');
+    // open1.classList.add('hidden');
   }
 }
 
@@ -78,4 +84,54 @@ window.addEventListener('resize', () => {
   prevVh = window.innerHeight * 0.01;
   prevVw = window.innerWidth * 0.01;
   document.documentElement.style.setProperty('--vh', `${prevVh}px`);
+});
+
+//Social links animation
+
+document.getElementById('social-ig').addEventListener('mouseover', mouseOver);
+document.getElementById('social-ig').addEventListener('mouseout', mouseOut);
+
+function mouseOver() {
+  const FBblock = document.getElementById('social-fb');
+  const FBInnerBlock = document.getElementById('social-fb-c');
+  FBblock.style.width = getComputedStyle(FBblock).width;
+  FBInnerBlock.style.width = getComputedStyle(FBInnerBlock).width;
+}
+
+function mouseOut() {
+  const FBblock = document.getElementById('social-fb');
+  const FBInnerBlock = document.getElementById('social-fb-c');
+  FBblock.style.width = null;
+  FBInnerBlock.style.width = null;
+}
+
+//FOOTER ANIMATIONS (COLLAPSE FOR SMALL SCREEN)
+
+const checkSize = function () {
+  const checkbox = document.querySelectorAll('.footer__item__checkbox');
+  if (window.innerWidth < 1030) {
+    checkbox.forEach((item) => {
+      item.checked = true;
+    });
+  } else {
+    checkbox.forEach((item) => {
+      item.checked = false;
+    });
+  }
+  if (window.innerWidth < 321) {
+    document.querySelector('.copyright__address').innerHTML = '';
+  } else if (window.innerWidth < 415) {
+    document.querySelector('.copyright__address').innerHTML = '© VGKS, Lietuva';
+  } else {
+    document.querySelector('.copyright__address').innerHTML =
+      '© Visagino Grožio Kūrėjų Studija, Lietuva';
+  }
+};
+
+window.addEventListener('resize', () => {
+  checkSize();
+});
+
+window.addEventListener('load', () => {
+  checkSize();
 });
