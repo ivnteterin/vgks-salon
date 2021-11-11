@@ -6,6 +6,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
 html {
@@ -447,6 +449,8 @@ body {
   display: flex;
   align-self: flex-start;
   border: 2px solid #fff;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 .footer__content {
   height: max-content;

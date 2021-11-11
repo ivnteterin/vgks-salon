@@ -7,6 +7,8 @@ $color-btn-main: linear-gradient(to bottom left, #bb84e6, #da7db3);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
 html {

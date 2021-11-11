@@ -39,6 +39,8 @@
     display: flex;
     align-self: flex-start;
     border: 2px solid #fff;
+    -webkit-appearance: none;
+    border-radius: 0;
   }
 
   &__content {
