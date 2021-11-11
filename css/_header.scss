@@ -130,25 +130,26 @@
       display: inline;
       margin-right: 5rem;
 
+      @include respond(tab-port) {
+        display: none;
+      }
+
+      &:last-of-type {
+        @include respond(tab-port) {
+          display: inline;
+          margin-right: 5rem;
+        }
+        @include respond(phone) {
+          margin-right: 3rem;
+        }
+        @include respond(small-phone) {
+          display: none;
+        }
+      }
+
       &__link {
         text-decoration: none;
         color: inherit;
-
-        &--btn {
-          margin-right: 5rem;
-
-          @include respond(phone) {
-            margin-right: 3rem;
-          }
-
-          @include respond(small-phone) {
-            display: none;
-          }
-        }
-
-        @include respond(tab-port) {
-          display: none;
-        }
 
         &:hover {
           padding-bottom: 0.2rem;
