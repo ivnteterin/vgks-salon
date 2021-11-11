@@ -20,13 +20,15 @@ a {
 }
 
 body {
-  background: linear-gradient(to bottom, $color-primary-pink 50%, #202020 50%);
+  // overflow-x: hidden;
+  background: $color-primary-pink;
   font-family: 'Spartan', Times, serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
   color: #777;
   text-decoration: none;
+  //   padding: 3rem;
 }
 
 .container {

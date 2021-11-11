@@ -19,7 +19,7 @@ a {
 }
 
 body {
-  background: linear-gradient(to bottom, #f4e4f0 50%, #202020 50%);
+  background: #f4e4f0;
   font-family: "Spartan", Times, serif;
   font-weight: 400;
   font-size: 1.6rem;
