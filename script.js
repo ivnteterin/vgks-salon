@@ -1,5 +1,7 @@
 'use strict';
 
+const FOOTER_COLLAPSE_WIDTH = 1030;
+
 //SHOP STATUS (CLOSED / OPEN)
 
 function reqListener() {
@@ -109,26 +111,25 @@ function mouseOut() {
 
 const checkSize = function () {
   const buttons = document.querySelectorAll('.footer__item__header__button');
-  const checkbox = document.querySelectorAll('.footer__item__checkbox');
+  const checkboxes = document.querySelectorAll('.footer__item__checkbox');
 
   const collapseFooterItems = function () {
-    checkbox.forEach((item) => {
-      item.checked = true;
-    });
-  };
-
-  if (window.innerWidth < 1030) {
-    checkbox.forEach((item) => {
+    checkboxes.forEach((item) => {
       item.checked = true;
       item.disabled = false;
       buttons.forEach((button) => {
         button.style.cursor = 'pointer';
         button.addEventListener('click', function () {
-          collapseFooterItems();
+          for (let i = 0; i < buttons.length; i++) {
+            if (buttons[i] !== button) {
+              checkboxes[i].checked = true;
+            }
+          }
         });
       });
     });
-  } else {
+  };
+  const expandFooterItems = function () {
     checkbox.forEach((item) => {
       item.checked = false;
       item.disabled = true;
@@ -136,8 +137,12 @@ const checkSize = function () {
         button.style.cursor = 'unset';
       });
     });
-    const x = document.querySelector('.footer__item__header__button');
-    console.log(x);
+  };
+
+  if (window.innerWidth < FOOTER_COLLAPSE_WIDTH) {
+    collapseFooterItems();
+  } else {
+    expandFooterItems();
   }
   if (window.innerWidth < 321) {
     document.querySelector('.copyright__address').innerHTML = '';
@@ -149,10 +154,9 @@ const checkSize = function () {
   }
 };
 
-window.addEventListener('resize', () => {
+window.addEventListener('load', () => {
   checkSize();
 });
-
-window.addEventListener('load', () => {
+window.addEventListener('resize', () => {
   checkSize();
 });
