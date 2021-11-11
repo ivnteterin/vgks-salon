@@ -2,7 +2,6 @@
   position: relative;
   background-color: #202020;
   padding: 5rem;
-  height: max-content;
   min-width: 20rem;
 
   @include respond(phone) {
@@ -93,7 +92,7 @@
     height: 13rem;
   }
   &__item:nth-of-type(4) > &__item__content {
-    height: 17rem;
+    height: 19rem;
   }
 
   &__item {
@@ -103,11 +102,10 @@
     gap: 2rem;
     overflow-y: hidden;
 
-    @include respond(tab-land) {
-      width: 22rem;
-    }
-    @include respond(tab-port) {
-      //   width: 16rem;
+    &:nth-of-type(2) {
+      @include respond(footer1030) {
+        width: max-content;
+      }
     }
 
     &__sub-item-info {
@@ -228,6 +226,7 @@
   &__logo {
     display: block;
     margin: 0 auto;
+    z-index: 2601;
 
     @include respond(footer1030) {
       display: none;
@@ -236,7 +235,7 @@
     @include respond(small-phone) {
       display: block;
       position: absolute;
-      top: 6.5rem;
+      top: 2rem;
       right: 2rem;
     }
     @include respond(little-phone) {

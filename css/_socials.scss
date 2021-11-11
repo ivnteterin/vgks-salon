@@ -10,6 +10,13 @@ $stretch-speed: 0.2s;
   grid-template-rows: $block-radius;
   grid-template-columns: repeat(2, max-content);
   align-items: flex-end;
+  transform: scale(0.83);
+  transform-origin: left;
+
+  @include respond(footer1030) {
+    transform: scale(0.9);
+    transform-origin: left;
+  }
 
   &-fb,
   &-ig {

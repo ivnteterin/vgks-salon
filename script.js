@@ -130,7 +130,7 @@ const checkSize = function () {
     });
   };
   const expandFooterItems = function () {
-    checkbox.forEach((item) => {
+    checkboxes.forEach((item) => {
       item.checked = false;
       item.disabled = true;
       buttons.forEach((button) => {

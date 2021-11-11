@@ -19,9 +19,8 @@ a {
 }
 
 body {
-  background: linear-gradient(to bottom, #f4e4f0 50%, #202020 50%);
+  background: #f4e4f0;
   font-family: "Spartan", Times, serif;
-  height: max-content;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
@@ -421,7 +420,6 @@ body {
   position: relative;
   background-color: #202020;
   padding: 5rem;
-  height: max-content;
   min-width: 20rem;
 }
 @media (max-width: 37.5em) {
@@ -504,7 +502,7 @@ body {
   height: 13rem;
 }
 .footer__item:nth-of-type(4) > .footer__item__content {
-  height: 17rem;
+  height: 19rem;
 }
 .footer__item {
   width: 25rem;
@@ -513,9 +511,9 @@ body {
   gap: 2rem;
   overflow-y: hidden;
 }
-@media (max-width: 75em) {
-  .footer__item {
-    width: 22rem;
+@media (max-width: 64.375em) {
+  .footer__item:nth-of-type(2) {
+    width: max-content;
   }
 }
 .footer__item__sub-item-info {
@@ -625,6 +623,7 @@ body {
 .footer__logo {
   display: block;
   margin: 0 auto;
+  z-index: 2601;
 }
 @media (max-width: 64.375em) {
   .footer__logo {
@@ -635,7 +634,7 @@ body {
   .footer__logo {
     display: block;
     position: absolute;
-    top: 6.5rem;
+    top: 2rem;
     right: 2rem;
   }
 }
@@ -858,6 +857,14 @@ body {
   grid-template-rows: 4rem;
   grid-template-columns: repeat(2, max-content);
   align-items: flex-end;
+  transform: scale(0.83);
+  transform-origin: left;
+}
+@media (max-width: 64.375em) {
+  .footer__social {
+    transform: scale(0.9);
+    transform-origin: left;
+  }
 }
 .footer__social-fb, .footer__social-ig {
   align-items: center;
