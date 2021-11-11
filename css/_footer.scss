@@ -102,9 +102,9 @@
     flex-flow: column;
     gap: 2rem;
     overflow-y: hidden;
-    // overflow: hidden;
+
     @include respond(tab-land) {
-      width: 19rem;
+      width: 22rem;
     }
     @include respond(tab-port) {
       //   width: 16rem;
@@ -134,7 +134,7 @@
     }
 
     &__checkbox:checked ~ &__content {
-      transform: translateY(-100%) scaleY(0);
+      transform: translateY(-200%) scaleY(0);
       opacity: 0;
       height: 0;
     }

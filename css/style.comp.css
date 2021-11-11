@@ -511,7 +511,7 @@ body {
 }
 @media (max-width: 75em) {
   .footer__item {
-    width: 19rem;
+    width: 22rem;
   }
 }
 .footer__item__sub-item-info {
@@ -535,7 +535,7 @@ body {
   transform: rotate(-90deg);
 }
 .footer__item__checkbox:checked ~ .footer__item__content {
-  transform: translateY(-100%) scaleY(0);
+  transform: translateY(-200%) scaleY(0);
   opacity: 0;
   height: 0;
 }
