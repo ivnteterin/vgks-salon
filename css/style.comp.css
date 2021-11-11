@@ -507,6 +507,7 @@ body {
   display: flex;
   flex-flow: column;
   gap: 2rem;
+  overflow-y: hidden;
 }
 @media (max-width: 75em) {
   .footer__item {
