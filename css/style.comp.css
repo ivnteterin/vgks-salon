@@ -134,11 +134,11 @@ body {
 .navigation__list--item {
   position: relative;
   display: inline;
+  margin-right: 5rem;
 }
 .navigation__list--item__link {
   text-decoration: none;
   color: inherit;
-  margin-right: 5rem;
 }
 .navigation__list--item__link--btn {
   margin-right: 5rem;
@@ -594,7 +594,7 @@ body {
 @media (max-width: 37.5em) {
   .footer__logo-large {
     height: 19rem;
-    top: -3rem;
+    top: -4rem;
     right: -2rem;
   }
 }
@@ -733,6 +733,7 @@ body {
 
 .btn-newsletter {
   border: 2px solid #fff;
+  border-radius: none;
   padding: 0.5rem;
   background-color: #fff;
   color: #202020;

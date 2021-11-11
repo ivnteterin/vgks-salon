@@ -207,7 +207,7 @@
     }
     @include respond(phone) {
       height: 19rem;
-      top: -3rem;
+      top: -4rem;
       right: -2rem;
     }
     @include respond(mid-phone) {
