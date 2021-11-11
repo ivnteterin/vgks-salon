@@ -65,7 +65,8 @@
 
 .btn-newsletter {
   border: 2px solid #fff;
-  border-radius: none;
+  -webkit-appearance: none;
+  border-radius: 0;
   padding: 0.5rem;
   background-color: #fff;
 
