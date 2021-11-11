@@ -183,7 +183,7 @@
       display: flex;
       flex-flow: column;
       gap: 1rem;
-      transition: all 0.2s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
   }
 
@@ -210,7 +210,7 @@
       height: 24rem;
       top: -5rem;
       right: -5rem;
-      z-index: 1500;
+      z-index: 2500;
     }
     @include respond(phone) {
       height: 19rem;
