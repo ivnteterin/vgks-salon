@@ -77,6 +77,10 @@
     background-color: #505050;
     color: #202020;
     border: 2px solid #505050;
+
+    @include respond(footer1030) {
+      width: unset;
+    }
   }
 
   &__item:nth-of-type(1) > &__item__content {

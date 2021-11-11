@@ -110,12 +110,22 @@ function mouseOut() {
 const checkSize = function () {
   const buttons = document.querySelectorAll('.footer__item__header__button');
   const checkbox = document.querySelectorAll('.footer__item__checkbox');
+
+  const collapseFooterItems = function () {
+    checkbox.forEach((item) => {
+      item.checked = true;
+    });
+  };
+
   if (window.innerWidth < 1030) {
     checkbox.forEach((item) => {
       item.checked = true;
       item.disabled = false;
       buttons.forEach((button) => {
         button.style.cursor = 'pointer';
+        button.addEventListener('click', function () {
+          collapseFooterItems();
+        });
       });
     });
   } else {
