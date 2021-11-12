@@ -171,7 +171,7 @@ window.addEventListener('resize', () => {
 });
 
 window.addEventListener('scroll', function () {
-  if (window.pageYOffset > 50) {
+  if (window.pageYOffset > 250) {
     document.body.style.background = '#202020';
   } else {
     document.body.style.background = '#f4e4f0';
