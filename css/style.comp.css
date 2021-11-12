@@ -405,18 +405,19 @@ body {
   background-color: #fff;
   padding: 5rem;
   min-width: 20rem;
+  z-index: -1;
 }
 .services__content {
-  max-width: 130rem;
+  max-width: 120rem;
   display: grid;
   justify-content: space-around;
   margin: 0 auto;
   gap: 3rem;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
 }
 @media (max-width: 68.75em) {
   .services__content {
-    gap: 4rem;
+    gap: 3rem;
     max-width: 60rem;
     grid-template-columns: repeat(3, minmax(15rem, 18rem));
   }
@@ -441,15 +442,49 @@ body {
   text-align: center;
 }
 .services__item {
-  background: red;
+  overflow: hidden;
+  position: relative;
   height: 35rem;
-  padding: 1rem;
+  padding: 5rem 1rem 1rem;
   border-radius: 1rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   color: #fff;
-  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  z-index: 1000;
+}
+@media (max-width: 68.75em) {
+  .services__item {
+    padding: 1rem;
+    align-items: center;
+  }
+}
+.services__item:hover {
+  opacity: 1;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transform: translateZ(0) scale(1);
+  box-shadow: rgba(15, 0, 43, 0.3) 0px 13px 27px -5px, rgba(15, 0, 43, 0.3) 0px 8px 16px -8px;
+}
+.services__item:hover::after {
+  transform: scale(1.08);
+  filter: grayscale(0%);
+}
+.services__item::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: transform 0.8s cubic-bezier(0.34, 0.34, 0.34, 0.85);
+  z-index: -1;
+}
+.services__item:hover {
+  transform: scale(1.05);
 }
 @media (max-width: 68.75em) {
   .services__item {
@@ -458,7 +493,7 @@ body {
 }
 @media (max-width: 37.5em) {
   .services__item {
-    height: 15rem;
+    height: 17rem;
   }
 }
 @media (max-width: 29em) {
@@ -486,7 +521,89 @@ body {
 }
 
 .heading-2 {
-  font-size: 2rem;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  z-index: 3000;
+  font-weight: 600;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+@media (max-width: 24em) {
+  .heading-2 {
+    font-size: 1.5rem;
+  }
+}
+
+.nails::after {
+  background-image: linear-gradient(170deg, #519fe85b, 50%, #00005254), url("../img/vgks-nails.png");
+  background-position: 80%;
+  background-size: 200% auto;
+}
+@media (max-width: 37.5em) {
+  .nails::after {
+    background-size: 100% auto;
+  }
+}
+
+.hair::after {
+  background-image: linear-gradient(170deg, rgba(88, 65, 167, 0.4), 50%, rgba(0, 78, 122, 0.4)), url("../img/vgks-hair.png");
+  background-position: 15% top;
+  background-size: 190% auto;
+}
+@media (max-width: 37.5em) {
+  .hair::after {
+    background-position: 0% 27%;
+    background-size: 100% auto;
+  }
+}
+
+.other::after {
+  background-image: linear-gradient(170deg, rgba(182, 99, 174, 0.4), 50%, rgba(76, 67, 204, 0.4)), url("../img/vgks-facial.png");
+  background-position: 60% 50%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+@media (max-width: 37.5em) {
+  .other::after {
+    background-size: 150% auto;
+  }
+}
+
+.photo::after {
+  background-image: linear-gradient(170deg, rgba(74, 46, 120, 0.5), 50%, rgba(172, 110, 220, 0.4)), url("../img/vgks-photography.jpg");
+  background-position: 20%;
+  background-size: cover;
+}
+
+.courses::after {
+  background-image: linear-gradient(170deg, rgba(138, 185, 255, 0.35), 50%, rgba(224, 45, 111, 0.5)), url("../img/vgks-courses.jpg");
+  background-position: 56% 32%;
+  background-size: 218% auto;
+}
+@media (max-width: 37.5em) {
+  .courses::after {
+    background-position: 33% 55%;
+    background-size: 100% auto;
+  }
+}
+
+.massage::after {
+  background-image: linear-gradient(170deg, rgba(74, 46, 120, 0.5), 50%, rgba(172, 110, 220, 0.4)), url("../img/vgks-massage.jpg");
+  background-position: 25%;
+  background-size: cover;
+}
+@media (max-width: 37.5em) {
+  .massage::after {
+    background-position: 25% 55%;
+    background-size: auto 250%;
+  }
 }
 
 .footer {
