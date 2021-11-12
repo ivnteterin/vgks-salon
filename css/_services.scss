@@ -1,12 +1,83 @@
 .services {
   background-color: #fff;
-  height: 50rem;
+  // height: 50rem;
+  padding: 5rem;
+  min-width: 20rem;
+
+  &__content {
+    max-width: 130rem;
+    display: grid;
+    justify-content: space-around;
+    margin: 0 auto;
+    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+
+    @include respond(services1100) {
+      gap: 4rem;
+      max-width: 60rem;
+      grid-template-columns: repeat(3, minmax(15rem, 18rem));
+    }
+
+    @include respond(phone) {
+      grid-template-columns: repeat(auto-fit, minmax(12rem, 17rem));
+      gap: 3rem;
+    }
+
+    @include respond(mid-phone) {
+      grid-template-columns: repeat(auto-fit, 90%);
+    }
+
+    @include respond(mid-phone) {
+      grid-template-columns: repeat(auto-fit, 100%);
+    }
+    // justify-content: space-between;
+  }
+
+  &__header {
+    text-align: center;
+  }
+
+  &__item {
+    background: red; //test
+    height: 35rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+
+    @include respond(services1100) {
+      height: 25rem;
+    }
+
+    @include respond(phone) {
+      height: 15rem;
+    }
+
+    @include respond(mid-phone) {
+      height: 10rem;
+    }
+    // width: 18rem;
+  }
 }
 
 .heading-1 {
   text-align: center;
   font-size: 4rem;
   text-transform: uppercase;
-  padding: 5rem;
+  padding: 5rem 0;
   font-weight: 200;
+
+  @include respond(phone) {
+    font-size: 3rem;
+  }
+  @include respond(small-phone) {
+    font-size: 2rem;
+  }
+}
+
+.heading-2 {
+  font-size: 2rem;
 }

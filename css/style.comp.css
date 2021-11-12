@@ -297,8 +297,7 @@ body {
 }
 .sidebar__nav {
   padding: 3rem;
-  background: linear-gradient(to bottom right, #f4e4f0 30%, #f2b8d9);
-  border-left: 5px solid #eeb6d7;
+  background: linear-gradient(to bottom right, #f6dbef 30%, #f2b8d9);
   border-radius: 1rem;
   z-index: 1500;
   -webkit-transition: all 0.4s cubic-bezier(0.43, -0.01, 0.465, 1);
@@ -313,7 +312,6 @@ body {
   height: 1.6rem;
   width: auto;
   display: block;
-  opacity: 0.5;
   margin: 4rem auto -1rem;
 }
 .sidebar__list {
@@ -405,15 +403,90 @@ body {
 
 .services {
   background-color: #fff;
-  height: 50rem;
+  padding: 5rem;
+  min-width: 20rem;
+}
+.services__content {
+  max-width: 130rem;
+  display: grid;
+  justify-content: space-around;
+  margin: 0 auto;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+}
+@media (max-width: 68.75em) {
+  .services__content {
+    gap: 4rem;
+    max-width: 60rem;
+    grid-template-columns: repeat(3, minmax(15rem, 18rem));
+  }
+}
+@media (max-width: 37.5em) {
+  .services__content {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 17rem));
+    gap: 3rem;
+  }
+}
+@media (max-width: 29em) {
+  .services__content {
+    grid-template-columns: repeat(auto-fit, 90%);
+  }
+}
+@media (max-width: 29em) {
+  .services__content {
+    grid-template-columns: repeat(auto-fit, 100%);
+  }
+}
+.services__header {
+  text-align: center;
+}
+.services__item {
+  background: red;
+  height: 35rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+}
+@media (max-width: 68.75em) {
+  .services__item {
+    height: 25rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .services__item {
+    height: 15rem;
+  }
+}
+@media (max-width: 29em) {
+  .services__item {
+    height: 10rem;
+  }
 }
 
 .heading-1 {
   text-align: center;
   font-size: 4rem;
   text-transform: uppercase;
-  padding: 5rem;
+  padding: 5rem 0;
   font-weight: 200;
+}
+@media (max-width: 37.5em) {
+  .heading-1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 24em) {
+  .heading-1 {
+    font-size: 2rem;
+  }
+}
+
+.heading-2 {
+  font-size: 2rem;
 }
 
 .footer {
@@ -613,7 +686,7 @@ body {
   .footer__logo-large {
     display: block;
     position: absolute;
-    height: 24rem;
+    height: 23rem;
     top: -5rem;
     right: -5rem;
     z-index: 2500;
@@ -621,14 +694,14 @@ body {
 }
 @media (max-width: 37.5em) {
   .footer__logo-large {
-    height: 19rem;
+    height: 17rem;
     top: -4rem;
     right: -2rem;
   }
 }
 @media (max-width: 29em) {
   .footer__logo-large {
-    height: 13rem;
+    height: 12.5rem;
   }
 }
 @media (max-width: 24em) {

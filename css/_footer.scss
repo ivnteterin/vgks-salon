@@ -224,18 +224,18 @@
     @include respond(footer1030) {
       display: block;
       position: absolute;
-      height: 24rem;
+      height: 23rem;
       top: -5rem;
       right: -5rem;
       z-index: 2500;
     }
     @include respond(phone) {
-      height: 19rem;
+      height: 17rem;
       top: -4rem;
       right: -2rem;
     }
     @include respond(mid-phone) {
-      height: 13rem;
+      height: 12.5rem;
     }
     @include respond(small-phone) {
       display: none;
