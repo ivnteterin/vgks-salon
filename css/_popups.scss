@@ -1,0 +1,157 @@
+.popup {
+  opacity: 0;
+  visibility: hidden;
+
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 3000;
+  transition: all 0.3s;
+  &:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &:target &__content {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  &__link {
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    transform: scale(0.95);
+    &:hover {
+      transform: scale(1);
+    }
+  }
+
+  &__content {
+    display: flex;
+    max-width: 90rem;
+    height: 45rem;
+    padding: 2rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 0.5rem;
+
+    @include respond(tab-land) {
+      max-width: 70%;
+    }
+
+    @include respond(footer1030) {
+      height: 35rem;
+    }
+    @include respond(large-phone) {
+      height: 30rem;
+    }
+    @include respond(phone) {
+      height: 20rem;
+    }
+  }
+
+  &__h2 {
+    font-size: 4.2rem;
+    text-align: left;
+
+    @include respond(footer1030) {
+      font-size: 3.2rem;
+    }
+
+    @include respond(large-phone) {
+      font-size: 2.8rem;
+    }
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+  }
+  &__h3 {
+    // font-family: $font-primary;
+    color: rgb(39, 39, 39);
+    font-size: 1.7rem;
+    @include respond(footer1030) {
+      font-size: 1.4rem;
+    }
+    @include respond(large-phone) {
+      font-size: 1.2rem;
+    }
+    @include respond(phone) {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-flow: column;
+    /* justify-content: center; */
+    padding: 7rem 0 7rem 6rem;
+
+    @include respond(footer1030) {
+      padding: 4rem 0 4rem 3rem;
+    }
+    @include respond(large-phone) {
+      padding: 3rem 0 3rem 2rem;
+    }
+    @include respond(phone) {
+      padding: 0;
+    }
+  }
+
+  //   &__element {
+  //     position: absolute;
+  //     height: 100rem;
+  //     width: 45rem;
+  //     right: 5rem;
+  //     z-index: 2000;
+  //     transform: rotate(70deg) translateX(20rem);
+  //     background-image: linear-gradient(
+  //       90deg,
+  //       transparent 50%,
+  //       rgba(224, 144, 255, 0.8) 50%,
+  //       rgba(250, 112, 215, 0.8)
+  //     );
+  //   }
+
+  &__img {
+    height: 90%;
+    width: auto;
+    align-self: center;
+    @include respond(mid-phone) {
+      display: none;
+    }
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      color: rgb(156, 156, 156);
+      position: absolute;
+      top: 2.5rem;
+      right: 3.5rem;
+      font-size: 4rem;
+      text-decoration: none;
+      display: inline-block;
+      z-index: 9999;
+      @include respond(large-phone) {
+        top: 1.5rem;
+        right: 2.5rem;
+        font-size: 3.5rem;
+      }
+
+      @include respond(phone) {
+        top: 0.5rem;
+        right: 1.5rem;
+        font-size: 3rem;
+      }
+    }
+    &:hover {
+      //   color: $color-primary;
+    }
+  }
+}
