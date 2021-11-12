@@ -45,9 +45,11 @@
   &__content {
     height: max-content;
     display: flex;
+    gap: 2rem;
     justify-content: space-between;
     @include respond(footer1030) {
       flex-direction: column;
+      gap: 0;
     }
   }
 
@@ -64,6 +66,12 @@
       &:hover {
         border-bottom: 2px solid #e7a3ca;
       }
+    }
+  }
+
+  &-work-hours {
+    .footer__item__content {
+      padding-left: 0.5rem;
     }
   }
 
@@ -89,9 +97,12 @@
     height: 16rem;
   }
   &__item:nth-of-type(3) > &__item__content {
-    height: 13rem;
+    height: 9rem;
   }
   &__item:nth-of-type(4) > &__item__content {
+    height: 13rem;
+  }
+  &__item:nth-of-type(5) > &__item__content {
     height: 19rem;
   }
 
@@ -100,11 +111,19 @@
     display: flex;
     flex-flow: column;
     gap: 2rem;
-    overflow-y: hidden;
+    overflow: hidden;
 
     &:nth-of-type(2) {
       @include respond(footer1030) {
         width: max-content;
+      }
+    }
+    &:nth-of-type(3) {
+      //Darbo laikas
+      display: none;
+
+      @include respond(footer1030) {
+        display: flex;
       }
     }
 

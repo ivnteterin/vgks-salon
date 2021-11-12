@@ -24,7 +24,9 @@ function reqListener() {
   minutes = time.substring(3, 5);
 
   const closed = document.getElementById('closed');
+  const closedFooter = document.getElementById('closed-footer');
   const open = document.getElementById('open');
+  const openFooter = document.getElementById('open-footer');
   // const closed1 = document.getElementById('closed-1');
   // const open1 = document.getElementById('open-1');
   if (
@@ -39,8 +41,8 @@ function reqListener() {
     }
     open.classList.remove('hidden');
     closed.classList.add('hidden');
-    // open1.classList.remove('hidden');
-    // closed1.classList.add('hidden');
+    openFooter.classList.remove('hidden');
+    closedFooter.classList.add('hidden');
   } else {
     if (
       !closed.classList.contains('hidden') &&
@@ -50,8 +52,8 @@ function reqListener() {
     }
     closed.classList.remove('hidden');
     open.classList.add('hidden');
-    // closed1.classList.remove('hidden');
-    // open1.classList.add('hidden');
+    closedFooter.classList.remove('hidden');
+    openFooter.classList.add('hidden');
   }
 }
 
@@ -139,9 +141,15 @@ const checkSize = function () {
     });
   };
 
-  if (window.innerWidth < FOOTER_COLLAPSE_WIDTH) {
+  if (
+    window.innerWidth < prevWidth ||
+    (window.innerWidth > prevWidth && window.innerWidth < FOOTER_COLLAPSE_WIDTH)
+  ) {
     collapseFooterItems();
-  } else {
+    console.log('COLLAPSED!', window.innerWidth, window.innerHeight);
+    prevWidth = window.innerWidth;
+  }
+  if (window.innerWidth > FOOTER_COLLAPSE_WIDTH) {
     expandFooterItems();
   }
   if (window.innerWidth < 321) {
@@ -153,10 +161,19 @@ const checkSize = function () {
       '© Visagino Grožio Kūrėjų Studija, Lietuva';
   }
 };
+let prevWidth = FOOTER_COLLAPSE_WIDTH;
 
 window.addEventListener('load', () => {
   checkSize();
 });
 window.addEventListener('resize', () => {
   checkSize();
+});
+
+window.addEventListener('scroll', function () {
+  if (window.pageYOffset > 50) {
+    document.body.style.background = '#202020';
+  } else {
+    document.body.style.background = '#f4e4f0';
+  }
 });
