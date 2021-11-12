@@ -1,9 +1,13 @@
 .services {
   background-color: #fff;
   // height: 50rem;
-  padding: 5rem;
+  padding: 5rem 5rem 10rem;
   min-width: 20rem;
   z-index: -1;
+
+  @include respond(services1100) {
+    padding: 5rem 5rem 7rem;
+  }
 
   &__content {
     max-width: 120rem;

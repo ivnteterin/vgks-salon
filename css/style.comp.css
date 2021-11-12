@@ -412,9 +412,14 @@ body {
 
 .services {
   background-color: #fff;
-  padding: 5rem;
+  padding: 5rem 5rem 10rem;
   min-width: 20rem;
   z-index: -1;
+}
+@media (max-width: 68.75em) {
+  .services {
+    padding: 5rem 5rem 7rem;
+  }
 }
 .services__content {
   max-width: 120rem;
