@@ -66,27 +66,9 @@
       rgba(224, 144, 255, 0.8) 50%,
       rgba(250, 112, 215, 0.8)
     );
-
-    // @include respond(large-phone) {
-    //   top: 1.5rem;
-    //   right: 4rem;
-    // }
-    // @include respond(phone) {
-    //   top: -2rem;
-    //   right: 0;
-    // }
-    // @include respond(mid-phone) {
-    //   top: 7rem;
-    // }
     @include respond(mid-phone) {
       clip-path: polygon(100% 90%, 68% 100%, 100% 100%);
     }
-    // @include respond(small-phone) {
-    //   top: 2rem;
-    // }
-    // @include respond(little-phone) {
-    //   top: 1rem;
-    // }
   }
 
   &__left {
@@ -192,5 +174,84 @@
     &:hover {
       //   color: $color-primary;
     }
+  }
+}
+
+.reservation {
+  width: 85rem;
+  min-width: 18rem;
+  display: flex;
+  position: absolute;
+  flex-flow: column;
+  align-items: flex-start;
+  padding: 6rem;
+  gap: 3rem;
+
+  @include respond(tab-port) {
+    width: 80%;
+  }
+  @include respond(phone) {
+    padding: 3.8rem;
+  }
+  @include respond(mid-phone) {
+    padding: 3.5rem;
+  }
+  @include respond(mid-phone) {
+    padding: 2.5rem;
+  }
+  @include respond(small-phone) {
+    padding: 2rem;
+  }
+
+  &__item {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  &__header {
+    font-size: 3rem;
+    @include respond(tab-port) {
+      font-size: 2.5rem;
+    }
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+    @include respond(mid-phone) {
+      font-size: 1.6rem;
+    }
+    @include respond(small-phone) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__icon {
+    width: 6rem;
+    height: auto;
+    @include respond(mid-phone) {
+      width: 4.5rem;
+    }
+  }
+
+  &__text {
+    text-align: left;
+    font-size: 2rem;
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+    }
+    @include respond(phone) {
+      font-size: 1.6rem;
+    }
+    @include respond(mid-phone) {
+      font-size: 1.3rem;
+    }
+    @include respond(mid-phone) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__element {
+    top: 0;
+    left: 0;
   }
 }

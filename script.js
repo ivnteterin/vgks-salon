@@ -153,12 +153,19 @@ const checkSize = function () {
     expandFooterItems();
   }
   if (window.innerWidth < 321) {
+    document.querySelector('.reservation__header').innerHTML = 'Skambinkite';
+    document.querySelector('.js--reservation__text').innerHTML = '';
     document.querySelector('.copyright__address').innerHTML = '';
-  } else if (window.innerWidth < 415) {
+  }
+  if (window.innerWidth < 415) {
     document.querySelector('.copyright__address').innerHTML = '© VGKS, Lietuva';
   } else {
     document.querySelector('.copyright__address').innerHTML =
       '© Visagino Grožio Kūrėjų Studija, Lietuva';
+    document.querySelector('.reservation__header').innerHTML =
+      'Skambinkite telefonu';
+    document.querySelector('.js--reservation__text').innerHTML =
+      'Rezervacija internetu netrukus paleisime';
   }
 };
 let prevWidth = FOOTER_COLLAPSE_WIDTH;

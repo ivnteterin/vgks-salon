@@ -45,7 +45,7 @@
               >
             </li>
             <li class="navigation__list--item">
-              <a class="navigation__list--item__link--btn" href=""
+              <a class="navigation__list--item__link--btn" href="#reservation"
                 ><button class="btn">Rezervuoti</button></a
               >
             </li>
@@ -82,7 +82,7 @@
                   <!-- <li class="sidebar__item">
                                     <a href="#about-us" class="sidebar__link js--about-us-btn"><span>Apie mus</span></a>
                                 </li> -->
-                  <a href="#" class="sidebar__item">
+                  <a href="#reservation" class="sidebar__item">
                     <button class="btn btn-sidebar">Rezervuoti</button>
                   </a>
                 </ul>
@@ -370,6 +370,40 @@
           <img class="popup__img-1" src="img/popup-image.png" alt="Vip card" class="vip-card">
           <img class="popup__img-2" src="img/vip-card.svg" alt="Vip card" class="vip-card">
           <div class="popup__element">
+          </div>
+          <a href="#contacts" class="popup__close">&times;</a> 
+      </div>
+    </div>
+    <div class="popup" id='reservation'>
+      <div class="popup__content reservation">
+          <h2 class="heading-2 popup__h2">Reservacija</h2>
+          <div class="reservation__item">
+            <img class="reservation__icon" src="img/phone.svg" alt="Phone icon">
+            <div class="reservation__sub-item">
+              <div class="reservation__header">Skambinkite telefonu</div>
+              <div class="reservation__text">
+                <a href="tel:+370 (626) 55999" class="reservation__link">+370 (626) 55999</a>
+              </div>
+              </div>
+          </div>
+          <div class="reservation__item">
+            <img class="reservation__icon" src="img/messenger.svg" alt="Messenger icon">
+            <div class="reservation__sub-item">
+              <div class="reservation__header">Rašykite į <a href="http://www.m.me/vgks.visaginas" class="reservation__link">Messenger</a></div>
+              <div class="reservation__text ">
+              </div>
+            </div>
+          </div>
+          <div class="reservation__item grey-out">
+            <img class="reservation__icon" src="img/booking.svg" alt="Booking icon">
+            <div class="reservation__sub-item ">
+              <div class="reservation__header">Rezervuoti internetu</div>
+              <div class="reservation__text js--reservation__text">
+                Rezervacija internetu netrukus paleisime
+              </div>
+            </div>
+          </div>
+          <div class="popup__element reservation__element">
           </div>
           <a href="#contacts" class="popup__close">&times;</a> 
       </div>
