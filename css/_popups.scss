@@ -1,7 +1,6 @@
 .popup {
   opacity: 0;
   visibility: hidden;
-
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -13,6 +12,32 @@
   &:target {
     visibility: visible;
     opacity: 1;
+  }
+  &__content {
+    width: 60rem;
+    min-width: 18rem;
+
+    // height: 30rem;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    background-color: #fff;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s 0.2s;
+
+    @include respond(large-phone) {
+      width: 70%;
+    }
+
+    @include respond(mid-phone) {
+      flex-flow: column;
+    }
   }
 
   &:target &__content {
@@ -29,101 +54,110 @@
     }
   }
 
-  &__content {
-    display: flex;
-    max-width: 90rem;
-    height: 45rem;
-    padding: 2rem;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #fff;
-    border-radius: 0.5rem;
+  &__element {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2000;
+    // transform: rotate(69deg);polygon(100% 90%, 68% 100%, 100% 100%)
+    clip-path: polygon(100% 84%, 70% 100%, 100% 100%);
+    background-image: linear-gradient(
+      192deg,
+      rgba(224, 144, 255, 0.8) 50%,
+      rgba(250, 112, 215, 0.8)
+    );
 
-    @include respond(tab-land) {
-      max-width: 70%;
+    // @include respond(large-phone) {
+    //   top: 1.5rem;
+    //   right: 4rem;
+    // }
+    // @include respond(phone) {
+    //   top: -2rem;
+    //   right: 0;
+    // }
+    // @include respond(mid-phone) {
+    //   top: 7rem;
+    // }
+    @include respond(mid-phone) {
+      clip-path: polygon(100% 90%, 68% 100%, 100% 100%);
     }
+    // @include respond(small-phone) {
+    //   top: 2rem;
+    // }
+    // @include respond(little-phone) {
+    //   top: 1rem;
+    // }
+  }
 
-    @include respond(footer1030) {
-      height: 35rem;
-    }
-    @include respond(large-phone) {
-      height: 30rem;
-    }
+  &__left {
+    padding: 4rem 0 4rem 4rem;
     @include respond(phone) {
-      height: 20rem;
+      padding: 3rem 0 3rem 3rem;
+    }
+
+    @include respond(mid-phone) {
+      padding: 3rem 3rem 2rem 3rem;
+    }
+
+    @include respond(small-phone) {
+      padding: 2.5rem 2.5rem 1rem 2.5rem;
+    }
+  }
+
+  &__img-1 {
+    width: 40%;
+    height: 100%;
+
+    @include respond(mid-phone) {
+      display: none;
+    }
+  }
+  &__img-2 {
+    width: 100%;
+    height: 100%;
+    drop-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    display: none;
+    padding: 0 3rem 3rem 3rem;
+
+    @include respond(mid-phone) {
+      display: block;
+    }
+    @include respond(small-phone) {
+      padding: 0 3rem 3rem 3rem;
+    }
+    @include respond(little-phone) {
+      padding: 0 2rem 2rem 2rem;
     }
   }
 
   &__h2 {
-    font-size: 4.2rem;
-    text-align: left;
-
-    @include respond(footer1030) {
-      font-size: 3.2rem;
-    }
-
+    font-size: 2.5rem;
     @include respond(large-phone) {
-      font-size: 2.8rem;
+      font-size: 1.9rem;
     }
     @include respond(phone) {
-      font-size: 2rem;
+      font-size: 1.8rem;
+    }
+    @include respond(mid-phone) {
+      font-size: 1.6rem;
+    }
+    @include respond(small-phone) {
+      font-size: 1.4rem;
     }
   }
   &__h3 {
-    // font-family: $font-primary;
-    color: rgb(39, 39, 39);
-    font-size: 1.7rem;
-    @include respond(footer1030) {
-      font-size: 1.4rem;
-    }
+    font-size: 1.4rem;
     @include respond(large-phone) {
       font-size: 1.2rem;
     }
     @include respond(phone) {
       font-size: 1.1rem;
     }
-  }
-
-  &__left {
-    display: flex;
-    flex-flow: column;
-    /* justify-content: center; */
-    padding: 7rem 0 7rem 6rem;
-
-    @include respond(footer1030) {
-      padding: 4rem 0 4rem 3rem;
-    }
-    @include respond(large-phone) {
-      padding: 3rem 0 3rem 2rem;
-    }
-    @include respond(phone) {
-      padding: 0;
-    }
-  }
-
-  //   &__element {
-  //     position: absolute;
-  //     height: 100rem;
-  //     width: 45rem;
-  //     right: 5rem;
-  //     z-index: 2000;
-  //     transform: rotate(70deg) translateX(20rem);
-  //     background-image: linear-gradient(
-  //       90deg,
-  //       transparent 50%,
-  //       rgba(224, 144, 255, 0.8) 50%,
-  //       rgba(250, 112, 215, 0.8)
-  //     );
-  //   }
-
-  &__img {
-    height: 90%;
-    width: auto;
-    align-self: center;
     @include respond(mid-phone) {
-      display: none;
+      font-size: 0.9rem;
+    }
+    @include respond(small-phone) {
+      font-size: 0.8rem;
     }
   }
 
@@ -132,22 +166,23 @@
     &:visited {
       color: rgb(156, 156, 156);
       position: absolute;
-      top: 2.5rem;
-      right: 3.5rem;
+      top: 2rem;
+      right: 2rem;
+      line-height: 1;
       font-size: 4rem;
       text-decoration: none;
       display: inline-block;
       z-index: 9999;
       @include respond(large-phone) {
         top: 1.5rem;
-        right: 2.5rem;
-        font-size: 3.5rem;
+        right: 1.5rem;
+        font-size: 3rem;
       }
 
       @include respond(phone) {
-        top: 0.5rem;
-        right: 1.5rem;
-        font-size: 3rem;
+        top: 1rem;
+        right: 1rem;
+        font-size: 2rem;
       }
     }
     &:hover {
