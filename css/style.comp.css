@@ -1122,7 +1122,7 @@ body {
 }
 @media (max-width: 29em) {
   .popup__h3 {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 .popup__close:link, .popup__close:visited {
