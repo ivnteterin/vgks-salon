@@ -7,6 +7,61 @@
   opacity: 0.6;
 }
 
+.heading-1 {
+  text-align: center;
+  font-size: 4rem;
+  text-transform: uppercase;
+  padding: 5rem 0;
+  font-weight: 200;
+}
+@media (max-width: 37.5em) {
+  .heading-1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 24em) {
+  .heading-1 {
+    font-size: 2rem;
+  }
+}
+
+.heading-2 {
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-size: 4rem;
+  z-index: 3000;
+  font-weight: 600;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+@media (max-width: 56.25em) {
+  .heading-2 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .heading-2 {
+    font-size: 2.4rem;
+  }
+}
+@media (max-width: 24em) {
+  .heading-2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 20em) {
+  .heading-2 {
+    font-size: 1.6rem;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -521,45 +576,6 @@ body {
   }
 }
 
-.heading-1 {
-  text-align: center;
-  font-size: 4rem;
-  text-transform: uppercase;
-  padding: 5rem 0;
-  font-weight: 200;
-}
-@media (max-width: 37.5em) {
-  .heading-1 {
-    font-size: 3rem;
-  }
-}
-@media (max-width: 24em) {
-  .heading-1 {
-    font-size: 2rem;
-  }
-}
-
-.heading-2 {
-  text-transform: uppercase;
-  font-size: 1.8rem;
-  z-index: 3000;
-  font-weight: 600;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  backface-visibility: hidden;
-  transform: translateZ(0);
-}
-@media (max-width: 24em) {
-  .heading-2 {
-    font-size: 1.5rem;
-  }
-}
-
 .nails::after {
   background-image: linear-gradient(170deg, #519fe85b, 50%, #00005254), url("../img/vgks-nails.png");
   background-position: 80%;
@@ -1019,10 +1035,6 @@ body {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 }
-.popup:target .reservation {
-  transform: translate(-50%, -50%) scale(0.8);
-  opacity: 1;
-}
 .popup__link {
   cursor: pointer;
   transition: all 0.1s ease-in-out;
@@ -1162,7 +1174,7 @@ body {
 }
 .reservation {
   width: 85rem;
-  min-width: 18rem;
+  min-width: 20rem;
   display: flex;
   position: absolute;
   flex-flow: column;
@@ -1170,7 +1182,7 @@ body {
   padding: 6rem;
   gap: 3rem;
 }
-@media (max-width: 56.25em) {
+@media (max-width: 64.375em) {
   .reservation {
     width: 80%;
     padding: 3.8rem;
@@ -1180,20 +1192,21 @@ body {
 @media (max-width: 37.5em) {
   .reservation {
     padding: 3.4rem;
-    gap: 1.5rem;
+    gap: 1.4rem;
   }
 }
 @media (max-width: 29em) {
   .reservation {
-    padding: 3.2rem;
-  }
-}
-@media (max-width: 29em) {
-  .reservation {
-    padding: 2.5rem;
+    padding: 3rem;
   }
 }
 @media (max-width: 24em) {
+  .reservation {
+    padding: 2.5rem;
+    gap: 1.2rem;
+  }
+}
+@media (max-width: 20em) {
   .reservation {
     padding: 2rem;
   }
@@ -1204,26 +1217,26 @@ body {
   align-items: center;
 }
 .reservation__header {
-  font-size: 3rem;
+  font-size: 2.8rem;
 }
 @media (max-width: 56.25em) {
-  .reservation__header {
-    font-size: 2.2rem;
-  }
-}
-@media (max-width: 37.5em) {
   .reservation__header {
     font-size: 1.8rem;
   }
 }
-@media (max-width: 29em) {
+@media (max-width: 37.5em) {
   .reservation__header {
     font-size: 1.6rem;
   }
 }
-@media (max-width: 24em) {
+@media (max-width: 29em) {
   .reservation__header {
     font-size: 1.5rem;
+  }
+}
+@media (max-width: 24em) {
+  .reservation__header {
+    font-size: 1.4rem;
   }
 }
 .reservation__icon {
@@ -1232,16 +1245,21 @@ body {
 }
 @media (max-width: 56.25em) {
   .reservation__icon {
-    width: 4.5rem;
+    width: 3.6rem;
+  }
+}
+@media (max-width: 29em) {
+  .reservation__icon {
+    width: 3.2rem;
   }
 }
 .reservation__text {
   text-align: left;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 @media (max-width: 56.25em) {
   .reservation__text {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 37.5em) {
@@ -1252,6 +1270,11 @@ body {
 @media (max-width: 29em) {
   .reservation__text {
     font-size: 1.15rem;
+  }
+}
+@media (max-width: 20em) {
+  .reservation__text {
+    font-size: 1rem;
   }
 }
 .reservation__element {
