@@ -375,6 +375,7 @@ body {
 .sidebar__nav {
   padding: 2.5rem;
   background: #202020;
+  border-left: 5px solid #b579ac;
   border-radius: 0.5rem;
   z-index: 1500;
   -webkit-transition: all 0.4s cubic-bezier(0.43, -0.01, 0.465, 1);
