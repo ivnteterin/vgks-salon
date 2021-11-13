@@ -17,6 +17,33 @@
     <title>VGKS | Beauty Salons</title>
   </head>
   <body>
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "285257749036891");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v12.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/ru_RU/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
     <div class="container">
       <header class="header">
         <nav class="navigation">
@@ -26,23 +53,17 @@
 
           <ul class="navigation__list">
             <li class="navigation__list--item">
-              <a href="#services" class="navigation__list--item__link"
-                >Paslaugos</a
-              >
+              <a href="#services" class="navigation__list--item__link">Paslaugos</a>
             </li>
             <li class="navigation__list--item">
-              <a href="#" class="navigation__list--item__link"
-                >El. parduotuvė</a
-              >
+              <a href="#" class="navigation__list--item__link">El. parduotuvė</a >
               <span class="coming-soon">Coming soon</span>
             </li>
             <li class="navigation__list--item">
               <a
                 href="#contacts"
                 class="navigation__list--item__link"
-                id="js--scroll-to-contacts"
-                >Kontaktai</a
-              >
+                id="js--scroll-to-contacts">Kontaktai</a>
             </li>
             <li class="navigation__list--item">
               <a class="navigation__list--item__link--btn" href="#reservation"
