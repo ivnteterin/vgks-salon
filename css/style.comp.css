@@ -1120,11 +1120,6 @@ body {
     font-size: 1.1rem;
   }
 }
-@media (max-width: 29em) {
-  .popup__h3 {
-    font-size: 1rem;
-  }
-}
 .popup__close:link, .popup__close:visited {
   color: #9c9c9c;
   position: absolute;
