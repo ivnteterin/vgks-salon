@@ -62,6 +62,14 @@
   }
 }
 
+.heading-3 {
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-size: 2rem;
+  z-index: 3000;
+  font-weight: 600;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -577,7 +585,7 @@ body {
 }
 
 .nails::after {
-  background-image: linear-gradient(170deg, #519fe85b, 50%, #00005254), url("../img/vgks-nails.png");
+  background-image: linear-gradient(170deg, #519fe85b, 50%, #00005254), url("../img/vgks-nails.jpg");
   background-position: 80%;
   background-size: 200% auto;
 }
@@ -588,7 +596,7 @@ body {
 }
 
 .hair::after {
-  background-image: linear-gradient(170deg, rgba(88, 65, 167, 0.4), 50%, rgba(0, 78, 122, 0.4)), url("../img/vgks-hair.png");
+  background-image: linear-gradient(170deg, rgba(88, 65, 167, 0.4), 50%, rgba(0, 78, 122, 0.4)), url("../img/vgks-hair.jpg");
   background-position: 15% top;
   background-size: 190% auto;
 }
@@ -600,7 +608,7 @@ body {
 }
 
 .other::after {
-  background-image: linear-gradient(170deg, rgba(182, 99, 174, 0.4), 50%, rgba(76, 67, 204, 0.4)), url("../img/vgks-facial.png");
+  background-image: linear-gradient(170deg, rgba(182, 99, 174, 0.4), 50%, rgba(76, 67, 204, 0.4)), url("../img/vgks-facial.jpg");
   background-position: 60% 50%;
   background-size: auto 100%;
   background-repeat: no-repeat;
@@ -1107,11 +1115,12 @@ body {
 }
 @media (max-width: 20em) {
   .popup__img-2 {
-    padding: 0 2rem 2rem 2rem;
+    padding: 0 2.5rem 2.5rem 2.5rem;
   }
 }
 .popup__h2 {
   font-size: 3.2rem;
+  margin-bottom: 2rem;
 }
 @media (max-width: 46.875em) {
   .popup__h2 {
@@ -1131,6 +1140,7 @@ body {
 @media (max-width: 24em) {
   .popup__h2 {
     font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 }
 .popup__h3 {
@@ -1145,6 +1155,11 @@ body {
 @media (max-width: 37.5em) {
   .popup__h3 {
     font-size: 1.2rem;
+  }
+}
+@media (max-width: 20em) {
+  .popup__h3 {
+    font-size: 0.9rem;
   }
 }
 .popup__close:link, .popup__close:visited {
@@ -1179,7 +1194,7 @@ body {
   position: absolute;
   flex-flow: column;
   align-items: flex-start;
-  padding: 6rem;
+  padding: 7.5rem;
   gap: 3rem;
 }
 @media (max-width: 64.375em) {
@@ -1280,6 +1295,9 @@ body {
 .reservation__element {
   top: 0;
   left: 0;
+}
+.reservation a {
+  color: #ad7fc1;
 }
 
 .btn {
