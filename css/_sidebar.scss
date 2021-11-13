@@ -38,17 +38,17 @@
   }
 
   &__checkbox:checked + &__button &__icon::before {
-    width: 2.3rem;
+    width: 2rem;
     transform: rotate(45deg);
-    background-color: #da7db3;
+    background-color: #ffffff;
     top: 0;
   }
 
   &__checkbox:checked + &__button &__icon::after {
-    width: 2.3rem;
+    width: 2rem;
     top: 0;
     transform: rotate(-45deg);
-    background-color: #da7db3;
+    background-color: #ffffff;
   }
 
   &__button {
@@ -70,14 +70,14 @@
   }
 
   &__nav {
-    padding: 3rem;
-    background: $color-secondary;
+    padding: 2.5rem;
+    background: #202020;
     // border-left: 5px solid #eeb6d7;
     // width: max-content;
     // position: fixed;
     // top: 6.5rem;
     // right: 2rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     z-index: 1500;
 
     -webkit-transition: all 0.4s cubic-bezier(0.43, -0.01, 0.465, 1);
@@ -96,7 +96,7 @@
     width: auto;
     display: block;
     // opacity: 0.5;
-    margin: 4rem auto -1rem;
+    margin: 4rem auto 1rem;
   }
 
   &__list {
@@ -163,7 +163,7 @@
   &__link {
     position: relative;
     top: 0;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     &:hover {
       padding-bottom: 0.2rem;
@@ -176,7 +176,7 @@
     &,
     &::before,
     &::after {
-      width: 2.5rem;
+      width: 2rem;
       height: 2px;
       // background-color: transparent;
       display: inline-block;

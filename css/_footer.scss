@@ -88,10 +88,16 @@
     @include respond(footer1030) {
       width: unset;
     }
+    @include respond(little-phone) {
+      width: 100%;
+    }
   }
 
   &__item:nth-of-type(1) > &__item__content {
     height: 17rem;
+    @include respond(little-phone) {
+      height: 19rem;
+    }
   }
   &__item:nth-of-type(2) > &__item__content {
     height: 16rem;
@@ -125,6 +131,9 @@
       @include respond(footer1030) {
         display: flex;
       }
+    }
+    @include respond(little-phone) {
+      width: 18rem;
     }
 
     &__sub-item-info {
@@ -345,8 +354,25 @@
   width: 100%;
 }
 
-.work-days-days {
-  width: 2.5rem;
+.work-days {
+  &__footer {
+    display: flex;
+    flex-flow: column;
+  }
+  &__days {
+    width: 3rem;
+  }
+
+  &__workweek {
+    display: flex;
+  }
+
+  &__hours {
+    &-open,
+    &-closed {
+      margin-top: 0.5rem;
+    }
+  }
 }
 
 //CHECKBOX
