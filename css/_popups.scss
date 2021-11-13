@@ -45,6 +45,12 @@
     opacity: 1;
   }
 
+  &:target .reservation {
+    transform: translate(-50%, -50%) scale(0.8);
+
+    opacity: 1;
+  }
+
   &__link {
     cursor: pointer;
     transition: all 0.1s ease-in-out;
@@ -189,12 +195,15 @@
 
   @include respond(tab-port) {
     width: 80%;
+    padding: 3.8rem;
+    gap: 1.8rem;
   }
   @include respond(phone) {
-    padding: 3.8rem;
+    padding: 3.4rem;
+    gap: 1.5rem;
   }
   @include respond(mid-phone) {
-    padding: 3.5rem;
+    padding: 3.2rem;
   }
   @include respond(mid-phone) {
     padding: 2.5rem;
@@ -212,23 +221,23 @@
   &__header {
     font-size: 3rem;
     @include respond(tab-port) {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
     }
     @include respond(phone) {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
     @include respond(mid-phone) {
       font-size: 1.6rem;
     }
     @include respond(small-phone) {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
     }
   }
 
   &__icon {
     width: 6rem;
     height: auto;
-    @include respond(mid-phone) {
+    @include respond(tab-port) {
       width: 4.5rem;
     }
   }
@@ -237,16 +246,15 @@
     text-align: left;
     font-size: 2rem;
     @include respond(tab-port) {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
     }
     @include respond(phone) {
-      font-size: 1.6rem;
-    }
-    @include respond(mid-phone) {
-      font-size: 1.3rem;
-    }
-    @include respond(mid-phone) {
       font-size: 1.2rem;
+    }
+    @include respond(mid-phone) {
+      font-size: 1.15rem;
+    }
+    @include respond(mid-phone) {
     }
   }
 

@@ -1019,6 +1019,10 @@ body {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 }
+.popup:target .reservation {
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 1;
+}
 .popup__link {
   cursor: pointer;
   transition: all 0.1s ease-in-out;
@@ -1169,16 +1173,19 @@ body {
 @media (max-width: 56.25em) {
   .reservation {
     width: 80%;
+    padding: 3.8rem;
+    gap: 1.8rem;
   }
 }
 @media (max-width: 37.5em) {
   .reservation {
-    padding: 3.8rem;
+    padding: 3.4rem;
+    gap: 1.5rem;
   }
 }
 @media (max-width: 29em) {
   .reservation {
-    padding: 3.5rem;
+    padding: 3.2rem;
   }
 }
 @media (max-width: 29em) {
@@ -1201,12 +1208,12 @@ body {
 }
 @media (max-width: 56.25em) {
   .reservation__header {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 }
 @media (max-width: 37.5em) {
   .reservation__header {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 @media (max-width: 29em) {
@@ -1216,14 +1223,14 @@ body {
 }
 @media (max-width: 24em) {
   .reservation__header {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 }
 .reservation__icon {
   width: 6rem;
   height: auto;
 }
-@media (max-width: 29em) {
+@media (max-width: 56.25em) {
   .reservation__icon {
     width: 4.5rem;
   }
@@ -1234,22 +1241,17 @@ body {
 }
 @media (max-width: 56.25em) {
   .reservation__text {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 }
 @media (max-width: 37.5em) {
   .reservation__text {
-    font-size: 1.6rem;
-  }
-}
-@media (max-width: 29em) {
-  .reservation__text {
-    font-size: 1.3rem;
-  }
-}
-@media (max-width: 29em) {
-  .reservation__text {
     font-size: 1.2rem;
+  }
+}
+@media (max-width: 29em) {
+  .reservation__text {
+    font-size: 1.15rem;
   }
 }
 .reservation__element {
