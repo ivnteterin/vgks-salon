@@ -153,7 +153,7 @@ const checkSize = function () {
   if (window.innerWidth > FOOTER_COLLAPSE_WIDTH) {
     expandFooterItems();
   }
-  if (window.innerWidth < 415 && window.innerWidth > 321) {
+  if (window.innerWidth < 415 && window.innerWidth >= 321) {
     document.querySelector('.copyright__address').innerHTML = '© VGKS, Lietuva';
     document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
       'Įsigykite „VIP“ kortelę tik už 5€ bet kuriame iš mūsų salonų ir sutaupykite 10% kiekvieno apsilankymo metu! :)';
@@ -192,3 +192,46 @@ window.addEventListener('scroll', function () {
     document.body.style.background = '#f4e4f0';
   }
 });
+
+const services = document.querySelectorAll('.services__item');
+const pricelists = document.querySelectorAll('.pricelist__item');
+
+function getOffset(el) {
+  const rect = el.getBoundingClientRect();
+  return {
+    left: rect.left + window.scrollX,
+    top: rect.top + window.scrollY,
+  };
+}
+const scrollToServices = function () {
+  window.scrollTo({
+    top:
+      getOffset(document.getElementById('services')).top -
+      parseInt(window.innerHeight * 0.1, 10),
+    left: 0,
+    behavior: 'smooth',
+  });
+};
+
+const scrollToPricelist = function (pricelist) {
+  window.scrollTo({
+    top: getOffset(pricelist).top - parseInt(window.innerHeight * 0.1, 10),
+    left: 0,
+    behavior: 'smooth',
+  });
+};
+
+services[0].addEventListener('click', function () {
+  if (pricelists[0].classList.contains('pricelist__hidden')) {
+    pricelists[0].classList.remove('pricelist__hidden');
+    if (window.innerWidth > 464) {
+      scrollToPricelist(pricelists[0]);
+    }
+  } else {
+    pricelists[0].classList.add('pricelist__hidden');
+  }
+});
+
+// services.forEach(service => {
+
+// })

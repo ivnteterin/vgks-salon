@@ -78,23 +78,23 @@
 
   &__left {
     padding: 5rem 0 5rem 5rem;
-    @include respond(tab-land) {
-      padding: 4rem 0 4rem 4rem;
-    }
-    @include respond(footer1030) {
-      padding: 3.8rem 0 3.8rem 3.8rem;
-    }
-    @include respond(phone) {
-      padding: 3rem 0 3rem 3rem;
-    }
+    // @include respond(tab-land) {
+    //   padding: 4rem 0 4rem 4rem;
+    // }
+    // @include respond(footer1030) {
+    //   padding: 3.8rem 0 3.8rem 3.8rem;
+    // }
+    // @include respond(phone) {
+    //   padding: 3rem 0 3rem 3rem;
+    // }
 
     @include respond(mid-phone) {
       padding: 3rem 3rem 2rem 3rem;
     }
 
-    @include respond(small-phone) {
-      padding: 2.5rem 2.5rem 1rem 2.5rem;
-    }
+    // @include respond(small-phone) {
+    //   padding: 2.5rem 2.5rem 1rem 2.5rem;
+    // }
   }
 
   &__img-1 {
@@ -112,50 +112,50 @@
     display: none;
     padding: 0 3rem 3rem 3rem;
 
-    @include respond(mid-phone) {
-      display: block;
-    }
-    @include respond(small-phone) {
-      padding: 0 3rem 3rem 3rem;
-    }
-    @include respond(little-phone) {
-      padding: 0 2.5rem 2.5rem 2.5rem;
-    }
+    // @include respond(mid-phone) {
+    //   display: block;
+    // }
+    // @include respond(small-phone) {
+    //   padding: 0 3rem 3rem 3rem;
+    // }
+    // @include respond(little-phone) {
+    //   padding: 0 2.5rem 2.5rem 2.5rem;
+    // }
   }
 
   &__h2 {
     font-size: 3.2rem;
     margin-bottom: 2rem;
 
-    @include respond(large-phone) {
-      font-size: 2.4rem;
-    }
-    @include respond(phone) {
-      font-size: 2rem;
-    }
-    @include respond(mid-phone) {
-      font-size: 1.7rem;
-    }
-    @include respond(small-phone) {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
+    // @include respond(large-phone) {
+    //   font-size: 2.4rem;
+    // }
+    // @include respond(phone) {
+    //   font-size: 2rem;
+    // }
+    // @include respond(mid-phone) {
+    //   font-size: 1.7rem;
+    // }
+    // @include respond(small-phone) {
+    //   font-size: 1.5rem;
+    //   margin-bottom: 1rem;
+    // }
   }
   &__h3 {
     font-size: 1.8rem;
     text-align: justify;
-    @include respond(large-phone) {
-      font-size: 1.4rem;
-    }
-    @include respond(phone) {
-      font-size: 1.2rem;
-    }
-    @include respond(mid-phone) {
-      //   font-size: 11rem;
-    }
-    @include respond(little-phone) {
-      font-size: 0.9rem;
-    }
+    // @include respond(large-phone) {
+    //   font-size: 1.4rem;
+    // }
+    // @include respond(phone) {
+    //   font-size: 1.2rem;
+    // }
+    // @include respond(mid-phone) {
+    //   //   font-size: 11rem;
+    // }
+    // @include respond(little-phone) {
+    //   font-size: 0.9rem;
+    // }
   }
 
   &__close {
@@ -170,17 +170,17 @@
       text-decoration: none;
       display: inline-block;
       z-index: 9999;
-      @include respond(large-phone) {
-        top: 1.5rem;
-        right: 1.5rem;
-        font-size: 3rem;
-      }
+      // @include respond(large-phone) {
+      //   top: 1.5rem;
+      //   right: 1.5rem;
+      //   font-size: 3rem;
+      // }
 
-      @include respond(phone) {
-        top: 1rem;
-        right: 1rem;
-        font-size: 3rem;
-      }
+      // @include respond(phone) {
+      //   top: 1rem;
+      //   right: 1rem;
+      //   font-size: 3rem;
+      // }
     }
     &:hover {
       //   color: $color-primary;
@@ -195,39 +195,39 @@
   position: absolute;
   flex-flow: column;
   align-items: flex-start;
-  padding: 7.5rem;
+  padding: 4.5rem;
   gap: 3rem;
 
   &--heading-2 {
     margin-bottom: 1rem;
   }
 
-  @include respond(tab-land) {
-    padding: 4rem;
-  }
+  // @include respond(tab-land) {
+  //   padding: 4rem;
+  // }
 
   @include respond(footer1030) {
     width: 80%;
-    padding: 3.8rem;
-    gap: 1.8rem;
+    // padding: 3.8rem;
+    // gap: 1.8rem;
   }
-  @include respond(phone) {
-    padding: 3rem;
-    gap: 1.4rem;
-  }
-  @include respond(mid-phone) {
-    padding: 3rem;
-  }
-  @include respond(mid-phone) {
-    // padding: 2.2rem;
-  }
-  @include respond(small-phone) {
-    padding: 2.5rem;
-    gap: 1.2rem;
-  }
-  @include respond(little-phone) {
-    padding: 2rem;
-  }
+  // @include respond(phone) {
+  //   padding: 3rem;
+  //   gap: 1.4rem;
+  // }
+  // @include respond(mid-phone) {
+  //   padding: 3rem;
+  // }
+  // @include respond(mid-phone) {
+  //   // padding: 2.2rem;
+  // }
+  // @include respond(small-phone) {
+  //   padding: 2.5rem;
+  //   gap: 1.2rem;
+  // }
+  // @include respond(little-phone) {
+  //   padding: 2rem;
+  // }
 
   &__item {
     display: flex;
@@ -237,29 +237,29 @@
 
   &__header {
     font-size: 2.8rem;
-    @include respond(tab-port) {
-      font-size: 1.8rem;
-    }
-    @include respond(phone) {
-      font-size: 1.6rem;
-    }
-    @include respond(mid-phone) {
-      font-size: 1.5rem;
-    }
-    @include respond(small-phone) {
-      font-size: 1.4rem;
-    }
+    // @include respond(tab-port) {
+    //   font-size: 1.8rem;
+    // }
+    // @include respond(phone) {
+    //   font-size: 1.6rem;
+    // }
+    // @include respond(mid-phone) {
+    //   font-size: 1.5rem;
+    // }
+    // @include respond(small-phone) {
+    //   font-size: 1.4rem;
+    // }
   }
 
   &__icon {
     width: 6rem;
     height: auto;
-    @include respond(tab-port) {
-      width: 3.6rem;
-    }
-    @include respond(mid-phone) {
-      width: 3.2rem;
-    }
+    // @include respond(tab-port) {
+    //   width: 3.6rem;
+    // }
+    // @include respond(mid-phone) {
+    //   width: 3.2rem;
+    // }
   }
 
   &__element {

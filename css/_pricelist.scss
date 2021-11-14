@@ -1,0 +1,87 @@
+.pricelist {
+  &__item {
+    height: 50rem;
+    // width: 80%;
+    margin: 0 auto;
+    grid-column: 1 / -1;
+    width: 80%;
+    font-family: 'Times New Roman', Times, serif;
+    transition: all 0.3s ease-in-out;
+
+    @include respond(services1100) {
+      width: 95%;
+    }
+    @include respond(tab-port) {
+      height: 45rem;
+    }
+    @include respond(phone) {
+      height: 34rem;
+    }
+
+    @include respond(mid-phone) {
+      height: 34rem;
+      grid-row: 2 / 3;
+    }
+    @include respond(small-phone) {
+      height: 30rem;
+    }
+
+    &__price {
+      height: 4rem;
+
+      @include respond(services1100) {
+        height: 3rem;
+      }
+
+      @include respond(phone) {
+        height: 2.5rem;
+        line-height: 1.1;
+      }
+
+      @include respond(little-phone) {
+        height: max-content;
+      }
+    }
+    &__description {
+      display: flex;
+      flex: 1;
+      height: 4rem;
+      @include respond(services1100) {
+        height: 3rem;
+      }
+
+      @include respond(phone) {
+        height: 2.5rem;
+        line-height: 1.1;
+      }
+      @include respond(little-phone) {
+        height: max-content;
+      }
+
+      &::after {
+        content: '';
+        border-bottom: dashed 1px rgba(0, 0, 0, 0.315);
+        flex: 1;
+        margin: 0 2rem;
+        padding: 0 1rem;
+
+        @include respond(services1100) {
+          margin: 0 1.5rem;
+        }
+        @include respond(phone) {
+          margin: 0 1rem;
+        }
+        @include respond(little-phone) {
+          display: none;
+        }
+      }
+    }
+  }
+  &__sub-item {
+    display: flex;
+    margin: 3rem 0;
+    @include respond(phone) {
+      margin: 2rem 0;
+    }
+  }
+}

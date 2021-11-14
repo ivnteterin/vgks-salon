@@ -244,6 +244,7 @@
 
   &__logo {
     display: block;
+
     margin: 0 auto;
     z-index: 2601;
 
@@ -259,7 +260,7 @@
     }
     @include respond(little-phone) {
       display: block;
-      margin: 0 auto;
+      margin: 1rem auto;
       position: relative;
       top: unset;
       right: unset;
@@ -298,7 +299,7 @@
   color: #fff;
   gap: 1rem;
 
-  @include respond(phone) {
+  @include respond(mid-phone) {
     padding: 0;
   }
   @include respond(little-phone) {

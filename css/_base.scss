@@ -20,6 +20,28 @@ $img-massage: '../img/vgks-massage.jpg';
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+  @include respond(tab-land) {
+    font-size: 60%;
+  }
+  @include respond(tab-port) {
+    font-size: 58%;
+  }
+  @include respond(phone) {
+    font-size: 56%;
+  }
+  @include respond(phone) {
+    font-size: 54%;
+  }
+  @include respond(mid-phone) {
+    font-size: 52%;
+  }
+  @include respond(small-phone) {
+    font-size: 50%;
+  }
+  @include respond(little-phone) {
+    font-size: 48%;
+  }
 }
 
 a {
