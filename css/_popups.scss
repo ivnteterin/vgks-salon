@@ -81,6 +81,9 @@
     @include respond(tab-land) {
       padding: 4rem 0 4rem 4rem;
     }
+    @include respond(footer1030) {
+      padding: 3.8rem 0 3.8rem 3.8rem;
+    }
     @include respond(phone) {
       padding: 3rem 0 3rem 3rem;
     }
@@ -195,13 +198,17 @@
   padding: 7.5rem;
   gap: 3rem;
 
+  @include respond(tab-land) {
+    padding: 4rem;
+  }
+
   @include respond(footer1030) {
     width: 80%;
     padding: 3.8rem;
     gap: 1.8rem;
   }
   @include respond(phone) {
-    padding: 3.4rem;
+    padding: 3rem;
     gap: 1.4rem;
   }
   @include respond(mid-phone) {
@@ -248,23 +255,6 @@
     }
     @include respond(mid-phone) {
       width: 3.2rem;
-    }
-  }
-
-  &__text {
-    text-align: left;
-    font-size: 1.7rem;
-    @include respond(tab-port) {
-      font-size: 1.5rem;
-    }
-    @include respond(phone) {
-      font-size: 1.2rem;
-    }
-    @include respond(mid-phone) {
-      font-size: 1.15rem;
-    }
-    @include respond(little-phone) {
-      font-size: 1rem;
     }
   }
 

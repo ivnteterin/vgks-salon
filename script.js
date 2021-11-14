@@ -114,6 +114,13 @@ function mouseOut() {
 const checkSize = function () {
   const buttons = document.querySelectorAll('.footer__item__header__button');
   const checkboxes = document.querySelectorAll('.footer__item__checkbox');
+  const collapseForClick = function () {
+    for (let i = 0; i < buttons.length; i++) {
+      if (buttons[i] !== button) {
+        checkboxes[i].checked = true;
+      }
+    }
+  };
 
   const collapseFooterItems = function () {
     checkboxes.forEach((item) => {
@@ -121,13 +128,7 @@ const checkSize = function () {
       item.disabled = false;
       buttons.forEach((button) => {
         button.style.cursor = 'pointer';
-        button.addEventListener('click', function () {
-          for (let i = 0; i < buttons.length; i++) {
-            if (buttons[i] !== button) {
-              checkboxes[i].checked = true;
-            }
-          }
-        });
+        button.addEventListener('click', collapseForClick);
       });
     });
   };
@@ -137,6 +138,7 @@ const checkSize = function () {
       item.disabled = true;
       buttons.forEach((button) => {
         button.style.cursor = 'unset';
+        button.removeEventListener('click', collapseForClick);
       });
     });
   };
@@ -146,25 +148,31 @@ const checkSize = function () {
     (window.innerWidth > prevWidth && window.innerWidth < FOOTER_COLLAPSE_WIDTH)
   ) {
     collapseFooterItems();
-    console.log('COLLAPSED!', window.innerWidth, window.innerHeight);
     prevWidth = window.innerWidth;
   }
   if (window.innerWidth > FOOTER_COLLAPSE_WIDTH) {
     expandFooterItems();
   }
-  if (window.innerWidth < 321) {
-    document.querySelector('.reservation__header').innerHTML = 'Skambinkite';
-    document.querySelector('.js--reservation__text').innerHTML = '';
-    document.querySelector('.copyright__address').innerHTML = '';
-  }
-  if (window.innerWidth < 415) {
+  if (window.innerWidth < 415 && window.innerWidth > 321) {
     document.querySelector('.copyright__address').innerHTML = '© VGKS, Lietuva';
+    document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
+      'Įsigykite „VIP“ kortelę tik už 5€ bet kuriame iš mūsų salonų ir sutaupykite 10% kiekvieno apsilankymo metu! :)';
+  } else if (window.innerWidth < 321 && window.innerWidth > 280) {
+    document.querySelector('.js-popup__reservation-heading-4').innerHTML =
+      'Skambinkite';
+    document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
+      'Įsigykite kortelę už 5€ bet kuriame iš mūsų salonų ir sutaupykite 10%!';
+    document.querySelector('.js-popup__reservation-basic-text').innerHTML = '';
+    document.querySelector('.copyright__address').innerHTML = '';
+  } else if (window.innerWidth < 280) {
+    document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
+      'Įsigykite kortelę už 5€ ir sutaupykite 10%!';
   } else {
     document.querySelector('.copyright__address').innerHTML =
       '© Visagino Grožio Kūrėjų Studija, Lietuva';
-    document.querySelector('.reservation__header').innerHTML =
+    document.querySelector('.js-popup__reservation-heading-4').innerHTML =
       'Skambinkite telefonu';
-    document.querySelector('.js--reservation__text').innerHTML =
+    document.querySelector('.js-popup__reservation-basic-text').innerHTML =
       'Rezervacija internetu netrukus paleisime';
   }
 };

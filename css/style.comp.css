@@ -27,8 +27,38 @@
 
 .heading-2 {
   line-height: 1.1;
+  font-size: 3.2rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
-  font-size: 4rem;
+  font-weight: 600;
+  z-index: 3000;
+}
+@media (max-width: 46.875em) {
+  .heading-2 {
+    font-size: 2.6rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .heading-2 {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 29em) {
+  .heading-2 {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 24em) {
+  .heading-2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.heading-3 {
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-size: 2rem;
   z-index: 3000;
   font-weight: 600;
   -webkit-backface-visibility: hidden;
@@ -41,33 +71,78 @@
   backface-visibility: hidden;
   transform: translateZ(0);
 }
-@media (max-width: 56.25em) {
-  .heading-2 {
-    font-size: 3rem;
-  }
+.heading-3--footer {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  color: white;
 }
-@media (max-width: 37.5em) {
-  .heading-2 {
-    font-size: 2.4rem;
-  }
-}
-@media (max-width: 24em) {
-  .heading-2 {
-    font-size: 2rem;
-  }
-}
-@media (max-width: 20em) {
-  .heading-2 {
-    font-size: 1.6rem;
+@media (max-width: 75em) {
+  .heading-3--footer {
+    font-size: 1.4rem;
   }
 }
 
-.heading-3 {
-  line-height: 1.1;
-  text-transform: uppercase;
-  font-size: 2rem;
-  z-index: 3000;
-  font-weight: 600;
+.heading-4 {
+  text-align: justify;
+  font-size: 1.9rem;
+}
+.heading-4--messenger {
+  text-align: left;
+}
+@media (max-width: 56.25em) {
+  .heading-4 {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .heading-4 {
+    font-size: 1.45rem;
+  }
+}
+@media (max-width: 29em) {
+  .heading-4 {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 24em) {
+  .heading-4 {
+    font-size: 1.35rem;
+  }
+}
+@media (max-width: 24em) {
+  .heading-4 {
+    font-size: 1.2rem;
+  }
+}
+
+.basic-text {
+  text-align: left;
+  font-size: 1.8rem;
+}
+@media (max-width: 75em) {
+  .basic-text {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .basic-text {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .basic-text {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 29em) {
+  .basic-text {
+    font-size: 1.15rem;
+  }
+}
+@media (max-width: 20em) {
+  .basic-text {
+    font-size: 1rem;
+  }
 }
 
 * {
@@ -813,16 +888,6 @@ body {
   gap: 1rem;
   z-index: 2000;
 }
-.footer__item__header--heading {
-  text-transform: uppercase;
-  font-size: 1.6rem;
-  color: white;
-}
-@media (max-width: 75em) {
-  .footer__item__header--heading {
-    font-size: 1.4rem;
-  }
-}
 .footer__item__header__button {
   cursor: pointer;
   display: flex;
@@ -1073,6 +1138,11 @@ body {
     padding: 4rem 0 4rem 4rem;
   }
 }
+@media (max-width: 64.375em) {
+  .popup__left {
+    padding: 3.8rem 0 3.8rem 3.8rem;
+  }
+}
 @media (max-width: 37.5em) {
   .popup__left {
     padding: 3rem 0 3rem 3rem;
@@ -1198,6 +1268,11 @@ body {
   padding: 7.5rem;
   gap: 3rem;
 }
+@media (max-width: 75em) {
+  .reservation {
+    padding: 4rem;
+  }
+}
 @media (max-width: 64.375em) {
   .reservation {
     width: 80%;
@@ -1207,7 +1282,7 @@ body {
 }
 @media (max-width: 37.5em) {
   .reservation {
-    padding: 3.4rem;
+    padding: 3rem;
     gap: 1.4rem;
   }
 }
@@ -1267,30 +1342,6 @@ body {
 @media (max-width: 29em) {
   .reservation__icon {
     width: 3.2rem;
-  }
-}
-.reservation__text {
-  text-align: left;
-  font-size: 1.7rem;
-}
-@media (max-width: 56.25em) {
-  .reservation__text {
-    font-size: 1.5rem;
-  }
-}
-@media (max-width: 37.5em) {
-  .reservation__text {
-    font-size: 1.2rem;
-  }
-}
-@media (max-width: 29em) {
-  .reservation__text {
-    font-size: 1.15rem;
-  }
-}
-@media (max-width: 20em) {
-  .reservation__text {
-    font-size: 1rem;
   }
 }
 .reservation__element {

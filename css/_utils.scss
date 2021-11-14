@@ -24,10 +24,43 @@
 
 .heading-2 {
   line-height: 1.1;
+  font-size: 3.2rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
-  font-size: 4rem;
+  font-weight: 600;
+  z-index: 3000;
+
+  @include respond(large-phone) {
+    font-size: 2.6rem;
+  }
+  @include respond(phone) {
+    font-size: 2.2rem;
+  }
+  @include respond(mid-phone) {
+    font-size: 1.7rem;
+  }
+  @include respond(small-phone) {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.heading-3 {
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-size: 2rem;
   z-index: 3000;
   font-weight: 600;
+
+  &--footer {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    color: rgb(255, 255, 255);
+
+    @include respond(tab-land) {
+      font-size: 1.4rem;
+    }
+  }
 
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -38,27 +71,51 @@
   -o-transform: translateZ(0);
   backface-visibility: hidden;
   transform: translateZ(0);
-  // text-shadow: 0rem 0rem 0.35rem rgba(10, 10, 10, 0.15);
+}
+
+.heading-4 {
+  text-align: justify;
+  font-size: 1.9rem;
+
+  &--messenger {
+    text-align: left;
+  }
 
   @include respond(tab-port) {
-    font-size: 3rem;
+    font-size: 1.6rem;
   }
   @include respond(phone) {
-    font-size: 2.4rem;
+    font-size: 1.45rem;
   }
-
+  @include respond(mid-phone) {
+    font-size: 1.4rem;
+  }
   @include respond(small-phone) {
-    font-size: 2rem;
+    font-size: 1.35rem;
   }
-  @include respond(little-phone) {
-    font-size: 1.6rem;
+  @include respond(small-phone) {
+    font-size: 1.2rem;
   }
 }
 
-.heading-3 {
-  line-height: 1.1;
-  text-transform: uppercase;
-  font-size: 2rem;
-  z-index: 3000;
-  font-weight: 600;
+.basic-text {
+  text-align: left;
+  font-size: 1.8rem;
+
+  @include respond(tab-land) {
+    font-size: 1.7rem;
+  }
+
+  @include respond(tab-port) {
+    font-size: 1.5rem;
+  }
+  @include respond(phone) {
+    font-size: 1.2rem;
+  }
+  @include respond(mid-phone) {
+    font-size: 1.15rem;
+  }
+  @include respond(little-phone) {
+    font-size: 1rem;
+  }
 }
