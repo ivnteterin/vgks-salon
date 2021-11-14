@@ -150,8 +150,6 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
 }
 @media (max-width: 75em) {
   html {

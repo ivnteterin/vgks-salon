@@ -2,32 +2,32 @@
 
 const FOOTER_COLLAPSE_WIDTH = 1030;
 
-$(document).ready(function () {
-  // Add smooth scrolling to all links with the class scroll
-  $('a.scroll').on('click', function (event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== '') {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+(function() {
+	scrollTo();
+})();
 
-      // Store hash
-      var hash = this.hash;
+function scrollTo() {
+	const links = document.querySelectorAll('.scroll');
+	links.forEach(each => (each.onclick = scrollAnchors));
+}
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate(
-        {
-          scrollTop: $(hash).offset().top,
-        },
-        0,
-        function () {
-          // Add hash (#) to URL when done scrolling (default click behavior)
-          window.location.hash = hash;
-        }
-      );
-    } // End if
-  });
-});
+function scrollAnchors(e, respond = null) {
+	const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
+	e.preventDefault();
+	var targetID = (respond) ? respond.getAttribute('href') : this.getAttribute('href');
+	const targetAnchor = document.querySelector(targetID);
+	if (!targetAnchor) return;
+	const originalTop = distanceToTop(targetAnchor);
+	window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' });
+	const checkIfDone = setInterval(function() {
+		const atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
+		if (distanceToTop(targetAnchor) === 0 || atBottom) {
+			targetAnchor.tabIndex = '-1';
+			targetAnchor.focus();
+			window.history.pushState('', '', targetID);
+			clearInterval(checkIfDone);
+		}
+	
 
 //SHOP STATUS (CLOSED / OPEN)
 
