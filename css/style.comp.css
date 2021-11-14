@@ -448,21 +448,27 @@ body {
   opacity: 1;
 }
 .sidebar__nav {
-  padding: 2.5rem;
+  padding: 2.5rem 2.5rem 9rem;
+  position: relative;
   background: #202020;
-  border-left: 5px solid #b579ac;
   border-radius: 0.5rem;
   z-index: 1500;
   -webkit-transition: all 0.4s cubic-bezier(0.43, -0.01, 0.465, 1);
   opacity: 0;
-  height: min-content;
+  height: max-content;
   width: max-content;
+  overflow: hidden;
   transform: rotateY(-90deg);
   transform-origin: right;
   box-shadow: rgba(15, 0, 43, 0.3) 0px 13px 27px -5px, rgba(15, 0, 43, 0.3) 0px 8px 16px -8px;
 }
 .sidebar__logo {
-  height: 1.6rem;
+  height: 5.5rem;
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  opacity: 0.2;
+  transform: translateX(-50%);
   width: auto;
   display: block;
   margin: 4rem auto 1rem;
@@ -521,6 +527,7 @@ body {
 }
 .sidebar__link {
   position: relative;
+  opacity: 0.8;
   top: 0;
   color: #fff;
   text-decoration: none;
@@ -1268,6 +1275,9 @@ body {
   padding: 7.5rem;
   gap: 3rem;
 }
+.reservation--heading-2 {
+  margin-bottom: 1rem;
+}
 @media (max-width: 75em) {
   .reservation {
     padding: 4rem;
@@ -1377,12 +1387,13 @@ body {
   box-shadow: 0px 10px 20px -15px rgba(0, 0, 0, 0.75);
 }
 .btn-sidebar {
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   color: #ccc;
+  opacity: 0.9;
 }
 .btn-sidebar:hover {
   color: #000;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   background-image: linear-gradient(-120deg, #ccc 50%, transparent 50%);
 }
 

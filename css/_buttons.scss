@@ -63,11 +63,12 @@
   }
 
   &-sidebar {
-    border: 2px solid #ccc;
+    border: 1px solid #ccc;
     color: #ccc;
+    opacity: 0.9;
     &:hover {
       color: #000;
-      border: 2px solid #ccc;
+      border: 1px solid #ccc;
       background-image: linear-gradient(-120deg, #ccc 50%, transparent 50%);
     }
   }

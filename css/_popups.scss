@@ -198,6 +198,10 @@
   padding: 7.5rem;
   gap: 3rem;
 
+  &--heading-2 {
+    margin-bottom: 1rem;
+  }
+
   @include respond(tab-land) {
     padding: 4rem;
   }
