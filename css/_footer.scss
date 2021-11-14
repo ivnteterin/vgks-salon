@@ -220,6 +220,7 @@
 
   &__logo-large {
     display: none;
+
     @include respond(footer1030) {
       display: block;
       position: absolute;

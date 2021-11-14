@@ -114,9 +114,9 @@ function mouseOut() {
 const checkSize = function () {
   const buttons = document.querySelectorAll('.footer__item__header__button');
   const checkboxes = document.querySelectorAll('.footer__item__checkbox');
-  const collapseForClick = function () {
+  const collapseForClick = function (btn) {
     for (let i = 0; i < buttons.length; i++) {
-      if (buttons[i] !== button) {
+      if (buttons[i] !== btn) {
         checkboxes[i].checked = true;
       }
     }
