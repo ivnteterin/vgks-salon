@@ -985,7 +985,7 @@ body {
   height: 17rem;
 }
 .footer__item:nth-of-type(3) > .footer__item__content {
-  height: 11rem;
+  height: 10rem;
 }
 .footer__item:nth-of-type(4) > .footer__item__content {
   height: 13rem;
