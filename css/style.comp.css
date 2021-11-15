@@ -693,14 +693,9 @@ body {
   }
 }
 .services__item:hover {
-  opacity: 1;
   cursor: pointer;
   -webkit-transition: all 0.2s;
   box-shadow: rgba(15, 0, 43, 0.3) 0px 13px 27px -5px, rgba(15, 0, 43, 0.3) 0px 8px 16px -8px;
-}
-.services__item:hover::after {
-  transform: scale(1.08);
-  filter: grayscale(0%);
 }
 @media (max-width: 56.25em) {
   .services__item:hover {
@@ -802,12 +797,21 @@ body {
 .service-desktop:hover {
   transform: scale(1.05);
 }
+.service-desktop:hover::after {
+  transform: scale(1.08);
+}
 
 .service-mobile-pressed {
   transform: scale(1.05);
 }
+.service-mobile-pressed::after {
+  transform: scale(1.08);
+}
 
 .service-mobile-released {
+  transform: scale(1);
+}
+.service-mobile-released::after {
   transform: scale(1);
 }
 

@@ -69,12 +69,6 @@
     }
 
     &:hover {
-      opacity: 1;
-      &::after {
-        transform: scale(1.08);
-        filter: grayscale(0%);
-      }
-
       cursor: pointer;
       -webkit-transition: all 0.2s;
       // transform: translateZ(0) scale(1);
@@ -227,11 +221,20 @@
 
 .service-desktop:hover {
   transform: scale(1.05);
+  &::after {
+    transform: scale(1.08);
+  }
 }
 .service-mobile-pressed {
   transform: scale(1.05);
+  &::after {
+    transform: scale(1.08);
+  }
 }
 
 .service-mobile-released {
   transform: scale(1);
+  &::after {
+    transform: scale(1);
+  }
 }
