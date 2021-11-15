@@ -564,7 +564,7 @@ body {
   font-weight: 600;
   transition: all 0.25s;
   opacity: 0;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   transition-delay: 0.25s;
   transform: translateX(-50%) translateY(2rem);
   z-index: 10;

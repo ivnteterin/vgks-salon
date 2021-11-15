@@ -162,7 +162,6 @@ function mouseOut() {
 
 const checkSize = function () {
   const buttons = document.querySelectorAll('.footer__item__header__button');
-  const checkboxes = document.querySelectorAll('.footer__item__checkbox');
 
   const collapseForClick = function (btn) {
     for (let i = 0; i < buttons.length; i++) {
@@ -253,6 +252,7 @@ window.addEventListener('scroll', function () {
 const pricelists = document.querySelectorAll('.pricelist__item');
 const servicesBlock = document.querySelector('.services');
 const footerBlock = document.querySelector('.footer');
+const checkboxes = document.querySelectorAll('.footer__item__checkbox');
 
 function getOffset(el) {
   const rect = el.getBoundingClientRect();
@@ -293,5 +293,6 @@ document.querySelectorAll('.js--scroll-to-services').forEach((el) => {
 document.querySelectorAll('.js--scroll-to-contacts').forEach((el) => {
   el.addEventListener('click', function () {
     scrollTo(footerBlock);
+    checkboxes[1].checked = false;
   });
 });
