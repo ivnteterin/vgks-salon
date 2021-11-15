@@ -265,10 +265,10 @@ const scrollToContacts = function () {
 };
 
 document
-  .getElementById('#js--scroll-to-services')
+  .getElementById('js--scroll-to-services')
   .addEventListener('click', scrollToServices);
 document
-  .getElementById('#js--scroll-to-contacts')
+  .getElementById('js--scroll-to-contacts')
   .addEventListener('click', scrollToContacts);
 
 const pricelists = document.querySelectorAll('.pricelist__item');
