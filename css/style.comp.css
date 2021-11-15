@@ -961,24 +961,19 @@ body {
   }
 }
 .footer__item:nth-of-type(1) > .footer__item__content {
-  height: 17rem;
-}
-@media (max-width: 20em) {
-  .footer__item:nth-of-type(1) > .footer__item__content {
-    height: 19rem;
-  }
+  height: 20rem;
 }
 .footer__item:nth-of-type(2) > .footer__item__content {
-  height: 16rem;
+  height: 17rem;
 }
 .footer__item:nth-of-type(3) > .footer__item__content {
-  height: 9rem;
+  height: 11rem;
 }
 .footer__item:nth-of-type(4) > .footer__item__content {
   height: 13rem;
 }
 .footer__item:nth-of-type(5) > .footer__item__content {
-  height: 19rem;
+  height: 20rem;
 }
 .footer__item {
   width: 25rem;
@@ -1002,13 +997,13 @@ body {
 }
 @media (max-width: 20em) {
   .footer__item {
-    width: 18rem;
+    width: 22rem;
   }
 }
 .footer__item__sub-item-info {
   display: flex;
   gap: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: white;
 }
 .footer__item__sub-item-info-mail {
@@ -1016,7 +1011,7 @@ body {
 }
 @media (max-width: 75em) {
   .footer__item__sub-item-info {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 .footer__item__checkbox {
@@ -1084,14 +1079,14 @@ body {
 }
 @media (max-width: 37.5em) {
   .footer__logo-large {
-    height: 17rem;
+    height: 18rem;
     top: -4rem;
     right: -2rem;
   }
 }
 @media (max-width: 29em) {
   .footer__logo-large {
-    height: 12.5rem;
+    height: 13.5rem;
   }
 }
 @media (max-width: 24em) {
@@ -1149,7 +1144,7 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   margin-top: 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #fff;
   gap: 1rem;
 }
@@ -1176,7 +1171,7 @@ body {
   .copyright__info {
     display: flex;
     flex-direction: column;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     align-items: center;
   }
 }
