@@ -13,25 +13,45 @@ const isTouchDevice = () => {
     navigator.msMaxTouchPoints > 0
   );
 };
-console.log(isTouchDevice());
+// console.log(isTouchDevice());
 
 const services = document.querySelectorAll('.services__item');
 
-const servicesOnResize = function () {
-  if (isTouchDevice()) {
-    services.forEach((service) => {
+if (isTouchDevice()) {
+  services.forEach((service) => {
+    service.addEventListener('touchstart', function () {
+      service.classList.remove('service-mobile-released');
       service.classList.remove('service-desktop');
-      service.classList.add('service-mobile');
+      service.classList.add('service-mobile-pressed');
     });
-  } else {
-    services.forEach((service) => {
-      service.classList.remove('service-mobile');
-      service.classList.add('service-desktop');
+    service.addEventListener('touchend', function () {
+      service.classList.remove('service-mobile-pressed');
+      service.classList.add('service-mobile-released');
     });
-  }
-};
+  });
+} else {
+  services.forEach((service) => {
+    service.classList.remove('service-mobile-pressed');
+    service.classList.remove('service-mobile-released');
+    service.classList.add('service-desktop');
+  });
+}
 
-servicesOnResize();
+// const servicesOnResize = function () {
+//   if (isTouchDevice()) {
+//     services.forEach((service) => {
+//       service.classList.remove('service-desktop');
+//       service.classList.add('service-mobile');
+//     });
+//   } else {
+//     services.forEach((service) => {
+//       service.classList.remove('service-mobile');
+//       service.classList.add('service-desktop');
+//     });
+//   }
+// };
+
+// servicesOnResize();
 
 function reqListener() {
   let week;
@@ -151,7 +171,7 @@ const checkSize = function () {
       }
     }
   };
-  servicesOnResize();
+  // servicesOnResize();
 
   const collapseFooterItems = function () {
     checkboxes.forEach((item) => {

@@ -688,7 +688,6 @@ body {
   opacity: 1;
   cursor: pointer;
   -webkit-transition: all 0.2s;
-  transform: translateZ(0) scale(1);
   box-shadow: rgba(15, 0, 43, 0.3) 0px 13px 27px -5px, rgba(15, 0, 43, 0.3) 0px 8px 16px -8px;
 }
 .services__item:hover::after {
@@ -796,8 +795,12 @@ body {
   transform: scale(1.05);
 }
 
-.service-mobile:active {
-  transform: scale(1.05);
+.service-mobile-pressed {
+  transform: scale(1.5);
+}
+
+.service-mobile-released {
+  transform: scale(1);
 }
 
 .pricelist__item {
