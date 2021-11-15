@@ -250,28 +250,8 @@ window.addEventListener('scroll', function () {
   }
 });
 
-const scrollToServices = function () {
-  window.scrollTo({
-    top:
-      getOffset(document.getElementById('services')).top -
-      parseInt(window.innerHeight * 0.1, 10),
-    left: 0,
-    behavior: 'smooth',
-  });
-};
-
-const scrollToContacts = function () {
-  window.scroll({ bottom: 0, left: 0, behavior: 'smooth' });
-};
-
-document
-  .getElementById('js--scroll-to-services')
-  .addEventListener('click', scrollToServices);
-document
-  .getElementById('js--scroll-to-contacts')
-  .addEventListener('click', scrollToContacts);
-
 const pricelists = document.querySelectorAll('.pricelist__item');
+const servicesBlock = document.querySelector('.services');
 
 function getOffset(el) {
   const rect = el.getBoundingClientRect();
@@ -280,6 +260,18 @@ function getOffset(el) {
     top: rect.top + window.scrollY,
   };
 }
+
+const scrollToServices = function () {
+  window.scrollTo({
+    top: getOffset(servicesBlock).top - parseInt(window.innerHeight * 0.1, 10),
+    left: 0,
+    behavior: 'smooth',
+  });
+};
+
+const scrollToContacts = function () {
+  window.scroll({ bottom: 0, left: 0, behavior: 'smooth' });
+};
 
 const scrollToPricelist = function (pricelist) {
   window.scrollTo({
@@ -303,3 +295,10 @@ services[0].addEventListener('click', function () {
 // services.forEach(service => {
 
 // })
+
+document
+  .getElementById('js--scroll-to-services')
+  .addEventListener('click', scrollToServices);
+document
+  .getElementById('js--scroll-to-contacts')
+  .addEventListener('click', scrollToContacts);
