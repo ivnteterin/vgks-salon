@@ -1029,7 +1029,7 @@ body {
 }
 @media (max-width: 20em) {
   .footer__item {
-    width: 22rem;
+    width: 25rem;
   }
 }
 .footer__item__sub-item-info {
