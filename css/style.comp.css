@@ -116,7 +116,7 @@
   align-items: center;
 }
 .heading-4--pricelist span {
-  line-height: 1;
+  line-height: 0.8;
   display: inline-block;
   vertical-align: middle;
 }
