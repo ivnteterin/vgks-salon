@@ -831,7 +831,7 @@ body {
 }
 .pricelist__item__description::after {
   content: "";
-  border-bottom: dashed 1px rgba(0, 0, 0, 0.315);
+  border-bottom: dotted 1px rgba(0, 0, 0, 0.315);
   flex: 1;
   align-self: flex-end;
   margin: 0 0 0 2rem;
