@@ -285,13 +285,13 @@ services[0].addEventListener('click', function () {
 
 // })
 
-document
-  .getElementById('js--scroll-to-services')
-  .addEventListener('click', function () {
+document.querySelectorAll('.js--scroll-to-services').forEach((el) => {
+  el.addEventListener('click', function () {
     scrollTo(servicesBlock);
   });
-document
-  .getElementById('js--scroll-to-contacts')
-  .addEventListener('click', function () {
+});
+document.querySelectorAll('.js--scroll-to-contacts').forEach((el) => {
+  el.addEventListener('click', function () {
     scrollTo(footerBlock);
   });
+});
