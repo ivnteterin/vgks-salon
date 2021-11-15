@@ -15,7 +15,7 @@
   }
   &__content {
     width: 70rem;
-    min-width: 18rem;
+    min-width: 200px;
 
     // height: 30rem;
     display: flex;
@@ -35,7 +35,7 @@
       width: 80%;
     }
 
-    @include respond(mid-phone) {
+    @include respond(phone) {
       flex-flow: column;
     }
   }
@@ -88,8 +88,8 @@
     //   padding: 3rem 0 3rem 3rem;
     // }
 
-    @include respond(mid-phone) {
-      padding: 3rem 3rem 2rem 3rem;
+    @include respond(phone) {
+      padding: 4.5rem 4.5rem 2rem;
     }
 
     // @include respond(small-phone) {
@@ -101,7 +101,7 @@
     width: 40%;
     height: 100%;
 
-    @include respond(mid-phone) {
+    @include respond(phone) {
       display: none;
     }
   }
@@ -110,11 +110,11 @@
     height: 100%;
     drop-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
     display: none;
-    padding: 0 3rem 3rem 3rem;
+    padding: 0 4.5rem 4.5rem;
 
-    // @include respond(mid-phone) {
-    //   display: block;
-    // }
+    @include respond(phone) {
+      display: block;
+    }
     // @include respond(small-phone) {
     //   padding: 0 3rem 3rem 3rem;
     // }

@@ -802,11 +802,6 @@ body {
     grid-row: 2/3;
   }
 }
-@media (max-width: 24em) {
-  .pricelist__item {
-    height: 30rem;
-  }
-}
 .pricelist__item__price {
   height: 4rem;
 }
@@ -838,7 +833,7 @@ body {
 }
 @media (max-width: 37.5em) {
   .pricelist__item__description {
-    height: 2.5rem;
+    height: 2rem;
     line-height: 1.1;
   }
 }
@@ -1235,7 +1230,7 @@ body {
 }
 .popup__content {
   width: 70rem;
-  min-width: 18rem;
+  min-width: 200px;
   display: flex;
   align-items: center;
   opacity: 0;
@@ -1254,7 +1249,7 @@ body {
     width: 80%;
   }
 }
-@media (max-width: 29em) {
+@media (max-width: 37.5em) {
   .popup__content {
     flex-flow: column;
   }
@@ -1287,16 +1282,16 @@ body {
 .popup__left {
   padding: 5rem 0 5rem 5rem;
 }
-@media (max-width: 29em) {
+@media (max-width: 37.5em) {
   .popup__left {
-    padding: 3rem 3rem 2rem 3rem;
+    padding: 4.5rem 4.5rem 2rem;
   }
 }
 .popup__img-1 {
   width: 40%;
   height: 100%;
 }
-@media (max-width: 29em) {
+@media (max-width: 37.5em) {
   .popup__img-1 {
     display: none;
   }
@@ -1306,7 +1301,12 @@ body {
   height: 100%;
   drop-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
   display: none;
-  padding: 0 3rem 3rem 3rem;
+  padding: 0 4.5rem 4.5rem;
+}
+@media (max-width: 37.5em) {
+  .popup__img-2 {
+    display: block;
+  }
 }
 .popup__h2 {
   font-size: 3.2rem;

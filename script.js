@@ -1,33 +1,8 @@
 'use strict';
 
+// kick off the polyfill!
+
 const FOOTER_COLLAPSE_WIDTH = 1030;
-
-(function() {
-	scrollTo();
-})();
-
-function scrollTo() {
-	const links = document.querySelectorAll('.scroll');
-	links.forEach(each => (each.onclick = scrollAnchors));
-}
-
-function scrollAnchors(e, respond = null) {
-	const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
-	e.preventDefault();
-	var targetID = (respond) ? respond.getAttribute('href') : this.getAttribute('href');
-	const targetAnchor = document.querySelector(targetID);
-	if (!targetAnchor) return;
-	const originalTop = distanceToTop(targetAnchor);
-	window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' });
-	const checkIfDone = setInterval(function() {
-		const atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
-		if (distanceToTop(targetAnchor) === 0 || atBottom) {
-			targetAnchor.tabIndex = '-1';
-			targetAnchor.focus();
-			window.history.pushState('', '', targetID);
-			clearInterval(checkIfDone);
-		}
-	
 
 //SHOP STATUS (CLOSED / OPEN)
 
@@ -141,6 +116,7 @@ function mouseOut() {
 const checkSize = function () {
   const buttons = document.querySelectorAll('.footer__item__header__button');
   const checkboxes = document.querySelectorAll('.footer__item__checkbox');
+
   const collapseForClick = function (btn) {
     for (let i = 0; i < buttons.length; i++) {
       if (buttons[i] !== btn) {
@@ -155,7 +131,9 @@ const checkSize = function () {
       item.disabled = false;
       buttons.forEach((button) => {
         button.style.cursor = 'pointer';
-        button.addEventListener('click', collapseForClick);
+        button.addEventListener('click', function () {
+          collapseForClick(button);
+        });
       });
     });
   };
@@ -180,15 +158,16 @@ const checkSize = function () {
   if (window.innerWidth > FOOTER_COLLAPSE_WIDTH) {
     expandFooterItems();
   }
-  if (window.innerWidth < 415 && window.innerWidth >= 321) {
+  if (window.innerWidth < 700 && window.innerWidth > 415) {
+    document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
+      'Įsigykite „VIP“ kortelę už 5€ viename iš mūsų salonų ir sutaupykite 10% kiekvieno vizito metu :)';
+  } else if (window.innerWidth < 415 && window.innerWidth >= 321) {
     document.querySelector('.copyright__address').innerHTML = '© VGKS, Lietuva';
     document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
-      'Įsigykite „VIP“ kortelę tik už 5€ bet kuriame iš mūsų salonų ir sutaupykite 10% kiekvieno apsilankymo metu! :)';
+      'Įsigykite kortelę už 5€ viename iš mūsų salonų ir sutaupykite 10%!';
   } else if (window.innerWidth < 321 && window.innerWidth > 280) {
     document.querySelector('.js-popup__reservation-heading-4').innerHTML =
       'Skambinkite';
-    document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
-      'Įsigykite kortelę už 5€ bet kuriame iš mūsų salonų ir sutaupykite 10%!';
     document.querySelector('.js-popup__reservation-basic-text').innerHTML = '';
     document.querySelector('.copyright__address').innerHTML = '';
   } else if (window.innerWidth < 280) {
@@ -201,6 +180,8 @@ const checkSize = function () {
       'Skambinkite telefonu';
     document.querySelector('.js-popup__reservation-basic-text').innerHTML =
       'Rezervacija internetu netrukus paleisime';
+    document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
+      'Įsigykite „VIP“ kortelę tik už 5€ bet kuriame iš mūsų salonų ir sutaupykite 10% kiekvieno apsilankymo metu! :)';
   }
 };
 let prevWidth = FOOTER_COLLAPSE_WIDTH;
