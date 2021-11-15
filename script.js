@@ -170,9 +170,10 @@ const checkSize = function () {
       'Skambinkite';
     document.querySelector('.js-popup__reservation-basic-text').innerHTML = '';
     document.querySelector('.copyright__address').innerHTML = '';
-  } else if (window.innerWidth < 280) {
+  } else if (window.innerWidth < 281) {
     document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
       'Įsigykite kortelę už 5€ ir sutaupykite 10%!';
+    document.querySelector('.copyright__address').innerHTML = '';
   } else {
     document.querySelector('.copyright__address').innerHTML =
       '© Visagino Grožio Kūrėjų Studija, Lietuva';

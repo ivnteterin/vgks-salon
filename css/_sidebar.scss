@@ -38,14 +38,14 @@
   }
 
   &__checkbox:checked + &__button &__icon::before {
-    width: 2rem;
+    width: 2.2rem;
     transform: rotate(45deg);
     background-color: #ffffff;
     top: 0;
   }
 
   &__checkbox:checked + &__button &__icon::after {
-    width: 2rem;
+    width: 2.2rem;
     top: 0;
     transform: rotate(-45deg);
     background-color: #ffffff;
@@ -70,7 +70,7 @@
   }
 
   &__nav {
-    padding: 2.5rem 2.5rem 9rem;
+    padding: 25px 25px 110px;
     position: relative;
     background: #202020;
     // border-left: 5px solid #b579ac;
@@ -114,7 +114,7 @@
   &__logo {
     height: 5.5rem;
     position: absolute;
-    bottom: -1.5rem;
+    bottom: -0.5rem;
     left: 50%;
     opacity: 0.2;
     transform: translateX(-50%);
@@ -129,7 +129,7 @@
     gap: 1rem;
     flex-direction: column;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 16px;
     margin-top: 2rem;
     position: relative;
   }
@@ -202,7 +202,7 @@
     &,
     &::before,
     &::after {
-      width: 2rem;
+      width: 2.2rem;
       height: 2px;
       // background-color: transparent;
       display: inline-block;
