@@ -711,9 +711,6 @@ body {
   transition: transform 0.8s cubic-bezier(0.34, 0.34, 0.34, 0.85);
   z-index: -1;
 }
-.services__item:hover {
-  transform: scale(1.05);
-}
 @media (max-width: 68.75em) {
   .services__item {
     height: 25rem;
@@ -793,6 +790,14 @@ body {
     background-position: 25% 55%;
     background-size: auto 250%;
   }
+}
+
+.service-desktop:hover {
+  transform: scale(1.05);
+}
+
+.service-mobile:active {
+  transform: scale(1.05);
 }
 
 .pricelist__item {

@@ -6,6 +6,33 @@ const FOOTER_COLLAPSE_WIDTH = 1030;
 
 //SHOP STATUS (CLOSED / OPEN)
 
+const isTouchDevice = () => {
+  return (
+    'ontouchstart' in window ||
+    navigator.maxTouchPoints > 0 ||
+    navigator.msMaxTouchPoints > 0
+  );
+};
+console.log(isTouchDevice());
+
+const services = document.querySelectorAll('.services__item');
+
+const servicesOnResize = function () {
+  if (isTouchDevice()) {
+    services.forEach((service) => {
+      service.classList.remove('service-desktop');
+      service.classList.add('service-mobile');
+    });
+  } else {
+    services.forEach((service) => {
+      service.classList.remove('service-mobile');
+      service.classList.add('service-desktop');
+    });
+  }
+};
+
+servicesOnResize();
+
 function reqListener() {
   let week;
   let hours;
@@ -124,6 +151,7 @@ const checkSize = function () {
       }
     }
   };
+  servicesOnResize();
 
   const collapseFooterItems = function () {
     checkboxes.forEach((item) => {
@@ -202,7 +230,6 @@ window.addEventListener('scroll', function () {
   }
 });
 
-const services = document.querySelectorAll('.services__item');
 const pricelists = document.querySelectorAll('.pricelist__item');
 
 function getOffset(el) {

@@ -99,10 +99,6 @@
       z-index: -1;
     }
 
-    &:hover {
-      transform: scale(1.05);
-    }
-
     @include respond(services1100) {
       height: 25rem;
     }
@@ -227,4 +223,11 @@
       background-size: auto 250%;
     }
   }
+}
+
+.service-desktop:hover {
+  transform: scale(1.05);
+}
+.service-mobile:active {
+  transform: scale(1.05);
 }
