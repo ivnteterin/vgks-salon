@@ -250,15 +250,6 @@ window.addEventListener('scroll', function () {
   }
 });
 
-const pricelists = document.querySelectorAll('.pricelist__item');
-
-function getOffset(el) {
-  const rect = el.getBoundingClientRect();
-  return {
-    left: rect.left + window.scrollX,
-    top: rect.top + window.scrollY,
-  };
-}
 const scrollToServices = function () {
   window.scrollTo({
     top:
@@ -268,6 +259,27 @@ const scrollToServices = function () {
     behavior: 'smooth',
   });
 };
+
+const scrollToContacts = function () {
+  window.scroll({ bottom: 0, left: 0, behavior: 'smooth' });
+};
+
+document
+  .getElementById('#js--scroll-to-services')
+  .addEventListener('click', scrollToServices);
+document
+  .getElementById('#js--scroll-to-contacts')
+  .addEventListener('click', scrollToContacts);
+
+const pricelists = document.querySelectorAll('.pricelist__item');
+
+function getOffset(el) {
+  const rect = el.getBoundingClientRect();
+  return {
+    left: rect.left + window.scrollX,
+    top: rect.top + window.scrollY,
+  };
+}
 
 const scrollToPricelist = function (pricelist) {
   window.scrollTo({
