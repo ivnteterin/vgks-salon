@@ -448,8 +448,8 @@ body {
   -webkit-perspective: 500px;
   perspective-origin: right;
   position: absolute;
-  top: -1rem;
-  right: -1rem;
+  top: -1.5rem;
+  right: -1.25rem;
   height: 0;
 }
 
