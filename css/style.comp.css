@@ -337,6 +337,9 @@ body {
 .navigation__logo-box {
   width: 100%;
 }
+.navigation__logo-link {
+  display: inline-block;
+}
 .navigation__list {
   white-space: nowrap;
 }

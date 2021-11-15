@@ -252,6 +252,7 @@ window.addEventListener('scroll', function () {
 
 const pricelists = document.querySelectorAll('.pricelist__item');
 const servicesBlock = document.querySelector('.services');
+const footerBlock = document.querySelector('.footer');
 
 function getOffset(el) {
   const rect = el.getBoundingClientRect();
@@ -261,21 +262,9 @@ function getOffset(el) {
   };
 }
 
-const scrollToServices = function () {
+const scrollTo = function (el) {
   window.scrollTo({
-    top: getOffset(servicesBlock).top - parseInt(window.innerHeight * 0.1, 10),
-    left: 0,
-    behavior: 'smooth',
-  });
-};
-
-const scrollToContacts = function () {
-  window.scroll({ bottom: 0, left: 0, behavior: 'smooth' });
-};
-
-const scrollToPricelist = function (pricelist) {
-  window.scrollTo({
-    top: getOffset(pricelist).top - parseInt(window.innerHeight * 0.1, 10),
+    top: getOffset(el).top - parseInt(window.innerHeight * 0.1, 10),
     left: 0,
     behavior: 'smooth',
   });
@@ -285,7 +274,7 @@ services[0].addEventListener('click', function () {
   if (pricelists[0].classList.contains('pricelist__hidden')) {
     pricelists[0].classList.remove('pricelist__hidden');
     if (window.innerWidth > 464) {
-      scrollToPricelist(pricelists[0]);
+      scrollTo(pricelists[0]);
     }
   } else {
     pricelists[0].classList.add('pricelist__hidden');
@@ -298,7 +287,11 @@ services[0].addEventListener('click', function () {
 
 document
   .getElementById('js--scroll-to-services')
-  .addEventListener('click', scrollToServices);
+  .addEventListener('click', function () {
+    scrollTo(servicesBlock);
+  });
 document
   .getElementById('js--scroll-to-contacts')
-  .addEventListener('click', scrollToContacts);
+  .addEventListener('click', function () {
+    scrollTo(footerBlock);
+  });
