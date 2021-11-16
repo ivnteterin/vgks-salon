@@ -38,7 +38,7 @@
 .heading-2--pricelist {
   padding-left: 1.5rem;
   letter-spacing: 3rem;
-  font-size: 5rem;
+  font-size: 4rem;
   text-align: center;
   margin: 2rem 0;
 }
@@ -130,7 +130,7 @@
   }
 }
 .heading-4--pricelist {
-  font-size: 3rem;
+  font-size: 2rem;
   height: max-content;
   align-items: center;
 }
@@ -841,7 +841,7 @@ body {
 }
 
 .pricelist__item {
-  max-width: 75rem;
+  max-width: 60rem;
   margin: 0 auto;
   grid-column: 1/-1;
   width: 80%;
@@ -892,7 +892,7 @@ body {
 }
 .pricelist__sub-item {
   display: flex;
-  margin: 3rem 0;
+  margin: 0 0 3rem 0;
   align-items: center;
   gap: 2rem;
 }
