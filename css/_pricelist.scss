@@ -1,29 +1,30 @@
 .pricelist {
   &__item {
-    height: 50rem;
     max-width: 75rem;
     margin: 0 auto;
     grid-column: 1 / -1;
     width: 80%;
+    display: flex;
+    flex-flow: column;
+    position: relative;
     font-family: 'Times New Roman', Times, serif;
     transition: all 0.3s ease-in-out;
+    overflow: hidden;
 
     @include respond(services1100) {
       width: 95%;
     }
     @include respond(tab-port) {
-      height: 45rem;
+      // height: 45rem;
     }
     @include respond(phone) {
-      height: 40rem;
+      // height: 40rem;
     }
 
     @include respond(mid-phone) {
-      height: 40rem;
       grid-row: 2 / 3;
     }
     @include respond(small-phone) {
-      // height: 30rem;
     }
 
     &__price {

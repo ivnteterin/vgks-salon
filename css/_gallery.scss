@@ -1,0 +1,39 @@
+.gallery {
+  &__item {
+    margin: 5rem auto;
+    width: 90%;
+    display: flex;
+
+    justify-content: center;
+    gap: 1rem;
+
+    @include respond(phone) {
+      flex-flow: column;
+    }
+  }
+  &__img {
+    img {
+      height: 100%;
+      width: 100%;
+
+      object-fit: cover;
+      filter: grayscale(0.1);
+    }
+  }
+}
+
+.aspect-ratio-1-1 {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect-ratio-2-1 {
+  aspect-ratio: 1.5 / 1;
+}
+
+.aspect-ratio-1-2 {
+  aspect-ratio: 1 / 1.5;
+
+  @include respond(phone) {
+    aspect-ratio: 1.5 / 1;
+  }
+}

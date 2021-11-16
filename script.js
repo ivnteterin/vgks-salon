@@ -236,9 +236,11 @@ let prevWidth = FOOTER_COLLAPSE_WIDTH;
 
 window.addEventListener('load', () => {
   checkSize();
+  getDymanicHeight(document.querySelector('.pricelist__item'));
 });
 window.addEventListener('resize', () => {
   checkSize();
+  getDymanicHeight(document.querySelector('.pricelist__item'));
 });
 
 window.addEventListener('scroll', function () {
@@ -273,6 +275,7 @@ const scrollTo = function (el) {
 services[0].addEventListener('click', function () {
   if (pricelists[0].classList.contains('pricelist__hidden')) {
     pricelists[0].classList.remove('pricelist__hidden');
+
     if (window.innerWidth > 464) {
       scrollTo(pricelists[0]);
     }
@@ -296,3 +299,28 @@ document.querySelectorAll('.js--scroll-to-contacts').forEach((el) => {
     checkboxes[1].checked = false;
   });
 });
+
+const getDymanicHeight = function (el) {
+  el.style.height = `${getHeightOfChildren(el)}px`;
+};
+
+// document.getElementById('nails').addEventListener('click', function () {
+
+//     getDymanicHeight(document.querySelector('.pricelist__item'));
+// });
+
+const getHeightOfChildren = function (el) {
+  const children = Array.from(el.children);
+  let heightOfParent = 0;
+
+  children.forEach((el) => {
+    const style = el.currentStyle || window.getComputedStyle(el);
+    heightOfParent =
+      heightOfParent +
+      el.getBoundingClientRect().height +
+      parseFloat(style.marginBottom) +
+      parseFloat(style.marginTop);
+  });
+
+  return heightOfParent;
+};
