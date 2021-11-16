@@ -211,7 +211,7 @@ const checkSize = function () {
   } else if (window.innerWidth < 415 && window.innerWidth >= 321) {
     document.querySelector('.copyright__address').innerHTML = '© VGKS, Lietuva';
     document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
-      'Įsigykite kortelę už 5€ viename iš mūsų salonų ir sutaupykite 10%!';
+      'Įsigykite kortelę tik už 5€ viename iš mūsų salonų ir sutaupykite 10%!';
   } else if (window.innerWidth < 321 && window.innerWidth > 280) {
     document.querySelector('.js-popup__reservation-heading-4').innerHTML =
       'Skambinkite';
@@ -219,7 +219,7 @@ const checkSize = function () {
     document.querySelector('.copyright__address').innerHTML = '';
   } else if (window.innerWidth < 281) {
     document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
-      'Įsigykite kortelę už 5€ ir sutaupykite 10%!';
+      'Įsigykite kortelę<br>tik už 5€ ir sutaupykite 10%!';
     document.querySelector('.copyright__address').innerHTML = '';
   } else {
     document.querySelector('.copyright__address').innerHTML =

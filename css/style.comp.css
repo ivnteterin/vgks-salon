@@ -119,6 +119,11 @@
   text-align: justify;
   font-size: 1.9rem;
 }
+@media (max-width: 20em) {
+  .heading-4 {
+    text-align: left;
+  }
+}
 .heading-4--pricelist {
   font-size: 3rem;
   height: max-content;
@@ -222,7 +227,7 @@ body {
   font-family: "Spartan", Times, serif;
   font-weight: 400;
   font-size: 1.6rem;
-  line-height: 1.7;
+  line-height: 1.4;
   color: #777;
   text-decoration: none;
   -webkit-backface-visibility: hidden;
@@ -413,7 +418,7 @@ body {
   margin-left: 1.2rem;
 }
 .work-days__hours-open, .work-days__hours-closed {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
 }
 .work-days__hours-open {
   color: #8cff8c;
@@ -989,7 +994,7 @@ body {
   }
 }
 .footer__item:nth-of-type(1) > .footer__item__content {
-  height: 21rem;
+  height: 20rem;
 }
 @media (max-width: 37.5em) {
   .footer__item:nth-of-type(1) > .footer__item__content {
@@ -1036,16 +1041,12 @@ body {
 .footer__item__sub-item-info {
   display: flex;
   gap: 1rem;
+  margin-left: 0.3rem;
   font-size: 1.6rem;
   color: white;
 }
 .footer__item__sub-item-info-mail {
   height: 2.5rem;
-}
-@media (max-width: 75em) {
-  .footer__item__sub-item-info {
-    font-size: 1.5rem;
-  }
 }
 .footer__item__checkbox {
   display: none;
@@ -1317,6 +1318,11 @@ body {
     padding: 4.5rem 4.5rem 2rem;
   }
 }
+@media (max-width: 20em) {
+  .popup__left {
+    padding: 3.5rem 3.5rem 2rem;
+  }
+}
 .popup__img-1 {
   width: 40%;
   height: 100%;
@@ -1358,8 +1364,8 @@ body {
   z-index: 9999;
 }
 .reservation {
-  width: 85rem;
-  min-width: 20rem;
+  width: 80rem;
+  min-width: 200px;
   display: flex;
   position: absolute;
   flex-flow: column;
@@ -1370,9 +1376,32 @@ body {
 .reservation--heading-2 {
   margin-bottom: 0rem;
 }
+@media (max-width: 20em) {
+  .reservation--heading-2 {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 46.875em) and (max-height: 45em) {
+  .reservation {
+    padding: 4rem;
+    gap: 2.5rem;
+  }
+}
+@media (max-width: 37.5em) and (max-height: 45em) {
+  .reservation {
+    padding: 3.5rem;
+    gap: 2rem;
+  }
+}
 @media (max-width: 64.375em) {
   .reservation {
     width: 80%;
+  }
+}
+@media (max-width: 24em) {
+  .reservation {
+    padding: 3rem;
+    gap: 2rem;
   }
 }
 .reservation__item {
@@ -1386,6 +1415,11 @@ body {
 .reservation__icon {
   width: 6rem;
   height: auto;
+}
+@media (max-width: 29em) {
+  .reservation__icon {
+    width: 5rem;
+  }
 }
 .reservation__element {
   top: 0;
@@ -1543,12 +1577,11 @@ body {
   grid-template-rows: 4rem;
   grid-template-columns: repeat(2, max-content);
   align-items: flex-end;
-  transform: scale(0.83);
+  transform: scale(0.95);
   transform-origin: left;
 }
 @media (max-width: 64.375em) {
   .footer__social {
-    transform: scale(0.9);
     transform-origin: left;
   }
 }

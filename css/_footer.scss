@@ -95,7 +95,7 @@
   }
 
   &__item:nth-of-type(1) > &__item__content {
-    height: 21rem;
+    height: 20rem;
     @include respond(phone) {
       height: 20rem;
     }
@@ -140,6 +140,7 @@
     &__sub-item-info {
       display: flex;
       gap: 1rem;
+      margin-left: 0.3rem;
       font-size: 1.6rem;
       color: white;
 
@@ -148,7 +149,7 @@
       }
 
       @include respond(tab-land) {
-        font-size: 1.5rem;
+        // font-size: 1.5rem;
       }
     }
 

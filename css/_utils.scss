@@ -114,6 +114,10 @@
   text-align: justify;
   font-size: 1.9rem;
 
+  @include respond(little-phone) {
+    text-align: left;
+  }
+
   &--pricelist {
     font-size: 3rem;
     height: max-content;

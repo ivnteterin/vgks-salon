@@ -92,6 +92,10 @@
       padding: 4.5rem 4.5rem 2rem;
     }
 
+    @include respond(little-phone) {
+      padding: 3.5rem 3.5rem 2rem;
+    }
+
     // @include respond(small-phone) {
     //   padding: 2.5rem 2.5rem 1rem 2.5rem;
     // }
@@ -189,8 +193,8 @@
 }
 
 .reservation {
-  width: 85rem;
-  min-width: 20rem;
+  width: 80rem;
+  min-width: 200px;
   display: flex;
   position: absolute;
   flex-flow: column;
@@ -200,34 +204,33 @@
 
   &--heading-2 {
     margin-bottom: 0rem;
+    @include respond(little-phone) {
+      font-size: 2.2rem;
+    }
   }
 
-  // @include respond(tab-land) {
-  //   padding: 4rem;
-  // }
+  @include respond(large-phone) {
+    @include h-respond(tab-port) {
+      padding: 4rem;
+      gap: 2.5rem;
+    }
+  }
+
+  @include respond(phone) {
+    @include h-respond(tab-port) {
+      padding: 3.5rem;
+      gap: 2rem;
+    }
+  }
 
   @include respond(footer1030) {
     width: 80%;
-    // padding: 3.8rem;
-    // gap: 1.8rem;
   }
-  // @include respond(phone) {
-  //   padding: 3rem;
-  //   gap: 1.4rem;
-  // }
-  // @include respond(mid-phone) {
-  //   padding: 3rem;
-  // }
-  // @include respond(mid-phone) {
-  //   // padding: 2.2rem;
-  // }
-  // @include respond(small-phone) {
-  //   padding: 2.5rem;
-  //   gap: 1.2rem;
-  // }
-  // @include respond(little-phone) {
-  //   padding: 2rem;
-  // }
+
+  @include respond(small-phone) {
+    padding: 3rem;
+    gap: 2rem;
+  }
 
   &__item {
     display: flex;
@@ -257,9 +260,9 @@
     // @include respond(tab-port) {
     //   width: 3.6rem;
     // }
-    // @include respond(mid-phone) {
-    //   width: 3.2rem;
-    // }
+    @include respond(mid-phone) {
+      width: 5rem;
+    }
   }
 
   &__element {
