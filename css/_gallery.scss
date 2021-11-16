@@ -1,12 +1,13 @@
 .gallery {
   &__item {
     margin: 5rem auto;
-    width: 80%;
+    width: 100%;
     display: flex;
     position: relative;
-    // transform: scale(1.2);
+    flex-wrap: wrap;
+    transform: scale(1.2);
 
-    justify-content: center;
+    justify-content: left;
     gap: 0.5rem;
 
     // &::after {
@@ -33,13 +34,15 @@
     // }
 
     @include respond(phone) {
-      flex-flow: column;
+      //   flex-flow: column;
       transform: scale(1);
     }
   }
   &__img {
+    flex-basis: calc(33% - 0.3rem);
     img {
       height: 100%;
+      aspect-ratio: 1 /1;
       width: 100%;
       object-fit: cover;
       filter: grayscale(0.1);
@@ -48,37 +51,48 @@
 }
 
 .aspect-ratio-1-1 {
-  aspect-ratio: 1 / 1;
+  //   aspect-ratio: 1 / 1;
 }
 
 .aspect-ratio-2-1 {
   //   aspect-ratio: 1.5 / 1;
-  aspect-ratio: 1 / 1;
+  //   aspect-ratio: 1 / 1;
 }
 
 .aspect-ratio-1-2 {
   //   aspect-ratio: 1 / 1.5;
-  aspect-ratio: 1 / 1;
+  //   aspect-ratio: 1 / 1;
 
   @include respond(phone) {
     // aspect-ratio: 1.5 / 1;
   }
 }
 
-.my-gallery {
-  width: 100%;
-  float: left;
-}
-.my-gallery img {
-  width: 100%;
-  height: auto;
-}
-.my-gallery figure {
-  display: block;
-  float: left;
-  margin: 0 5px 5px 0;
-  width: 150px;
-}
-.my-gallery figcaption {
-  display: none;
-}
+// .my-gallery {
+//   width: 100%;
+//   float: left;
+// }
+// .my-gallery img {
+//   width: 100%;
+//   height: auto;
+// }
+// .my-gallery figure {
+//   display: block;
+//   float: left;
+//   margin: 0 5px 5px 0;
+//   width: 150px;
+// }
+// .my-gallery figcaption {
+//   display: none;
+// }
+
+// #my-gallery {
+//   display: flex;
+//   // background-color: grey;
+//   > div {
+//     // border: 2px solid;
+//     // padding: 2em;
+//     // margin: 1em;
+//     height: 10rem;
+//   }
+// }

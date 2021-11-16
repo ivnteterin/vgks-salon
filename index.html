@@ -16,19 +16,38 @@
 
 
     <!-- Core CSS file -->
-<link rel="stylesheet" href="photoswipe.css"> 
+<!-- <link rel="stylesheet" href="photoswipe.css">  -->
 
 <!-- Skin CSS file (styling of UI - buttons, caption, etc.)
      In the folder of skin CSS file there are also:
      - .png and .svg icons sprite, 
      - preloader.gif (for browsers that do not support CSS animations) -->
-<link rel="stylesheet" href="default-skin/default-skin.css"> 
+<!-- <link rel="stylesheet" href="default-skin/default-skin.css">  -->
 
 <!-- Core JS file -->
-<script src="photoswipe.min.js"></script> 
+<!-- <script src="photoswipe.min.js"></script>  -->
 
 <!-- UI JS file -->
-<script src="photoswipe-ui-default.min.js"></script> 
+<!-- <script src="photoswipe-ui-default.min.js"></script>  -->
+
+<link rel="stylesheet" href="./photoswipe.css"/>
+<script type="module">
+  // Include Lightbox 
+  import PhotoSwipeLightbox from './photoswipe-lightbox.esm.js';
+  
+  const lightbox = new PhotoSwipeLightbox({
+    // may select multiple "galleries"
+    gallery: '#gallery--simple',
+  
+    // Elements within gallery (slides)
+    children: 'a',
+  
+    // Include PhotoSwipe Core
+    // and use absolute path (that starts with http(s)://)
+    pswpModule: '/photoswipe.esm.js'
+  });
+  lightbox.init();
+  </script>
 
 
 
@@ -238,18 +257,41 @@
                 <span>25</span>
               </div>
             </div>
-            <div class="gallery__item">
-              <div class="gallery__img aspect-ratio-2-1">
-                <img src="/img/gallery/nail-1.jpg" alt="Image of Manicure">
-              </div> 
-              <div class="gallery__img aspect-ratio-1-2">
-                <img src="/img/gallery/nail-2.jpg" alt="Image of Manicure">
-              </div> 
-              <div class="gallery__img aspect-ratio-1-2">
-                <img src="/img/gallery/nail-3.jpg" alt="Image of Manicure">
-              </div> 
-              <button id="btn">Open PhotoSwipe</button>
 
+    <!-- ///////////////////////// -->
+
+            <div id="my-gallery" class="gallery__item pswp-gallery">
+              
+              <div class="gallery__img aspect-ratio-2-1">
+                <a
+                  href="/img/gallery/nail-1.jpg"
+                  data-pswp-width="1877"
+                  data-pswp-height="1250"
+                  target="_blank"
+                  >
+                  <img src="/img/gallery/nail-1.jpg" alt="">
+                </a>
+              </div> 
+                <div class="gallery__img aspect-ratio-2-1">
+                  <a
+                    href="/img/gallery/nail-2.jpg"
+                    data-pswp-width="1000"
+                    data-pswp-height="1250"
+                    target="_blank"
+                    >
+                    <img src="/img/gallery/nail-2.jpg" alt="">
+                  </a>
+              </div> 
+              <div class="gallery__img aspect-ratio-1-2">
+                <a
+                  href="/img/gallery/nail-3.jpg"
+                  data-pswp-width="1000"
+                  data-pswp-height="1250"
+                  target="_blank"
+                  >
+                  <img src="/img/gallery/nail-3.jpg" alt="">
+                </a>
+              </div> 
             </div>
             
           </div>
@@ -448,7 +490,7 @@
             <div class="payment-icons">
                 <img src="img/icons/vgks-visa.png" alt="VISA" class="payment-icons__visa">
                 <img src="img/icons/vgks-mastercard.png" alt="MC" class="payment-icons__mastercard">
-                <img src="img/icons/vgks-paysera.png" alt="PAYSERA" class="payment-icons__paysera">
+                <img src="img/icons/vgks-paysera.svg" alt="PAYSERA" class="payment-icons__paysera">
             </div>
         </div>
       </footer>
@@ -500,83 +542,9 @@
           <a href="#" class="popup__close">&times;</a> 
       </div>
     </div>
-
-
-    <!-- ///////////////////////// -->
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. 
-         It's a separate element, as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
-        <div class="pswp__container">
-            <!-- don't modify these 3 pswp__item elements, data is added later on -->
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-          </div>
-
-        </div>
-
-</div>
-    <!-- ///////////////////////// -->
-
-
-
-
   </body>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script type="module" src="gallery.js"></script>
   <script type="text/javascript" src="smoothscroll.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
-  <script type="text/javascript" src="gallery.js"></script>
 </html>
