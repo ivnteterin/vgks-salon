@@ -95,9 +95,9 @@
   }
 
   &__item:nth-of-type(1) > &__item__content {
-    height: 20rem;
+    height: 19rem;
     @include respond(phone) {
-      height: 20rem;
+      // height: 18rem;
     }
   }
   &__item:nth-of-type(2) > &__item__content {
@@ -141,15 +141,15 @@
       display: flex;
       gap: 1rem;
       margin-left: 0.3rem;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       color: white;
 
       &-mail {
         height: 2.5rem;
       }
 
-      @include respond(tab-land) {
-        // font-size: 1.5rem;
+      @include respond(tab-port) {
+        font-size: 1.6rem;
       }
     }
 
@@ -286,6 +286,10 @@
   &__mastercard {
     height: 2.5rem;
   }
+
+  &__paysera {
+    height: 2rem;
+  }
 }
 
 .privacy-policy {
@@ -351,6 +355,9 @@
 }
 
 .work-days {
+  p {
+    margin-bottom: 1rem;
+  }
   &__footer {
     display: flex;
     flex-flow: column;

@@ -2,7 +2,7 @@
 
 // kick off the polyfill!
 
-const FOOTER_COLLAPSE_WIDTH = 1030;
+const FOOTER_COLLAPSE_WIDTH = 1031;
 
 //SHOP STATUS (CLOSED / OPEN)
 
