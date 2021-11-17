@@ -241,6 +241,7 @@ window.addEventListener('load', () => {
   });
   getDymanicHeight(document.querySelector('.pricelist__item'));
 });
+
 window.addEventListener('resize', () => {
   // setTimeout(function () {
   checkSize();

@@ -197,7 +197,7 @@ body {
   text-transform: uppercase;
   font-size: 1.7rem;
   white-space: nowrap;
-  color: white;
+  color: #fff;
 }
 @media (max-width: 75em) {
   .heading-3--footer {
