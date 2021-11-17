@@ -927,12 +927,22 @@ body {
 .gallery__img {
   flex-basis: calc(33% - 0.3rem);
 }
+@media (max-width: 29em) {
+  .gallery__img:last-of-type {
+    flex: 1;
+  }
+}
 .gallery__img img {
   height: 100%;
   aspect-ratio: 1/1;
   width: 100%;
   object-fit: cover;
   filter: grayscale(0.1);
+}
+@media (max-width: 29em) {
+  .gallery__img {
+    flex-basis: calc(50% - 0.3rem);
+  }
 }
 
 .footer {

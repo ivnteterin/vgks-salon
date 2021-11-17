@@ -42,12 +42,13 @@
 // openPhotoSwipe();
 
 // document.querySelector('.gallery__item').onclick = openPhotoSwipe;
-import PhotoSwipeLightbox from './photoswipe-lightbox.esm.js';
+import PhotoSwipeLightbox from 'https://raw.githack.com/dimsemenov/PhotoSwipe/a6f1ae128f0c8edc631d0d0ece730740ebb66808/dist/photoswipe-lightbox.esm.js';
 
 const options = {
   gallerySelector: '#my-gallery',
   childSelector: 'a',
-  pswpModule: './photoswipe.esm.js',
+  pswpModule:
+    'https://raw.githack.com/dimsemenov/PhotoSwipe/v5-beta/dist/photoswipe.esm.js',
 };
 
 const lightbox = new PhotoSwipeLightbox(options);

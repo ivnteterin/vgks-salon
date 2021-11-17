@@ -38,8 +38,15 @@
       transform: scale(1);
     }
   }
+
   &__img {
     flex-basis: calc(33% - 0.3rem);
+
+    &:last-of-type {
+      @include respond(mid-phone) {
+        flex: 1;
+      }
+    }
     img {
       height: 100%;
       aspect-ratio: 1 /1;
@@ -47,9 +54,12 @@
       object-fit: cover;
       filter: grayscale(0.1);
     }
+
+    @include respond(mid-phone) {
+      flex-basis: calc(50% - 0.3rem);
+    }
   }
 }
-
 .aspect-ratio-1-1 {
   //   aspect-ratio: 1 / 1;
 }
