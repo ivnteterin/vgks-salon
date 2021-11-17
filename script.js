@@ -235,14 +235,14 @@ const checkSize = function () {
 let prevWidth = FOOTER_COLLAPSE_WIDTH;
 
 window.addEventListener('load', () => {
-  getDymanicHeight(document.querySelector('.pricelist__item'));
   checkSize();
   document.querySelectorAll('.js--fix-height').forEach((el) => {
     aspectRatioFixforIOS(el);
   });
+  getDymanicHeight(document.querySelector('.pricelist__item'));
 });
 window.addEventListener('resize', () => {
-  getDymanicHeight(document.querySelector('.pricelist__item'));
+  // setTimeout(function () {
   checkSize();
   document.querySelectorAll('.js--fix-height').forEach((el) => {
     aspectRatioFixforIOS(el);
@@ -250,6 +250,8 @@ window.addEventListener('resize', () => {
   document.querySelectorAll('.gallery__img').forEach((el) => {
     aspectRatioFixforIOS(el);
   });
+  getDymanicHeight(document.querySelector('.pricelist__item'));
+  // }, 500);
 });
 
 window.addEventListener('scroll', function () {

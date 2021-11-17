@@ -4,6 +4,7 @@
     width: 100%;
     display: flex;
     margin-top: 3rem;
+    margin-bottom: 3rem;
     position: relative;
     flex-wrap: wrap;
     // transform: scale(1.2);
@@ -48,7 +49,7 @@
     &:last-of-type {
       @include respond(phone) {
         flex: 1;
-        margin-bottom: 5rem;
+        // margin-bottom: 5rem;
       }
     }
     img {
@@ -57,19 +58,6 @@
       height: 100%;
       object-fit: cover;
       filter: grayscale(0.15);
-    }
-
-    @supports not (aspect-ratio: 1 / 1) {
-      img::before {
-        float: left;
-        padding-top: 100%;
-        content: '';
-      }
-      img::after {
-        display: block;
-        content: '';
-        clear: both;
-      }
     }
 
     @include respond(phone) {

@@ -1,7 +1,29 @@
-$color-primary-pink: #f4e4f0;
-$color-primary-dark-pink: #ad7fc1;
+//MAIN COLOR VARIABLES//
+
+$vgks-color-primary-pink: #f4e4f0;
+$vgks-color-primary-dark-pink: #f2b8d9;
+$vgks-color-primary-white: #fff;
+$vgks-color-primary-black: #000;
+$vgks-color-primary-purple: #ad7fc1;
+
+$vgks-color-secondary-darker-pink: #e7a3ca;
+$vgks-color-secondary-dark-grey: #202020;
+$vgks-color-secondary-light-grey: #505050;
+$vgks-color-secondary-lighter-grey: rgb(212, 212, 212);
+
+$vgks-color-secondary-text: #777;
+
 $color-secondary: linear-gradient(to bottom right, #f6dbef 30%, #f2b8d9);
-$color-btn-main: linear-gradient(to bottom left, #bb84e6, #da7db3);
+// $color-btn-main: linear-gradient(to bottom left, #bb84e6, #da7db3);
+
+//NEON COLORS//
+$neon-green: #8cff8c;
+$neon-red: #f6e2e6;
+$neon-green-dark: #46ce47;
+$neon-red-dark: #ff0037;
+$neon-light: #fff;
+
+//SERVICE BLOCK IMAGES//
 
 $img-nails: '../img/vgks-nails.jpg';
 $img-hair: '../img/vgks-hair.jpg';
@@ -10,11 +32,23 @@ $img-photography: '../img/vgks-photography.jpg';
 $img-courses: '../img/vgks-courses.jpg';
 $img-massage: '../img/vgks-massage.jpg';
 
+//FONTS//
+$vgks-font-body: 'Spartan', Times, serif;
+$vgks-font-pricelist: 'Times New Roman', Times, serif;
+$vgks-font-misc: Arial, sans-serif;
+
+//WIDTHS
+
+$vgks-max-width: 1200px;
+$vgks-min-width: 200px;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -moz-appearance: none;
   -webkit-appearance: none;
+  appearance: none;
   border-radius: 0;
 }
 
@@ -51,16 +85,13 @@ a {
 }
 
 body {
-  background: $color-primary-pink;
-  font-family: 'Spartan', Times, serif;
+  background: $vgks-color-primary-pink;
+  font-family: $vgks-font-body;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.4;
-  color: #777;
+  color: $vgks-color-secondary-text;
   text-decoration: none;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
 }
 
 .container {
@@ -69,11 +100,9 @@ body {
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
   backface-visibility: hidden;
   transform: translateZ(0);
-  // min-width: 18rem;
-}
-
-.content {
-  // height: 40rem; //test
 }

@@ -2,13 +2,11 @@
   display: flex;
   position: relative;
   flex-flow: column;
-  // justify-content: space-between;
   grid-gap: 1rem;
-  // height: 100vh;
   height: calc(var(--vh, 1vh) * 110);
   background-image: linear-gradient(
       to bottom,
-      $color-primary-pink 40%,
+      $vgks-color-primary-pink 40%,
       #f4e4f080
     ),
     url(../img/main-image.jpg);
@@ -36,7 +34,6 @@
 .poster-container {
   flex: 1;
   position: relative;
-  // background: green;
 }
 
 .poster {
@@ -51,7 +48,6 @@
   @include respond(mid-phone) {
     transform: translate(-50%) scale(1.2);
     @include h-respond(phone) {
-      // transform: translate(-50%) scale(0.8);
     }
   }
 }
@@ -74,7 +70,6 @@
       width: auto;
 
       @include h-respond(phone) {
-        // width: 101%;
         height: 100%;
       }
     }
@@ -94,29 +89,20 @@
 }
 
 .navigation {
-  // min-height: 7.5rem;
   display: flex;
-  max-width: 120rem; //100% if screen is smaller than 1200px
+  max-width: $vgks-max-width; //100% if screen is smaller than 1200px
+  min-width: $vgks-min-width;
   width: 100%;
   padding: 0 2rem;
   margin: 2rem auto 0;
+  align-items: center;
+  color: rgb(141, 141, 141);
 
   z-index: 1000;
 
-  @include respond(tab-port) {
-    // transform: scale(1.6);
-    @include h-respond(phone) {
-      // margin: 2rem auto 0;
-    }
-  }
   @include respond(small-phone) {
     height: 4.2rem;
   }
-
-  // background: red; //test
-
-  align-items: center;
-  color: #000;
 
   &__logo-box {
     width: 100%;
@@ -128,7 +114,7 @@
 
   &__list {
     white-space: nowrap;
-    // float: right;
+    color: $vgks-color-primary-black;
     &--item {
       position: relative;
       display: inline;
@@ -158,7 +144,7 @@
         &:hover {
           padding-bottom: 0.2rem;
           cursor: pointer;
-          border-bottom: 2px solid #e7a3ca;
+          border-bottom: 2px solid $vgks-color-secondary-darker-pink;
         }
         &:hover + .coming-soon {
           transition: all 0.2s ease-out;
@@ -171,9 +157,7 @@
 }
 
 .coming-soon {
-  position: absolute;
-  top: 0;
-  left: 0;
+  @include posAbs;
   width: 124px;
   text-align: center;
   transition: all 0.2s;
@@ -202,13 +186,13 @@
     }
 
     &-open {
-      color: #8cff8c;
+      color: $neon-green;
       -webkit-animation: neonOpened 1.5s ease-in-out infinite alternate;
       -moz-animation: neonOpened 1.5s ease-in-out infinite alternate;
       animation: neonOpened 1.5s ease-in-out infinite alternate;
     }
     &-closed {
-      color: #f6e2e6;
+      color: $neon-red;
       -webkit-animation: neonClosed 1.5s ease-in-out infinite alternate;
       -moz-animation: neonClosed 1.5s ease-in-out infinite alternate;
       animation: neonClosed 1.5s ease-in-out infinite alternate;
@@ -218,21 +202,27 @@
 
 @-webkit-keyframes neonClosed {
   from {
-    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #ff0037,
-      0 0 7px #ff0037, 0 0 8px #ff0037, 0 0 10px #ff0037, 0 0 15px #ff0037;
+    text-shadow: 0 0 1px $neon-light, 0 0 2px $neon-light, 0 0 3px $neon-light,
+      0 0 4px $neon-red-dark, 0 0 7px $neon-red-dark, 0 0 8px $neon-red-dark,
+      0 0 10px $neon-red-dark, 0 0 15px $neon-red-dark;
   }
   to {
-    text-shadow: 0 0 0.5px #fff, 0 0 1px #fff, 0 0 1.5px #fff, 0 0 2px #ff0037,
-      0 0 3.5px #ff0037, 0 0 4px #ff0037, 0 0 5px #ff0037, 0 0 7.5px #ff0037;
+    text-shadow: 0 0 0.5px $neon-light, 0 0 1px $neon-light,
+      0 0 1.5px $neon-light, 0 0 2px $neon-red-dark, 0 0 3.5px $neon-red-dark,
+      0 0 4px $neon-red-dark, 0 0 5px $neon-red-dark, 0 0 7.5px $neon-red-dark;
   }
 }
 @-webkit-keyframes neonOpened {
   from {
-    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #46ce47,
-      0 0 7px #46ce47, 0 0 8px #46ce47, 0 0 10px #46ce47, 0 0 15px #46ce47;
+    text-shadow: 0 0 1px $neon-light, 0 0 2px $neon-light, 0 0 3px $neon-light,
+      0 0 4px $neon-green-dark, 0 0 7px $neon-green-dark,
+      0 0 8px $neon-green-dark, 0 0 10px $neon-green-dark,
+      0 0 15px $neon-green-dark;
   }
   to {
-    text-shadow: 0 0 0.5px #fff, 0 0 1px #fff, 0 0 1.5px #fff, 0 0 2px #46ce47,
-      0 0 3.5px #46ce47, 0 0 4px #46ce47, 0 0 5px #46ce47, 0 0 7.5px #46ce47;
+    text-shadow: 0 0 0.5px $neon-light, 0 0 1px $neon-light,
+      0 0 1.5px $neon-light, 0 0 2px $neon-green-dark,
+      0 0 3.5px $neon-green-dark, 0 0 4px $neon-green-dark,
+      0 0 5px $neon-green-dark, 0 0 7.5px $neon-green-dark;
   }
 }

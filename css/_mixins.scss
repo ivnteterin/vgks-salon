@@ -13,6 +13,17 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin relatCenter {
+  position: relative;
+  margin: 0 auto;
+}
+
+@mixin posAbs {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 // MEDIA QUERY MANAGER
 
 @mixin respond($breakpoint) {
