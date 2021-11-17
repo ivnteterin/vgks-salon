@@ -59,6 +59,19 @@
       filter: grayscale(0.15);
     }
 
+    @supports not (aspect-ratio: 1 / 1) {
+      img::before {
+        float: left;
+        padding-top: 100%;
+        content: '';
+      }
+      img::after {
+        display: block;
+        content: '';
+        clear: both;
+      }
+    }
+
     @include respond(phone) {
       flex-basis: calc(50% - 0.3rem);
     }
