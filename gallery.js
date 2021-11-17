@@ -42,7 +42,7 @@
 // openPhotoSwipe();
 
 // document.querySelector('.gallery__item').onclick = openPhotoSwipe;
-import PhotoSwipeLightbox from 'https://raw.githack.com/dimsemenov/PhotoSwipe/a6f1ae128f0c8edc631d0d0ece730740ebb66808/dist/photoswipe-lightbox.esm.js';
+import PhotoSwipeLightbox from './photoswipe-lightbox.esm.min.js';
 
 const options = {
   gallerySelector: '#my-gallery',
