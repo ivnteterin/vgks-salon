@@ -44,14 +44,14 @@
 }
 @media (max-width: 68.75em) {
   .heading-2--pricelist {
-    letter-spacing: 2.4rem;
-    font-size: 4rem;
+    letter-spacing: 2.5rem;
+    font-size: 3.2rem;
     margin: 1.5rem 0;
   }
 }
 @media (max-width: 37.5em) {
   .heading-2--pricelist {
-    letter-spacing: 1.8rem;
+    letter-spacing: 2.4rem;
     font-size: 3rem;
     margin: 1rem 0;
   }
@@ -70,7 +70,7 @@
 }
 @media (max-width: 46.875em) {
   .heading-2 {
-    font-size: 2.7rem;
+    font-size: 2.5rem;
   }
 }
 @media (max-width: 24em) {
@@ -141,12 +141,12 @@
 }
 @media (max-width: 68.75em) {
   .heading-4--pricelist {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 }
 @media (max-width: 37.5em) {
   .heading-4--pricelist {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 }
 .heading-4--messenger {
@@ -857,6 +857,11 @@ body {
     width: 95%;
   }
 }
+@media (max-width: 56.25em) {
+  .pricelist__item {
+    width: 90%;
+  }
+}
 @media (max-width: 29em) {
   .pricelist__item {
     grid-row: 2/3;
@@ -899,29 +904,30 @@ body {
 @media (max-width: 68.75em) {
   .pricelist__sub-item {
     gap: 1.5rem;
-    margin: 2.5rem 0;
+    margin: 0 0 2.5rem 0;
   }
 }
 @media (max-width: 37.5em) {
   .pricelist__sub-item {
     gap: 1rem;
-    margin: 2rem 0;
+    margin: 0 0 2rem 0;
   }
 }
 
 .gallery__item {
-  margin: 5rem auto;
   width: 100%;
   display: flex;
+  margin-top: 3rem;
   position: relative;
   flex-wrap: wrap;
   transform: scale(1.2);
   justify-content: left;
   gap: 0.5rem;
 }
-@media (max-width: 37.5em) {
+@media (max-width: 46.875em) {
   .gallery__item {
-    transform: scale(1);
+    transform: scale(0.9);
+    transform-origin: top;
   }
 }
 .gallery__img {
@@ -930,6 +936,7 @@ body {
 @media (max-width: 29em) {
   .gallery__img:last-of-type {
     flex: 1;
+    margin-bottom: 5rem;
   }
 }
 .gallery__img img {

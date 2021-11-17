@@ -15,7 +15,7 @@
       width: 95%;
     }
     @include respond(tab-port) {
-      // height: 45rem;
+      width: 90%;
     }
     @include respond(phone) {
       // height: 40rem;
@@ -63,12 +63,12 @@
 
     @include respond(services1100) {
       gap: 1.5rem;
-      margin: 2.5rem 0;
+      margin: 0 0 2.5rem 0;
     }
 
     @include respond(phone) {
       gap: 1rem;
-      margin: 2rem 0;
+      margin: 0 0 2rem 0;
     }
   }
 }

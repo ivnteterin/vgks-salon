@@ -1,8 +1,9 @@
 .gallery {
   &__item {
-    margin: 5rem auto;
+    // margin: 5rem auto;
     width: 100%;
     display: flex;
+    margin-top: 3rem;
     position: relative;
     flex-wrap: wrap;
     transform: scale(1.2);
@@ -33,9 +34,11 @@
     //   }
     // }
 
-    @include respond(phone) {
+    @include respond(large-phone) {
       //   flex-flow: column;
-      transform: scale(1);
+      transform: scale(0.9);
+      transform-origin: top;
+      //   margin-bottom: 5rem;
     }
   }
 
@@ -45,6 +48,7 @@
     &:last-of-type {
       @include respond(mid-phone) {
         flex: 1;
+        margin-bottom: 5rem;
       }
     }
     img {
