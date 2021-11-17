@@ -235,12 +235,18 @@ const checkSize = function () {
 let prevWidth = FOOTER_COLLAPSE_WIDTH;
 
 window.addEventListener('load', () => {
-  checkSize();
   getDymanicHeight(document.querySelector('.pricelist__item'));
+  checkSize();
+  // document.querySelectorAll('.js--fix-height').forEach((el) => {
+  //   // aspectRatioFixforIOS(el);
+  // });
 });
 window.addEventListener('resize', () => {
-  checkSize();
   getDymanicHeight(document.querySelector('.pricelist__item'));
+  checkSize();
+  // document.querySelectorAll('.js--fix-height').forEach((el) => {
+  //   // aspectRatioFixforIOS(el);
+  // });
 });
 
 window.addEventListener('scroll', function () {
@@ -324,3 +330,8 @@ const getHeightOfChildren = function (el) {
 
   return heightOfParent;
 };
+
+// const aspectRatioFixforIOS = function (el) {
+//   el.style.height = `${el.getBoundingClientRect().width}px`;
+//   el.style.height = `${el.getBoundingClientRect().width}px`;
+// };

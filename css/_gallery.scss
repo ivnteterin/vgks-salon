@@ -6,7 +6,7 @@
     margin-top: 3rem;
     position: relative;
     flex-wrap: wrap;
-    transform: scale(1.2);
+    // transform: scale(1.2);
 
     justify-content: left;
     gap: 0.5rem;
@@ -34,7 +34,7 @@
     //   }
     // }
 
-    @include respond(mid-phone) {
+    @include respond(phone) {
       //   flex-flow: column;
       transform: scale(0.9);
       transform-origin: top;
@@ -46,7 +46,7 @@
     flex-basis: calc(33% - 0.3rem);
 
     &:last-of-type {
-      @include respond(mid-phone) {
+      @include respond(phone) {
         flex: 1;
         margin-bottom: 5rem;
       }
@@ -59,7 +59,7 @@
       filter: grayscale(0.15);
     }
 
-    @include respond(mid-phone) {
+    @include respond(phone) {
       flex-basis: calc(50% - 0.3rem);
     }
   }

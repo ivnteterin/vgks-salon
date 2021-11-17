@@ -851,6 +851,7 @@ body {
   position: relative;
   font-family: "Times New Roman", Times, serif;
   transition: all 0.3s ease-in-out;
+  overflow: hidden;
 }
 @media (max-width: 68.75em) {
   .pricelist__item {
@@ -920,11 +921,10 @@ body {
   margin-top: 3rem;
   position: relative;
   flex-wrap: wrap;
-  transform: scale(1.2);
   justify-content: left;
   gap: 0.5rem;
 }
-@media (max-width: 29em) {
+@media (max-width: 37.5em) {
   .gallery__item {
     transform: scale(0.9);
     transform-origin: top;
@@ -933,7 +933,7 @@ body {
 .gallery__img {
   flex-basis: calc(33% - 0.3rem);
 }
-@media (max-width: 29em) {
+@media (max-width: 37.5em) {
   .gallery__img:last-of-type {
     flex: 1;
     margin-bottom: 5rem;
@@ -946,7 +946,7 @@ body {
   object-fit: cover;
   filter: grayscale(0.15);
 }
-@media (max-width: 29em) {
+@media (max-width: 37.5em) {
   .gallery__img {
     flex-basis: calc(50% - 0.3rem);
   }
