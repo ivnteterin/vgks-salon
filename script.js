@@ -239,11 +239,13 @@ window.addEventListener('load', () => {
   document.querySelectorAll('.js--fix-height').forEach((el) => {
     aspectRatioFixforIOS(el);
   });
+  document.querySelectorAll('.gallery__img').forEach((el) => {
+    aspectRatioFixforIOS(el);
+  });
   getDymanicHeight(document.querySelector('.pricelist__item'));
 });
 
 window.addEventListener('resize', () => {
-  // setTimeout(function () {
   checkSize();
   document.querySelectorAll('.js--fix-height').forEach((el) => {
     aspectRatioFixforIOS(el);
@@ -252,7 +254,6 @@ window.addEventListener('resize', () => {
     aspectRatioFixforIOS(el);
   });
   getDymanicHeight(document.querySelector('.pricelist__item'));
-  // }, 500);
 });
 
 window.addEventListener('scroll', function () {
@@ -296,10 +297,6 @@ services[0].addEventListener('click', function () {
   }
 });
 
-// services.forEach(service => {
-
-// })
-
 document.querySelectorAll('.js--scroll-to-services').forEach((el) => {
   el.addEventListener('click', function () {
     scrollTo(servicesBlock);
@@ -315,11 +312,6 @@ document.querySelectorAll('.js--scroll-to-contacts').forEach((el) => {
 const getDymanicHeight = function (el) {
   el.style.height = `${getHeightOfChildren(el)}px`;
 };
-
-// document.getElementById('nails').addEventListener('click', function () {
-
-//     getDymanicHeight(document.querySelector('.pricelist__item'));
-// });
 
 const getHeightOfChildren = function (el) {
   const children = Array.from(el.children);
