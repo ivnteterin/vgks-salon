@@ -237,16 +237,19 @@ let prevWidth = FOOTER_COLLAPSE_WIDTH;
 window.addEventListener('load', () => {
   getDymanicHeight(document.querySelector('.pricelist__item'));
   checkSize();
-  // document.querySelectorAll('.js--fix-height').forEach((el) => {
-  //   // aspectRatioFixforIOS(el);
-  // });
+  document.querySelectorAll('.js--fix-height').forEach((el) => {
+    aspectRatioFixforIOS(el);
+  });
 });
 window.addEventListener('resize', () => {
   getDymanicHeight(document.querySelector('.pricelist__item'));
   checkSize();
-  // document.querySelectorAll('.js--fix-height').forEach((el) => {
-  //   // aspectRatioFixforIOS(el);
-  // });
+  document.querySelectorAll('.js--fix-height').forEach((el) => {
+    aspectRatioFixforIOS(el);
+  });
+  document.querySelectorAll('.gallery__img').forEach((el) => {
+    aspectRatioFixforIOS(el);
+  });
 });
 
 window.addEventListener('scroll', function () {
@@ -331,7 +334,10 @@ const getHeightOfChildren = function (el) {
   return heightOfParent;
 };
 
-// const aspectRatioFixforIOS = function (el) {
-//   el.style.height = `${el.getBoundingClientRect().width}px`;
-//   el.style.height = `${el.getBoundingClientRect().width}px`;
-// };
+const aspectRatioFixforIOS = function (el) {
+  console.log(el.getBoundingClientRect().width);
+  el.style.height = `${el.getBoundingClientRect().width}px`;
+  console.log(el.getBoundingClientRect().height);
+  // el.style.height = `${el.getBoundingClientRect().width}px`;
+  // el.style.height = `${el.getBoundingClientRect().width}px`;
+};
