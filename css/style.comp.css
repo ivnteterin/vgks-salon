@@ -924,7 +924,7 @@ body {
   justify-content: left;
   gap: 0.5rem;
 }
-@media (max-width: 46.875em) {
+@media (max-width: 29em) {
   .gallery__item {
     transform: scale(0.9);
     transform-origin: top;
@@ -940,11 +940,11 @@ body {
   }
 }
 .gallery__img img {
-  height: 100%;
-  aspect-ratio: 1/1;
   width: 100%;
+  aspect-ratio: 1/1 !important;
+  height: 100%;
   object-fit: cover;
-  filter: grayscale(0.1);
+  filter: grayscale(0.15);
 }
 @media (max-width: 29em) {
   .gallery__img {
