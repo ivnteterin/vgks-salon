@@ -96,8 +96,8 @@
 
   &__item:nth-of-type(1) > &__item__content {
     height: 19rem;
-    @include respond(phone) {
-      // height: 18rem;
+    @include respond(mid-phone) {
+      height: 18.8rem;
     }
   }
   &__item:nth-of-type(2) > &__item__content {

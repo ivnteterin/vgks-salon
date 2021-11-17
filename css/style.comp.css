@@ -1037,6 +1037,11 @@ body {
 .footer__item:nth-of-type(1) > .footer__item__content {
   height: 19rem;
 }
+@media (max-width: 29em) {
+  .footer__item:nth-of-type(1) > .footer__item__content {
+    height: 18.8rem;
+  }
+}
 .footer__item:nth-of-type(2) > .footer__item__content {
   height: 17rem;
 }
