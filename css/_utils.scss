@@ -57,13 +57,20 @@
 
   @include respond(large-phone) {
     height: 8rem;
-    top: unset;
-    bottom: 12rem;
-    right: 1.5rem;
+    top: -10rem;
+    right: 1rem;
+    &:hover {
+      img {
+        transform: translateY(0.3rem);
+      }
+    }
+    img {
+      transform: translateY(1.5rem);
+    }
   }
 
-  @include respond(little-phone) {
-    top: 2rem;
-    bottom: unset;
+  @include respond(small-phone) {
+    top: -9.5rem;
+    right: 0.5rem;
   }
 }

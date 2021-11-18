@@ -55,15 +55,20 @@
 @media (max-width: 46.875em) {
   #back-to-top {
     height: 8rem;
-    top: unset;
-    bottom: 12rem;
-    right: 1.5rem;
+    top: -10rem;
+    right: 1rem;
+  }
+  #back-to-top:hover img {
+    transform: translateY(0.3rem);
+  }
+  #back-to-top img {
+    transform: translateY(1.5rem);
   }
 }
-@media (max-width: 20em) {
+@media (max-width: 24em) {
   #back-to-top {
-    top: 2rem;
-    bottom: unset;
+    top: -9.5rem;
+    right: 0.5rem;
   }
 }
 

@@ -209,6 +209,13 @@ const checkSize = function () {
     prevWidth = window.innerWidth;
     console.log('prevWidth to expand: ', prevWidth);
   }
+
+  if (window.innerWidth < 380) {
+    document.getElementById('back-to-top').style.display = 'none';
+  } else {
+    document.getElementById('back-to-top').style.display = 'block';
+  }
+
   if (window.innerWidth < 700 && window.innerWidth > 415) {
     document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
       'Įsigykite „VIP“ kortelę už 5€ viename iš mūsų salonų ir sutaupykite 10% kiekvieno vizito metu :)';
