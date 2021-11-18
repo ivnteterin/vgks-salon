@@ -489,8 +489,7 @@ body {
   display: none;
 }
 .sidebar__checkbox:checked ~ .wrapper .sidebar__nav {
-  transform: rotateY(0);
-  visibility: visible;
+  opacity: 1;
 }
 .sidebar__checkbox:checked + .sidebar__button {
   transition: background 0.3s 0.3s;
@@ -529,11 +528,10 @@ body {
   border-radius: 0.5rem;
   z-index: 1500;
   transition: all 0.4s cubic-bezier(0.43, -0.01, 0.465, 1);
-  visibility: hidden;
+  opacity: 0;
   height: max-content;
   width: max-content;
   overflow: hidden;
-  transform: rotateY(-90deg);
   transform-origin: right;
   box-shadow: rgba(15, 0, 43, 0.3) 0px 13px 27px -5px, rgba(15, 0, 43, 0.3) 0px 8px 16px -8px;
 }

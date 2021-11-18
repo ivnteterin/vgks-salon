@@ -28,9 +28,9 @@
   }
 
   &__checkbox:checked ~ .wrapper &__nav {
-    // opacity: 1;
-    transform: rotateY(0);
-    visibility: visible;
+    opacity: 1;
+    // transform: rotateY(0);
+    // visibility: visible;
   }
 
   &__checkbox:checked + &__button {
@@ -53,7 +53,6 @@
   }
 
   &__button {
-    // background-color: $color-secondary;
     position: relative;
 
     height: 4rem;
@@ -74,43 +73,21 @@
     padding: 2.5rem 2.5rem 11rem;
     position: relative;
     background: #202020;
-    // border-left: 5px solid #b579ac;
-    // width: max-content;
-    // position: fixed;
-    // top: 6.5rem;
-    // right: 2rem;
     border-radius: 0.5rem;
     z-index: 1500;
 
     transition: all 0.4s cubic-bezier(0.43, -0.01, 0.465, 1);
-    // opacity: 0;
-    visibility: hidden;
+    opacity: 0;
+    // visibility: hidden;
     height: max-content;
     width: max-content;
 
     overflow: hidden;
 
-    transform: rotateY(-90deg);
+    // transform: rotateY(-90deg);
     transform-origin: right;
     box-shadow: rgba(15, 0, 43, 0.3) 0px 13px 27px -5px,
       rgba(15, 0, 43, 0.3) 0px 8px 16px -8px;
-
-    // &::after {
-    //   content: '';
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   height: 100%;
-    //   width: 100%;
-    //   z-index: 2000;
-    //   // transform: rotate(69deg);polygon(100% 90%, 68% 100%, 100% 100%)
-    //   clip-path: polygon(100% 92%, 74% 100%, 100% 100%);
-    //   background-image: linear-gradient(
-    //     192deg,
-    //     rgba(224, 144, 255, 0.8) 50%,
-    //     rgba(250, 112, 215, 0.8)
-    //   );
-    // }
   }
 
   &__logo {
@@ -143,7 +120,6 @@
     text-align: center;
     padding: 1rem;
     width: 100%;
-    // margin-bottom: 3rem;
 
     position: relative;
 
