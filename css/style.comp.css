@@ -25,8 +25,48 @@
   border-radius: 0;
 }
 
+@media (-webkit-device-pixel-ratio: 1.5) {
+  html {
+    font-size: 41.625%;
+  }
+}
+@media (-webkit-device-pixel-ratio: 1.5) and (max-width: 75em) {
+  html {
+    font-size: 40%;
+  }
+}
+@media (-webkit-device-pixel-ratio: 1.5) and (max-width: 56.25em) {
+  html {
+    font-size: 38%;
+  }
+}
+@media (-webkit-device-pixel-ratio: 1.5) and (max-width: 37.5em) {
+  html {
+    font-size: 36%;
+  }
+}
+@media (-webkit-device-pixel-ratio: 1.5) and (max-width: 37.5em) {
+  html {
+    font-size: 34%;
+  }
+}
+@media (-webkit-device-pixel-ratio: 1.5) and (max-width: 29em) {
+  html {
+    font-size: 32%;
+  }
+}
+@media (-webkit-device-pixel-ratio: 1.5) and (max-width: 24em) {
+  html {
+    font-size: 30%;
+  }
+}
+@media (-webkit-device-pixel-ratio: 1.5) and (max-width: 20em) {
+  html {
+    font-size: 28%;
+  }
+}
 html {
-  font-size: 62.5%;
+  font-size: 62.3%;
   scroll-behavior: smooth;
 }
 @media (max-width: 75em) {
@@ -335,7 +375,7 @@ body {
 
 .navigation {
   display: flex;
-  max-width: 1200px;
+  max-width: 1200rem;
   min-width: 200px;
   width: 100%;
   padding: 0 2rem;
