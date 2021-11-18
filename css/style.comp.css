@@ -1021,7 +1021,6 @@ body {
   height: 2.2rem;
   text-decoration: none;
   color: #fff;
-  height: min-content;
   margin-left: 0.6rem;
 }
 .footer__info-mail:hover {
