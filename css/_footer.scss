@@ -231,7 +231,7 @@
     }
     @include respond(little-phone) {
       display: block;
-      margin: 0.5rem auto;
+      margin: 2rem auto 0.5rem;
       position: relative;
       top: unset;
       right: unset;

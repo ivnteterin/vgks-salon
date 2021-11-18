@@ -28,7 +28,7 @@
   padding: 1rem;
   width: 4rem;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 3000;
   overflow: hidden;
   transition: all 0.2s;
   &:hover {
@@ -58,13 +58,12 @@
   @include respond(large-phone) {
     height: 8rem;
     top: unset;
-    bottom: 3rem;
+    bottom: 12rem;
     right: 1.5rem;
   }
 
   @include respond(little-phone) {
-    top: 3rem;
+    top: 2rem;
     bottom: unset;
-    right: 1.5rem;
   }
 }

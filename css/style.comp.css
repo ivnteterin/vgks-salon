@@ -27,7 +27,7 @@
   padding: 1rem;
   width: 4rem;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 3000;
   overflow: hidden;
   transition: all 0.2s;
   position: absolute;
@@ -56,15 +56,14 @@
   #back-to-top {
     height: 8rem;
     top: unset;
-    bottom: 3rem;
+    bottom: 12rem;
     right: 1.5rem;
   }
 }
 @media (max-width: 20em) {
   #back-to-top {
-    top: 3rem;
+    top: 2rem;
     bottom: unset;
-    right: 1.5rem;
   }
 }
 
@@ -1227,7 +1226,7 @@ body {
 @media (max-width: 20em) {
   .footer__logo {
     display: block;
-    margin: 0.5rem auto;
+    margin: 2rem auto 0.5rem;
     position: relative;
     top: unset;
     right: unset;
