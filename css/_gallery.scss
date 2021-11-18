@@ -11,8 +11,8 @@
     gap: 0.5rem;
 
     @include respond(phone) {
-      transform: scale(0.9);
-      transform-origin: top;
+      //   transform: scale(0.9);
+      //   transform-origin: top;
     }
   }
 

@@ -929,12 +929,6 @@ body {
   justify-content: left;
   gap: 0.5rem;
 }
-@media (max-width: 37.5em) {
-  .gallery__item {
-    transform: scale(0.9);
-    transform-origin: top;
-  }
-}
 .gallery__img {
   flex-basis: calc(33% - 0.3rem);
   overflow: hidden;
