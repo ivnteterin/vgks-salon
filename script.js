@@ -2,7 +2,7 @@
 
 // kick off the polyfill!
 
-const FOOTER_COLLAPSE_WIDTH = 1031;
+const FOOTER_COLLAPSE_WIDTH = 1030;
 
 //SHOP STATUS (CLOSED / OPEN)
 
@@ -163,14 +163,15 @@ function mouseOut() {
 const checkSize = function () {
   const buttons = document.querySelectorAll('.footer__item__header__button');
 
-  const collapseForClick = function (btn) {
+  const collapseForClick = function (e) {
+    const btn = e.path[1];
     for (let i = 0; i < buttons.length; i++) {
+      if (checkboxes[i].disabled) return;
       if (buttons[i] !== btn) {
         checkboxes[i].checked = true;
       }
     }
   };
-  // servicesOnResize();
 
   const collapseFooterItems = function () {
     checkboxes.forEach((item) => {
@@ -178,9 +179,7 @@ const checkSize = function () {
       item.disabled = false;
       buttons.forEach((button) => {
         button.style.cursor = 'pointer';
-        button.addEventListener('click', function () {
-          collapseForClick(button);
-        });
+        button.addEventListener('click', collapseForClick);
       });
     });
   };
@@ -201,9 +200,12 @@ const checkSize = function () {
   ) {
     collapseFooterItems();
     prevWidth = window.innerWidth;
+    console.log('prevWidth to collapse: ', prevWidth);
   }
   if (window.innerWidth > FOOTER_COLLAPSE_WIDTH) {
     expandFooterItems();
+    prevWidth = window.innerWidth;
+    console.log('prevWidth to expand: ', prevWidth);
   }
   if (window.innerWidth < 700 && window.innerWidth > 415) {
     document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
@@ -242,7 +244,12 @@ window.addEventListener('load', () => {
   document.querySelectorAll('.gallery__img').forEach((el) => {
     aspectRatioFixforIOS(el);
   });
+
   getDymanicHeight(document.querySelector('.pricelist__item'));
+
+  document.querySelectorAll('.footer__item__content').forEach((el) => {
+    getDymanicHeight(el);
+  });
 });
 
 window.addEventListener('resize', () => {
@@ -254,6 +261,9 @@ window.addEventListener('resize', () => {
     aspectRatioFixforIOS(el);
   });
   getDymanicHeight(document.querySelector('.pricelist__item'));
+  document.querySelectorAll('.footer__item__content').forEach((el) => {
+    getDymanicHeight(el);
+  });
 });
 
 window.addEventListener('scroll', function () {
@@ -318,7 +328,7 @@ const getHeightOfChildren = function (el) {
   let heightOfParent = 0;
 
   children.forEach((el) => {
-    const style = el.currentStyle || window.getComputedStyle(el);
+    const style = window.getComputedStyle(el);
     heightOfParent =
       heightOfParent +
       el.getBoundingClientRect().height +
@@ -330,9 +340,5 @@ const getHeightOfChildren = function (el) {
 };
 
 const aspectRatioFixforIOS = function (el) {
-  console.log(el.getBoundingClientRect().width);
   el.style.height = `${el.getBoundingClientRect().width}px`;
-  console.log(el.getBoundingClientRect().height);
-  // el.style.height = `${el.getBoundingClientRect().width}px`;
-  // el.style.height = `${el.getBoundingClientRect().width}px`;
 };

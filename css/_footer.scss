@@ -45,7 +45,7 @@
     justify-content: space-between;
     @include respond(footer1030) {
       flex-direction: column;
-      gap: 0;
+      gap: 2rem;
     }
   }
 
@@ -81,30 +81,10 @@
     border: 2px solid $vgks-color-secondary-light-grey;
   }
 
-  &__item:nth-of-type(1) > &__item__content {
-    height: 19rem;
-    @include respond(mid-phone) {
-      height: 18.8rem;
-    }
-  }
-  &__item:nth-of-type(2) > &__item__content {
-    height: 17rem;
-  }
-  &__item:nth-of-type(3) > &__item__content {
-    height: 10rem;
-  }
-  &__item:nth-of-type(4) > &__item__content {
-    height: 13rem;
-  }
-  &__item:nth-of-type(5) > &__item__content {
-    height: 20rem;
-  }
-
   &__item {
     width: 25rem;
     display: flex;
     flex-flow: column;
-    gap: 2rem;
     overflow: hidden;
 
     &:nth-of-type(2) {
@@ -151,7 +131,8 @@
     &__checkbox:checked ~ &__content {
       transform: translateY(-105%);
       opacity: 0;
-      height: 0;
+      height: 0 !important;
+      margin-top: 0;
     }
 
     &__header {
@@ -188,8 +169,10 @@
     &__content {
       display: flex;
       flex-flow: column;
-      gap: 1rem;
       transition: all 0.3s ease-in-out;
+      & > * {
+        margin-top: 1rem;
+      }
     }
   }
 

@@ -7,7 +7,7 @@
     display: flex;
     flex-flow: column;
     position: relative;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: $vgks-font-pricelist;
     transition: all 0.3s ease-in-out;
     overflow: hidden;
 
@@ -17,18 +17,11 @@
     @include respond(tab-port) {
       width: 90%;
     }
-    @include respond(phone) {
-      // height: 40rem;
-    }
 
     @include respond(mid-phone) {
       grid-row: 2 / 3;
     }
-    @include respond(small-phone) {
-    }
 
-    &__price {
-    }
     &__description {
       display: flex;
       flex: 1;
