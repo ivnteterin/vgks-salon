@@ -28,8 +28,9 @@
   }
 
   &__checkbox:checked ~ .wrapper &__nav {
-    opacity: 1;
+    // opacity: 1;
     transform: rotateY(0);
+    visibility: visible;
   }
 
   &__checkbox:checked + &__button {
@@ -81,8 +82,9 @@
     border-radius: 0.5rem;
     z-index: 1500;
 
-    -webkit-transition: all 0.4s cubic-bezier(0.43, -0.01, 0.465, 1);
-    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.43, -0.01, 0.465, 1);
+    // opacity: 0;
+    visibility: hidden;
     height: max-content;
     width: max-content;
 
