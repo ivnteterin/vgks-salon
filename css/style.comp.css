@@ -932,6 +932,11 @@ body {
     grid-row: 2/3;
   }
 }
+@media (max-width: 37.5em) {
+  .pricelist__item {
+    width: 100%;
+  }
+}
 .pricelist__item__description {
   display: flex;
   flex: 1;

@@ -22,6 +22,10 @@
       grid-row: 2 / 3;
     }
 
+    @include respond(phone) {
+      width: 100%;
+    }
+
     &__description {
       display: flex;
       flex: 1;
