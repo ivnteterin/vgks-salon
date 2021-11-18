@@ -81,29 +81,29 @@ html {
 
 @media screen and (-webkit-min-device-pixel-ratio: 1.5) {
   html {
-    font-size: 41.625%;
+    font-size: 50%;
 
-    @include respond(tab-land) {
-      font-size: 40%;
-    }
-    @include respond(tab-port) {
-      font-size: 38%;
-    }
-    @include respond(phone) {
-      font-size: 36%;
-    }
-    @include respond(phone) {
-      font-size: 34%;
-    }
-    @include respond(mid-phone) {
-      font-size: 32%;
-    }
-    @include respond(small-phone) {
-      font-size: 30%;
-    }
-    @include respond(little-phone) {
-      font-size: 28%;
-    }
+    // @include respond(tab-land) {
+    //   font-size: 40%;
+    // }
+    // @include respond(tab-port) {
+    //   font-size: 38%;
+    // }
+    // @include respond(phone) {
+    //   font-size: 36%;
+    // }
+    // @include respond(phone) {
+    //   font-size: 34%;
+    // }
+    // @include respond(mid-phone) {
+    //   font-size: 32%;
+    // }
+    // @include respond(small-phone) {
+    //   font-size: 30%;
+    // }
+    // @include respond(little-phone) {
+    //   font-size: 28%;
+    // }
   }
 }
 

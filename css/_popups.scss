@@ -14,7 +14,7 @@
     opacity: 1;
   }
   &__content {
-    width: 70rem;
+    max-width: 70rem;
     min-width: 200px;
 
     display: flex;
@@ -121,7 +121,7 @@
 }
 
 .reservation {
-  width: 80rem;
+  max-width: 70rem;
   min-width: 200px;
   display: flex;
   position: absolute;
