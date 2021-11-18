@@ -1018,6 +1018,7 @@ body {
   height: 2.5rem;
 }
 .footer__info-mail {
+  height: 2.2rem;
   text-decoration: none;
   color: #fff;
   height: min-content;
