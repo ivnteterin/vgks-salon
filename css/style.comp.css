@@ -547,6 +547,8 @@ body {
 }
 .sidebar__checkbox:checked ~ .wrapper .sidebar__nav {
   opacity: 1;
+  transform: scale(1);
+  visibility: visible;
 }
 .sidebar__checkbox:checked + .sidebar__button {
   transition: background 0.3s 0.3s;
@@ -589,7 +591,8 @@ body {
   height: max-content;
   width: max-content;
   overflow: hidden;
-  transform-origin: right;
+  transform-origin: top right;
+  transform: scale(0);
   box-shadow: rgba(15, 0, 43, 0.3) 0px 13px 27px -5px, rgba(15, 0, 43, 0.3) 0px 8px 16px -8px;
 }
 .sidebar__logo {
