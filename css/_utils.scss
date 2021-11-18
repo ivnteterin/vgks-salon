@@ -2,6 +2,13 @@
   display: none;
 }
 
+.hidden-arrow {
+  opacity: 0;
+  transform: translateY(20rem);
+  position: fixed !important;
+  visibility: hidden;
+}
+
 .grey-out {
   filter: grayscale(0.8);
   opacity: 0.6;
@@ -14,4 +21,50 @@
   opacity: 0 !important;
   visibility: hidden !important;
   // transform: translateY(-120%);
+}
+
+#back-to-top {
+  height: 9rem;
+  padding: 1rem;
+  width: 4rem;
+  cursor: pointer;
+  z-index: 1000;
+  overflow: hidden;
+  transition: all 0.2s;
+  &:hover {
+    img {
+      transform: translateY(-1rem);
+    }
+  }
+  span {
+    display: block;
+    width: max-content;
+    position: absolute;
+    bottom: 1rem;
+    left: -1.5rem;
+    font-size: 1.3rem;
+    transform: rotate(90deg);
+  }
+  img {
+    transform-origin: bottom center;
+    transition: all 0.2s;
+    height: 140%;
+    float: right;
+  }
+  position: absolute;
+  top: -11rem;
+  right: 1.5rem;
+
+  @include respond(large-phone) {
+    height: 8rem;
+    top: unset;
+    bottom: 3rem;
+    right: 1.5rem;
+  }
+
+  @include respond(little-phone) {
+    top: 3rem;
+    bottom: unset;
+    right: 1.5rem;
+  }
 }

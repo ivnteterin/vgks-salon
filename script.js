@@ -281,6 +281,16 @@ const servicesBlock = document.querySelector('.services');
 const footerBlock = document.querySelector('.footer');
 const checkboxes = document.querySelectorAll('.footer__item__checkbox');
 
+function backToTop() {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  });
+}
+const goTopBtn = document.getElementById('back-to-top');
+goTopBtn.addEventListener('click', backToTop);
+
 function getOffset(el) {
   const rect = el.getBoundingClientRect();
   return {
