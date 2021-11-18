@@ -163,14 +163,17 @@ function mouseOut() {
 const checkSize = function () {
   const buttons = document.querySelectorAll('.footer__item__header__button');
 
-  const collapseForClick = function (e) {
-    const btn = e.path[1];
-    for (let i = 0; i < buttons.length; i++) {
-      if (checkboxes[i].disabled) return;
-      if (buttons[i] !== btn) {
-        checkboxes[i].checked = true;
-      }
-    }
+  const collapseOtherFooterItemsWhenClick = function (btn) {
+    const currCheckbox = document.getElementById(`${btn.htmlFor}`);
+    const collapseOtherFooterItems = function () {
+      if (currCheckbox.disabled) return;
+      checkboxes.forEach((checkbox) => {
+        if (checkbox !== currCheckbox) {
+          checkbox.checked = true;
+        }
+      });
+    };
+    btn.addEventListener('click', collapseOtherFooterItems);
   };
 
   const collapseFooterItems = function () {
@@ -179,7 +182,7 @@ const checkSize = function () {
       item.disabled = false;
       buttons.forEach((button) => {
         button.style.cursor = 'pointer';
-        button.addEventListener('click', collapseForClick);
+        collapseOtherFooterItemsWhenClick(button);
       });
     });
   };
@@ -189,7 +192,6 @@ const checkSize = function () {
       item.disabled = true;
       buttons.forEach((button) => {
         button.style.cursor = 'unset';
-        button.removeEventListener('click', collapseForClick);
       });
     });
   };
