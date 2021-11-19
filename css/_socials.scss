@@ -3,7 +3,62 @@ $block-color: rgb(10, 10, 10);
 $block-radius: 4rem;
 $stretch-speed: 0.2s;
 
-.footer__social {
+.social-wall {
+  &__social {
+    transform: scale(1) !important;
+    width: 10rem !important;
+    @include respond(tab-port) {
+      transform: scale(0.9) !important;
+      width: 7rem !important;
+    }
+
+    &-fb {
+      grid-column: 1 / 2;
+      &:hover {
+        .fb-container {
+          background: $block-color;
+        }
+      }
+    }
+
+    &-ig {
+      grid-column: 2 / 3;
+      &:hover {
+        .ig-container {
+          background: $block-color;
+        }
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-flow: column;
+
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem;
+    span {
+      color: $vgks-color-primary-dark-pink;
+      font-weight: 400;
+    }
+    h1 {
+      font-size: 3rem;
+      padding: 0;
+      @include respond(phone) {
+        font-size: 2.5rem;
+      }
+    }
+    @include respond(tab-port) {
+      gap: 1rem;
+      padding: 2rem;
+    }
+  }
+}
+
+.footer__social,
+.social-wall__social {
   //   grid-column: 1 / 3;
   width: 30rem;
   display: grid;

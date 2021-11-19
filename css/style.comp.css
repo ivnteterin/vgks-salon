@@ -699,18 +699,18 @@ body {
 .services {
   background-color: #fff;
   position: relative;
-  padding: 5rem 5rem 10rem;
+  padding: 5rem 5rem;
   min-width: 200px;
   z-index: -1;
 }
 @media (max-width: 68.75em) {
   .services {
-    padding: 5rem 5rem 7rem;
+    padding: 5rem 5rem;
   }
 }
 @media (max-width: 24em) {
   .services {
-    padding: 3rem 3rem 5rem;
+    padding: 3rem 3rem;
   }
 }
 .services__content {
@@ -906,7 +906,7 @@ body {
 }
 
 .pricelist__item {
-  max-width: 60rem;
+  max-width: 85rem;
   margin: 0 auto;
   grid-column: 1/-1;
   width: 80%;
@@ -1659,7 +1659,58 @@ body {
   animation-timing-function: linear;
 }
 
-.footer__social {
+.social-wall__social {
+  transform: scale(1) !important;
+  width: 10rem !important;
+}
+@media (max-width: 56.25em) {
+  .social-wall__social {
+    transform: scale(0.9) !important;
+    width: 7rem !important;
+  }
+}
+.social-wall__social-fb {
+  grid-column: 1/2;
+}
+.social-wall__social-fb:hover .fb-container {
+  background: #0a0a0a;
+}
+.social-wall__social-ig {
+  grid-column: 2/3;
+}
+.social-wall__social-ig:hover .ig-container {
+  background: #0a0a0a;
+}
+.social-wall__header {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem;
+}
+.social-wall__header span {
+  color: #f2b8d9;
+  font-weight: 400;
+}
+.social-wall__header h1 {
+  font-size: 3rem;
+  padding: 0;
+}
+@media (max-width: 37.5em) {
+  .social-wall__header h1 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .social-wall__header {
+    gap: 1rem;
+    padding: 2rem;
+  }
+}
+
+.footer__social,
+.social-wall__social {
   width: 30rem;
   display: grid;
   grid-template-rows: 4rem;
@@ -1669,16 +1720,20 @@ body {
   transform-origin: left;
 }
 @media (max-width: 75em) {
-  .footer__social {
+  .footer__social,
+.social-wall__social {
     transform: scale(0.82);
   }
 }
 @media (max-width: 64.375em) {
-  .footer__social {
+  .footer__social,
+.social-wall__social {
     transform: scale(1);
   }
 }
-.footer__social-fb, .footer__social-ig {
+.footer__social-fb, .footer__social-ig,
+.social-wall__social-fb,
+.social-wall__social-ig {
   align-items: center;
   display: grid;
   height: 100%;
@@ -1686,21 +1741,27 @@ body {
   background: none;
   transition: width 0.2s;
 }
-.footer__social-fb:hover, .footer__social-ig:hover {
+.footer__social-fb:hover, .footer__social-ig:hover,
+.social-wall__social-fb:hover,
+.social-wall__social-ig:hover {
   transform-origin: 0;
   width: 13rem;
 }
-.footer__social-fb {
+.footer__social-fb,
+.social-wall__social-fb {
   grid-column: 1/2;
 }
-.footer__social-fb:hover .fb-container {
+.footer__social-fb:hover .fb-container,
+.social-wall__social-fb:hover .fb-container {
   background: #0a0a0a;
   width: 12rem;
 }
-.footer__social-ig {
+.footer__social-ig,
+.social-wall__social-ig {
   grid-column: 2/3;
 }
-.footer__social-ig:hover .ig-container {
+.footer__social-ig:hover .ig-container,
+.social-wall__social-ig:hover .ig-container {
   width: 12.5rem;
   background: #0a0a0a;
 }
