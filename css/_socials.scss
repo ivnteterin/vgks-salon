@@ -6,10 +6,9 @@ $stretch-speed: 0.2s;
 .social-wall {
   &__social {
     transform: scale(1) !important;
-    width: 10rem !important;
+    width: 7rem !important;
     @include respond(tab-port) {
       transform: scale(0.9) !important;
-      width: 7rem !important;
     }
 
     &-fb {
