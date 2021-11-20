@@ -141,23 +141,38 @@ window.addEventListener('resize', () => {
 
 //Social links animation
 
-document.getElementById('social-ig').addEventListener('mouseover', mouseOver);
-document.getElementById('social-ig').addEventListener('mouseout', mouseOut);
+// document.getElementById('social-ig').addEventListener('mouseover', mouseOver);
+// document.getElementById('social-ig').addEventListener('mouseout', mouseOut);
+
+const socialIconsInst = [
+  document.getElementById('social-ig-1'), //1 is for footer
+  document.getElementById('social-ig-2'), //2 is for social media section
+];
+
+const socialsIconsFbWidthFix = function (elems) {
+  elems.forEach((el) => {
+    el.addEventListener('mouseover', mouseOver);
+    el.addEventListener('mouseout', mouseOut);
+  });
+};
 
 function mouseOver() {
-  const FBblock = document.getElementById('social-fb');
-  const FBInnerBlock = document.getElementById('social-fb-c');
+  const id = this.id.slice(-1);
+  const FBblock = document.getElementById(`social-fb-${id}`);
+  const FBInnerBlock = document.getElementById(`social-fb-c-${id}`);
   FBblock.style.width = getComputedStyle(FBblock).width;
   FBInnerBlock.style.width = getComputedStyle(FBInnerBlock).width;
 }
 
 function mouseOut() {
-  const FBblock = document.getElementById('social-fb');
-  const FBInnerBlock = document.getElementById('social-fb-c');
+  const id = this.id.slice(-1);
+  const FBblock = document.getElementById(`social-fb-${id}`);
+  const FBInnerBlock = document.getElementById(`social-fb-c-${id}`);
   FBblock.style.width = null;
   FBInnerBlock.style.width = null;
 }
 
+socialsIconsFbWidthFix(socialIconsInst);
 //FOOTER ANIMATIONS (COLLAPSE FOR SMALL SCREEN)
 
 const checkSize = function () {
@@ -254,7 +269,9 @@ window.addEventListener('load', () => {
     aspectRatioFixforIOS(el);
   });
 
-  getDymanicHeight(document.querySelector('.pricelist__item'));
+  pricelists.forEach((pricelist) => {
+    getDymanicHeight(pricelist);
+  });
 
   document.querySelectorAll('.footer__item__content').forEach((el) => {
     getDymanicHeight(el);
@@ -263,17 +280,25 @@ window.addEventListener('load', () => {
 
 window.addEventListener('resize', () => {
   checkSize();
-  document.querySelectorAll('.js--fix-height').forEach((el) => {
-    aspectRatioFixforIOS(el);
-  });
-  document.querySelectorAll('.gallery__img').forEach((el) => {
-    aspectRatioFixforIOS(el);
-  });
-  getDymanicHeight(document.querySelector('.pricelist__item'));
+  setTimeout(() => {
+    document.querySelectorAll('.js--fix-height').forEach((el) => {
+      aspectRatioFixforIOS(el);
+    });
+    document.querySelectorAll('.gallery__img').forEach((el) => {
+      aspectRatioFixforIOS(el);
+    });
+    pricelists.forEach((pricelist) => {
+      getDymanicHeight(pricelist);
+    });
+  }, 500);
+
   document.querySelectorAll('.footer__item__content').forEach((el) => {
     getDymanicHeight(el);
   });
+  console.log('CHANGE!');
 });
+
+window.addEventListener('visibilitychange', () => {});
 
 window.addEventListener('scroll', function () {
   if (window.pageYOffset > 450) {
@@ -314,17 +339,24 @@ const scrollTo = function (el) {
   });
 };
 
-services[0].addEventListener('click', function () {
-  if (pricelists[0].classList.contains('pricelist__hidden')) {
-    pricelists[0].classList.remove('pricelist__hidden');
+for (let i = 0; i < services.length; i++) {
+  services[i].addEventListener('click', function () {
+    if (pricelists[i].classList.contains('pricelist__hidden')) {
+      pricelists.forEach((pricelist) => {
+        pricelist.classList.add('pricelist__hidden');
+      });
+      pricelists[i].classList.remove('pricelist__hidden');
 
-    if (window.innerWidth > 464) {
-      scrollTo(pricelists[0]);
+      setTimeout(() => {
+        if (window.innerWidth > 464) {
+          scrollTo(pricelists[i]);
+        }
+      }, 500);
+    } else {
+      pricelists[i].classList.add('pricelist__hidden');
     }
-  } else {
-    pricelists[0].classList.add('pricelist__hidden');
-  }
-});
+  });
+}
 
 document.querySelectorAll('.js--scroll-to-services').forEach((el) => {
   el.addEventListener('click', function () {

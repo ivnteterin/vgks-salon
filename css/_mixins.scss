@@ -86,7 +86,7 @@
   }
 
   @if $breakpoint == desktop {
-    @media (min-width: 75em) {
+    @media (max-width: 93.75em) {
       @content;
     }
   }
