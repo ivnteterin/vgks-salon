@@ -349,9 +349,11 @@ const scrollToPrice = function (el) {
 for (let i = 0; i < services.length; i++) {
   services[i].addEventListener('click', function () {
     if (pricelists[i].classList.contains('pricelist__hidden')) {
-      pricelists.forEach((pricelist) => {
-        pricelist.classList.add('pricelist__hidden');
-      });
+      if (window.innerWidth > 464) {
+        pricelists.forEach((pricelist) => {
+          pricelist.classList.add('pricelist__hidden');
+        });
+      }
       pricelists[i].classList.remove('pricelist__hidden');
 
       setTimeout(() => {
@@ -365,9 +367,9 @@ for (let i = 0; i < services.length; i++) {
             behavior: 'smooth',
           });
         } else {
-          scrollToPrice(services[i]);
+          // scrollToPrice(services[i]);
         }
-      }, 750);
+      }, 250);
     } else {
       pricelists[i].classList.add('pricelist__hidden');
     }

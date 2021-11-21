@@ -973,7 +973,7 @@ body {
 .pricelist__item__details {
   text-align: justify;
   font-style: italic;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
 }
 .pricelist__item__details ul {
   position: relative;
@@ -985,13 +985,12 @@ body {
   -webkit-columns: 2;
   -m-oz-columns: 2;
   columns: 2;
-  padding: 2rem;
+  padding: 2rem 0;
   list-style-type: "✔";
 }
-@media (max-width: 29em) {
+@media (max-width: 37.5em) {
   .pricelist__item__details ul {
     columns: 1;
-    display: block;
   }
 }
 .pricelist__item__details ul li {
