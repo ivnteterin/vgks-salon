@@ -4,6 +4,7 @@
     margin: 0 auto;
     grid-column: 1 / -1;
     width: 80%;
+    grid-row: 2;
     display: flex;
     flex-flow: column;
     position: relative;
@@ -13,6 +14,7 @@
 
     @include respond(services1100) {
       width: 95%;
+      grid-row: 3;
     }
     @include respond(tab-port) {
       width: 90%;
@@ -20,6 +22,7 @@
 
     @include respond(phone) {
       width: 100%;
+      grid-row: 4;
     }
 
     &__description {

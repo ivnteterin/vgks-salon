@@ -3,6 +3,10 @@
 // kick off the polyfill!
 
 const FOOTER_COLLAPSE_WIDTH = 1030;
+const pricelists = document.querySelectorAll('.pricelist__item');
+const servicesBlock = document.querySelector('.services');
+const footerBlock = document.querySelector('footer');
+const checkboxes = document.querySelectorAll('.footer__item__checkbox');
 
 //SHOP STATUS (CLOSED / OPEN)
 
@@ -307,11 +311,6 @@ window.addEventListener('scroll', function () {
     document.body.style.background = '#f4e4f0';
   }
 });
-
-const pricelists = document.querySelectorAll('.pricelist__item');
-const servicesBlock = document.querySelector('.services');
-const footerBlock = document.querySelector('footer');
-const checkboxes = document.querySelectorAll('.footer__item__checkbox');
 
 function backToTop() {
   window.scrollTo({

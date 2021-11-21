@@ -917,6 +917,7 @@ body {
   margin: 0 auto;
   grid-column: 1/-1;
   width: 80%;
+  grid-row: 2;
   display: flex;
   flex-flow: column;
   position: relative;
@@ -927,6 +928,7 @@ body {
 @media (max-width: 68.75em) {
   .pricelist__item {
     width: 95%;
+    grid-row: 3;
   }
 }
 @media (max-width: 56.25em) {
@@ -937,6 +939,7 @@ body {
 @media (max-width: 37.5em) {
   .pricelist__item {
     width: 100%;
+    grid-row: 4;
   }
 }
 .pricelist__item__description {
