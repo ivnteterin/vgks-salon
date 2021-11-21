@@ -361,7 +361,7 @@ for (let i = 0; i < services.length; i++) {
         } else {
           scrollToPrice(services[i]);
         }
-      }, 500);
+      }, 750);
     } else {
       pricelists[i].classList.add('pricelist__hidden');
     }
