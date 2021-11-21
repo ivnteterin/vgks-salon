@@ -46,6 +46,7 @@
       font-size: 2.5rem;
       margin: 1.5rem 0;
     }
+
     @include respond(little-phone) {
       letter-spacing: unset;
     }
@@ -56,7 +57,7 @@
   }
 
   @include respond(small-phone) {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
   }
 }
 
@@ -100,6 +101,10 @@
 .heading-4 {
   text-align: justify;
   font-size: 1.9rem;
+
+  @include respond(small-phone) {
+    font-size: 1.8rem;
+  }
 
   @include respond(little-phone) {
     text-align: left;

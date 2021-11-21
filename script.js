@@ -310,7 +310,7 @@ window.addEventListener('scroll', function () {
 
 const pricelists = document.querySelectorAll('.pricelist__item');
 const servicesBlock = document.querySelector('.services');
-const footerBlock = document.querySelector('.footer');
+const footerBlock = document.querySelector('footer');
 const checkboxes = document.querySelectorAll('.footer__item__checkbox');
 
 function backToTop() {
@@ -331,7 +331,7 @@ function getOffset(el) {
   };
 }
 
-const scrollTo = function (el) {
+const scrollToElem = function (el) {
   window.scrollTo({
     top: getOffset(el).top,
     left: 0,
@@ -357,7 +357,14 @@ for (let i = 0; i < services.length; i++) {
 
       setTimeout(() => {
         if (window.innerWidth > 464) {
-          scrollToPrice(document.getElementById('other'));
+          window.scrollTo({
+            top:
+              getOffset(document.getElementById('other')).top +
+              document.getElementById('other').getBoundingClientRect().height -
+              40,
+            left: 0,
+            behavior: 'smooth',
+          });
         } else {
           scrollToPrice(services[i]);
         }
@@ -370,12 +377,12 @@ for (let i = 0; i < services.length; i++) {
 
 document.querySelectorAll('.js--scroll-to-services').forEach((el) => {
   el.addEventListener('click', function () {
-    scrollTo(servicesBlock);
+    scrollToElem(servicesBlock);
   });
 });
 document.querySelectorAll('.js--scroll-to-contacts').forEach((el) => {
   el.addEventListener('click', function () {
-    scrollTo(footerBlock);
+    scrollToElem(footerBlock);
     checkboxes[1].checked = false;
   });
 });

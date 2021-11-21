@@ -219,7 +219,7 @@ body {
 }
 @media (max-width: 24em) {
   .heading-2 {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
   }
 }
 
@@ -267,6 +267,11 @@ body {
 .heading-4 {
   text-align: justify;
   font-size: 1.9rem;
+}
+@media (max-width: 24em) {
+  .heading-4 {
+    font-size: 1.8rem;
+  }
 }
 @media (max-width: 20em) {
   .heading-4 {
@@ -1458,14 +1463,24 @@ body {
 .popup__left {
   padding: 5rem 0 5rem 5rem;
 }
-@media (max-width: 37.5em) {
+@media (max-width: 56.25em) {
   .popup__left {
     padding: 4.5rem 4.5rem 2rem;
   }
 }
-@media (max-width: 20em) {
+@media (max-width: 46.875em) {
+  .popup__left {
+    padding: 4rem 4rem 2rem;
+  }
+}
+@media (max-width: 37.5em) {
   .popup__left {
     padding: 3.5rem 3.5rem 2rem;
+  }
+}
+@media (max-width: 24em) {
+  .popup__left {
+    padding: 3rem 3rem 2rem;
   }
 }
 .popup__img-1 {
@@ -1482,7 +1497,7 @@ body {
   height: 100%;
   drop-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
   display: none;
-  padding: 0 4.5rem 4.5rem;
+  padding: 0 3.5rem 3.5rem;
 }
 @media (max-width: 37.5em) {
   .popup__img-2 {
@@ -1505,32 +1520,35 @@ body {
 }
 
 .reservation {
-  max-width: 70rem;
+  width: 65rem;
   min-width: 200px;
   display: flex;
   position: absolute;
   flex-flow: column;
   align-items: flex-start;
-  padding: 4.5rem;
+  padding: 5rem;
   gap: 3rem;
 }
 .reservation--heading-2 {
   margin-bottom: 0rem;
 }
-@media (max-width: 20em) {
-  .reservation--heading-2 {
-    font-size: 2.2rem;
+@media (max-width: 46.875em) {
+  .reservation {
+    padding: 4rem;
   }
 }
 @media (max-width: 46.875em) and (max-height: 45em) {
   .reservation {
-    padding: 4rem;
     gap: 2.5rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .reservation {
+    padding: 3.5rem;
   }
 }
 @media (max-width: 37.5em) and (max-height: 45em) {
   .reservation {
-    padding: 3.5rem;
     gap: 2rem;
   }
 }
