@@ -14,7 +14,7 @@
     opacity: 1;
   }
   &__content {
-    max-width: 70rem;
+    width: 70rem;
     min-width: 200px;
 
     display: flex;
@@ -71,13 +71,14 @@
 
   &__left {
     padding: 5rem 0 5rem 5rem;
+    flex: 1;
 
     @include respond(tab-port) {
-      padding: 4.5rem 4.5rem 2rem;
+      padding: 4.5rem 0 4.5rem 4.5rem;
     }
 
     @include respond(large-phone) {
-      padding: 4rem 4rem 2rem;
+      padding: 4rem 0 4rem 4rem;
     }
     @include respond(phone) {
       padding: 3.5rem 3.5rem 2rem;
@@ -159,7 +160,7 @@
   }
 
   @include respond(footer1030) {
-    width: 80%;
+    width: 70%;
   }
 
   @include respond(small-phone) {

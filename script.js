@@ -331,11 +331,7 @@ function getOffset(el) {
 }
 
 const scrollToElem = function (el) {
-  window.scrollTo({
-    top: getOffset(el).top,
-    left: 0,
-    behavior: 'smooth',
-  });
+  window.scrollIntoView(el);
 };
 
 const scrollToPrice = function (el) {
@@ -387,6 +383,20 @@ document.querySelectorAll('.js--scroll-to-contacts').forEach((el) => {
     checkboxes[1].checked = false;
   });
 });
+
+// $('.js--scroll-to-contacts').on('click', function (event) {
+//   event.preventDefault();
+//   $('html, body')
+//     .stop()
+//     .animate({ scrollTop: $(document).height() }, 'slow');
+// });
+
+// $('.to-top').on('click', function (event) {
+//   event.preventDefault();
+//   $('html, body')
+//     .stop()
+//     .animate({ scrollTop: $('body') }, 'slow');
+// });
 
 const getDymanicHeight = function (el) {
   el.style.height = `${getHeightOfChildren(el)}px`;
