@@ -333,7 +333,15 @@ function getOffset(el) {
 
 const scrollTo = function (el) {
   window.scrollTo({
-    top: getOffset(el).top - parseInt(window.innerHeight * 0.1, 10),
+    top: getOffset(el).top,
+    left: 0,
+    behavior: 'smooth',
+  });
+};
+
+const scrollToPrice = function (el) {
+  window.scrollTo({
+    top: getOffset(el).top + el.getBoundingClientRect().height,
     left: 0,
     behavior: 'smooth',
   });
@@ -349,7 +357,9 @@ for (let i = 0; i < services.length; i++) {
 
       setTimeout(() => {
         if (window.innerWidth > 464) {
-          scrollTo(pricelists[i]);
+          scrollToPrice(document.getElementById('other'));
+        } else {
+          scrollToPrice(services[i]);
         }
       }, 500);
     } else {
