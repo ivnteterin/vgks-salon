@@ -1463,7 +1463,7 @@ body {
   flex: 1;
 }
 .popup__left h2 {
-  padding-left: 2rem;
+  padding-right: 2rem;
 }
 @media (max-width: 56.25em) {
   .popup__left {
