@@ -1498,9 +1498,9 @@ body {
   width: 100%;
   height: auto;
   display: none;
-  padding-bottom: 3.5rem;
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
+  padding-bottom: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 @media (max-width: 37.5em) {
   .popup__img-2 {
