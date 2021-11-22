@@ -331,7 +331,11 @@ function getOffset(el) {
 }
 
 const scrollToElem = function (el) {
-  window.scrollIntoView(el);
+  window.scrollTo({
+    top: getOffset(el).top,
+    left: 0,
+    behavior: 'smooth',
+  });
 };
 
 const scrollToPrice = function (el) {
