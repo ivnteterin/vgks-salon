@@ -212,6 +212,17 @@ body {
     letter-spacing: unset;
   }
 }
+.heading-2--pricelist--too-wide {
+  letter-spacing: 2rem;
+}
+.heading-2--pricelist--too-wide span {
+  letter-spacing: 0;
+}
+@media (max-width: 37.5em) {
+  .heading-2--pricelist--too-wide {
+    letter-spacing: 1.4rem;
+  }
+}
 @media (max-width: 46.875em) {
   .heading-2 {
     font-size: 2.4rem;
@@ -1002,6 +1013,9 @@ body {
   display: block;
   text-align: right;
 }
+.pricelist__item__details span:first-of-type {
+  margin-top: 2rem;
+}
 .pricelist__sub-item {
   display: flex;
   margin: 0 0 3rem 0;
@@ -1032,6 +1046,13 @@ body {
     grid-row: 4/5;
   }
 }
+
+@media (max-width: 29em) {
+  #hair-pricelist {
+    grid-row: 6/7;
+  }
+}
+
 .gallery__item {
   width: 100%;
   display: flex;

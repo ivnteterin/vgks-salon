@@ -50,6 +50,17 @@
     @include respond(little-phone) {
       letter-spacing: unset;
     }
+
+    &--too-wide {
+      letter-spacing: 2rem;
+      span {
+        letter-spacing: 0;
+      }
+
+      @include respond(phone) {
+        letter-spacing: 1.4rem;
+      }
+    }
   }
 
   @include respond(large-phone) {
