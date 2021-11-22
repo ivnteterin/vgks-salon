@@ -1493,6 +1493,7 @@ body {
 }
 .popup__img-2 {
   width: 100%;
+  height: auto;
   drop-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
   display: none;
   padding: 0 3.5rem 3.5rem;
