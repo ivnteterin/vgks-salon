@@ -266,12 +266,7 @@ body {
 
 .heading-4 {
   text-align: justify;
-  font-size: 1.9rem;
-}
-@media (max-width: 24em) {
-  .heading-4 {
-    font-size: 1.8rem;
-  }
+  font-size: 1.8rem;
 }
 @media (max-width: 20em) {
   .heading-4 {

@@ -100,10 +100,10 @@
 
 .heading-4 {
   text-align: justify;
-  font-size: 1.9rem;
+  font-size: 1.8rem;
 
   @include respond(small-phone) {
-    font-size: 1.8rem;
+    // font-size: 1.8rem;
   }
 
   @include respond(little-phone) {
