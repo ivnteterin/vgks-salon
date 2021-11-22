@@ -1422,7 +1422,7 @@ body {
 }
 @media (max-width: 46.875em) {
   .popup__content {
-    width: 80%;
+    width: 75%;
   }
 }
 @media (max-width: 37.5em) {
@@ -1552,7 +1552,7 @@ body {
 }
 @media (max-width: 64.375em) {
   .reservation {
-    width: 70%;
+    width: 75%;
   }
 }
 @media (max-width: 24em) {
