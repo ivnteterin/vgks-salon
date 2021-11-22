@@ -1497,9 +1497,8 @@ body {
 .popup__img-2 {
   width: 100%;
   height: auto;
-  drop-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
   display: none;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 @media (max-width: 37.5em) {
   .popup__img-2 {
