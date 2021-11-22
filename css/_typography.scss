@@ -101,6 +101,7 @@
 .heading-4 {
   text-align: justify;
   font-size: 1.8rem;
+  color: red;
 
   @include respond(small-phone) {
     // font-size: 1.8rem;
