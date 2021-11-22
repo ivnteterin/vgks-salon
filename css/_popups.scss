@@ -6,9 +6,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  // background-color: rgba(0, 0, 0, 0.8);
-  background-color: white;
-
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 3000;
   transition: all 0.3s;
   &:target {
@@ -104,7 +102,7 @@
     height: 100%;
     drop-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
     display: none;
-    padding: 0 3.5rem 3.5rem;
+    // padding: 0 3.5rem 3.5rem;
 
     @include respond(phone) {
       display: block;
