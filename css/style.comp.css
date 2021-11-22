@@ -1396,7 +1396,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: white;
   z-index: 3000;
   transition: all 0.3s;
 }
