@@ -74,6 +74,10 @@
     padding: 5rem 0 5rem 5rem;
     flex: 1;
 
+    h2 {
+      padding-left: 2rem;
+    }
+
     @include respond(tab-port) {
       padding: 4.5rem 0 4.5rem 4.5rem;
     }
