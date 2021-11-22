@@ -1429,6 +1429,13 @@ body {
 @media (max-width: 37.5em) {
   .popup__content {
     flex-flow: column;
+    padding: 3.5rem;
+  }
+}
+@media (max-width: 24em) {
+  .popup__content {
+    flex-flow: column;
+    padding: 3rem;
   }
 }
 .popup:target .popup__content {
@@ -1477,12 +1484,8 @@ body {
 }
 @media (max-width: 37.5em) {
   .popup__left {
-    padding: 3.5rem 3.5rem 2rem;
-  }
-}
-@media (max-width: 24em) {
-  .popup__left {
-    padding: 3rem 3rem 2rem;
+    padding: 0;
+    padding-bottom: 2rem;
   }
 }
 .popup__img-1 {
@@ -1498,18 +1501,10 @@ body {
   width: 100%;
   height: auto;
   display: none;
-  padding-bottom: 3rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
 }
 @media (max-width: 37.5em) {
   .popup__img-2 {
     display: block;
-  }
-}
-@media (max-width: 24em) {
-  .popup__img-2 {
-    padding: 0 3rem 3rem;
   }
 }
 .popup__close:link, .popup__close:visited {
