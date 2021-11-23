@@ -47,6 +47,7 @@ $stretch-speed: 0.2s;
     width: unset !important;
     @include respond(tab-port) {
       transform: scale(0.9) !important;
+      transform-origin: center !important;
     }
     .footer__social {
       &-fb {

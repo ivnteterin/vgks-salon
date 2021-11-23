@@ -1812,6 +1812,7 @@ body {
 @media (max-width: 56.25em) {
   .social-wall__social {
     transform: scale(0.9) !important;
+    transform-origin: center !important;
   }
 }
 .social-wall__social .footer__social-fb .fb-container {
