@@ -213,7 +213,7 @@ body {
   }
 }
 .heading-2--pricelist--too-wide {
-  letter-spacing: 1.4rem;
+  letter-spacing: 1.8rem;
 }
 .heading-2--pricelist--too-wide span {
   position: relative;
@@ -229,6 +229,11 @@ body {
 @media (max-width: 20em) {
   .heading-2--pricelist--too-wide span::after {
     right: -12%;
+  }
+}
+@media (max-width: 75em) {
+  .heading-2--pricelist--too-wide {
+    letter-spacing: 1.4rem;
   }
 }
 @media (max-width: 37.5em) {

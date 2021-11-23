@@ -52,7 +52,7 @@
     }
 
     &--too-wide {
-      letter-spacing: 1.4rem;
+      letter-spacing: 1.8rem;
       span {
         position: relative;
         &::after {
@@ -66,6 +66,9 @@
             right: -12%;
           }
         }
+      }
+      @include respond(tab-land) {
+        letter-spacing: 1.4rem;
       }
 
       @include respond(phone) {
