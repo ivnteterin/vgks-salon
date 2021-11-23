@@ -69,7 +69,7 @@
       }
 
       @include respond(phone) {
-        letter-spacing: 1rem;
+        letter-spacing: 0.85rem;
       }
       @include respond(little-phone) {
         letter-spacing: unset;

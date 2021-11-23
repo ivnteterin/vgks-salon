@@ -233,7 +233,7 @@ body {
 }
 @media (max-width: 37.5em) {
   .heading-2--pricelist--too-wide {
-    letter-spacing: 1rem;
+    letter-spacing: 0.85rem;
   }
 }
 @media (max-width: 20em) {
