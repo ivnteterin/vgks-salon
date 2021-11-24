@@ -52,6 +52,16 @@
       text-align: justify;
       font-style: italic;
       font-size: 1.8rem;
+
+      .ul-left {
+        left: unset;
+        transform: unset;
+        @include respond(mid-phone) {
+          transform: translateX(-50%);
+          left: 50%;
+        }
+      }
+
       ul {
         position: relative;
         left: 50%;
@@ -66,8 +76,11 @@
         list-style-type: '\2714';
         @include respond(phone) {
           columns: 1;
-          // display: block;
         }
+        @include respond(small-phone) {
+          list-style-type: none;
+        }
+
         li {
           padding-left: 1rem;
           margin: 0 2rem;
