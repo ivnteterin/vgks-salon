@@ -10,14 +10,9 @@ const checkboxes = document.querySelectorAll('.footer__item__checkbox');
 
 //SHOP STATUS (CLOSED / OPEN)
 
-const isTouchDevice = () => {
-  return (
-    'ontouchstart' in window ||
-    navigator.maxTouchPoints > 0 ||
-    navigator.msMaxTouchPoints > 0
-  );
-};
-// console.log(isTouchDevice());
+function isTouchDevice() {
+  return window.ontouchstart !== undefined;
+}
 
 const services = document.querySelectorAll('.services__item');
 
