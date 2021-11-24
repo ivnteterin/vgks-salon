@@ -51,7 +51,21 @@
       letter-spacing: unset;
     }
 
-    &--too-wide {
+    &--wide {
+      letter-spacing: 1.8rem;
+      @include respond(tab-land) {
+        letter-spacing: 1.5rem;
+      }
+
+      @include respond(phone) {
+        letter-spacing: 1.2rem;
+      }
+      @include respond(little-phone) {
+        letter-spacing: unset;
+      }
+    }
+
+    &--wider {
       letter-spacing: 1.8rem;
       span {
         position: relative;

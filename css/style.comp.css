@@ -212,13 +212,31 @@ body {
     letter-spacing: unset;
   }
 }
-.heading-2--pricelist--too-wide {
+.heading-2--pricelist--wide {
   letter-spacing: 1.8rem;
 }
-.heading-2--pricelist--too-wide span {
+@media (max-width: 75em) {
+  .heading-2--pricelist--wide {
+    letter-spacing: 1.5rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .heading-2--pricelist--wide {
+    letter-spacing: 1.2rem;
+  }
+}
+@media (max-width: 20em) {
+  .heading-2--pricelist--wide {
+    letter-spacing: unset;
+  }
+}
+.heading-2--pricelist--wider {
+  letter-spacing: 1.8rem;
+}
+.heading-2--pricelist--wider span {
   position: relative;
 }
-.heading-2--pricelist--too-wide span::after {
+.heading-2--pricelist--wider span::after {
   content: "**";
   font-size: 1.6rem;
   position: absolute;
@@ -227,22 +245,22 @@ body {
   right: -3%;
 }
 @media (max-width: 20em) {
-  .heading-2--pricelist--too-wide span::after {
+  .heading-2--pricelist--wider span::after {
     right: -12%;
   }
 }
 @media (max-width: 75em) {
-  .heading-2--pricelist--too-wide {
+  .heading-2--pricelist--wider {
     letter-spacing: 1.4rem;
   }
 }
 @media (max-width: 37.5em) {
-  .heading-2--pricelist--too-wide {
+  .heading-2--pricelist--wider {
     letter-spacing: 0.85rem;
   }
 }
 @media (max-width: 20em) {
-  .heading-2--pricelist--too-wide {
+  .heading-2--pricelist--wider {
     letter-spacing: unset;
   }
 }
