@@ -1030,6 +1030,7 @@ body {
   .pricelist__item__details .ul-left {
     transform: translateX(-50%);
     left: 50%;
+    margin-left: 1rem;
   }
 }
 .pricelist__item__details ul {

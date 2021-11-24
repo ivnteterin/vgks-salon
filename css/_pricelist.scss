@@ -59,6 +59,7 @@
         @include respond(mid-phone) {
           transform: translateX(-50%);
           left: 50%;
+          margin-left: 1rem;
         }
       }
 
