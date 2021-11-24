@@ -134,3 +134,40 @@
     grid-row: 6 / 7;
   }
 }
+#photo-pricelist {
+  @include respond(mid-phone) {
+    grid-row: 8 / 9;
+  }
+}
+
+.photographer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto;
+  &__icon {
+    height: 10rem;
+    width: auto;
+    opacity: 0.3;
+    @include respond(mid-phone) {
+      height: 8rem;
+    }
+  }
+  &__details {
+    // display: none;
+    display: flex;
+    flex-direction: column;
+    &__name {
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      font-family: 'Spartan';
+      letter-spacing: 0.2rem;
+    }
+
+    &__social {
+      &--img {
+        height: 2rem;
+      }
+    }
+  }
+}

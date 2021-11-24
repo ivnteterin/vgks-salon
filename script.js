@@ -151,6 +151,7 @@ window.addEventListener('resize', () => {
 const socialIconsInst = [
   document.getElementById('social-ig-1'), //1 is for footer
   document.getElementById('social-ig-2'), //2 is for social media section
+  // document.getElementById('social-ig-3'), //2 is for social media section
 ];
 
 const socialsIconsFbWidthFix = function (elems) {

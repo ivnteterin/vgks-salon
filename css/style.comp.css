@@ -1085,6 +1085,42 @@ body {
   }
 }
 
+@media (max-width: 29em) {
+  #photo-pricelist {
+    grid-row: 8/9;
+  }
+}
+
+.photographer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto;
+}
+.photographer__icon {
+  height: 10rem;
+  width: auto;
+  opacity: 0.3;
+}
+@media (max-width: 29em) {
+  .photographer__icon {
+    height: 8rem;
+  }
+}
+.photographer__details {
+  display: flex;
+  flex-direction: column;
+}
+.photographer__details__name {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-family: "Spartan";
+  letter-spacing: 0.2rem;
+}
+.photographer__details__social--img {
+  height: 2rem;
+}
+
 .gallery__item {
   width: 100%;
   display: flex;
