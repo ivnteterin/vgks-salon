@@ -648,7 +648,7 @@ body {
   z-index: 1500;
   transition: opacity 0.3s cubic-bezier(0.43, -0.01, 0.465, 1), transform 0.1s 0.3s;
   opacity: 0;
-  height: max-content;
+  height: 42rem;
   width: max-content;
   overflow: hidden;
   transform-origin: top right;
