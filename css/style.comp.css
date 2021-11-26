@@ -375,7 +375,7 @@ body {
   flex-flow: column;
   grid-gap: 1rem;
   height: calc(var(--vh, 1vh) * 110);
-  background-image: linear-gradient(to bottom, #f4e4f0 40%, #f4e4f080), url(../img/main-image.jpg);
+  background-image: linear-gradient(to bottom, #f4e4f0f5 20%, #f4e4f080), url(../img/main-image.jpg);
   background-size: cover;
   background-position: top;
 }
@@ -1087,7 +1087,7 @@ body {
   display: flex;
   margin: 0 0 3rem 0;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 @media (max-width: 68.75em) {
   .pricelist__sub-item {
@@ -1423,7 +1423,7 @@ body {
 @media (max-width: 20em) {
   .footer__logo {
     display: block;
-    margin: 2rem auto 0.5rem;
+    margin: 5rem auto 0.5rem;
     position: relative;
     top: unset;
     right: unset;
@@ -1455,7 +1455,7 @@ body {
   padding: 0 4.5rem;
   flex-flow: row wrap;
   justify-content: center;
-  margin-top: 1.5rem;
+  margin-top: 5.5rem;
   font-size: 1.4rem;
   color: #fff;
   gap: 1rem;
@@ -1498,6 +1498,11 @@ body {
 }
 @media (max-width: 25.95em) {
   .copyright__divider {
+    display: none;
+  }
+}
+@media (max-width: 20em) {
+  .copyright__year {
     display: none;
   }
 }

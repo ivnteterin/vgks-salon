@@ -234,24 +234,27 @@ const checkSize = function () {
   if (window.innerWidth < 700 && window.innerWidth > 415) {
     document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
       'Įsigykite „VIP“ kortelę už 5€ viename iš mūsų salonų ir sutaupykite 10% kiekvieno vizito metu :)';
+    document.querySelector('.copyright__address-text').innerHTML =
+      ' © Visagino Grožio Kūrėjų Studija';
   } else if (window.innerWidth < 415 && window.innerWidth >= 321) {
-    document.querySelector('.copyright__address').innerHTML = '© VGKS, Lietuva';
+    document.querySelector('.copyright__address-text').innerHTML =
+      ' © VGKS, Lietuva';
     document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
       'Įsigykite kortelę už 5€ viename iš mūsų salonų ir gaukite 10% nuolaidą visoms paslaugoms!';
   } else if (window.innerWidth < 321 && window.innerWidth > 280) {
     document.querySelector('.js-popup__reservation-heading-4').innerHTML =
       'Skambinkite';
     document.querySelector('.js-popup__reservation-basic-text').innerHTML = '';
-    document.querySelector('.copyright__address').innerHTML = '';
+    document.querySelector('.copyright__address-text').innerHTML = '';
     document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
       'Įsigykite kortelę už 5€ viename iš mūsų salonų ir gaukite 10% visoms paslaugoms!';
   } else if (window.innerWidth < 281) {
     document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
       'Įsigykite kortelę tik už 5€ ir gaukite 10% visoms paslaugoms!';
-    document.querySelector('.copyright__address').innerHTML = '';
+    document.querySelector('.copyright__address-text').innerHTML = '';
   } else {
-    document.querySelector('.copyright__address').innerHTML =
-      '© Visagino Grožio Kūrėjų Studija, Lietuva';
+    document.querySelector('.copyright__address-text').innerHTML =
+      ' © Visagino Grožio Kūrėjų Studija, Lietuva';
     document.querySelector('.js-popup__reservation-heading-4').innerHTML =
       'Skambinkite telefonu';
     document.querySelector('.js-popup__reservation-basic-text').innerHTML =

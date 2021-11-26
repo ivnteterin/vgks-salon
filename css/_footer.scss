@@ -231,7 +231,7 @@
     }
     @include respond(little-phone) {
       display: block;
-      margin: 2rem auto 0.5rem;
+      margin: 5rem auto 0.5rem;
       position: relative;
       top: unset;
       right: unset;
@@ -270,7 +270,7 @@
   padding: 0 4.5rem;
   flex-flow: row wrap;
   justify-content: center;
-  margin-top: 1.5rem;
+  margin-top: 5.5rem;
   font-size: 1.4rem;
   color: $vgks-color-primary-white;
   gap: 1rem;
@@ -314,6 +314,12 @@
     margin: 0 1rem;
 
     @include respond(footer415) {
+      display: none;
+    }
+  }
+
+  &__year {
+    @include respond(little-phone) {
       display: none;
     }
   }
