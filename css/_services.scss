@@ -6,7 +6,7 @@
   z-index: -1;
 
   @include respond(services1100) {
-    padding: 5rem 5rem;
+    padding: 5rem 4rem;
   }
   @include respond(small-phone) {
     padding: 3rem 3rem;

@@ -764,7 +764,7 @@ body {
 }
 @media (max-width: 68.75em) {
   .services {
-    padding: 5rem 5rem;
+    padding: 5rem 4rem;
   }
 }
 @media (max-width: 24em) {
