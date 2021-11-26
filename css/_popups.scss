@@ -79,10 +79,6 @@
     padding: 5rem 0 5rem 5rem;
     flex: 1;
 
-    h2 {
-      padding-right: 2rem;
-    }
-
     @include respond(tab-port) {
       padding: 4.5rem 0 4.5rem 4.5rem;
     }
@@ -93,6 +89,9 @@
     @include respond(phone) {
       padding: 0;
       padding-bottom: 2rem;
+      h2 {
+        padding-right: 2rem;
+      }
     }
 
     @include respond(small-phone) {

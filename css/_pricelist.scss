@@ -53,6 +53,15 @@
       font-style: italic;
       font-size: 1.8rem;
 
+      &-span {
+        font-size: 1.4rem;
+        display: block;
+        text-align: right;
+        &:first-of-type {
+          margin-top: 2rem;
+        }
+      }
+
       .ul-left {
         left: unset;
         transform: unset;
@@ -91,14 +100,6 @@
           @include respond(mid-phone) {
             margin: unset;
           }
-        }
-      }
-      span {
-        font-size: 1.4rem;
-        display: block;
-        text-align: right;
-        &:first-of-type {
-          margin-top: 2rem;
         }
       }
     }
@@ -151,6 +152,16 @@
 #photo-pricelist {
   @include respond(mid-phone) {
     grid-row: 8 / 9;
+  }
+}
+#course-pricelist {
+  @include respond(mid-phone) {
+    grid-row: 10 / 11;
+  }
+}
+#other-pricelist {
+  @include respond(mid-phone) {
+    grid-row: 12 / 13;
   }
 }
 
