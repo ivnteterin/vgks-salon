@@ -168,6 +168,7 @@
   text-align: right;
   white-space: nowrap;
   display: inline-block;
+  color: #000;
 
   @include respond(phone) {
     display: none;

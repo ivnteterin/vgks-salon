@@ -534,6 +534,7 @@ body {
   text-align: right;
   white-space: nowrap;
   display: inline-block;
+  color: #000;
 }
 @media (max-width: 37.5em) {
   .work-days {
