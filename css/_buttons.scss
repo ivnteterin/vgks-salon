@@ -42,37 +42,7 @@
 
     color: #fff;
     transform: translateY(-0.2rem);
-
-    // &::before {
-    //   content: '';
-    //   position: absolute;
-    //   top: -17%;
-    //   left: -6%;
-    //   height: 123%;
-    //   width: 110%;
-    //   background: none;
-    //   border: 2px solid rgba(0, 0, 0, 0.185);
-    //   z-index: -1;
-    // }
   }
-
-  //   &:hover {
-  //     // background-position: 100%;
-  //     cursor: pointer;
-  //     transform: translateY(-0.2rem);
-
-  //     &::before {
-  //       content: '';
-  //       position: absolute;
-  //       top: -20%;
-  //       left: -8%;
-  //       height: 130%;
-  //       width: 116%;
-  //       background: transparent;
-  //       border: 2px solid #ca7dc3;
-  //       z-index: -1;
-  //     }
-  //   }
 
   &:active {
     transform: translateY(0.5rem);
@@ -80,13 +50,13 @@
   }
 
   &-sidebar {
-    box-shadow: inset 0px 0px 0px 2px #fff;
+    box-shadow: inset 0px 0px 0px 1.5px #fff;
 
     color: #fff;
     opacity: 0.9;
     &:hover {
       color: #000;
-      box-shadow: inset 0px 0px 0px 2px #fff;
+      box-shadow: inset 0px 0px 0px 1.5px #fff;
 
       background-image: linear-gradient(-120deg, #fff 50%, transparent 50%);
     }

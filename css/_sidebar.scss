@@ -23,6 +23,23 @@
     margin-right: 0;
   }
 
+  &__socials {
+    text-align: center;
+    a {
+      display: inline-block;
+      padding: 1.5rem;
+      margin-top: 2.5rem;
+
+      &:hover {
+        svg {
+          stop {
+            stop-color: $vgks-color-primary-white;
+          }
+        }
+      }
+    }
+  }
+
   &__checkbox {
     display: none;
   }

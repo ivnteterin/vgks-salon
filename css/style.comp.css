@@ -601,6 +601,17 @@ body {
     margin-right: 0;
   }
 }
+.sidebar__socials {
+  text-align: center;
+}
+.sidebar__socials a {
+  display: inline-block;
+  padding: 1.5rem;
+  margin-top: 2.5rem;
+}
+.sidebar__socials a:hover svg stop {
+  stop-color: #fff;
+}
 .sidebar__checkbox {
   display: none;
 }
@@ -1765,13 +1776,13 @@ body {
   transform: translateY(0.5rem);
 }
 .btn-sidebar {
-  box-shadow: inset 0px 0px 0px 2px #fff;
+  box-shadow: inset 0px 0px 0px 1.5px #fff;
   color: #fff;
   opacity: 0.9;
 }
 .btn-sidebar:hover {
   color: #000;
-  box-shadow: inset 0px 0px 0px 2px #fff;
+  box-shadow: inset 0px 0px 0px 1.5px #fff;
   background-image: linear-gradient(-120deg, #fff 50%, transparent 50%);
 }
 
