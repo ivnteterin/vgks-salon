@@ -1,0 +1,43 @@
+.cky-consent-bar {
+  width: 120rem !important;
+  left: 50% !important;
+  right: unset !important;
+  bottom: 1rem !important;
+  padding: 2rem 4rem !important;
+  transform: translateX(-50%);
+  @include respond(tab-land) {
+    width: 95% !important;
+    padding: 2rem 3rem !important;
+  }
+  @include respond(phone) {
+    padding: 2rem 2rem !important;
+  }
+}
+.cky-content-logo-outer-wrapper {
+  img {
+    @include respond(phone) {
+      //   flex-direction: column;
+      //   text-align: center !important;
+      //   margin: 0 auto 1rem !important;
+      margin-bottom: 1rem;
+    }
+  }
+}
+.cky-content-logo-inner-wrapper {
+  @include respond(phone) {
+    display: block !important;
+    margin: 0 auto 1rem !important;
+  }
+}
+
+.cky-button-wrapper {
+  text-align: right !important;
+  //   margin-top: 1rem !important;
+}
+
+.cky-btn-settings {
+  &::before {
+    top: 8px !important;
+    right: -2px !important;
+  }
+}

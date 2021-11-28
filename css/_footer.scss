@@ -216,7 +216,7 @@
   &__logo {
     display: block;
 
-    margin: 0 auto;
+    margin: 2.5rem auto;
     z-index: 2601;
 
     @include respond(footer1030) {
@@ -270,10 +270,13 @@
   padding: 0 4.5rem;
   flex-flow: row wrap;
   justify-content: center;
-  margin-top: 5.5rem;
   font-size: 1.4rem;
   color: $vgks-color-primary-white;
   gap: 1rem;
+
+  @include respond(footer1030) {
+    margin-top: 5.5rem;
+  }
 
   @include respond(mid-phone) {
     padding: 0;

@@ -135,7 +135,8 @@
   }
 }
 
-.reservation {
+.reservation,
+.privacy {
   width: 65rem;
   min-width: 200px;
   display: flex;
@@ -192,5 +193,14 @@
 
   a {
     color: $vgks-color-primary-purple;
+  }
+}
+
+.privacy {
+  width: 80rem;
+  padding: 4rem 3rem;
+  gap: 2rem;
+  @include respond(footer1030) {
+    width: 85%;
   }
 }
