@@ -1869,8 +1869,10 @@ body {
 }
 @media (max-width: 75em) {
   .cky-consent-bar {
-    width: 95% !important;
+    width: 82% !important;
     padding: 2rem 3rem !important;
+    left: 1rem !important;
+    transform: unset;
   }
 }
 @media (max-width: 37.5em) {
@@ -1899,6 +1901,11 @@ body {
 .cky-btn-settings::before {
   top: 8px !important;
   right: -2px !important;
+}
+@media (max-width: 37.5em) {
+  .cky-btn-settings::before {
+    top: 6px !important;
+  }
 }
 
 .center-con {

@@ -7,9 +7,12 @@
   transform: translateX(-50%);
   border-radius: 5px;
   @include respond(tab-land) {
-    width: 95% !important;
+    width: 82% !important;
     padding: 2rem 3rem !important;
+    left: 1rem !important;
+    transform: unset;
   }
+
   @include respond(phone) {
     padding: 2rem 2rem !important;
   }
@@ -40,5 +43,8 @@
   &::before {
     top: 8px !important;
     right: -2px !important;
+    @include respond(phone) {
+      top: 6px !important;
+    }
   }
 }
