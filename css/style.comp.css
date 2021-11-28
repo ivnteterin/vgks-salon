@@ -1865,6 +1865,7 @@ body {
   bottom: 1rem !important;
   padding: 2rem 4rem !important;
   transform: translateX(-50%);
+  border-radius: 5px;
 }
 @media (max-width: 75em) {
   .cky-consent-bar {

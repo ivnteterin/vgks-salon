@@ -5,6 +5,7 @@
   bottom: 1rem !important;
   padding: 2rem 4rem !important;
   transform: translateX(-50%);
+  border-radius: 5px;
   @include respond(tab-land) {
     width: 95% !important;
     padding: 2rem 3rem !important;
