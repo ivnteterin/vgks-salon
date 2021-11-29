@@ -1897,6 +1897,11 @@ body {
 .cky-button-wrapper {
   text-align: right !important;
 }
+@media (max-width: 37.5em) {
+  .cky-button-wrapper {
+    padding-right: 2rem;
+  }
+}
 
 .cky-btn-settings::before {
   top: 8px !important;

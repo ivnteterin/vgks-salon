@@ -37,6 +37,9 @@
 .cky-button-wrapper {
   text-align: right !important;
   //   margin-top: 1rem !important;
+  @include respond(phone) {
+    padding-right: 3rem;
+  }
 }
 
 .cky-btn-settings {
