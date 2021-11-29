@@ -1908,6 +1908,15 @@ body {
   }
 }
 
+.cky-btn-settings[expanded]:before {
+  top: 10px !important;
+}
+@media (max-width: 37.5em) {
+  .cky-btn-settings[expanded]:before {
+    top: 8px !important;
+  }
+}
+
 .center-con {
   width: min-content;
   height: min-content;

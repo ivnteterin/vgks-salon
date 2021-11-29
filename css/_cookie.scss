@@ -48,3 +48,10 @@
     }
   }
 }
+
+.cky-btn-settings[expanded]:before {
+  top: 10px !important;
+  @include respond(phone) {
+    top: 8px !important;
+  }
+}
