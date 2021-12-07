@@ -129,6 +129,10 @@
     @include respond(phone) {
       margin: 0 0 2rem 0;
     }
+    @include respond(small-phone) {
+      gap: 2.4rem;
+      margin: 0 0 2rem 0;
+    }
   }
 }
 

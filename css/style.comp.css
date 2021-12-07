@@ -335,7 +335,7 @@ body {
   display: inline-block;
   vertical-align: middle;
 }
-@media (max-width: 20em) {
+@media (max-width: 24em) {
   .heading-4--pricelist span {
     line-height: 1.2;
   }
@@ -1155,6 +1155,12 @@ body {
 }
 @media (max-width: 37.5em) {
   .pricelist__sub-item {
+    margin: 0 0 2rem 0;
+  }
+}
+@media (max-width: 24em) {
+  .pricelist__sub-item {
+    gap: 2.4rem;
     margin: 0 0 2rem 0;
   }
 }

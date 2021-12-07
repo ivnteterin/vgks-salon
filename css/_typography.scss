@@ -162,7 +162,7 @@
       line-height: 0.8;
       display: inline-block;
       vertical-align: middle;
-      @include respond(little-phone) {
+      @include respond(small-phone) {
         line-height: 1.2;
       }
     }
