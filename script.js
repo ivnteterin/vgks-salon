@@ -1,61 +1,18 @@
 'use strict';
 
-// kick off the polyfill!
-
 const FOOTER_COLLAPSE_WIDTH = 1030;
+
 const pricelists = document.querySelectorAll('.pricelist__item');
 const servicesBlock = document.querySelector('.services');
 const footerBlock = document.querySelector('footer');
 const checkboxes = document.querySelectorAll('.footer__item__checkbox');
+const services = document.querySelectorAll('.services__item');
 
 //SHOP STATUS (CLOSED / OPEN)
 
-function isTouchDevice() {
-  return window.ontouchstart !== undefined;
-}
-
-const services = document.querySelectorAll('.services__item');
-
-if (isTouchDevice()) {
-  services.forEach((service) => {
-    service.addEventListener('touchstart', function () {
-      service.classList.remove('service-mobile-released');
-      service.classList.remove('service-desktop');
-      service.classList.add('service-mobile-pressed');
-    });
-    service.addEventListener('touchend', function () {
-      service.classList.remove('service-mobile-pressed');
-      service.classList.add('service-mobile-released');
-    });
-  });
-} else {
-  services.forEach((service) => {
-    service.classList.remove('service-mobile-pressed');
-    service.classList.remove('service-mobile-released');
-    service.classList.add('service-desktop');
-  });
-}
-
-// const servicesOnResize = function () {
-//   if (isTouchDevice()) {
-//     services.forEach((service) => {
-//       service.classList.remove('service-desktop');
-//       service.classList.add('service-mobile');
-//     });
-//   } else {
-//     services.forEach((service) => {
-//       service.classList.remove('service-mobile');
-//       service.classList.add('service-desktop');
-//     });
-//   }
-// };
-
-// servicesOnResize();
-
-function reqListener() {
+const loadShopOpeningTimeStatus = function () {
   let week;
   let hours;
-  let minutes;
 
   const options = {
     timeZone: 'Europe/Vilnius',
@@ -69,14 +26,13 @@ function reqListener() {
 
   week = date.getDay();
   hours = time.substring(0, 2);
-  minutes = time.substring(3, 5);
 
   const closed = document.getElementById('closed');
-  const closedFooter = document.getElementById('closed-footer');
   const open = document.getElementById('open');
+
+  const closedFooter = document.getElementById('closed-footer');
   const openFooter = document.getElementById('open-footer');
-  // const closed1 = document.getElementById('closed-1');
-  // const open1 = document.getElementById('open-1');
+
   if (
     (week !== 0 && week < 7 && hours < 18 && hours >= 9) ||
     (week === 0 && hours < 16 && hours >= 10)
@@ -103,16 +59,41 @@ function reqListener() {
     closedFooter.classList.remove('hidden');
     openFooter.classList.add('hidden');
   }
-}
+};
 
-function loadShopStatus() {
-  reqListener();
-}
+//first time on load
+loadShopOpeningTimeStatus();
 
-loadShopStatus();
-setInterval(loadShopStatus, 60000);
+//then every 60sec
+setInterval(loadShopOpeningTimeStatus, 60000);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // VIEWPORT FIX FOR MOBILE
+
+function isTouchDevice() {
+  return window.ontouchstart !== undefined;
+}
+
+if (isTouchDevice()) {
+  services.forEach((service) => {
+    service.addEventListener('touchstart', function () {
+      service.classList.remove('service-mobile-released');
+      service.classList.remove('service-desktop');
+      service.classList.add('service-mobile-pressed');
+    });
+    service.addEventListener('touchend', function () {
+      service.classList.remove('service-mobile-pressed');
+      service.classList.add('service-mobile-released');
+    });
+  });
+} else {
+  services.forEach((service) => {
+    service.classList.remove('service-mobile-pressed');
+    service.classList.remove('service-mobile-released');
+    service.classList.add('service-desktop');
+  });
+}
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 // let vh = window.innerHeight * 0.01;
@@ -124,14 +105,13 @@ document.documentElement.style.setProperty('--vh', `${prevVh}px`);
 window.addEventListener('resize', () => {
   const currVw = window.innerWidth * 0.01;
   prevVh = window.innerHeight * 0.01;
-  // console.log('curr = ', currVw);
-  // console.log('prev = ', prevVw);
+
   if (currVw < prevVw) {
     document.documentElement.style.setProperty('--vh', `${prevVh}px`);
     prevVw = currVw;
     return;
   }
-  if (window.innerWidth < 550 && window.innerHeight < 768) return;
+  if (window.innerWidth < 600 && window.innerHeight < 800) return;
 
   prevVh = window.innerHeight * 0.01;
   prevVw = window.innerWidth * 0.01;
@@ -140,15 +120,12 @@ window.addEventListener('resize', () => {
 
 //Social links animation
 
-// document.getElementById('social-ig').addEventListener('mouseover', mouseOver);
-// document.getElementById('social-ig').addEventListener('mouseout', mouseOut);
-
 const socialIconsInst = [
   document.getElementById('social-ig-1'), //1 is for footer
   document.getElementById('social-ig-2'), //2 is for social media section
-  // document.getElementById('social-ig-3'), //2 is for social media section
 ];
 
+//make Facebook's social link stay expanded while hovered on Instagram's link
 const socialsIconsFbWidthFix = function (elems) {
   elems.forEach((el) => {
     el.addEventListener('mouseover', mouseOver);
@@ -173,6 +150,9 @@ function mouseOut() {
 }
 
 socialsIconsFbWidthFix(socialIconsInst);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 //FOOTER ANIMATIONS (COLLAPSE FOR SMALL SCREEN)
 
 const checkSize = function () {
@@ -388,20 +368,6 @@ document.querySelectorAll('.js--scroll-to-contacts').forEach((el) => {
     checkboxes[1].checked = false;
   });
 });
-
-// $('.js--scroll-to-contacts').on('click', function (event) {
-//   event.preventDefault();
-//   $('html, body')
-//     .stop()
-//     .animate({ scrollTop: $(document).height() }, 'slow');
-// });
-
-// $('.to-top').on('click', function (event) {
-//   event.preventDefault();
-//   $('html, body')
-//     .stop()
-//     .animate({ scrollTop: $('body') }, 'slow');
-// });
 
 const getDymanicHeight = function (el) {
   el.style.height = `${getHeightOfChildren(el)}px`;
