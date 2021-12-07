@@ -19,6 +19,7 @@
   &__img {
     flex-basis: calc(33% - 0.3rem);
     overflow: hidden;
+    text-align: center;
     &:hover {
       img {
         transform: scale(1.2);
@@ -53,3 +54,12 @@
 //     flex-basis: calc(50% - 0.3rem);
 //   }
 // }
+
+.img-loading {
+  @include relatCenter;
+  margin: 2rem auto;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5rem !important;
+  height: 5rem !important;
+}

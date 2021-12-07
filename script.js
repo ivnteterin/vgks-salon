@@ -387,3 +387,52 @@ const getHeightOfChildren = function (el) {
 const aspectRatioFixforIOS = function (el) {
   el.style.height = `${el.getBoundingClientRect().width}px`;
 };
+
+const images = document.querySelectorAll('.img-loading');
+
+const loadGallery = function (imgNode) {
+  loadImage('/img/gallery/nails/1.jpg', 0);
+  loadImage('/img/gallery/nails/2.jpg', 1);
+  loadImage('/img/gallery/nails/3.jpg', 2);
+  loadImage('/img/gallery/massage/1.jpg', 3);
+  loadImage('/img/gallery/massage/2.jpg', 4);
+  loadImage('/img/gallery/massage/3.jpg', 5);
+  loadImage('/img/gallery/massage/4.jpg', 6);
+  loadImage('/img/gallery/massage/5.jpg', 7);
+  loadImage('/img/gallery/massage/6.jpg', 8);
+  loadImage('/img/gallery/hair/1.jpg', 9);
+  loadImage('/img/gallery/hair/2.jpg', 10);
+  loadImage('/img/gallery/hair/3.jpg', 11);
+  loadImage('/img/gallery/hair/4.jpg', 12);
+  loadImage('/img/gallery/hair/5.jpg', 13);
+  loadImage('/img/gallery/hair/6.jpg', 14);
+  loadImage('/img/gallery/photo/1.jpg', 15);
+  loadImage('/img/gallery/photo/2.jpg', 16);
+  loadImage('/img/gallery/photo/3.jpg', 17);
+  loadImage('/img/gallery/photo/4.jpg', 18);
+  loadImage('/img/gallery/photo/5.jpg', 19);
+  loadImage('/img/gallery/photo/6.jpg', 20);
+  loadImage('/img/gallery/courses/1.jpg', 21);
+  loadImage('/img/gallery/courses/2.jpg', 22);
+  loadImage('/img/gallery/courses/3.jpg', 23);
+  loadImage('/img/gallery/courses/4.jpg', 24);
+  loadImage('/img/gallery/courses/5.jpg', 25);
+  loadImage('/img/gallery/courses/6.jpg', 26);
+  loadImage('/img/gallery/other/1.jpg', 27);
+  loadImage('/img/gallery/other/2.jpg', 28);
+  loadImage('/img/gallery/other/3.jpg', 29);
+  loadImage('/img/gallery/other/4.jpg', 30);
+  loadImage('/img/gallery/other/5.jpg', 31);
+  loadImage('/img/gallery/other/6.jpg', 32);
+};
+
+const loadImage = function (imgLink, id) {
+  const downloadingImg = new Image();
+  downloadingImg.onload = function () {
+    images[id].src = this.src;
+    images[id].classList.remove('img-loading');
+  };
+  downloadingImg.src = imgLink;
+};
+
+loadGallery();
