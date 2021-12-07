@@ -1615,22 +1615,14 @@ body {
 .popup {
   opacity: 0;
   visibility: hidden;
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100vh;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 3000;
   transition: all 0.3s;
-}
-.popup::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  background-color: rgba(0, 0, 0, 0.8);
-  width: 100%;
-  height: 100vh;
 }
 .popup:target {
   visibility: visible;
