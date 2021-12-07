@@ -20,6 +20,12 @@
       height: 66rem;
     }
   }
+
+  @include respond(mid-desktop) {
+    @include h-respond(large-phone) {
+      height: 66rem;
+    }
+  }
 }
 
 .logo-small {
@@ -55,10 +61,10 @@
   img {
     position: absolute;
     bottom: -0.25rem;
-    height: auto;
+    height: 100%;
     width: 101%;
 
-    @include respond(large-phone) {
+    @include respond(tab-land) {
       bottom: -0.2rem;
       left: 50%;
       transform: translateX(-50%);
@@ -79,7 +85,7 @@
 
   @include respond(desktop) {
     @include h-respond(large-phone) {
-      min-height: 7rem;
+      min-height: 8rem;
     }
   }
 }

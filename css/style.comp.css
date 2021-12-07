@@ -422,6 +422,11 @@ body {
     height: 66rem;
   }
 }
+@media (min-width: 93.75em) and (max-height: 37.5em) {
+  .header {
+    height: 66rem;
+  }
+}
 
 .logo-small {
   vertical-align: middle;
@@ -454,10 +459,10 @@ body {
 .splitter img {
   position: absolute;
   bottom: -0.25rem;
-  height: auto;
+  height: 100%;
   width: 101%;
 }
-@media (max-width: 46.875em) {
+@media (max-width: 75em) {
   .splitter img {
     bottom: -0.2rem;
     left: 50%;
@@ -466,7 +471,7 @@ body {
     width: auto;
   }
 }
-@media (max-width: 46.875em) and (max-height: 28.5em) {
+@media (max-width: 75em) and (max-height: 28.5em) {
   .splitter img {
     height: 100%;
   }
@@ -478,7 +483,7 @@ body {
 }
 @media (max-width: 93.75em) and (max-height: 37.5em) {
   .splitter {
-    min-height: 7rem;
+    min-height: 8rem;
   }
 }
 
