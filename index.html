@@ -19,6 +19,35 @@
     <title>VGKS | Beauty Salons</title>
   </head>
   <body>
+
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "285257749036891");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v12.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <div class="container">
       <header class="header">
         <nav class="navigation">
@@ -1276,7 +1305,9 @@
           <img class="footer__logo" src="/img/logo-small-white.svg" alt="VGKS Logo">
           <div class="copyright">
               <div class="copyright__address">
-                  <span class="copyright__year"><script>document.write(new Date().getFullYear())</script></span>
+                  <span class="copyright__year">
+                    <script>document.write(new Date().getFullYear())</script>
+                  </span>
                   <span class="copyright__address-text"> © Visagino Grožio Kūrėjų Studija, Lietuva</span>
               </div>
               <div class="copyright__info">
@@ -1531,33 +1562,6 @@
         <a href="#contacts" class="popup__close">&times;</a> 
       </div>
     </div>
-       <!-- Messenger Chat Plugin Code -->
-   <div id="fb-root"></div>
-
-   <!-- Your Chat Plugin code -->
-   <div id="fb-customer-chat" class="fb-customerchat">
-   </div>
-
-   <script>
-     var chatbox = document.getElementById('fb-customer-chat');
-     chatbox.setAttribute("page_id", "285257749036891");
-     chatbox.setAttribute("attribution", "biz_inbox");
-
-     window.fbAsyncInit = function() {
-       FB.init({
-         xfbml            : true,
-         version          : 'v12.0'
-       });
-     };
-
-     (function(d, s, id) {
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) return;
-       js = d.createElement(s); js.id = id;
-       js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-       fjs.parentNode.insertBefore(js, fjs);
-     }(document, 'script', 'facebook-jssdk'));
-   </script>
   </body>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
   <script  type="module" src="gallery.js"></script>
