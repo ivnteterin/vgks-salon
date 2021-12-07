@@ -4,26 +4,33 @@
   flex-flow: column;
   grid-gap: 1rem;
   height: calc(var(--vh, 1vh) * 110);
+  min-height: 20rem;
   background-image: linear-gradient(to bottom, #f4e4f0f5 20%, #f4e4f080),
     url(../img/main-image.jpg);
   background-size: cover;
   background-position: top;
 
   @include respond(tab-land) {
-    @include h-respond(phone) {
-      height: 50rem;
+    @include h-respond(large-phone) {
+      min-height: 66rem;
     }
   }
 
   @include respond(desktop) {
     @include h-respond(large-phone) {
-      height: 66rem;
+      min-height: 66rem;
+      .splitter {
+        min-height: 9rem;
+      }
     }
   }
 
   @include respond(mid-desktop) {
     @include h-respond(large-phone) {
-      height: 66rem;
+      min-height: 66rem;
+      .splitter {
+        min-height: 9rem;
+      }
     }
   }
 }
@@ -49,8 +56,6 @@
 
   @include respond(mid-phone) {
     transform: translate(-50%) scale(1.2);
-    @include h-respond(phone) {
-    }
   }
 }
 

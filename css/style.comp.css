@@ -408,23 +408,30 @@ body {
   flex-flow: column;
   grid-gap: 1rem;
   height: calc(var(--vh, 1vh) * 110);
+  min-height: 20rem;
   background-image: linear-gradient(to bottom, #f4e4f0f5 20%, #f4e4f080), url(../img/main-image.jpg);
   background-size: cover;
   background-position: top;
 }
-@media (max-width: 75em) and (max-height: 28.5em) {
+@media (max-width: 75em) and (max-height: 37.5em) {
   .header {
-    height: 50rem;
+    min-height: 66rem;
   }
 }
 @media (max-width: 93.75em) and (max-height: 37.5em) {
   .header {
-    height: 66rem;
+    min-height: 66rem;
+  }
+  .header .splitter {
+    min-height: 9rem;
   }
 }
 @media (min-width: 93.75em) and (max-height: 37.5em) {
   .header {
-    height: 66rem;
+    min-height: 66rem;
+  }
+  .header .splitter {
+    min-height: 9rem;
   }
 }
 
@@ -451,6 +458,7 @@ body {
     transform: translate(-50%) scale(1.2);
   }
 }
+
 .splitter {
   position: relative;
   height: 10vh;
