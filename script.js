@@ -245,33 +245,12 @@ const checkSize = function () {
 };
 let prevWidth = FOOTER_COLLAPSE_WIDTH;
 
-window.addEventListener('load', () => {
-  checkSize();
-  document.querySelectorAll('.js--fix-height').forEach((el) => {
-    aspectRatioFixforIOS(el);
-  });
-  document.querySelectorAll('.gallery__img').forEach((el) => {
-    aspectRatioFixforIOS(el);
-  });
-
-  pricelists.forEach((pricelist) => {
-    getDymanicHeight(pricelist);
-  });
-
-  document.querySelectorAll('.footer__item__content').forEach((el) => {
-    getDymanicHeight(el);
-  });
-});
-
-window.addEventListener('resize', () => {
-  checkSize();
+const adjustItemSizeOnResize = function () {
   setTimeout(() => {
     document.querySelectorAll('.js--fix-height').forEach((el) => {
       aspectRatioFixforIOS(el);
     });
-    document.querySelectorAll('.gallery__img').forEach((el) => {
-      aspectRatioFixforIOS(el);
-    });
+
     pricelists.forEach((pricelist) => {
       getDymanicHeight(pricelist);
     });
@@ -280,7 +259,16 @@ window.addEventListener('resize', () => {
   document.querySelectorAll('.footer__item__content').forEach((el) => {
     getDymanicHeight(el);
   });
-  console.log('CHANGE!');
+};
+
+window.addEventListener('load', () => {
+  checkSize();
+  adjustItemSizeOnResize();
+});
+
+window.addEventListener('resize', () => {
+  checkSize();
+  adjustItemSizeOnResize();
 });
 
 window.addEventListener('visibilitychange', () => {});

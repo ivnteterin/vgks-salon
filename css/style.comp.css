@@ -377,6 +377,7 @@ body {
 .basic-text h4 {
   margin-bottom: 1rem;
   text-align: left;
+  text-transform: uppercase;
 }
 .basic-text h4 span {
   color: #ad7fc1;
@@ -1711,7 +1712,8 @@ body {
 }
 
 .reservation,
-.privacy {
+.privacy,
+.tou {
   width: 65rem;
   min-width: 200px;
   display: flex;
@@ -1722,76 +1724,90 @@ body {
   gap: 3rem;
 }
 .reservation--heading-2,
-.privacy--heading-2 {
+.privacy--heading-2,
+.tou--heading-2 {
+  padding-right: 3rem;
   margin-bottom: 0rem;
 }
 @media (max-width: 46.875em) {
   .reservation,
-.privacy {
+.privacy,
+.tou {
     padding: 4rem;
   }
 }
 @media (max-width: 46.875em) and (max-height: 45em) {
   .reservation,
-.privacy {
+.privacy,
+.tou {
     gap: 2.5rem;
   }
 }
 @media (max-width: 37.5em) {
   .reservation,
-.privacy {
+.privacy,
+.tou {
     padding: 3.5rem;
   }
 }
 @media (max-width: 37.5em) and (max-height: 45em) {
   .reservation,
-.privacy {
+.privacy,
+.tou {
     gap: 2rem;
   }
 }
 @media (max-width: 64.375em) {
   .reservation,
-.privacy {
+.privacy,
+.tou {
     width: 75%;
   }
 }
 @media (max-width: 24em) {
   .reservation,
-.privacy {
+.privacy,
+.tou {
     padding: 3rem;
     gap: 2rem;
   }
 }
 .reservation__item,
-.privacy__item {
+.privacy__item,
+.tou__item {
   display: flex;
   gap: 2rem;
   align-items: center;
 }
 .reservation__icon,
-.privacy__icon {
+.privacy__icon,
+.tou__icon {
   width: 6rem;
   height: auto;
 }
 @media (max-width: 29em) {
   .reservation__icon,
-.privacy__icon {
+.privacy__icon,
+.tou__icon {
     width: 5rem;
   }
 }
 .reservation a,
-.privacy a {
+.privacy a,
+.tou a {
   color: #ad7fc1;
 }
 
-.privacy {
-  width: 80rem;
+.privacy,
+.tou {
+  width: 100rem;
   padding: 4rem 3rem;
   gap: 2rem;
 }
 @media (max-width: 64.375em) {
-  .privacy {
-    width: 85%;
+  .privacy,
+.tou {
+    width: 90%;
   }
 }
 

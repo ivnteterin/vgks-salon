@@ -136,7 +136,8 @@
 }
 
 .reservation,
-.privacy {
+.privacy,
+.tou {
   width: 65rem;
   min-width: 200px;
   display: flex;
@@ -147,6 +148,7 @@
   gap: 3rem;
 
   &--heading-2 {
+    padding-right: 3rem;
     margin-bottom: 0rem;
     @include respond(little-phone) {
       // font-size: 2.2rem;
@@ -196,11 +198,12 @@
   }
 }
 
-.privacy {
-  width: 80rem;
+.privacy,
+.tou {
+  width: 100rem;
   padding: 4rem 3rem;
   gap: 2rem;
   @include respond(footer1030) {
-    width: 85%;
+    width: 90%;
   }
 }
