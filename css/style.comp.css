@@ -1278,8 +1278,8 @@ body {
   cursor: initial;
   top: 50%;
   transform: translateY(-50%);
-  width: 5rem !important;
-  height: 5rem !important;
+  width: 4rem !important;
+  height: 4rem !important;
 }
 .img-loading:hover {
   transform: translateY(-50%) scale(1) !important;
