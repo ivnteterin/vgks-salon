@@ -12,13 +12,13 @@
 
   @include respond(tab-land) {
     @include h-respond(large-phone) {
-      min-height: 66rem;
+      min-height: 50rem;
     }
   }
 
   @include respond(desktop) {
     @include h-respond(large-phone) {
-      min-height: 66rem;
+      min-height: 80rem;
       .splitter {
         min-height: 9rem;
       }
@@ -27,7 +27,7 @@
 
   @include respond(mid-desktop) {
     @include h-respond(large-phone) {
-      min-height: 66rem;
+      min-height: 80rem;
       .splitter {
         min-height: 9rem;
       }

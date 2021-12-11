@@ -415,12 +415,12 @@ body {
 }
 @media (max-width: 75em) and (max-height: 37.5em) {
   .header {
-    min-height: 66rem;
+    min-height: 50rem;
   }
 }
 @media (max-width: 93.75em) and (max-height: 37.5em) {
   .header {
-    min-height: 66rem;
+    min-height: 80rem;
   }
   .header .splitter {
     min-height: 9rem;
@@ -428,7 +428,7 @@ body {
 }
 @media (min-width: 93.75em) and (max-height: 37.5em) {
   .header {
-    min-height: 66rem;
+    min-height: 80rem;
   }
   .header .splitter {
     min-height: 9rem;
