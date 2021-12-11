@@ -54,8 +54,32 @@
   max-width: 110rem;
   transform: translate(-50%);
 
-  @include respond(mid-phone) {
-    transform: translate(-50%) scale(1.2);
+  @include respond(tab-land) {
+    width: 85%;
+  }
+
+  @include respond(tab-port) {
+    // transform: translate(-50%) scale(1.2);
+    display: none;
+  }
+}
+.poster-2 {
+  display: none;
+  font-size: 8rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  // font-family: 'Oranienbaum', serif;
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background: -webkit-linear-gradient(#000, #ba74b7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @include respond(tab-port) {
+    // transform: translate(-50%) scale(1.2);
+    display: block;
   }
 }
 

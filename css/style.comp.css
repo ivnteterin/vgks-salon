@@ -453,9 +453,34 @@ body {
   max-width: 110rem;
   transform: translate(-50%);
 }
-@media (max-width: 29em) {
+@media (max-width: 75em) {
   .poster {
-    transform: translate(-50%) scale(1.2);
+    width: 85%;
+  }
+}
+@media (max-width: 56.25em) {
+  .poster {
+    display: none;
+  }
+}
+
+.poster-2 {
+  display: none;
+  font-size: 8rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  font-family: "Cinzel", serif;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background: -webkit-linear-gradient(#000, #ba74b7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 56.25em) {
+  .poster-2 {
+    display: block;
   }
 }
 

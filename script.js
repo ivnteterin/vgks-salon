@@ -7,6 +7,7 @@ const servicesBlock = document.querySelector('.services');
 const footerBlock = document.querySelector('footer');
 const checkboxes = document.querySelectorAll('.footer__item__checkbox');
 const services = document.querySelectorAll('.services__item');
+const goTopBtn = document.getElementById('back-to-top');
 
 //SHOP STATUS (CLOSED / OPEN)
 
@@ -76,11 +77,6 @@ function isTouchDevice() {
 }
 
 if (isTouchDevice()) {
-  // let prevVh = window.innerHeight * 0.01;
-  // let prevVw = window.innerWidth * 0.01;
-  // // Then we set the value in the --vh custom property to the root of the document
-  // document.documentElement.style.setProperty('--vh', `${prevVh}px`);
-
   services.forEach((service) => {
     service.addEventListener('touchstart', function () {
       service.classList.remove('service-mobile-released');
@@ -295,7 +291,6 @@ function backToTop() {
     behavior: 'smooth',
   });
 }
-const goTopBtn = document.getElementById('back-to-top');
 goTopBtn.addEventListener('click', backToTop);
 
 function getOffset(el) {
