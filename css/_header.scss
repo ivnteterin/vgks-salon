@@ -65,13 +65,13 @@
 }
 .poster-2 {
   display: none;
-  font-size: 8rem;
+  font-size: 10rem;
   opacity: 0.8;
   text-transform: uppercase;
-  // font-family: 'Oranienbaum', serif;
-  font-family: 'Cinzel', serif;
+  font-family: 'Oranienbaum', serif;
   text-align: center;
   position: relative;
+  min-width: 200px;
   top: 50%;
   transform: translateY(-50%);
   background: -webkit-linear-gradient(#000, #ba74b7);
@@ -80,6 +80,12 @@
   @include respond(tab-port) {
     // transform: translate(-50%) scale(1.2);
     display: block;
+  }
+  @include respond(small-phone) {
+    font-size: 9rem;
+  }
+  @include respond(little-phone) {
+    font-size: 7rem;
   }
 }
 

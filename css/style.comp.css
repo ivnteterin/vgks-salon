@@ -466,12 +466,13 @@ body {
 
 .poster-2 {
   display: none;
-  font-size: 8rem;
+  font-size: 10rem;
   opacity: 0.8;
   text-transform: uppercase;
-  font-family: "Cinzel", serif;
+  font-family: "Oranienbaum", serif;
   text-align: center;
   position: relative;
+  min-width: 200px;
   top: 50%;
   transform: translateY(-50%);
   background: -webkit-linear-gradient(#000, #ba74b7);
@@ -481,6 +482,16 @@ body {
 @media (max-width: 56.25em) {
   .poster-2 {
     display: block;
+  }
+}
+@media (max-width: 24em) {
+  .poster-2 {
+    font-size: 9rem;
+  }
+}
+@media (max-width: 20em) {
+  .poster-2 {
+    font-size: 7rem;
   }
 }
 
