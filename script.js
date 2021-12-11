@@ -429,5 +429,5 @@ const loadImage = function (imgLink, id) {
   };
   downloadingImg.src = imgLink;
 };
-
+checkSize();
 loadGallery();
