@@ -33,8 +33,9 @@
     display: flex;
     width: 100%;
     align-self: flex-start;
+    flex-wrap: wrap;
 
-    border: 2px solid $vgks-color-primary-white;
+    // border: 2px solid $vgks-color-primary-white;
     border-radius: 0;
   }
 
