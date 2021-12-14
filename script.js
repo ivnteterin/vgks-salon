@@ -443,5 +443,7 @@ form.addEventListener('input', () => {
     document.querySelector('.ml-form-recaptcha').classList.add('hidden');
     console.log('FORM EMPTY');
     getDymanicHeight(document.querySelectorAll('.footer__item__content')[3]);
+    document.querySelector('.row-success').style.display = 'none';
+    grecaptcha.reset();
   }
 });
