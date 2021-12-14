@@ -1935,10 +1935,11 @@ body {
 }
 
 .btn-newsletter {
-  border: 2px solid #fff;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  height: 100%;
+  border: 2px solid #fff;
   -webkit-appearance: none;
   border-radius: 0;
   padding: 0.5rem 0.8rem 0.5rem 0.9rem;

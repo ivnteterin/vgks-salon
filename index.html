@@ -1283,15 +1283,15 @@
                       <form class="ml-block-form footer__form" action="https://static.mailerlite.com/webforms/submit/p5q1p5" data-code="p5q1p5" method="post" target="_blank">
                         <div class="ml-form-formContent" style="flex: 1; border: 2px solid #fff;">
                             <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-                              <input aria-label="email" aria-required="true" type="email" class="form-control footer__newsletter__email" data-inputmask="" name="fields[email]" placeholder="El. paštas" autocomplete="email">
+                              <input aria-label="email" aria-required="true" type="email" class="form-control footer__newsletter__email" data-inputmask="" name="fields[email]" placeholder="El. paštas" autocomplete="email" id="newsletter-form">
                             </div>
                         </div>
-                        <div class="ml-form-recaptcha ml-validate-required" style="order:1;flex-basis: 100%;">
+                        <div class="ml-form-recaptcha ml-validate-required hidden" style="order:1;flex-basis: 100%;">
                           <style type="text/css">
-                            .ml-form-recaptcha{margin-top:20px}.ml-form-recaptcha.ml-error iframe{border:solid 1px red}@media screen and (max-width:480px){.ml-form-recaptcha{width:220px!important}.g-recaptcha{transform:scale(.78);-webkit-transform:scale(.78);transform-origin:0 0;-webkit-transform-origin:0 0}}
+                            .ml-form-recaptcha{margin-top:20px}.ml-form-recaptcha.ml-error iframe{border:solid 1px red}@media screen and (max-width:480px){.ml-form-recaptcha{width:220px!important}}
                           </style>
                           <script src="https://www.google.com/recaptcha/api.js"></script>
-                          <div class="g-recaptcha" data-theme="dark" data-size="compact" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
+                          <div class="g-recaptcha" style="transform:scale(.85);-webkit-transform:scale(.85);transform-origin:0 0;-webkit-transform-origin:0 0;" data-theme="dark" data-size="compact" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
                         </div>
                         <input type="hidden" name="ml-submit" value="1">
                         <div class="ml-form-embedSubmit">
