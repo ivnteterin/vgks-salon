@@ -49,13 +49,18 @@
   position: absolute;
   height: 100%;
 
+  g {
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+  }
+
   width: 100%;
   left: 50%;
-  max-width: 110rem;
+  max-width: 160rem;
   transform: translate(-50%);
 
   @include respond(tab-land) {
-    width: 85%;
+    width: 100%;
   }
 
   @include respond(tab-port) {

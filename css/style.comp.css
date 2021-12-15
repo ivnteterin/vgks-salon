@@ -450,12 +450,16 @@ body {
   height: 100%;
   width: 100%;
   left: 50%;
-  max-width: 110rem;
+  max-width: 160rem;
   transform: translate(-50%);
+}
+.poster g {
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 1px;
 }
 @media (max-width: 75em) {
   .poster {
-    width: 85%;
+    width: 100%;
   }
 }
 @media (max-width: 56.25em) {
@@ -1854,14 +1858,14 @@ body {
 .reservation__icon,
 .privacy__icon,
 .tou__icon {
-  width: 6rem;
+  width: 5rem;
   height: auto;
 }
 @media (max-width: 29em) {
   .reservation__icon,
 .privacy__icon,
 .tou__icon {
-    width: 5rem;
+    width: 4rem;
   }
 }
 .reservation a,
@@ -1939,7 +1943,7 @@ body {
   border: 2px solid #fff;
   -webkit-appearance: none;
   border-radius: 0;
-  padding: 0.5rem 0.8rem 0.5rem 0.9rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
   background-color: #fff;
   border-style: none;
   color: #202020;

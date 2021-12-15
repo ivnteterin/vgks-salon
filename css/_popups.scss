@@ -185,11 +185,11 @@
   }
 
   &__icon {
-    width: 6rem;
+    width: 5rem;
     height: auto;
 
     @include respond(mid-phone) {
-      width: 5rem;
+      width: 4rem;
     }
   }
 
