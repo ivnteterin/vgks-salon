@@ -106,14 +106,16 @@ window.addEventListener('resize', () => {
   const currVw = window.innerWidth * 0.01;
   prevVh = window.innerHeight * 0.01;
 
+  if (isTouchDevice()) {
+    return;
+  }
+
   if (currVw < prevVw) {
     document.documentElement.style.setProperty('--vh', `${prevVh}px`);
     prevVw = currVw;
     return;
   }
-  if (isTouchDevice()) {
-    return;
-  }
+
   // if (window.innerWidth < 650 && window.innerHeight < 1300) return;
 
   prevVh = window.innerHeight * 0.01;
