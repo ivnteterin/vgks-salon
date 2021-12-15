@@ -437,12 +437,10 @@ const form = document.getElementById('newsletter-form');
 form.addEventListener('input', () => {
   if (document.getElementById('newsletter-form').value.length !== 0) {
     document.querySelector('.ml-form-recaptcha').classList.remove('hidden');
-    console.log('FORM NOT EMPTY');
     getDymanicHeight(document.querySelectorAll('.footer__item__content')[3]);
     document.querySelector('.row-success').style.display = 'none';
   } else {
     document.querySelector('.ml-form-recaptcha').classList.add('hidden');
-    console.log('FORM EMPTY');
     getDymanicHeight(document.querySelectorAll('.footer__item__content')[3]);
     document.querySelector('.row-success').style.display = 'none';
     grecaptcha.reset();
