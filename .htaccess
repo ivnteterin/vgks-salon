@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond% {HTTPS}! ^ Is $
+RewriteRule. * Https: //% {SERVER_NAME}% {REQUEST_URI} [L, R]

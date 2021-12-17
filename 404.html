@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="lt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="VGKS | 404 Not Found" />
+    <meta name="author" content="@ivnteterin" />
+
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@200;400;600;700&family=Oranienbaum&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./photoswipe.css"/>
+    <title>VGKS | 404 Not Found</title>
+  </head>
+  <body>
+    <div class="container" style="display: flex; height: calc(var(--vh, 1vh) * 100) !important; flex-flow: column;">
+      <header class="header-404" style="flex: 1;">
+        <nav class="navigation">
+          <div class="navigation__logo-box">
+            <a href="/" class="navigation__logo-link">
+            <img class="logo-small" src="img/logo-small.svg" alt="logo">
+          </a>
+          </div>
+          <ul class="navigation__list">
+            <li class="navigation__list--item">
+              <a href="/#services" class="navigation__list--item__link js--scroll-to-services">Paslaugos</a>
+            </li>
+            <li class="navigation__list--item">
+              <a class="navigation__list--item__link">El. parduotuvė</a >
+              <span class="coming-soon">Coming soon</span>
+            </li>
+            <li class="navigation__list--item">
+              <a  href="/#contacts"
+                class="navigation__list--item__link">Kontaktai</a>
+            </li>
+            <li class="navigation__list--item">
+              <a class="navigation__list--item__link--btn" href="/#reservation"><button class="btn">Rezervuoti</button></a>
+            </li>
+          </ul>
+
+          <div class="sidebar">
+            <input
+              type="checkbox"
+              class="sidebar__checkbox"
+              id="sidebar-toggle"
+            />
+            <label for="sidebar-toggle" class="sidebar__button">
+              <span class="sidebar__icon"></span>
+            </label>
+            <div class="wrapper">
+              <nav class="sidebar__nav">
+                <ul class="sidebar__list">
+                  <li class="sidebar__item">
+                    <a href="/#services" class="sidebar__link js--scroll-to-services"
+                      ><span>Paslaugos</span></a>
+                    
+                  </li>
+                  <li class="sidebar__item">
+                    <a class="sidebar__link sidebar__link-go"
+                      ><span>El.parduotuvė</span></a>
+                    
+                    <span class="coming-soon">Coming soon</span>
+                  </li>
+                  <li class="sidebar__item">
+                    <a href="/#contacts" class="sidebar__link js--scroll-to-contacts"
+                      ><span>Kontaktai</span></a>
+                    
+                  </li>
+                  <a href="/#reservation" class="sidebar__item">
+                    <button class="btn btn-sidebar">Rezervuoti</button>
+                  </a>
+                </ul>
+                <div class="sidebar__socials">
+                  <a href="https://www.instagram.com/vgks.visaginas/" class="sidebar_ig">
+                    <svg class="footer__icon footer__icon__instagram ig-logo" stroke-width=".501" stroke-linejoin="bevel" fill-rule="evenodd" xmlns="http://www.w3.org/2000/svg" overflow="visible" viewBox="0 0 72 72" id="vgks-icon-instagram">
+                      <defs>
+                          <linearGradient id="a-3" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="45.919" y2="48.138" gradientTransform="translate(15.551 13.325)">
+                              <stop class="instagram-change-color" offset="0" stop-color="#777"></stop>
+                          </linearGradient>
+                      </defs>
+                      <g stroke-linejoin="round" stroke-linecap="round" stroke-width=".25" stroke-miterlimit="79.84" fill="url(#a-3)" transform="matrix(1 0 0 -1 0 72)" font-family="Times New Roman" font-size="16">
+                          <path d="M29.469 26.518c-2.531 1.841-4.171 4.632-4.66 7.748-.432 3.155.345 6.243 2.215 8.775 1.87 2.56 4.641 4.191 7.758 4.661h3.491a11.9 11.9 0 006.645-3.309c1.765-1.832 2.964-4.124 3.328-6.646.441-3.136-.316-6.252-2.225-8.793-1.87-2.523-4.632-4.21-7.748-4.671a14.064 14.064 0 00-1.765-.086c-2.541 0-4.967.786-7.039 2.321zm14.567 10.577c-.508 3.366-3.088 5.898-6.425 6.377a4.653 4.653 0 01-1.074.116c-.364 0-.748-.039-1.141-.116a7.156 7.156 0 01-4.929-2.963c-1.237-1.592-1.736-3.615-1.429-5.648a7.382 7.382 0 012.973-4.929c1.649-1.218 3.634-1.717 5.6-1.41 4.162.614 6.991 4.459 6.425 8.573z"></path>
+                          <path d="M10.53 10.551c-14.04 14.049-14.04 36.863 0 50.912 14.049 14.049 36.882 14.049 50.94 0 14.04-14.049 14.04-36.863 0-50.912-14.058-14.068-36.891-14.068-50.94 0zm45.187 5.926c2.637 2.369 4.315 5.773 4.315 9.542v21.683c0 7.038-5.716 12.763-12.745 12.763H25.576c-6.991 0-12.754-5.725-12.754-12.763V26.019c0-4.056 1.917-7.681 4.833-9.992 2.388-2.753 5.744-4.479 9.532-4.479h18.681c3.97 0 7.557 1.937 9.849 4.929z"></path>
+                          <path d="M46.386 48.248c-.652.633-1.046 1.602-1.046 2.561 0 .968.394 1.966 1.046 2.646.757.662 1.688 1.122 2.675 1.122.93 0 1.918-.46 2.637-1.122.662-.68 1.094-1.678 1.094-2.646 0-.959-.432-1.928-1.094-2.561-.719-.738-1.707-1.16-2.637-1.16-.987 0-1.918.422-2.675 1.16z"></path>
+                      </g>
+                    </svg>
+                  </a> 
+                  <a href="https://www.facebook.com/vgks.visaginas/" target="_blank" class="sidebar__fb">
+                    <svg class="footer__icon footer__icon__facebook fb-logo" stroke-width=".501" stroke-linejoin="bevel" fill-rule="evenodd" xmlns="http://www.w3.org/2000/svg" overflow="visible" viewBox="0 0 72 72" id="vgks-icon-facebook">
+                      <defs>
+                          <linearGradient id="b-3" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="46.405" y2="44.53" gradientTransform="translate(19.224 21.598)">
+                              <stop offset="0" stop-color="#777"></stop>
+                          </linearGradient>
+                      </defs>
+                      <path d="M10.544 10.538c-14.068 14.049-14.068 36.882 0 50.912 14.039 14.068 36.872 14.068 50.912 0 14.068-14.03 14.068-36.863 0-50.912-3.759-3.769-8.151-6.502-12.85-8.285v26.899h7.786c.595 0 1.046.441 1.046 1.007v8.381c0 .278-.096.576-.317.787a1.29 1.29 0 01-.729.249h-7.786v4.929c0 2.359.585 3.548 3.672 3.548h4.421a1.04 1.04 0 011.036 1.046v7.767c0 .604-.441 1.026-1.036 1.026l-6.578.01c-7.442 0-12.237-4.91-12.237-12.505v-5.821h-6.646c-.565 0-1.054-.432-1.054-1.036v-8.381c0-.566.489-1.007 1.054-1.007h6.646L37.865.047c-9.82-.508-19.832 2.992-27.321 10.491z" fill="url(#b-3)" transform="matrix(1 0 0 -1 0 72)" font-family="Times New Roman" font-size="16"></path>
+                    </svg>
+                  </a>
+                </div>
+                <img
+                  src="img/sidebar-logo.svg"
+                  alt="VGKS Logo"
+                  class="sidebar__logo"
+                />
+              </nav>
+            </div>
+          </div>
+
+          <div class="work-days">
+            <p>
+              Darbo laikas<br />I-VI
+              <span class="work-days__hours">10 - 18</span><br />VII<span
+                class="work-days__hours"
+                >10 - 16</span
+              >
+            </p>
+            <span class="work-days__hours-open hidden" id="open">OPEN</span>
+            <span class="work-days__hours-closed hidden" id="closed"
+              >CLOSED</span
+            >
+          </div>
+        </nav>
+        <div class="poster-container">
+          <div style="position: relative; top: 50%; transform: translateY(-50%); padding:5rem 2rem">
+            <div class="poster-404">404 NOT&nbsp;FOUND</div>
+            <p class="poster-404__text">Atsiprašome, tokio puslapio rasti nepavyko&nbsp;:(</p>
+            <a href="/" class="">
+              <button class="btn btn-404">Grįžti į pradžią</button>
+            </a>   
+          </div>
+        </div>
+      </header>
+      </section>
+      <footer class="footer" id="contacts">
+        <div class="footer__media">
+          <img style="display: block; margin: 0 auto 2.5rem;" src="/img/logo-small-white.svg" alt="VGKS Logo">
+          <div class="copyright" style="margin-top: 0;">
+              <div class="copyright__address">
+                  <span class="copyright__year">
+                    <script>document.write(new Date().getFullYear())</script>
+                  </span>
+                  <span class="copyright__address-text"> © Visagino Grožio Kūrėjų Studija, Lietuva</span>
+              </div>
+              <div class="copyright__info">
+                  <a href="/#privacy-policy" class="privacy-policy">Privatumo politika</a><span class="copyright__divider">|</span><a href="/#terms-of-use" class="terms-of-use">Paslaugų teikimo sąlygos</a><span class="copyright__divider">|</span><a href="/#duk" class=" faq">DUK</a>
+                  </span>              
+              </div>
+          </div>
+        </div>
+        </footer>
+    </div>
+  </body>
+  <script  type="text/javascript" src="404.js"></script>
+</html>

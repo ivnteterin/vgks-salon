@@ -12,7 +12,7 @@
     "compress:css": "node-sass css/style.prefix.css style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css",
     "start-parcel": "parcel index.html",
-    "build-parcel": "parcel build index.html --dist-dir ./dist"
+    "build-parcel": "parcel build index.html 404.html --dist-dir ./dist1"
   },
   "author": "IT",
   "license": "ISC",

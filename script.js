@@ -218,24 +218,24 @@ const checkSize = function () {
 
   if (window.innerWidth < 700 && window.innerWidth > 415) {
     document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
-      'Įsigykite „VIP“ kortelę už 5€ viename iš mūsų salonų ir sutaupykite 10% kiekvieno vizito metu :)';
+      'Įsigykite „VIP“ kortelę už 5€ viename iš mūsų salonų ir sutaupykite 5% kiekvieno vizito metu :)';
     document.querySelector('.copyright__address-text').innerHTML =
       ' © Visagino Grožio Kūrėjų Studija';
   } else if (window.innerWidth < 415 && window.innerWidth >= 321) {
     document.querySelector('.copyright__address-text').innerHTML =
       ' © VGKS, Lietuva';
     document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
-      'Įsigykite kortelę už 5€ viename iš mūsų salonų ir gaukite 10% nuolaidą visoms paslaugoms!';
+      'Įsigykite kortelę už 5€ viename iš mūsų salonų ir gaukite 5% nuolaidą visoms paslaugoms!';
   } else if (window.innerWidth < 321 && window.innerWidth > 280) {
     document.querySelector('.js-popup__reservation-heading-4').innerHTML =
       'Skambinkite';
     document.querySelector('.js-popup__reservation-basic-text').innerHTML = '';
     document.querySelector('.copyright__address-text').innerHTML = '';
     document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
-      'Įsigykite kortelę už 5€ viename iš mūsų salonų ir gaukite 10% visoms paslaugoms!';
+      'Įsigykite kortelę už 5€ viename iš mūsų salonų ir gaukite 5% visoms paslaugoms!';
   } else if (window.innerWidth < 281) {
     document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
-      'Įsigykite kortelę tik už 5€ ir gaukite 10% visoms paslaugoms!';
+      'Įsigykite kortelę tik už 5€ ir gaukite 5% visoms paslaugoms!';
     document.querySelector('.copyright__address-text').innerHTML = '';
   } else {
     document.querySelector('.copyright__address-text').innerHTML =
@@ -245,7 +245,7 @@ const checkSize = function () {
     document.querySelector('.js-popup__reservation-basic-text').innerHTML =
       'Rezervacija internetu netrukus paleisime';
     document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
-      'Įsigykite „VIP“ kortelę tik už 5€ bet kuriame iš mūsų salonų ir sutaupykite 10% kiekvieno apsilankymo metu! :)';
+      'Įsigykite „VIP“ kortelę tik už 5€ bet kuriame iš mūsų salonų ir sutaupykite 5% kiekvieno apsilankymo metu! :)';
   }
 };
 let prevWidth = FOOTER_COLLAPSE_WIDTH;
@@ -265,13 +265,24 @@ const adjustItemSizeOnResize = function () {
     getDymanicHeight(el);
   });
 };
+const header = document.querySelector('.header');
+const headerAdjust = function () {
+  header.style.minHeight = `${
+    getHeightOfChildren(header) -
+    document.querySelector('.poster-container').clientHeight +
+    document.querySelector('.poster').clientHeight +
+    document.querySelector('.poster-2').clientHeight
+  }px`;
+};
 
 window.addEventListener('load', () => {
+  headerAdjust();
   checkSize();
   adjustItemSizeOnResize();
 });
 
 window.addEventListener('resize', () => {
+  headerAdjust();
   checkSize();
   adjustItemSizeOnResize();
 });
@@ -448,3 +459,26 @@ form.addEventListener('input', () => {
     grecaptcha.reset();
   }
 });
+
+//target reassign
+// let BtnClicked = false;
+goTopBtn.addEventListener('click', () => {
+  // BtnClicked = true;
+  history.pushState('', '', window.location.pathname);
+});
+
+// window.addEventListener('scroll', function (ev) {
+//   if (BtnClicked) {
+//     return;
+//   }
+//   if (
+//     window.innerHeight + window.pageYOffset >=
+//     document.body.offsetHeight - footerBlock.clientHeight / 2
+//   ) {
+//     window.location.hash = '#contacts';
+//   } else if (window.pageYOffset + 250 >= servicesBlock.scrollHeight) {
+//     window.location.hash = '#services';
+//   } else {
+//     history.pushState('', '', window.location.pathname);
+//   }
+// });
