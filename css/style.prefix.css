@@ -409,14 +409,16 @@ body {
   display: flex;
   position: relative;
   flex-flow: column;
-  grid-gap: 1rem;
-  height: calc(var(--vh, 1vh) * 110);
   min-height: -webkit-max-content;
   min-height: -moz-max-content;
   min-height: max-content;
   background-image: linear-gradient(to bottom, #f4e4f0f5 20%, #f4e4f080), url(../img/main-image.jpg);
   background-size: cover;
   background-position: top;
+}
+
+.header {
+  height: calc(var(--vh, 1vh) * 110);
 }
 
 .header-404 {
@@ -442,11 +444,12 @@ body {
 
 .poster {
   position: relative;
-  height: 100%;
+  width: 100%;
+  top: 50%;
   left: 50%;
   max-width: 160rem;
   min-height: 450px;
-  transform: translate(-50%);
+  transform: translate(-50%, -50%);
 }
 @media (max-width: 56.25em) {
   .poster {

@@ -4,7 +4,6 @@
   position: relative;
   flex-flow: column;
   // grid-gap: 1rem;
-  height: calc(var(--vh, 1vh) * 110);
   min-height: max-content;
   background-image: linear-gradient(to bottom, #f4e4f0f5 20%, #f4e4f080),
     url(../img/main-image.jpg);
@@ -13,6 +12,7 @@
 }
 
 .header {
+  height: calc(var(--vh, 1vh) * 110);
 }
 .header-404 {
   min-height: max-content !important;
@@ -71,7 +71,7 @@
 
 .poster-2 {
   position: relative;
-  padding: 3.5rem 0;
+  padding: 3rem 0;
   font-size: 10rem;
   display: none;
   top: 50%;

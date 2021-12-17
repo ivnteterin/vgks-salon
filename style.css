@@ -389,8 +389,6 @@ body {
   display: flex;
   position: relative;
   flex-flow: column;
-  grid-gap: 1rem;
-  height: calc(var(--vh, 1vh) * 110);
   min-height: -webkit-max-content;
   min-height: -moz-max-content;
   min-height: max-content;
@@ -402,6 +400,9 @@ body {
     url(img/main-image.jpg);
   background-size: cover;
   background-position: top;
+}
+.header {
+  height: calc(var(--vh, 1vh) * 110);
 }
 .header-404 {
   min-height: -webkit-max-content !important;
@@ -423,11 +424,12 @@ body {
 }
 .poster {
   position: relative;
-  height: 100%;
+  width: 100%;
+  top: 50%;
   left: 50%;
   max-width: 160rem;
   min-height: 450px;
-  transform: translate(-50%);
+  transform: translate(-50%, -50%);
 }
 @media (max-width: 56.25em) {
   .poster {
@@ -466,6 +468,7 @@ body {
 }
 .poster-2 {
   position: relative;
+  padding: 3rem 0;
   font-size: 10rem;
   display: none;
   top: 50%;
