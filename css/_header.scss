@@ -85,9 +85,9 @@
   margin-bottom: 3rem;
   &__text {
     display: block;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #000;
     @include respond(small-phone) {
       font-size: 1.6rem;

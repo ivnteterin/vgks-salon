@@ -1,13 +1,17 @@
-.footer {
-  position: relative;
-  background-color: $vgks-color-secondary-dark-grey;
-  padding: 5rem;
-  min-width: 20rem;
-
-  @include respond(phone) {
-    padding: 4rem 2rem;
+.footer-404 {
+  padding: 2.3rem;
+  &::before {
+    content: '';
+    @include posAbs;
+    height: 0.3rem;
+    width: 100%;
+    background: linear-gradient(70deg, #ddbcec, #f1b8c9);
+    z-index: 2600;
   }
+}
 
+.footer {
+  padding: 5rem;
   &::before {
     content: '';
     @include posAbs;
@@ -16,7 +20,16 @@
     background: linear-gradient(70deg, #ddbcec, #f1b8c9);
     z-index: 2600;
   }
+  @include respond(phone) {
+    padding: 4rem 2rem;
+  }
+}
 
+.footer,
+.footer-404 {
+  position: relative;
+  background-color: $vgks-color-secondary-dark-grey;
+  min-width: 20rem;
   // TOP STUFF
 
   &__media {

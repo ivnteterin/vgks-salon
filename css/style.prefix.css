@@ -508,9 +508,9 @@ body {
 }
 .poster-404__text {
   display: block;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #000;
 }
 @media (max-width: 24em) {
@@ -1365,16 +1365,22 @@ body {
   transform: translateY(-50%) scale(1) !important;
 }
 
-.footer {
-  position: relative;
-  background-color: #202020;
-  padding: 5rem;
-  min-width: 20rem;
+.footer-404 {
+  padding: 2.3rem;
 }
-@media (max-width: 37.5em) {
-  .footer {
-    padding: 4rem 2rem;
-  }
+.footer-404::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.3rem;
+  width: 100%;
+  background: linear-gradient(70deg, #ddbcec, #f1b8c9);
+  z-index: 2600;
+}
+
+.footer {
+  padding: 5rem;
 }
 .footer::before {
   content: "";
@@ -1386,23 +1392,39 @@ body {
   background: linear-gradient(70deg, #ddbcec, #f1b8c9);
   z-index: 2600;
 }
-.footer__media {
+@media (max-width: 37.5em) {
+  .footer {
+    padding: 4rem 2rem;
+  }
+}
+
+.footer,
+.footer-404 {
+  position: relative;
+  background-color: #202020;
+  min-width: 20rem;
+}
+.footer__media,
+.footer-404__media {
   position: relative;
   margin: 0 auto;
   max-width: 130rem;
   min-width: 15rem;
 }
-.footer__button {
+.footer__button,
+.footer-404__button {
   margin: 0;
 }
-.footer__form {
+.footer__form,
+.footer-404__form {
   display: flex;
   width: 100%;
   align-self: flex-start;
   flex-wrap: wrap;
   border-radius: 0;
 }
-.footer__content {
+.footer__content,
+.footer-404__content {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -1411,29 +1433,35 @@ body {
   justify-content: space-between;
 }
 @media (max-width: 64.375em) {
-  .footer__content {
+  .footer__content,
+.footer-404__content {
     flex-direction: column;
     gap: 2rem;
   }
 }
-.footer__info {
+.footer__info,
+.footer-404__info {
   text-decoration: none;
   color: #fff;
   height: 2.5rem;
 }
-.footer__info-mail {
+.footer__info-mail,
+.footer-404__info-mail {
   height: 2.2rem;
   text-decoration: none;
   color: #fff;
   margin-left: 0.6rem;
 }
-.footer__info-mail:hover {
+.footer__info-mail:hover,
+.footer-404__info-mail:hover {
   border-bottom: 2px solid #e7a3ca;
 }
-.footer-work-hours .footer__item__content {
+.footer-work-hours .footer__item__content,
+.footer-404-work-hours .footer__item__content {
   padding-left: 0.5rem;
 }
-.footer__newsletter__email {
+.footer__newsletter__email,
+.footer-404__newsletter__email {
   width: 100%;
   padding: 0.5rem;
   border: none;
@@ -1442,73 +1470,95 @@ body {
   color: #fff;
   border: 2px solid #505050;
 }
-.footer__item {
+.footer__item,
+.footer-404__item {
   width: 25rem;
   display: flex;
   flex-flow: column;
   overflow: hidden;
 }
 @media (max-width: 64.375em) {
-  .footer__item:nth-of-type(2) {
+  .footer__item:nth-of-type(2),
+.footer-404__item:nth-of-type(2) {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
   }
 }
-.footer__item:nth-of-type(3) {
+.footer__item:nth-of-type(3),
+.footer-404__item:nth-of-type(3) {
   display: none;
 }
 @media (max-width: 64.375em) {
-  .footer__item:nth-of-type(3) {
+  .footer__item:nth-of-type(3),
+.footer-404__item:nth-of-type(3) {
     display: flex;
   }
 }
 @media (max-width: 20em) {
-  .footer__item {
+  .footer__item,
+.footer-404__item {
     width: 25rem;
   }
 }
-.footer__item__sub-item-info {
+.footer__item__sub-item-info,
+.footer-404__item__sub-item-info {
   display: flex;
   gap: 1rem;
   margin-left: 0.3rem;
   font-size: 1.3rem;
   color: white;
 }
-.footer__item__sub-item-info-mail {
+.footer__item__sub-item-info-mail,
+.footer-404__item__sub-item-info-mail {
   height: 2.5rem;
 }
 @media (max-width: 56.25em) {
-  .footer__item__sub-item-info {
+  .footer__item__sub-item-info,
+.footer-404__item__sub-item-info {
     font-size: 1.4rem;
   }
 }
-.footer__item__checkbox {
+.footer__item__checkbox,
+.footer-404__item__checkbox {
   display: none;
 }
-.footer__item__checkbox:checked + .footer__item__header .footer__item__header--collapse {
+.footer__item__checkbox:checked + .footer__item__header .footer__item__header--collapse,
+.footer__item__checkbox:checked + .footer__item__header .footer-404__item__header--collapse,
+.footer__item__checkbox:checked + .footer-404__item__header .footer__item__header--collapse,
+.footer__item__checkbox:checked + .footer-404__item__header .footer-404__item__header--collapse,
+.footer-404__item__checkbox:checked + .footer__item__header .footer__item__header--collapse,
+.footer-404__item__checkbox:checked + .footer__item__header .footer-404__item__header--collapse,
+.footer-404__item__checkbox:checked + .footer-404__item__header .footer__item__header--collapse,
+.footer-404__item__checkbox:checked + .footer-404__item__header .footer-404__item__header--collapse {
   transform: rotate(-90deg);
 }
-.footer__item__checkbox:checked ~ .footer__item__content {
+.footer__item__checkbox:checked ~ .footer__item__content,
+.footer__item__checkbox:checked ~ .footer-404__item__content,
+.footer-404__item__checkbox:checked ~ .footer__item__content,
+.footer-404__item__checkbox:checked ~ .footer-404__item__content {
   transform: translateY(-105%);
   opacity: 0;
   height: 0 !important;
   margin-top: 0;
 }
-.footer__item__header {
+.footer__item__header,
+.footer-404__item__header {
   display: flex;
   align-items: center;
   gap: 1rem;
   background-color: #202020;
   z-index: 2000;
 }
-.footer__item__header__button {
+.footer__item__header__button,
+.footer-404__item__header__button {
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-.footer__item__header--collapse {
+.footer__item__header--collapse,
+.footer-404__item__header--collapse {
   display: none;
   opacity: 0.7;
   width: 1.2rem;
@@ -1519,28 +1569,34 @@ body {
   margin-bottom: 0.4rem;
 }
 @media (max-width: 64.375em) {
-  .footer__item__header--collapse {
+  .footer__item__header--collapse,
+.footer-404__item__header--collapse {
     display: block;
   }
 }
-.footer__item__content {
+.footer__item__content,
+.footer-404__item__content {
   display: flex;
   flex-flow: column;
   transition: all 0.3s ease-in-out;
 }
-.footer__item__content > * {
+.footer__item__content > *,
+.footer-404__item__content > * {
   margin-top: 1rem;
 }
-.footer__icon {
+.footer__icon,
+.footer-404__icon {
   height: 1.8rem;
   width: 1.8rem;
   fill: #ad7fc1;
 }
-.footer__logo-large {
+.footer__logo-large,
+.footer-404__logo-large {
   display: none;
 }
 @media (max-width: 64.375em) {
-  .footer__logo-large {
+  .footer__logo-large,
+.footer-404__logo-large {
     display: block;
     position: absolute;
     height: 23rem;
@@ -1550,34 +1606,40 @@ body {
   }
 }
 @media (max-width: 37.5em) {
-  .footer__logo-large {
+  .footer__logo-large,
+.footer-404__logo-large {
     height: 18rem;
     top: -4rem;
     right: -2rem;
   }
 }
 @media (max-width: 29em) {
-  .footer__logo-large {
+  .footer__logo-large,
+.footer-404__logo-large {
     height: 13.5rem;
   }
 }
 @media (max-width: 24em) {
-  .footer__logo-large {
+  .footer__logo-large,
+.footer-404__logo-large {
     display: none;
   }
 }
-.footer__logo {
+.footer__logo,
+.footer-404__logo {
   display: block;
   margin: 2.5rem auto;
   z-index: 2601;
 }
 @media (max-width: 64.375em) {
-  .footer__logo {
+  .footer__logo,
+.footer-404__logo {
     display: none;
   }
 }
 @media (max-width: 24em) {
-  .footer__logo {
+  .footer__logo,
+.footer-404__logo {
     display: block;
     position: absolute;
     top: 2rem;
@@ -1585,7 +1647,8 @@ body {
   }
 }
 @media (max-width: 20em) {
-  .footer__logo {
+  .footer__logo,
+.footer-404__logo {
     display: block;
     margin: 5rem auto 0.5rem;
     position: relative;
@@ -1969,10 +2032,9 @@ body {
   cursor: pointer;
   box-shadow: inset 0px 0px 0px 2px #000;
   color: #fff;
-  transform: translateY(-0.2rem);
 }
 .btn:active {
-  transform: translateY(0.5rem);
+  transform: translateY(0.2rem);
 }
 .btn-sidebar {
   box-shadow: inset 0px 0px 0px 1.5px #fff;
@@ -1989,8 +2051,6 @@ body {
   margin: 0 auto;
   display: block;
   background-image: linear-gradient(-120deg, #a779a6 50%, transparent 50%);
-  padding: 1.5rem;
-  font-size: 2rem;
 }
 @media (max-width: 24em) {
   .btn-404 {
