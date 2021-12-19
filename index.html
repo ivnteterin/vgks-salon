@@ -16,6 +16,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@200;400;600;700&family=Oranienbaum&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./photoswipe.css"/>
+    <!-- TrustBox script -->
+    <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+    <!-- End TrustBox script -->
     <title>VGKS | Beauty Salons</title>
   </head>
   <body>
@@ -146,11 +149,15 @@
 
           <div class="work-days">
             <p>
-              Darbo laikas<br />I-VI
-              <span class="work-days__hours">10 - 18</span><br />VII<span
-                class="work-days__hours"
-                >10 - 16</span
-              >
+              Darbo laikas<br />
+              <div class="work-days__weekdays">
+                <span class="work-days__days">I-VI</span>
+                <span class="work-days__hours">10 - 18</span>
+            </div>
+              <div class="work-days__weekends">
+                <span class="work-days__days">VII</span>
+                <span class="work-days__hours">10 - 16</span>
+              </div>
             </p>
             <span class="work-days__hours-open hidden" id="open">OPEN</span>
             <span class="work-days__hours-closed hidden" id="closed"
@@ -1075,7 +1082,7 @@
         <img class="social-wall__img" src="img/hashtags-1.svg" alt="hashtags">
         <img class="social-wall__img-2" src="img/hashtags-2.svg" alt="hashtags">
         <div class="social-wall__content" style="max-width: 120rem; margin:0 auto">
-          <div class="social-wall__header">
+          <div class="social-wall__header" style="padding-bottom: 1rem;">
             <h1 class="heading-1">
             <p>Sekite mus socialiniuose tinkluose!<span> #vgks</span></p>
             </h1>
@@ -1127,10 +1134,12 @@
                   </a>
               </div>
             </div>
-            <!-- TrustBox script -->
-            <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
-            <!-- End TrustBox script -->
           </div>
+          <!-- TrustBox widget - Micro Review Count -->
+          <div class="trustpilot-widget" data-locale="en-US" data-template-id="5419b6a8b0d04a076446a9ad" data-businessunit-id="61bf4c3af08c2f3625d8cfeb" data-style-height="24px" data-style-width="100%" data-theme="light" data-stars="1,2,3,4,5" data-no-reviews="hide" data-scroll-to-list="true" data-allow-robots="true" data-min-review-count="10">
+            <a href="https://www.trustpilot.com/review/vgks.lt" target="_blank" rel="noopener">Trustpilot</a>
+          </div>
+          <!-- End TrustBox widget -->
           <div class="social__feed" style="width:100%;height:100%;overflow: hidden; position: relative; padding: 3rem 3rem 5rem;">
             <div id="vgks-feed"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
             <script type="text/javascript">
