@@ -1,0 +1,82 @@
+//ECWID
+
+.store-container {
+  background-image: linear-gradient(to bottom, #f4e4f0f5 20%, #f4e4f080),
+    url(../img/main-image.jpg);
+  background-size: cover;
+}
+
+.store {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  //   top: 10rem;
+  max-width: 140rem;
+  width: 80%;
+  padding: 10rem 10rem 5rem;
+  margin-top: 5rem;
+  padding-top: 4rem;
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 5rem;
+  background-color: white;
+  box-shadow: 0 2rem 4rem rgb(0 0 0 / 20%);
+
+  @include respond(tab-land) {
+    width: 100%;
+    padding: 5rem;
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+  }
+  @include respond(small-phone) {
+    padding: 1rem;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    padding-top: 5rem;
+  }
+
+  &__header {
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    display: flex;
+    padding-bottom: 2rem;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &__logo {
+    height: 5rem;
+    width: auto;
+  }
+  &__description {
+    @include respond(footer1030) {
+      display: none;
+    }
+  }
+}
+#my-store-69662574 {
+  padding-top: 4rem;
+}
+
+#my-search-69662574 {
+  @include respond(large-phone) {
+    display: block;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative !important;
+    right: 50% !important;
+    transform: translateX(50%);
+    top: 0rem !important;
+    padding: 0 1rem;
+  }
+}
+
+.to-top-shop {
+  span {
+    color: white;
+    @include respond(tab-land) {
+      color: black;
+    }
+  }
+}
