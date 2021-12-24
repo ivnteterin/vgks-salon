@@ -12,7 +12,8 @@
   transform: translateX(-50%);
   //   top: 10rem;
   max-width: 140rem;
-  width: 80%;
+  min-width: 200px;
+  width: 90%;
   padding: 10rem 10rem 5rem;
   margin-top: 5rem;
   padding-top: 4rem;
@@ -23,15 +24,27 @@
 
   @include respond(tab-land) {
     width: 100%;
-    padding: 5rem;
+    padding: 4.5rem;
     border-top-left-radius: 4rem;
     border-top-right-radius: 4rem;
+  }
+  @include respond(tab-port) {
+    padding: 4rem;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    padding-top: 4.5rem;
+  }
+  @include respond(large-phone) {
+    padding: 3rem;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    padding-top: 4.5rem;
   }
   @include respond(small-phone) {
     padding: 1rem;
     border-top-left-radius: 3rem;
     border-top-right-radius: 3rem;
-    padding-top: 5rem;
+    padding-top: 4.5rem;
   }
 
   &__header {
@@ -56,13 +69,13 @@
   }
 }
 #my-store-69662574 {
-  padding-top: 4rem;
+  padding-top: 2.5rem;
 }
 
 #my-search-69662574 {
-  @include respond(large-phone) {
+  @include respond(tab-port) {
     display: block;
-    margin-bottom: 1.5rem;
+    // margin-bottom: 1.5rem;
     text-align: center;
     position: relative !important;
     right: 50% !important;
@@ -70,13 +83,25 @@
     top: 0rem !important;
     padding: 0 1rem;
   }
+  @include respond(small-phone) {
+    margin-top: 6rem;
+  }
 }
 
 .to-top-shop {
   span {
     color: white;
-    @include respond(tab-land) {
+  }
+  img {
+    filter: grayscale(1) brightness(2);
+  }
+
+  @include respond(tab-land) {
+    span {
       color: black;
+    }
+    img {
+      filter: none;
     }
   }
 }

@@ -126,30 +126,32 @@ window.addEventListener('resize', () => {
 //Social links animation
 
 const socialIconsInst = [
-  document.getElementById('social-ig-1'), //1 is for footer
-  document.getElementById('social-ig-2'), //2 is for social media section
+  document.querySelector('.social-ig-1'), //1 is for footer
+  document.querySelector('.social-ig-2'), //2 is for social media section
 ];
 
 //make Facebook's social link stay expanded while hovered on Instagram's link
 const socialsIconsFbWidthFix = function (elems) {
   elems.forEach((el) => {
-    el.addEventListener('mouseover', mouseOver);
-    el.addEventListener('mouseout', mouseOut);
+    if (el) {
+      el.addEventListener('mouseover', mouseOver);
+      el.addEventListener('mouseout', mouseOut);
+    }
   });
 };
 
 function mouseOver() {
-  const id = this.id.slice(-1);
-  const FBblock = document.getElementById(`social-fb-${id}`);
-  const FBInnerBlock = document.getElementById(`social-fb-c-${id}`);
+  const id = this.classList[1].slice(-1);
+  const FBblock = document.querySelector(`.social-fb-${id}`);
+  const FBInnerBlock = document.querySelector(`.social-fb-c-${id}`);
   FBblock.style.width = getComputedStyle(FBblock).width;
   FBInnerBlock.style.width = getComputedStyle(FBInnerBlock).width;
 }
 
 function mouseOut() {
-  const id = this.id.slice(-1);
-  const FBblock = document.getElementById(`social-fb-${id}`);
-  const FBInnerBlock = document.getElementById(`social-fb-c-${id}`);
+  const id = this.classList[1].slice(-1);
+  const FBblock = document.querySelector(`.social-fb-${id}`);
+  const FBInnerBlock = document.querySelector(`.social-fb-c-${id}`);
   FBblock.style.width = null;
   FBInnerBlock.style.width = null;
 }
@@ -267,6 +269,7 @@ const adjustItemSizeOnResize = function () {
 };
 const header = document.querySelector('.header');
 const headerAdjust = function () {
+  if (!header) return;
   header.style.minHeight = `${
     getHeightOfChildren(header) -
     document.querySelector('.poster-container').clientHeight +
@@ -399,6 +402,7 @@ const aspectRatioFixforIOS = function (el) {
 const images = document.querySelectorAll('.img-loading');
 
 const loadGallery = function (imgNode) {
+  if (images.length == 0) return; //if not main page
   loadImage('/img/gallery/nails/1.jpg', 0);
   loadImage('/img/gallery/nails/2.jpg', 1);
   loadImage('/img/gallery/nails/3.jpg', 2);

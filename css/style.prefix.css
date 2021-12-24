@@ -1366,6 +1366,114 @@ body {
   transform: translateY(-50%) scale(1) !important;
 }
 
+.store-container {
+  background-image: linear-gradient(to bottom, #f4e4f0f5 20%, #f4e4f080), url(../img/main-image.jpg);
+  background-size: cover;
+}
+
+.store {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 140rem;
+  min-width: 200px;
+  width: 90%;
+  padding: 10rem 10rem 5rem;
+  margin-top: 5rem;
+  padding-top: 4rem;
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 5rem;
+  background-color: white;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 75em) {
+  .store {
+    width: 100%;
+    padding: 4.5rem;
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .store {
+    padding: 4rem;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    padding-top: 4.5rem;
+  }
+}
+@media (max-width: 46.875em) {
+  .store {
+    padding: 3rem;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    padding-top: 4.5rem;
+  }
+}
+@media (max-width: 24em) {
+  .store {
+    padding: 1rem;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    padding-top: 4.5rem;
+  }
+}
+.store__header {
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  display: flex;
+  padding-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.store__logo {
+  height: 5rem;
+  width: auto;
+}
+@media (max-width: 64.375em) {
+  .store__description {
+    display: none;
+  }
+}
+
+#my-store-69662574 {
+  padding-top: 2.5rem;
+}
+
+@media (max-width: 56.25em) {
+  #my-search-69662574 {
+    display: block;
+    text-align: center;
+    position: relative !important;
+    right: 50% !important;
+    transform: translateX(50%);
+    top: 0rem !important;
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 24em) {
+  #my-search-69662574 {
+    margin-top: 6rem;
+  }
+}
+
+.to-top-shop span {
+  color: white;
+}
+.to-top-shop img {
+  filter: grayscale(1) brightness(2);
+}
+@media (max-width: 75em) {
+  .to-top-shop span {
+    color: black;
+  }
+  .to-top-shop img {
+    filter: none;
+  }
+}
+
 .footer-404 {
   padding: 2.3rem;
 }
