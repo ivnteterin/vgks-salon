@@ -182,15 +182,26 @@
   }
 }
 .store-wrap {
-  background: linear-gradient(0deg, #f3e4ef 0%, #f9f1f7 100%);
+  //   background: linear-gradient(0deg, #f3e4ef 0%, #f9f1f7 100%);
   padding-top: 3rem;
+  background-image: linear-gradient(to bottom, #f9f1f7 20%, #f4e4f080),
+    url(../img/main-image.jpg);
 }
 
 .featured__title {
   text-align: center;
   margin-top: 2rem;
   padding-bottom: 1rem;
-  font-size: 2rem;
+  font-size: 6rem;
+  font-family: 'Oranienbaum';
+  text-transform: uppercase;
+  opacity: 0.4;
+  @include respond(tab-land) {
+    font-size: 5rem;
+  }
+  @include respond(phone) {
+    font-size: 4rem;
+  }
 }
 
 .store-redirect {
@@ -227,4 +238,16 @@
   width: 100%;
   padding: 2rem;
   max-width: 25rem;
+}
+
+.store-descriptions {
+  opacity: 0.6;
+  font-size: 1.3rem;
+  padding-bottom: 3rem;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  @include respond(phone) {
+    width: 100%;
+  }
 }
