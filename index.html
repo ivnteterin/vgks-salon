@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@200;400;600;700&family=Oranienbaum&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.comp.css" />
     <link rel="stylesheet" href="./photoswipe.css"/>
     <!-- TrustBox script -->
     <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
@@ -1072,20 +1072,49 @@
         </div>
       </section>
   
-      <!-- <section class="store">
-
-        
-        <div style="text-align: center; padding:2rem;"><div id="my-search-69662574"></div></div>
-        
-        <div>
-        <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?69662574&data_platform=code&data_date=2021-12-20" charset="utf-8"></script>
-        <script type="text/javascript"> xSearch("id=my-search-69662574"); </script>
+      <section class="store-wrap">
+        <div class="store-featured store">
+          <div id="my-store-69662574"></div>
+          <div><script id="store-script-1" data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?69662574&data_platform=code" charset="utf-8"></script><script id="store-script-2" type="text/javascript"> xProductBrowser("id=my-store-69662574", "defaultCategoryId=125065125");</script></div>
+          <div class="store__header">
+            <a href="/shop" class=""><img src="img/icons/e-shop-logo.svg" alt="VGKS Store Logo" class="store__logo"></a>
+            <div class="store__description">El. parduotuvė</div>
+          </div>
+          <div class="featured__title">Populiariausios prekės</div>
+          <div class="featured__products">
+            <a target="_blank" href="" class="featured-product">
+              <div class="store-product-img-container">
+                <img class="store-product-img img-loading" src="img/icons/loading.svg" alt="Product 1">
+              </div>
+              <div class="store-product-title"></div> 
+            </a> 
+            <a target="_blank" href="" class="featured-product">
+              <div class="store-product-img-container">
+                <img class="store-product-img img-loading" src="img/icons/loading.svg" alt="Product 1">
+              </div>
+              <div class="store-product-title"></div> 
+            </a> 
+            <a target="_blank" href="" class="featured-product">
+              <div class="store-product-img-container">
+                <img class="store-product-img img-loading" src="img/icons/loading.svg" alt="Product 1">
+              </div>
+              <div class="store-product-title"></div> 
+            </a> 
         </div>
-        <div id="my-store-69662574"></div>
-        <div>
-          <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?69662574&data_platform=code&data_date=2021-12-20" charset="utf-8"></script><script type="text/javascript"> xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-69662574");</script>
+        <a class="store-redirect" href="/shop"><button class="btn">Į parduotuvę &#8594;</button></a>
+        <div class="product-brands">
+          <a href="/shop.html#!/~/search/keyword=alcina" class="product-brands-img-container">
+            <img src="img/alcina.svg" alt="Alcina" class="product-brand">
+          </a>
+          <a href="/shop.html#!/~/search/keyword=estel" class="product-brands-img-container">
+            <img src="img/estel.svg" alt="Estel" class="product-brand">
+          </a>
+          <a href="/shop.html#!/~/search/keyword=trinity" class="product-brands-img-container">
+            <img src="img/trinity.svg" alt="Trinity" class="product-brand">
+          </a>
         </div>
-      </section> -->
+      </div>
+      </section>
       <section class="social-wall" style="background-color: #fff;">
         <img class="social-wall__img" src="img/hashtags-1.svg" alt="hashtags">
         <img class="social-wall__img-2" src="img/hashtags-2.svg" alt="hashtags">

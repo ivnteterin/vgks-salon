@@ -257,6 +257,9 @@ const adjustItemSizeOnResize = function () {
     document.querySelectorAll('.js--fix-height').forEach((el) => {
       aspectRatioFixforIOS(el);
     });
+    featuredProductImgContainers.forEach((productCont) => {
+      aspectRatioFixforIOS(productCont);
+    });
 
     pricelists.forEach((pricelist) => {
       getDymanicHeight(pricelist);
@@ -486,3 +489,74 @@ goTopBtn.addEventListener('click', () => {
 //     history.pushState('', '', window.location.pathname);
 //   }
 // });
+
+/**
+ * Wait for an element before resolving a promise
+ * @param {String} querySelector - Selector of element to wait for
+ * @param {Integer} timeout - Milliseconds to wait before timing out, or 0 for no timeout
+ */
+function waitForElement(querySelector, timeout) {
+  return new Promise((resolve, reject) => {
+    var timer = false;
+    if (document.querySelectorAll(querySelector).length) return resolve();
+    const observer = new MutationObserver(() => {
+      if (document.querySelectorAll(querySelector).length) {
+        observer.disconnect();
+        if (timer !== false) clearTimeout(timer);
+        return resolve();
+      }
+    });
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+    if (timeout)
+      timer = setTimeout(() => {
+        observer.disconnect();
+        reject();
+      }, timeout);
+  });
+}
+const featuredProductImgs = document.querySelectorAll('.store-product-img');
+const featuredProductTitles = document.querySelectorAll('.store-product-title');
+const featuredProductImgContainers = document.querySelectorAll(
+  '.store-product-img-container'
+);
+const featuredProductContainers =
+  document.querySelectorAll('.featured-product');
+
+// featuredProductImgs.forEach((img),()=> {
+
+//   waitForElement(img, 30000)
+//   .then(()
+
+// });
+
+waitForElement('.ec-footer', 30000)
+  .then(() => {
+    const productImages = document.querySelectorAll('.grid-product__image');
+    const productTitles = document.querySelectorAll('.grid-product__title');
+    // productImages.href = '/shop.html' + productImages.href;
+    let str = productImages.href;
+
+    for (i = 0; i < featuredProductContainers.length; i++) {
+      let str = productImages[i].href;
+      str = str
+        .substring(str.indexOf('/#!/') + 1)
+        .split('category=')[0]
+        .concat('category=0');
+      productImages[i].href = '/shop.html' + str;
+
+      featuredProductImgs[i].src = document.querySelectorAll(
+        '.grid-product__picture'
+      )[i].src;
+      featuredProductImgs[i].classList.remove('img-loading');
+      featuredProductContainers[i].href = productImages[i].href;
+      featuredProductTitles[i].innerHTML = document.querySelectorAll(
+        '.grid-product__title-inner'
+      )[i].innerHTML;
+    }
+  })
+  .catch((err) => {
+    console.log(err);
+  });
