@@ -11,6 +11,11 @@ const goTopBtn = document.getElementById('back-to-top');
 
 //SHOP STATUS (CLOSED / OPEN)
 
+window.onload = function () {
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('body-container').classList.remove('hidden');
+};
+
 const loadShopOpeningTimeStatus = function () {
   let week;
   let hours;

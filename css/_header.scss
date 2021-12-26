@@ -26,6 +26,7 @@
 .poster-container {
   flex: 1;
   position: relative;
+  min-width: 200px;
   @include respond(little-phone) {
     padding: 1rem;
   }
@@ -79,6 +80,12 @@
   transform: translateY(-50%);
   @include respond(tab-port) {
     display: block;
+  }
+  @include respond(small-phone) {
+    font-size: 8rem;
+  }
+  @include respond(little-phone) {
+    font-size: 7rem;
   }
 }
 .poster-404 {
