@@ -5,6 +5,22 @@
   min-width: 200px;
   z-index: -1;
 
+  &::before {
+    content: '';
+    position: absolute;
+    top: 27rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/vgks-ornament.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 0.1;
+    @include respond(tab-land) {
+      display: none;
+    }
+  }
+
   @include respond(services1100) {
     padding: 5rem 4rem 2rem;
   }
@@ -43,6 +59,11 @@
   }
 
   &__header {
+    text-align: center;
+  }
+
+  &__reservation {
+    display: block;
     text-align: center;
   }
 
