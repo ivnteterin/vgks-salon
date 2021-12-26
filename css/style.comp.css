@@ -3,6 +3,10 @@
   display: none;
 }
 
+.transparent {
+  opacity: 0;
+}
+
 .hidden-arrow {
   opacity: 0;
   transform: translateY(20rem);
@@ -156,6 +160,7 @@ body {
 }
 
 .container {
+  transition: opacity 0.2s ease-in;
   overflow-x: hidden;
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);

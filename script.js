@@ -13,7 +13,7 @@ const goTopBtn = document.getElementById('back-to-top');
 
 window.onload = function () {
   document.getElementById('loading').style.display = 'none';
-  document.getElementById('body-container').classList.remove('hidden');
+  document.getElementById('body-container').classList.remove('transparent');
 };
 
 const loadShopOpeningTimeStatus = function () {
@@ -33,11 +33,11 @@ const loadShopOpeningTimeStatus = function () {
   week = date.getDay();
   hours = time.substring(0, 2);
 
-  const closed = document.getElementById('closed');
-  const open = document.getElementById('open');
+  const closed = document.querySelector('.closed');
+  const open = document.querySelector('.open');
 
-  const closedFooter = document.getElementById('closed-footer');
-  const openFooter = document.getElementById('open-footer');
+  const closedFooter = document.querySelector('.closed-footer');
+  const openFooter = document.querySelector('.open-footer');
 
   if (
     (week !== 0 && week < 7 && hours < 18 && hours >= 9) ||
@@ -537,31 +537,33 @@ const featuredProductContainers =
 
 // });
 
-waitForElement('.ec-footer', 30000)
-  .then(() => {
-    const productImages = document.querySelectorAll('.grid-product__image');
-    const productTitles = document.querySelectorAll('.grid-product__title');
-    // productImages.href = '/shop.html' + productImages.href;
-    let str = productImages.href;
+if (servicesBlock) {
+  waitForElement('.ec-footer', 30000)
+    .then(() => {
+      const productImages = document.querySelectorAll('.grid-product__image');
+      const productTitles = document.querySelectorAll('.grid-product__title');
+      // productImages.href = '/shop.html' + productImages.href;
+      let str = productImages.href;
 
-    for (i = 0; i < featuredProductContainers.length; i++) {
-      let str = productImages[i].href;
-      str = str
-        .substring(str.indexOf('/#!/') + 1)
-        .split('category=')[0]
-        .concat('category=0');
-      productImages[i].href = '/shop.html' + str;
+      for (i = 0; i < featuredProductContainers.length; i++) {
+        let str = productImages[i].href;
+        str = str
+          .substring(str.indexOf('/#!/') + 1)
+          .split('category=')[0]
+          .concat('category=0');
+        productImages[i].href = '/shop.html' + str;
 
-      featuredProductImgs[i].src = document.querySelectorAll(
-        '.grid-product__picture'
-      )[i].src;
-      featuredProductImgs[i].classList.remove('img-loading');
-      featuredProductContainers[i].href = productImages[i].href;
-      featuredProductTitles[i].innerHTML = document.querySelectorAll(
-        '.grid-product__title-inner'
-      )[i].innerHTML;
-    }
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+        featuredProductImgs[i].src = document.querySelectorAll(
+          '.grid-product__picture'
+        )[i].src;
+        featuredProductImgs[i].classList.remove('img-loading');
+        featuredProductContainers[i].href = productImages[i].href;
+        featuredProductTitles[i].innerHTML = document.querySelectorAll(
+          '.grid-product__title-inner'
+        )[i].innerHTML;
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}

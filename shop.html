@@ -23,6 +23,9 @@
     <title>VGKS | Beauty Salons</title>
   </head>
   <body>
+    <div id="loading">
+      <img id="loading-image" src="img/icons/loading.svg" alt="Loading..." />
+    </div> 
   <!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/687ac10dd62a66fd45a47dfa/script.js"></script> <!-- End cookieyes banner -->
     <!-- Messenger Chat Plugin Code -->
     <div id="fb-root"></div>
@@ -52,7 +55,7 @@
       }(document, 'script', 'facebook-jssdk'));
     </script>
 
-    <div class="container store-container">
+    <div class="container store-container transparent" id="body-container">
       <header class=" header-shop">
         <nav class="navigation">
           <div class="navigation__logo-box">
@@ -160,8 +163,8 @@
                 <span class="work-days__hours">10 - 16</span>
               </div>
             </p>
-            <span class="work-days__hours-open hidden" id="open">OPEN</span>
-            <span class="work-days__hours-closed hidden" id="closed"
+            <span class="work-days__hours-open hidden open" id="">OPEN</span>
+            <span class="work-days__hours-closed hidden closed" id=""
               >CLOSED</span
             >
           </div>
@@ -317,8 +320,8 @@
                         <span class="work-days__days">VII</span>
                         <span class="work-days__hours">10 - 16</span>
                       </div>                   
-                      <span class="work-days__hours-open hidden" id="open-footer">OPEN</span>
-                      <span class="work-days__hours-closed hidden" id="closed-footer"
+                      <span class="work-days__hours-open hidden open-footer" id="">OPEN</span>
+                      <span class="work-days__hours-closed hidden closed-footer" id=""
                         >CLOSED</span>
                     </div>
                   </div>
