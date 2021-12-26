@@ -1,5 +1,6 @@
 //ECWID
 .store-featured {
+  margin: 0 !important;
   .ecwid,
   .ecwid-1 {
     display: none;
@@ -244,7 +245,8 @@
   max-width: 25rem;
 }
 
-.store-descriptions {
+.store-descriptions,
+.services__description {
   opacity: 0.6;
   font-size: 1.3rem;
   padding-bottom: 3rem;

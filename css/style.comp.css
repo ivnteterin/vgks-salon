@@ -969,18 +969,18 @@ body {
 .services {
   background: linear-gradient(0deg, #f9f1f7 0%, white 100%);
   position: relative;
-  padding: 5rem 5rem;
+  padding: 5rem 5rem 2rem;
   min-width: 200px;
   z-index: -1;
 }
 @media (max-width: 68.75em) {
   .services {
-    padding: 5rem 4rem;
+    padding: 5rem 4rem 2rem;
   }
 }
 @media (max-width: 24em) {
   .services {
-    padding: 3rem 3rem;
+    padding: 3rem 3rem 1rem;
   }
 }
 .services__content {
@@ -1438,6 +1438,9 @@ body {
   transform: translateY(-50%) scale(1) !important;
 }
 
+.store-featured {
+  margin: 0 !important;
+}
 .store-featured .ecwid,
 .store-featured .ecwid-1 {
   display: none;
@@ -1705,7 +1708,8 @@ body {
   max-width: 25rem;
 }
 
-.store-descriptions {
+.store-descriptions,
+.services__description {
   opacity: 0.6;
   font-size: 1.3rem;
   padding-bottom: 3rem;
@@ -1714,7 +1718,8 @@ body {
   text-align: center;
 }
 @media (max-width: 37.5em) {
-  .store-descriptions {
+  .store-descriptions,
+.services__description {
     width: 100%;
   }
 }
