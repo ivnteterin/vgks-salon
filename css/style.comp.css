@@ -388,12 +388,12 @@ body {
 }
 @media (max-width: 37.5em) {
   .basic-text {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 }
 @media (max-width: 24em) {
   .basic-text {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 }
 .basic-text:nth-child(n):not(:last-child) {
