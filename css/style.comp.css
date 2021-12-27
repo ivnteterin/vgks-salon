@@ -393,7 +393,7 @@ body {
 }
 @media (max-width: 24em) {
   .basic-text {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 }
 .basic-text:nth-child(n):not(:last-child) {

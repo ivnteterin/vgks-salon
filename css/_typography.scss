@@ -195,7 +195,7 @@
   }
 
   @include respond(small-phone) {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   &:nth-child(n):not(:last-child) {
