@@ -195,19 +195,18 @@
 .featured__title {
   text-align: center;
   margin-top: 2rem;
-  padding-bottom: 1rem;
+  padding: 0 1rem 1rem;
   font-size: 6rem;
   font-family: 'Oranienbaum';
   text-transform: uppercase;
-  opacity: 0.4;
   @include respond(tab-land) {
     font-size: 5rem;
   }
   @include respond(phone) {
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
   @include respond(little-phone) {
-    font-size: 2.8rem;
+    font-size: 3rem;
   }
 }
 

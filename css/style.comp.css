@@ -179,7 +179,7 @@ body {
   text-transform: uppercase;
   padding: 5rem 0;
   font-weight: 200;
-  opacity: 0.4;
+  opacity: 0.7;
   font-family: "Oranienbaum", serif;
 }
 @media (max-width: 37.5em) {
@@ -190,7 +190,7 @@ body {
 }
 @media (max-width: 24em) {
   .heading-1 {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     padding: 3rem 0;
   }
 }
@@ -1669,11 +1669,10 @@ body {
 .featured__title {
   text-align: center;
   margin-top: 2rem;
-  padding-bottom: 1rem;
+  padding: 0 1rem 1rem;
   font-size: 6rem;
   font-family: "Oranienbaum";
   text-transform: uppercase;
-  opacity: 0.4;
 }
 @media (max-width: 75em) {
   .featured__title {
@@ -1682,12 +1681,12 @@ body {
 }
 @media (max-width: 37.5em) {
   .featured__title {
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
 }
 @media (max-width: 20em) {
   .featured__title {
-    font-size: 2.8rem;
+    font-size: 3rem;
   }
 }
 
@@ -1850,6 +1849,7 @@ body {
   display: flex;
   flex-flow: column;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 .gift-certificate__text-container .heading-1 {
@@ -1875,6 +1875,18 @@ body {
 @media (max-width: 46.875em) {
   .gift-certificate__text-container .heading-1 {
     letter-spacing: 0;
+  }
+}
+@media (max-width: 37.5em) {
+  .gift-certificate__text-container .heading-1 {
+    font-family: "Oranienbaum", serif;
+    font-size: 5rem;
+    opacity: 0.7;
+  }
+}
+@media (max-width: 24em) {
+  .gift-certificate__text-container .heading-1 {
+    font-size: 4.5rem;
   }
 }
 @media (max-width: 37.5em) {
