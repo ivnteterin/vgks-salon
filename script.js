@@ -301,7 +301,7 @@ window.addEventListener('resize', () => {
 window.addEventListener('visibilitychange', () => {});
 
 window.addEventListener('scroll', function () {
-  if (window.pageYOffset > 450) {
+  if (window.pageYOffset > 300) {
     document.body.style.background = '#202020';
   } else {
     document.body.style.background = '#f4e4f0';
