@@ -1,0 +1,110 @@
+.gift-certificate {
+  display: flex;
+  position: relative;
+  min-width: $vgks-min-width;
+  background-color: #fff;
+  box-shadow: rgb(0 0 0 / 20%) 0px 4rem 8rem;
+
+  @include respond(phone) {
+    flex-flow: column;
+    background: linear-gradient(0deg, #fff 0%, #ead4f0 100%);
+  }
+
+  &__container {
+    flex: 1;
+    margin: 3rem;
+    @include respond(tab-land) {
+      margin: 2rem;
+    }
+    @include respond(phone) {
+      margin: 0 2rem;
+    }
+  }
+
+  &__img-container {
+    background: linear-gradient(0deg, #e2c9ff 0%, #ead4f0 100%);
+    @include respond(phone) {
+      background: none;
+      position: relative;
+      margin: 0;
+    }
+  }
+
+  &__poster {
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    top: 50%;
+    left: 8rem;
+    transform: translateY(-50%);
+    position: relative;
+    @include respond(tab-land) {
+      left: 6rem;
+    }
+    @include respond(tab-port) {
+      left: 4rem;
+    }
+    @include respond(phone) {
+      display: none;
+    }
+  }
+  &__img-2 {
+    width: 100%;
+    display: none;
+    @include respond(phone) {
+      display: block;
+      position: relative;
+      top: -1rem;
+    }
+  }
+
+  &__text-container {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    overflow: hidden;
+    .heading-1 {
+      padding: 2rem 0;
+      font-size: 4rem;
+      font-family: 'Times';
+      letter-spacing: 1.5rem;
+      font-weight: 400;
+      opacity: 1;
+      @include respond(tab-land) {
+        letter-spacing: 1rem;
+        font-size: 3.5rem;
+      }
+      @include respond(tab-port) {
+        letter-spacing: 0.5rem;
+        font-size: 3rem;
+      }
+      @include respond(large-phone) {
+        letter-spacing: 0;
+      }
+    }
+    @include respond(phone) {
+      padding-bottom: 2rem;
+    }
+  }
+  &__text {
+    width: 75%;
+    @include respond(tab-land) {
+      width: 95%;
+    }
+    @include respond(large-phone) {
+      width: 95%;
+      text-align: justify;
+    }
+    @include respond(phone) {
+      text-align: center;
+    }
+    @include respond(little-phone) {
+      text-align: justify;
+    }
+  }
+}

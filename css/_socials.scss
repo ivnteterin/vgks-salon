@@ -92,14 +92,17 @@ $stretch-speed: 0.2s;
     padding-top: 8rem;
 
     span {
-      color: $vgks-color-primary-dark-pink;
+      color: $vgks-color-primary-darker-pink;
       font-weight: 400;
     }
     h1 {
-      font-size: 3rem;
+      font-size: 5rem;
       padding: 0;
       @include respond(phone) {
-        font-size: 2.5rem;
+        font-size: 4rem;
+      }
+      @include respond(small-phone) {
+        font-size: 3.5rem;
       }
     }
     @include respond(tab-port) {
