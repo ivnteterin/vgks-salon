@@ -203,10 +203,9 @@
     font-size: 5rem;
   }
   @include respond(phone) {
-    font-size: 4.5rem;
   }
   @include respond(little-phone) {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 }
 
