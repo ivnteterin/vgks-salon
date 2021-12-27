@@ -250,7 +250,7 @@ const checkSize = function () {
     document.querySelector('.js-popup__reservation-heading-4').innerHTML =
       'Skambinkite telefonu';
     document.querySelector('.js-popup__reservation-basic-text').innerHTML =
-      'Rezervacija internetu netrukus paleisime';
+      'Netrukus paleisime';
     document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
       'Įsigykite „VIP“ kortelę tik už 5€ bet kuriame iš mūsų salonų ir sutaupykite 5% kiekvieno apsilankymo metu! :)';
   }
