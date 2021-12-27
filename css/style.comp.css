@@ -1679,11 +1679,6 @@ body {
     font-size: 5rem;
   }
 }
-@media (max-width: 37.5em) {
-  .featured__title {
-    font-size: 5rem;
-  }
-}
 @media (max-width: 20em) {
   .featured__title {
     font-size: 3.5rem;
