@@ -1733,20 +1733,17 @@ body {
   max-width: 25rem;
 }
 
-.store-descriptions,
-.services__description,
-.gift-certificate__text {
+.store-additional-text,
+.services__description {
   opacity: 0.8;
-  font-size: 1.5rem;
   padding-bottom: 3rem;
   width: 60%;
   margin: 0 auto;
   text-align: center;
 }
 @media (max-width: 37.5em) {
-  .store-descriptions,
-.services__description,
-.gift-certificate__text {
+  .store-additional-text,
+.services__description {
     width: 95%;
   }
 }
@@ -1807,6 +1804,9 @@ body {
     margin: 0;
   }
 }
+.gift-certificate__poster {
+  width: 100%;
+}
 @media (max-width: 37.5em) {
   .gift-certificate__poster {
     display: none;
@@ -1853,7 +1853,7 @@ body {
   overflow: hidden;
 }
 .gift-certificate__text-container .heading-1 {
-  padding: 2rem 0;
+  padding: 1rem 0 2rem;
   font-size: 4rem;
   font-family: "Times";
   letter-spacing: 1.5rem;
@@ -1884,6 +1884,15 @@ body {
 }
 .gift-certificate__text {
   width: 75%;
+  opacity: 0.8;
+  padding-bottom: 3rem;
+  margin: 0 auto;
+  text-align: center;
+}
+@media (max-width: 37.5em) {
+  .gift-certificate__text {
+    width: 95%;
+  }
 }
 @media (max-width: 75em) {
   .gift-certificate__text {
