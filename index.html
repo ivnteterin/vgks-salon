@@ -13,11 +13,26 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@200;400;600;700&family=Oranienbaum&display=swap" rel="stylesheet"/>
+
+
+    <link
+    rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Spartan:wght@200;400;600;700&family=Oranienbaum&display=swap"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Spartan:wght@200;400;600;700&family=Oranienbaum&display=swap"
+            rel="stylesheet"
+            type="text/css"
+        />
+    </noscript>
+
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="./photoswipe.css"/>
+    <link rel="stylesheet" href="./vendors/photoswipe.css"/>
     <!-- TrustBox script -->
-    <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+    <script  type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
     <!-- End TrustBox script -->
     <title>VGKS | Beauty Salons</title>
   </head>
@@ -44,15 +59,9 @@
           version          : 'v12.0'
         });
       };
-
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
     </script>
+    <script data-type='lazy' data-src="https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js"></script>
+   
 
     <div class="container transparent" id="body-container">
       <header class="header" id="header">
@@ -349,9 +358,9 @@
                 
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/nails/1.jpg"
-                    data-pswp-width="1877"
-                    data-pswp-height="1250"
+                    href="/img/gallery/nails/1.avif"
+                    data-pswp-width="800"
+                    data-pswp-height="600"
                     target="_blank"
                     >
                     <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -359,9 +368,9 @@
                 </div> 
                   <div class="gallery__img js--fix-height">
                     <a
-                      href="/img/gallery/nails/2.jpg"
-                      data-pswp-width="1000"
-                      data-pswp-height="1250"
+                      href="/img/gallery/nails/2.avif"
+                      data-pswp-width="600"
+                      data-pswp-height="800"
                       target="_blank"
                       >
                       <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -369,9 +378,9 @@
                 </div> 
                 <div class="gallery__img js--fix-height flex-1">
                   <a
-                    href="/img/gallery/nails/3.jpg"
-                    data-pswp-width="1000"
-                    data-pswp-height="1250"
+                    href="/img/gallery/nails/3.avif"
+                    data-pswp-width="600"
+                    data-pswp-height="800"
                     target="_blank"
                     >
                     <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -410,9 +419,9 @@
                 
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/massage/1.jpg"
-                    data-pswp-width="1500"
-                    data-pswp-height="1000"
+                    href="/img/gallery/massage/1.avif"
+                    data-pswp-width="800"
+                    data-pswp-height="600"
                     target="_blank"
                     >
                     <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -420,9 +429,9 @@
                 </div> 
                   <div class="gallery__img js--fix-height">
                     <a
-                    href="/img/gallery/massage/2.jpg"
-                    data-pswp-width="1500"
-                    data-pswp-height="1000"
+                    href="/img/gallery/massage/2.avif"
+                    data-pswp-width="800"
+                    data-pswp-height="600"
                       target="_blank"
                       >
                       <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -430,9 +439,9 @@
                 </div> 
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/massage/3.jpg"
-                    data-pswp-width="1000"
-                    data-pswp-height="1500"
+                    href="/img/gallery/massage/3.avif"
+                    data-pswp-width="600"
+                    data-pswp-height="800"
                     target="_blank"
                     >
                     <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -440,9 +449,9 @@
                 </div>
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/massage/4.jpg"
-                    data-pswp-width="1000"
-                    data-pswp-height="1500"
+                    href="/img/gallery/massage/4.avif"
+                    data-pswp-width="600"
+                    data-pswp-height="800"
                     target="_blank"
                     >
                     <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -450,9 +459,9 @@
                 </div> 
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/massage/5.jpg"
-                    data-pswp-width="1500"
-                    data-pswp-height="843"
+                    href="/img/gallery/massage/5.avif"
+                    data-pswp-width="800"
+                    data-pswp-height="600"
                     target="_blank"
                     >
                     <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -460,9 +469,9 @@
                 </div>
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/massage/6.jpg"
-                    data-pswp-width="1500"
-                    data-pswp-height="843"
+                    href="/img/gallery/massage/6.avif"
+                    data-pswp-width="800"
+                    data-pswp-height="600"
                     target="_blank"
                     >
                     <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -568,9 +577,9 @@
                         
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/hair/1.jpg"
-                    data-pswp-width="1000"
-                    data-pswp-height="1250"
+                    href="/img/gallery/hair/1.avif"
+                    data-pswp-width="600"
+                    data-pswp-height="800"
                     target="_blank"
                     >
                     <img  class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -578,9 +587,9 @@
                 </div> 
                   <div class="gallery__img js--fix-height">
                     <a
-                    href="/img/gallery/hair/2.jpg"
-                    data-pswp-width="1000"
-                    data-pswp-height="1250"
+                    href="/img/gallery/hair/2.avif"
+                    data-pswp-width="600"
+                    data-pswp-height="800"
                       target="_blank"
                       >
                       <img  class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -588,9 +597,9 @@
                 </div> 
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/hair/3.jpg"
-                    data-pswp-width="1000"
-                    data-pswp-height="1250"
+                    href="/img/gallery/hair/3.avif"
+                    data-pswp-width="600"
+                    data-pswp-height="800"
                     target="_blank"
                     >
                     <img  class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -598,9 +607,9 @@
                 </div>
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/hair/4.jpg"
-                    data-pswp-width="1000"
-                    data-pswp-height="1250"
+                    href="/img/gallery/hair/4.avif"
+                    data-pswp-width="600"
+                    data-pswp-height="800"
                     target="_blank"
                     >
                     <img  class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -608,9 +617,9 @@
                 </div> 
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/hair/5.jpg"
-                    data-pswp-width="1250"
-                    data-pswp-height="910"
+                    href="/img/gallery/hair/5.avif"
+                    data-pswp-width="800"
+                    data-pswp-height="600"
                     target="_blank"
                     >
                     <img  class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -618,9 +627,9 @@
                 </div>
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/hair/6.jpg"
-                    data-pswp-width="1000"
-                    data-pswp-height="1250"
+                    href="/img/gallery/hair/6.avif"
+                    data-pswp-width="600"
+                    data-pswp-height="800"
                     target="_blank"
                     >
                     <img  class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -715,9 +724,9 @@
                         
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/photo/1.jpg"
-                    data-pswp-width="850"
-                    data-pswp-height="1250"
+                    href="/img/gallery/photo/1.avif"
+                    data-pswp-width="600"
+                    data-pswp-height="800"
                     target="_blank"
                     >
                     <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -725,9 +734,9 @@
                 </div> 
                   <div class="gallery__img js--fix-height">
                     <a
-                    href="/img/gallery/photo/2.jpg"
-                    data-pswp-width="1250"
-                    data-pswp-height="850"
+                    href="/img/gallery/photo/2.avif"
+                    data-pswp-width="800"
+                    data-pswp-height="600"
                       target="_blank"
                       >
                       <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -735,9 +744,9 @@
                 </div> 
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/photo/3.jpg"
-                    data-pswp-width="850"
-                    data-pswp-height="1250"
+                    href="/img/gallery/photo/3.avif"
+                    data-pswp-width="600"
+                    data-pswp-height="800"
                     target="_blank"
                     >
                     <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -745,9 +754,9 @@
                 </div>
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/photo/4.jpg"
-                    data-pswp-width="850"
-                    data-pswp-height="1250"
+                    href="/img/gallery/photo/4.avif"
+                    data-pswp-width="600"
+                    data-pswp-height="800"
                     target="_blank"
                     >
                     <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -755,9 +764,9 @@
                 </div> 
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/photo/5.jpg"
-                    data-pswp-width="1250"
-                    data-pswp-height="850"
+                    href="/img/gallery/photo/5.avif"
+                    data-pswp-width="800"
+                    data-pswp-height="600"
                     target="_blank"
                     >
                     <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -765,9 +774,9 @@
                 </div>
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/photo/6.jpg"
-                    data-pswp-width="850"
-                    data-pswp-height="1250"
+                    href="/img/gallery/photo/6.avif"
+                    data-pswp-width="600"
+                    data-pswp-height="800"
                     target="_blank"
                     >
                     <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -804,9 +813,9 @@
                         
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/courses/1.jpg"
-                    data-pswp-width="665"
-                    data-pswp-height="1000"
+                    href="/img/gallery/courses/1.avif"
+                    data-pswp-width="600"
+                    data-pswp-height="800"
                     target="_blank"
                     >
                     <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -814,9 +823,9 @@
                 </div> 
                   <div class="gallery__img js--fix-height">
                     <a
-                    href="/img/gallery/courses/2.jpg"
-                    data-pswp-width="1000"
-                    data-pswp-height="665"
+                    href="/img/gallery/courses/2.avif"
+                    data-pswp-width="800"
+                    data-pswp-height="600"
                       target="_blank"
                       >
                       <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -824,9 +833,9 @@
                 </div> 
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/courses/3.jpg"
-                    data-pswp-width="665"
-                    data-pswp-height="1000"
+                    href="/img/gallery/courses/3.avif"
+                    data-pswp-width="600"
+                    data-pswp-height="800"
                     target="_blank"
                     >
                     <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -834,9 +843,9 @@
                 </div>
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/courses/4.jpg"
-                    data-pswp-width="665"
-                    data-pswp-height="1000"
+                    href="/img/gallery/courses/4.avif"
+                    data-pswp-width="600"
+                    data-pswp-height="800"
                     target="_blank"
                     >
                     <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -844,9 +853,9 @@
                 </div> 
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/courses/5.jpg"
-                    data-pswp-width="665"
-                    data-pswp-height="1000"
+                    href="/img/gallery/courses/5.avif"
+                    data-pswp-width="600"
+                    data-pswp-height="800"
                     target="_blank"
                     >
                     <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -854,9 +863,9 @@
                 </div>
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/courses/6.jpg"
-                    data-pswp-width="665"
-                    data-pswp-height="1000"
+                    href="/img/gallery/courses/6.avif"
+                    data-pswp-width="600"
+                    data-pswp-height="800"
                     target="_blank"
                     >
                     <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -1013,8 +1022,8 @@
                         
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/other/1.jpg"
-                    data-pswp-width="630"
+                    href="/img/gallery/other/1.avif"
+                    data-pswp-width="600"
                     data-pswp-height="800"
                     target="_blank"
                     >
@@ -1023,9 +1032,9 @@
                 </div> 
                   <div class="gallery__img js--fix-height">
                     <a
-                    href="/img/gallery/other/2.jpg"
-                    data-pswp-width="630"
-                    data-pswp-height="350"
+                    href="/img/gallery/other/2.avif"
+                    data-pswp-width="800"
+                    data-pswp-height="600"
                       target="_blank"
                       >
                       <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -1033,9 +1042,9 @@
                 </div> 
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/other/3.jpg"
+                    href="/img/gallery/other/3.avif"
                     data-pswp-width="800"
-                    data-pswp-height="540"
+                    data-pswp-height="600"
                     target="_blank"
                     >
                     <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -1043,9 +1052,9 @@
                 </div>
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/other/4.jpg"
-                    data-pswp-width="1250"
-                    data-pswp-height="850"
+                    href="/img/gallery/other/4.avif"
+                    data-pswp-width="800"
+                    data-pswp-height="600"
                     target="_blank"
                     >
                     <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -1053,9 +1062,9 @@
                 </div> 
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/other/5.jpg"
-                    data-pswp-width="850"
-                    data-pswp-height="1250"
+                    href="/img/gallery/other/5.avif"
+                    data-pswp-width="600"
+                    data-pswp-height="800"
                     target="_blank"
                     >
                     <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -1063,9 +1072,9 @@
                 </div>
                 <div class="gallery__img js--fix-height">
                   <a
-                    href="/img/gallery/other/6.jpg"
-                    data-pswp-width="1000"
-                    data-pswp-height="1250"
+                    href="/img/gallery/other/6.avif"
+                    data-pswp-width="600"
+                    data-pswp-height="800"
                     target="_blank"
                     >
                     <img class="js--fix-height img-loading" src="img/icons/loading.svg" alt="">
@@ -1084,7 +1093,7 @@
       <section class="store-wrap">
         <div class="store-featured store">
           <div id="my-store-69662574"></div>
-          <div><script id="store-script-1" data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?69662574&data_platform=code" charset="utf-8"></script><script id="store-script-2" type="text/javascript"> xProductBrowser("id=my-store-69662574", "defaultCategoryId=125065125");</script></div>
+          <div><script id="store-script-1" data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?69662574&data_platform=code" charset="utf-8"></script><script id="store-script-2" type="text/javascript">xProductBrowser("id=my-store-69662574", "defaultCategoryId=125065125");</script></div>
           <div class="store__header">
             <div class="store-sidebar store-header-element">
               <input
@@ -1157,13 +1166,13 @@
 
         <div class="product-brands">
           <a href="/shop.html#!/~/search/keyword=alcina" class="product-brands-img-container">
-            <img src="img/alcina.svg" alt="Alcina" class="product-brand">
+            <img loading="lazy" src="img/alcina.svg" alt="Alcina" class="product-brand">
           </a>
           <a href="/shop.html#!/~/search/keyword=estel" class="product-brands-img-container">
-            <img src="img/estel.svg" alt="Estel" class="product-brand">
+            <img loading="lazy" src="img/estel.svg" alt="Estel" class="product-brand">
           </a>
           <a href="/shop.html#!/~/search/keyword=trinity" class="product-brands-img-container">
-            <img src="img/trinity.svg" alt="Trinity" class="product-brand">
+            <img loading="lazy" src="img/trinity.svg" alt="Trinity" class="product-brand">
           </a>
         </div>
       </div>
@@ -1171,11 +1180,11 @@
     <section class="gift-certificate">
       <div class="gift-certificate__content">
         <div class="gift-certificate__img-container gift-certificate__container">
-          <img src="img/vgks-gift.png" alt="VGKS Gift Certificate" class="gift-certificate__img">
-          <img src="img/vgks-gift-2.png" alt="VGKS Gift Certificate" class="gift-certificate__img-2">
+          <img loading="lazy" src="img/vgks-gift.png" alt="VGKS Gift Certificate" class="gift-certificate__img">
+          <img loading="lazy" src="img/vgks-gift-2.png" alt="VGKS Gift Certificate" class="gift-certificate__img-2">
         </div>
         <div class="gift-certificate__text-container gift-certificate__container">
-          <img class="gift-certificate__poster" src="./img/logo-large-1.svg">
+          <img loading="lazy" class="gift-certificate__poster" src="./img/logo-large-1.svg">
           <div class="heading-1">Dovanų Kuponas</div>
           <div class="gift-certificate__text basic-text">
             Nudžiuginkite draugus ir artimuosius mūsų salono dovanų kuponu, kuriame profesionalūs plaukų stilistai ir nagų meistrai supakuoti į vieną elegantišką pakuotę. Kuponą galite įsigyti skaitmeniniu arba popieriniu formatu ir tik atvykę į mūsų saloną
@@ -1184,8 +1193,8 @@
       </div>
     </section>
     <section class="social-wall" style="background-color: #fff;">
-        <img class="social-wall__img" src="img/hashtags-1.svg" alt="hashtags">
-        <img class="social-wall__img-2" src="img/hashtags-2.svg" alt="hashtags">
+        <img loading="lazy" class="social-wall__img" src="img/hashtags-1.svg" alt="hashtags">
+        <img loading="lazy" class="social-wall__img-2" src="img/hashtags-2.svg" alt="hashtags">
         <div class="social-wall__content" style="max-width: 120rem; margin:0 auto">
           <div class="social-wall__header" style="padding-bottom: 1rem;">
             <h1 class="heading-1">
@@ -1440,7 +1449,7 @@
                       function ml_webform_success_5151428(){var r=ml_jQuery||jQuery;r(".ml-subscribe-form-5151428 .row-success").show(),r(".ml-subscribe-form-5151428 .row-form"); grecaptcha.reset();}
                     </script>
                     <img  src="https://track.mailerlite.com/webforms/o/5151428/p5q1p5?v1639400951" width="1" height="1" style="max-width:1px;max-height:1px;visibility:hidden;padding:0;margin:0;display:block;" alt="." border="0">
-                    <script src="https://static.mailerlite.com/js/w/webforms.min.js?v0c75f831c56857441820dcec3163967c" type="text/javascript"></script>
+                    <script data-type="lazy" data-src="https://static.mailerlite.com/js/w/webforms.min.js?v0c75f831c56857441820dcec3163967c" type="text/javascript"></script>
                   </div>
                 </div> 
             </div>
@@ -1462,9 +1471,9 @@
                     </div>
                 </div>
             </div>     
-            <img src="img/footer-logo.svg" alt="VGKS Logo" class="footer__logo-large">
+            <img loading="lazy" src="img/footer-logo.svg" alt="VGKS Logo" class="footer__logo-large">
           </div>
-          <img class="footer__logo" src="/img/logo-small-white.svg" alt="VGKS Logo">
+          <img loading="lazy" class="footer__logo" src="/img/logo-small-white.svg" alt="VGKS Logo">
           <div class="copyright">
               <div class="copyright__address">
                   <span class="copyright__year">
@@ -1725,7 +1734,7 @@
       </div>
     </div>
   </body>
-  <script  type="module" src="gallery.js"></script>
-  <script  type="text/javascript" src="smoothscroll.min.js"></script>
-  <script  type="text/javascript" src="script.js"></script>
+  <script defer  type="module" src="vendors/gallery.js"></script>
+  <script defer type="text/javascript" src="vendors/smoothscroll.min.js"></script>
+  <script defer type="text/javascript" src="script.js"></script>
 </html>

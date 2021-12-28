@@ -15,8 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@200;400;600;700&family=Oranienbaum&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="./photoswipe.css"/>
-    <script async defer type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="./vendors/photoswipe.css"/>
     <!-- TrustBox script -->
     <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
     <!-- End TrustBox script -->
@@ -26,7 +25,8 @@
     <div id="loading">
       <img id="loading-image" src="img/icons/loading.svg" alt="Loading..." />
     </div> 
-  <!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/687ac10dd62a66fd45a47dfa/script.js"></script> <!-- End cookieyes banner -->
+  <!-- Start cookieyes banner --> 
+  <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/687ac10dd62a66fd45a47dfa/script.js"></script> <!-- End cookieyes banner -->
     <!-- Messenger Chat Plugin Code -->
     <div id="fb-root"></div>
 
@@ -164,9 +164,7 @@
               </div>
             </p>
             <span class="work-days__hours-open hidden open" id="">OPEN</span>
-            <span class="work-days__hours-closed hidden closed" id=""
-              >CLOSED</span
-            >
+            <span class="work-days__hours-closed hidden closed" id="">CLOSED</span>
           </div>
         </nav>
       </header>
@@ -656,7 +654,8 @@
       </div>
     </div>
   </body>
-  <script  type="module" src="gallery.js"></script>
-  <script  type="text/javascript" src="smoothscroll.min.js"></script>
+  <script  type="module" src="vendors/gallery.js"></script>
+  <script async defer type="text/javascript" src="script.js"></script>
+  <script  type="text/javascript" src="vendors/smoothscroll.min.js"></script>
   
 </html>

@@ -14,6 +14,13 @@ const goTopBtn = document.getElementById('back-to-top');
 window.onload = function () {
   document.getElementById('loading').style.display = 'none';
   document.getElementById('body-container').classList.remove('transparent');
+  window.addEventListener('scroll', function () {
+    if (window.pageYOffset > 300) {
+      document.body.style.background = '#202020';
+    } else {
+      document.body.style.background = '#f4e4f0';
+    }
+  });
 };
 
 const loadShopOpeningTimeStatus = function () {
@@ -69,9 +76,9 @@ const loadShopOpeningTimeStatus = function () {
 
 //first time on load
 loadShopOpeningTimeStatus();
+setInterval(loadShopOpeningTimeStatus, 60000);
 
 //then every 60sec
-setInterval(loadShopOpeningTimeStatus, 60000);
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -300,14 +307,6 @@ window.addEventListener('resize', () => {
 
 window.addEventListener('visibilitychange', () => {});
 
-window.addEventListener('scroll', function () {
-  if (window.pageYOffset > 300) {
-    document.body.style.background = '#202020';
-  } else {
-    document.body.style.background = '#f4e4f0';
-  }
-});
-
 function backToTop() {
   window.scrollTo({
     top: 0,
@@ -411,39 +410,39 @@ const images = document.querySelectorAll('.img-loading');
 
 const loadGallery = function (imgNode) {
   if (images.length == 0) return; //if not main page
-  loadImage('/img/gallery/nails/1.jpg', 0);
-  loadImage('/img/gallery/nails/2.jpg', 1);
-  loadImage('/img/gallery/nails/3.jpg', 2);
-  loadImage('/img/gallery/massage/1.jpg', 3);
-  loadImage('/img/gallery/massage/2.jpg', 4);
-  loadImage('/img/gallery/massage/3.jpg', 5);
-  loadImage('/img/gallery/massage/4.jpg', 6);
-  loadImage('/img/gallery/massage/5.jpg', 7);
-  loadImage('/img/gallery/massage/6.jpg', 8);
-  loadImage('/img/gallery/hair/1.jpg', 9);
-  loadImage('/img/gallery/hair/2.jpg', 10);
-  loadImage('/img/gallery/hair/3.jpg', 11);
-  loadImage('/img/gallery/hair/4.jpg', 12);
-  loadImage('/img/gallery/hair/5.jpg', 13);
-  loadImage('/img/gallery/hair/6.jpg', 14);
-  loadImage('/img/gallery/photo/1.jpg', 15);
-  loadImage('/img/gallery/photo/2.jpg', 16);
-  loadImage('/img/gallery/photo/3.jpg', 17);
-  loadImage('/img/gallery/photo/4.jpg', 18);
-  loadImage('/img/gallery/photo/5.jpg', 19);
-  loadImage('/img/gallery/photo/6.jpg', 20);
-  loadImage('/img/gallery/courses/1.jpg', 21);
-  loadImage('/img/gallery/courses/2.jpg', 22);
-  loadImage('/img/gallery/courses/3.jpg', 23);
-  loadImage('/img/gallery/courses/4.jpg', 24);
-  loadImage('/img/gallery/courses/5.jpg', 25);
-  loadImage('/img/gallery/courses/6.jpg', 26);
-  loadImage('/img/gallery/other/1.jpg', 27);
-  loadImage('/img/gallery/other/2.jpg', 28);
-  loadImage('/img/gallery/other/3.jpg', 29);
-  loadImage('/img/gallery/other/4.jpg', 30);
-  loadImage('/img/gallery/other/5.jpg', 31);
-  loadImage('/img/gallery/other/6.jpg', 32);
+  loadImage('/img/gallery/nails/1.avif', 0);
+  loadImage('/img/gallery/nails/2.avif', 1);
+  loadImage('/img/gallery/nails/3.avif', 2);
+  loadImage('/img/gallery/massage/1.avif', 3);
+  loadImage('/img/gallery/massage/2.avif', 4);
+  loadImage('/img/gallery/massage/3.avif', 5);
+  loadImage('/img/gallery/massage/4.avif', 6);
+  loadImage('/img/gallery/massage/5.avif', 7);
+  loadImage('/img/gallery/massage/6.avif', 8);
+  loadImage('/img/gallery/hair/1.avif', 9);
+  loadImage('/img/gallery/hair/2.avif', 10);
+  loadImage('/img/gallery/hair/3.avif', 11);
+  loadImage('/img/gallery/hair/4.avif', 12);
+  loadImage('/img/gallery/hair/5.avif', 13);
+  loadImage('/img/gallery/hair/6.avif', 14);
+  loadImage('/img/gallery/photo/1.avif', 15);
+  loadImage('/img/gallery/photo/2.avif', 16);
+  loadImage('/img/gallery/photo/3.avif', 17);
+  loadImage('/img/gallery/photo/4.avif', 18);
+  loadImage('/img/gallery/photo/5.avif', 19);
+  loadImage('/img/gallery/photo/6.avif', 20);
+  loadImage('/img/gallery/courses/1.avif', 21);
+  loadImage('/img/gallery/courses/2.avif', 22);
+  loadImage('/img/gallery/courses/3.avif', 23);
+  loadImage('/img/gallery/courses/4.avif', 24);
+  loadImage('/img/gallery/courses/5.avif', 25);
+  loadImage('/img/gallery/courses/6.avif', 26);
+  loadImage('/img/gallery/other/1.avif', 27);
+  loadImage('/img/gallery/other/2.avif', 28);
+  loadImage('/img/gallery/other/3.avif', 29);
+  loadImage('/img/gallery/other/4.avif', 30);
+  loadImage('/img/gallery/other/5.avif', 31);
+  loadImage('/img/gallery/other/6.avif', 32);
 };
 
 const loadImage = function (imgLink, id) {
