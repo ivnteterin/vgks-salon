@@ -22,7 +22,82 @@ window.onload = function () {
       document.body.style.background = '#f4e4f0';
     }
   });
+
+  // loadShop(
+  //   'https://app.ecwid.com/script.js?69662574&data_platform=code',
+  //   'text/javascript',
+  //   false
+  // );
+  loadScript(
+    undefined,
+    'text/javascript',
+    "xProductBrowser('id=my-store-69662574', 'defaultCategoryId=125065125');",
+    'body',
+    false
+  );
+  if (servicesBlock) {
+    waitForElement('.ec-footer', 30000)
+      .then(() => {
+        const productImages = document.querySelectorAll('.grid-product__image');
+        const productTitles = document.querySelectorAll('.grid-product__title');
+        // productImages.href = '/shop.html' + productImages.href;
+        let str = productImages.href;
+
+        for (i = 0; i < featuredProductContainers.length; i++) {
+          let str = productImages[i].href;
+          str = str
+            .substring(str.indexOf('/#!/') + 1)
+            .split('category=')[0]
+            .concat('category=0');
+          productImages[i].href = '/shop.html' + str;
+
+          featuredProductImgs[i].src = document.querySelectorAll(
+            '.grid-product__picture'
+          )[i].src;
+          featuredProductImgs[i].classList.remove('img-loading');
+          featuredProductContainers[i].href = productImages[i].href;
+          featuredProductTitles[i].innerHTML = document.querySelectorAll(
+            '.grid-product__title-inner'
+          )[i].innerHTML;
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  insertTrustpilot();
 };
+
+const loadScript = function (src, type, innerHtml, AttachTo, async) {
+  const tag = document.createElement('script');
+  if (src) tag.src = src;
+  tag.type = type;
+  tag.innerHTML = innerHtml;
+  document.getElementsByTagName(AttachTo)[0].appendChild(tag);
+  console.log(tag);
+  if (async) tag.async = true;
+};
+
+function insertAfter(referenceNode, newNode) {
+  referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
+
+function insertTrustpilot() {
+  loadScript(
+    '//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js',
+    'text/javascript',
+    '',
+    'head',
+    true
+  );
+  const el = document.createElement('span');
+  el.innerHTML = `<div class="trustpilot-widget" data-locale="en-US" data-template-id="5419b6a8b0d04a076446a9ad" data-businessunit-id="61bf4c3af08c2f3625d8cfeb" data-style-height="24px" data-style-width="100%" data-theme="light" data-stars="1,2,3,4,5" data-no-reviews="hide" data-scroll-to-list="true" data-allow-robots="true" data-min-review-count="10">
+<a href="https://www.trustpilot.com/review/vgks.lt" target="_blank" rel="noopener">Trustpilot</a>
+</div>`;
+  const div = document.querySelector('.social-wall__header');
+  insertAfter(div, el);
+}
 
 const loadShopOpeningTimeStatus = function () {
   let week;
@@ -540,37 +615,6 @@ const featuredProductContainers =
 //   .then(()
 
 // });
-
-if (servicesBlock) {
-  waitForElement('.ec-footer', 30000)
-    .then(() => {
-      const productImages = document.querySelectorAll('.grid-product__image');
-      const productTitles = document.querySelectorAll('.grid-product__title');
-      // productImages.href = '/shop.html' + productImages.href;
-      let str = productImages.href;
-
-      for (i = 0; i < featuredProductContainers.length; i++) {
-        let str = productImages[i].href;
-        str = str
-          .substring(str.indexOf('/#!/') + 1)
-          .split('category=')[0]
-          .concat('category=0');
-        productImages[i].href = '/shop.html' + str;
-
-        featuredProductImgs[i].src = document.querySelectorAll(
-          '.grid-product__picture'
-        )[i].src;
-        featuredProductImgs[i].classList.remove('img-loading');
-        featuredProductContainers[i].href = productImages[i].href;
-        featuredProductTitles[i].innerHTML = document.querySelectorAll(
-          '.grid-product__title-inner'
-        )[i].innerHTML;
-      }
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-}
 
 document.querySelectorAll('.sidebar__link').forEach((link) => {
   link.addEventListener('click', () => {
