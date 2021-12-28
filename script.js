@@ -28,14 +28,15 @@ window.onload = function () {
   //   'text/javascript',
   //   false
   // );
-  loadScript(
-    undefined,
-    'text/javascript',
-    "xProductBrowser('id=my-store-69662574', 'defaultCategoryId=125065125');",
-    'body',
-    false
-  );
+
   if (servicesBlock) {
+    loadScript(
+      undefined,
+      'text/javascript',
+      "xProductBrowser('id=my-store-69662574', 'defaultCategoryId=125065125');",
+      'body',
+      false
+    );
     waitForElement('.ec-footer', 30000)
       .then(() => {
         const productImages = document.querySelectorAll('.grid-product__image');
@@ -64,9 +65,8 @@ window.onload = function () {
       .catch((err) => {
         console.log(err);
       });
+    insertTrustpilot();
   }
-
-  insertTrustpilot();
 };
 
 const loadScript = function (src, type, innerHtml, AttachTo, async) {
