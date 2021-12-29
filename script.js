@@ -206,8 +206,8 @@ window.addEventListener('resize', () => {
 
 services.forEach((service) => {
   service.addEventListener('click', function () {
-    loadGallery();
     checkSize();
+    loadGallery();
     adjustItemSizeOnResize();
   });
 });
