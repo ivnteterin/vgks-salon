@@ -60,8 +60,7 @@ window.onload = function () {
       });
     insertTrustpilot();
   }
-  checkSize();
-  loadGallery();
+
   loadShopOpeningTimeStatus();
   setInterval(loadShopOpeningTimeStatus, 60000);
 };
@@ -203,6 +202,14 @@ window.addEventListener('resize', () => {
   prevVh = window.innerHeight * 0.01;
   prevVw = window.innerWidth * 0.01;
   document.documentElement.style.setProperty('--vh', `${prevVh}px`);
+});
+
+services.forEach((service) => {
+  service.addEventListener('click', function () {
+    loadGallery();
+    checkSize();
+    adjustItemSizeOnResize();
+  });
 });
 
 //Social links animation
