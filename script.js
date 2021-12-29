@@ -60,6 +60,10 @@ window.onload = function () {
       });
     insertTrustpilot();
   }
+  checkSize();
+  loadGallery();
+  loadShopOpeningTimeStatus();
+  setInterval(loadShopOpeningTimeStatus, 60000);
 };
 
 const loadScript = function (src, type, innerHtml, AttachTo, async) {
@@ -143,8 +147,6 @@ const loadShopOpeningTimeStatus = function () {
 };
 
 //first time on load
-loadShopOpeningTimeStatus();
-setInterval(loadShopOpeningTimeStatus, 60000);
 
 //then every 60sec
 
@@ -525,8 +527,6 @@ const loadImage = function (imgLink, id) {
   };
   downloadingImg.src = imgLink;
 };
-checkSize();
-loadGallery();
 
 const form = document.getElementById('newsletter-form');
 
