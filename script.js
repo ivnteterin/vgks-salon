@@ -75,7 +75,6 @@ const loadScript = function (src, type, innerHtml, AttachTo, async) {
   tag.type = type;
   tag.innerHTML = innerHtml;
   document.getElementsByTagName(AttachTo)[0].appendChild(tag);
-  console.log(tag);
   if (async) tag.async = true;
 };
 
