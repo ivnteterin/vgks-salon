@@ -30,13 +30,6 @@ window.onload = function () {
   // );
 
   if (servicesBlock) {
-    loadScript(
-      undefined,
-      'text/javascript',
-      "xProductBrowser('id=my-store-69662574', 'defaultCategoryId=125065125');",
-      'body',
-      false
-    );
     waitForElement('.ec-footer', 30000)
       .then(() => {
         const productImages = document.querySelectorAll('.grid-product__image');
