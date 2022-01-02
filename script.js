@@ -12,8 +12,8 @@ const goTopBtn = document.getElementById('back-to-top');
 
 //SHOP STATUS (CLOSED / OPEN)
 
-window.onload = function () {
-  document.getElementById('loading').style.display = 'none';
+function runOnStart() {
+  document.querySelector('.loader').style.display = 'none';
   document.getElementById('body-container').classList.remove('transparent');
   window.addEventListener('scroll', function () {
     if (window.pageYOffset > 300) {
@@ -22,12 +22,6 @@ window.onload = function () {
       document.body.style.background = '#f4e4f0';
     }
   });
-
-  // loadShop(
-  //   'https://app.ecwid.com/script.js?69662574&data_platform=code',
-  //   'text/javascript',
-  //   false
-  // );
 
   if (servicesBlock) {
     waitForElement('.ec-footer', 30000)
@@ -58,40 +52,14 @@ window.onload = function () {
       .catch((err) => {
         console.log(err);
       });
-    insertTrustpilot();
   }
-
-  loadShopOpeningTimeStatus();
-  setInterval(loadShopOpeningTimeStatus, 60000);
-};
-
-const loadScript = function (src, type, innerHtml, AttachTo, async) {
-  const tag = document.createElement('script');
-  if (src) tag.src = src;
-  tag.type = type;
-  tag.innerHTML = innerHtml;
-  document.getElementsByTagName(AttachTo)[0].appendChild(tag);
-  if (async) tag.async = true;
-};
-
-function insertAfter(referenceNode, newNode) {
-  referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
-
-function insertTrustpilot() {
-  loadScript(
-    '//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js',
-    'text/javascript',
-    '',
-    'head',
-    true
-  );
-  const el = document.createElement('span');
-  el.innerHTML = `<div class="trustpilot-widget" data-locale="en-US" data-template-id="5419b6a8b0d04a076446a9ad" data-businessunit-id="61bf4c3af08c2f3625d8cfeb" data-style-height="24px" data-style-width="100%" data-theme="light" data-stars="1,2,3,4,5" data-no-reviews="hide" data-scroll-to-list="true" data-allow-robots="true" data-min-review-count="10">
-<a href="https://www.trustpilot.com/review/vgks.lt" target="_blank" rel="noopener">Trustpilot</a>
-</div>`;
-  const div = document.querySelector('.social-wall__header');
-  insertAfter(div, el);
+if (document.readyState !== 'loading') {
+  runOnStart();
+} else {
+  document.addEventListener('DOMContentLoaded', () => {
+    runOnStart();
+  });
 }
 
 const loadShopOpeningTimeStatus = function () {
@@ -146,8 +114,9 @@ const loadShopOpeningTimeStatus = function () {
 };
 
 //first time on load
-
+loadShopOpeningTimeStatus();
 //then every 60sec
+setInterval(loadShopOpeningTimeStatus, 60000);
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -206,9 +175,7 @@ window.addEventListener('resize', () => {
 
 services.forEach((service) => {
   service.addEventListener('click', function () {
-    checkSize();
-    loadGallery();
-    adjustItemSizeOnResize();
+    loadGallery(this.id);
   });
 });
 
@@ -299,11 +266,11 @@ const checkSize = function () {
     prevWidth = window.innerWidth;
   }
 
-  if (window.innerWidth < 380) {
-    document.getElementById('back-to-top').style.display = 'none';
-  } else {
-    document.getElementById('back-to-top').style.display = 'block';
-  }
+  // if (window.innerWidth < 380) {
+  //   document.getElementById('back-to-top').style.display = 'none';
+  // } else {
+  //   document.getElementById('back-to-top').style.display = 'block';
+  // }
 
   if (window.innerWidth < 700 && window.innerWidth > 415) {
     document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
@@ -456,9 +423,20 @@ document.querySelectorAll('.js--scroll-to-services').forEach((el) => {
     scrollToElem(servicesBlock);
   });
 });
+
 document.querySelectorAll('.js--scroll-to-contacts').forEach((el) => {
   el.addEventListener('click', function () {
+    let preloadedHeight = document.body.clientHeight;
     scrollToElem(footerBlock);
+    setTimeout(() => {
+      const loadedHeight = document.body.clientHeight;
+      if (preloadedHeight + 50 < loadedHeight) {
+        scrollToElem(footerBlock);
+        preloadedHeight = loadedHeight;
+        clearTimeout();
+        return;
+      }
+    }, 1000);
     checkboxes[1].checked = false;
   });
 });
@@ -487,58 +465,149 @@ const aspectRatioFixforIOS = function (el) {
   el.style.height = `${el.getBoundingClientRect().width}px`;
 };
 
-const images = document.querySelectorAll('.img-loading');
+const imagesLoading = document.querySelectorAll('.img-loading');
+const imagesGallery = document.querySelectorAll('.img-gallery');
 
-const loadGallery = function (imgNode) {
-  if (images.length == 0) return; //if not main page
-  loadImage('/img/gallery/nails/1.jpg', 0);
-  loadImage('/img/gallery/nails/2.jpg', 1);
-  loadImage('/img/gallery/nails/3.jpg', 2);
-  loadImage('/img/gallery/massage/1.jpg', 3);
-  loadImage('/img/gallery/massage/2.jpg', 4);
-  loadImage('/img/gallery/massage/3.jpg', 5);
-  loadImage('/img/gallery/massage/4.jpg', 6);
-  loadImage('/img/gallery/massage/5.jpg', 7);
-  loadImage('/img/gallery/massage/6.jpg', 8);
-  loadImage('/img/gallery/hair/1.jpg', 9);
-  loadImage('/img/gallery/hair/2.jpg', 10);
-  loadImage('/img/gallery/hair/3.jpg', 11);
-  loadImage('/img/gallery/hair/4.jpg', 12);
-  loadImage('/img/gallery/hair/5.jpg', 13);
-  loadImage('/img/gallery/hair/6.jpg', 14);
-  loadImage('/img/gallery/photo/1.jpg', 15);
-  loadImage('/img/gallery/photo/2.jpg', 16);
-  loadImage('/img/gallery/photo/3.jpg', 17);
-  loadImage('/img/gallery/photo/4.jpg', 18);
-  loadImage('/img/gallery/photo/5.jpg', 19);
-  loadImage('/img/gallery/photo/6.jpg', 20);
-  loadImage('/img/gallery/courses/1.jpg', 21);
-  loadImage('/img/gallery/courses/2.jpg', 22);
-  loadImage('/img/gallery/courses/3.jpg', 23);
-  loadImage('/img/gallery/courses/4.jpg', 24);
-  loadImage('/img/gallery/courses/5.jpg', 25);
-  loadImage('/img/gallery/courses/6.jpg', 26);
-  loadImage('/img/gallery/other/1.jpg', 27);
-  loadImage('/img/gallery/other/2.jpg', 28);
-  loadImage('/img/gallery/other/3.jpg', 29);
-  loadImage('/img/gallery/other/4.jpg', 30);
-  loadImage('/img/gallery/other/5.jpg', 31);
-  loadImage('/img/gallery/other/6.jpg', 32);
+const loadGallery = async function (service) {
+  if (imagesGallery.length == 0) return; //if not main page
+  try {
+    if (service === 'nails') {
+      await loadImage('/img/gallery/nails/1.jpg').then((image) => {
+        drawImage(image, 0);
+      });
+      await loadImage('/img/gallery/nails/2.jpg').then((image) => {
+        drawImage(image, 1);
+      });
+      await loadImage('/img/gallery/nails/3.jpg').then((image) => {
+        drawImage(image, 2);
+      });
+    }
+    if (service === 'massage') {
+      await loadImage('/img/gallery/massage/1.jpg').then((image) =>
+        drawImage(image, 3)
+      );
+      await loadImage('/img/gallery/massage/2.jpg').then((image) =>
+        drawImage(image, 4)
+      );
+      await loadImage('/img/gallery/massage/3.jpg').then((image) =>
+        drawImage(image, 5)
+      );
+      await loadImage('/img/gallery/massage/4.jpg').then((image) =>
+        drawImage(image, 6)
+      );
+      await loadImage('/img/gallery/massage/5.jpg').then((image) =>
+        drawImage(image, 7)
+      );
+      await loadImage('/img/gallery/massage/6.jpg').then((image) =>
+        drawImage(image, 8)
+      );
+    }
+    if (service === 'hair') {
+      await loadImage('/img/gallery/hair/1.jpg').then((image) =>
+        drawImage(image, 9)
+      );
+      await loadImage('/img/gallery/hair/2.jpg').then((image) =>
+        drawImage(image, 10)
+      );
+      await loadImage('/img/gallery/hair/3.jpg').then((image) =>
+        drawImage(image, 11)
+      );
+      await loadImage('/img/gallery/hair/4.jpg').then((image) =>
+        drawImage(image, 12)
+      );
+      await loadImage('/img/gallery/hair/5.jpg').then((image) =>
+        drawImage(image, 13)
+      );
+      await loadImage('/img/gallery/hair/6.jpg').then((image) =>
+        drawImage(image, 14)
+      );
+    }
+    if (service === 'photo') {
+      await loadImage('/img/gallery/photo/1.jpg').then((image) =>
+        drawImage(image, 15)
+      );
+      await loadImage('/img/gallery/photo/2.jpg').then((image) =>
+        drawImage(image, 16)
+      );
+      await loadImage('/img/gallery/photo/3.jpg').then((image) =>
+        drawImage(image, 17)
+      );
+      await loadImage('/img/gallery/photo/4.jpg').then((image) =>
+        drawImage(image, 18)
+      );
+      await loadImage('/img/gallery/photo/5.jpg').then((image) =>
+        drawImage(image, 19)
+      );
+      await loadImage('/img/gallery/photo/6.jpg').then((image) =>
+        drawImage(image, 20)
+      );
+    }
+    if (service === 'courses') {
+      await loadImage('/img/gallery/courses/1.jpg').then((image) =>
+        drawImage(image, 21)
+      );
+      await loadImage('/img/gallery/courses/2.jpg').then((image) =>
+        drawImage(image, 22)
+      );
+      await loadImage('/img/gallery/courses/3.jpg').then((image) =>
+        drawImage(image, 23)
+      );
+      await loadImage('/img/gallery/courses/4.jpg').then((image) =>
+        drawImage(image, 24)
+      );
+      await loadImage('/img/gallery/courses/5.jpg').then((image) =>
+        drawImage(image, 25)
+      );
+      await loadImage('/img/gallery/courses/6.jpg').then((image) =>
+        drawImage(image, 26)
+      );
+    }
+    if (service === 'other') {
+      await loadImage('/img/gallery/other/1.jpg').then((image) =>
+        drawImage(image, 27)
+      );
+      await loadImage('/img/gallery/other/2.jpg').then((image) =>
+        drawImage(image, 28)
+      );
+      await loadImage('/img/gallery/other/3.jpg').then((image) =>
+        drawImage(image, 29)
+      );
+      await loadImage('/img/gallery/other/4.jpg').then((image) =>
+        drawImage(image, 30)
+      );
+      await loadImage('/img/gallery/other/5.jpg').then((image) =>
+        drawImage(image, 31)
+      );
+      loadImage('/img/gallery/other/6.jpg').then((image) =>
+        drawImage(image, 32)
+      );
+    }
+  } catch (err) {
+    console.log(err);
+  }
 };
 
-const loadImage = function (imgLink, id) {
-  const downloadingImg = new Image();
-  downloadingImg.onload = function () {
-    images[id].src = this.src;
-    images[id].classList.remove('img-loading');
-  };
-  downloadingImg.src = imgLink;
+const loadImage = (imgLink) =>
+  new Promise((resolve, reject) => {
+    const downloadingImg = new Image();
+    downloadingImg.addEventListener('load', () => {
+      resolve(downloadingImg);
+    });
+    downloadingImg.src = imgLink;
+    downloadingImg.addEventListener('error', (err) => reject(err));
+  });
+
+const drawImage = (image, id) => {
+  imagesGallery[id].src = image.src;
+  imagesLoading[id].style.display = 'none';
+  imagesLoading[id].style.opacity = '0';
+  imagesGallery[id].style.display = 'block';
 };
 
-const form = document.getElementById('newsletter-form');
+const form = document.querySelector('.js--newsletter-form');
 
 form.addEventListener('input', () => {
-  if (document.getElementById('newsletter-form').value.length !== 0) {
+  if (form.value.length !== 0) {
     document.querySelector('.ml-form-recaptcha').classList.remove('hidden');
     getDymanicHeight(document.querySelectorAll('.footer__item__content')[3]);
     document.querySelector('.row-success').style.display = 'none';
@@ -556,22 +625,6 @@ goTopBtn.addEventListener('click', () => {
   // BtnClicked = true;
   history.pushState('', '', window.location.pathname);
 });
-
-// window.addEventListener('scroll', function (ev) {
-//   if (BtnClicked) {
-//     return;
-//   }
-//   if (
-//     window.innerHeight + window.pageYOffset >=
-//     document.body.offsetHeight - footerBlock.clientHeight / 2
-//   ) {
-//     window.location.hash = '#contacts';
-//   } else if (window.pageYOffset + 250 >= servicesBlock.scrollHeight) {
-//     window.location.hash = '#services';
-//   } else {
-//     history.pushState('', '', window.location.pathname);
-//   }
-// });
 
 /**
  * Wait for an element before resolving a promise
@@ -607,13 +660,6 @@ const featuredProductImgContainers = document.querySelectorAll(
 );
 const featuredProductContainers =
   document.querySelectorAll('.featured-product');
-
-// featuredProductImgs.forEach((img),()=> {
-
-//   waitForElement(img, 30000)
-//   .then(()
-
-// });
 
 document.querySelectorAll('.sidebar__link').forEach((link) => {
   link.addEventListener('click', () => {
