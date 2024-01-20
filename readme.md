@@ -1,4 +1,4 @@
-## VGKS Salon - Beauty Salon Website
+## VGKS Salon - Beauty Salons
 
 This repository contains the source code for the VGKS Salon website, a beauty salon located in Visaginas, Lithuania. Project was built using html/sass and js.
 
