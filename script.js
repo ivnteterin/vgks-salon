@@ -602,3 +602,5 @@ function changeLanguage() {
 		}
 	});
 }
+
+changeLanguage();

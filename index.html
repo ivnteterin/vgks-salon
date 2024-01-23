@@ -61,9 +61,9 @@
 
 
     <select id="languageSelector" onchange="changeLanguage()">
-				<option value="lt">LT</option>
-        <option value="en">EN</option>
-        <option value="ru">RU</option>
+				<option value="lt">&nbsp;&nbsp;LT&nbsp;&nbsp;</option>
+        <option value="en">&nbsp;&nbsp;EN&nbsp;&nbsp;</option>
+        <option value="ru">&nbsp;&nbsp;RU&nbsp;&nbsp;</option>
     </select>
 
     <div class="container transparent" id="body-container">
@@ -129,8 +129,7 @@
                     <!-- <span class="coming-soon">Coming soon</span> -->
                   </li>
                   <li class="sidebar__item">
-                    <a href="#contacts" class="sidebar__link js--scroll-to-contacts"
-                      ><span>Kontaktai</span></a>
+                    <a href="#contacts" class="sidebar__link js--scroll-to-contacts"><span>Kontaktai</span></a>
                     
                   </li>
                   <a href="#reservation" class="sidebar__item">
@@ -217,32 +216,44 @@
           <div class="services__content">
             <div class="services__item nails" id="nails">
             <div class="services__header">
-              <div class="heading-3">Nagai</div>
+              <div class="heading-3 lt-content">Nagai</div>
+              <div class="heading-3 en-content">Nails</div>
+              <div class="heading-3 ru-content">Ногти</div>
             </div>
           </div>
             <div class="services__item massage" id="massage">
               <div class="services__header">
-                <div class="heading-3">Masažas</div>
+                <div class="heading-3 lt-content">Masažas</div>
+                <div class="heading-3 en-content">Massage</div>
+                <div class="heading-3 ru-content">Массаж</div>
               </div>
             </div>
             <div class="services__item hair" id="hair">
               <div class="services__header">
-                <div class="heading-3">Plaukai</div>
+                <div class="heading-3 lt-content">Plaukai</div>
+                <div class="heading-3 en-content">Hair</div>
+                <div class="heading-3 ru-content">Волосы</div>
               </div>
             </div>
             <div class="services__item photo" id="photo">
               <div class="services__header">
-                <div class="heading-3">Foto</div>
+                <div class="heading-3 lt-content">Foto</div>
+                <div class="heading-3 en-content">Photo</div>
+                <div class="heading-3 ru-content">Фото</div>
               </div>
             </div>
             <div class="services__item courses" id="courses">
               <div class="services__header">
-                <div class="heading-3">Kursai</div>
+                <div class="heading-3 lt-content">Kursai</div>
+                <div class="heading-3 en-content">Courses</div>
+                <div class="heading-3 ru-content">Курсы</div>
               </div>
             </div>
             <div class="services__item other" id="other">
               <div class="services__header">
-                <div class="heading-3">Kitos paslaugos</div>
+                <div class="heading-3 lt-content">Kitos paslaugos</div>
+                <div class="heading-3 en-content">Other</div>
+                <div class="heading-3 ru-content">Другoe </div>
               </div>
             </div>
             <div class="pricelist__item pricelist__hidden" id="nails-pricelist">
@@ -1133,10 +1144,18 @@
             </div>
           </div>
         </div>
-        <div class="services__description basic-text">
+        <div class="services__description basic-text lt-content">
           Kai kurie salonai teikia ne visas paslaugas.<br>Daugiau informacijos apie paslaugas ir kainoraštį kreipkitės telefonu arba elektroniniu paštu.
         </div>
-        <a class="services__reservation" href="#reservation"><button class="btn">Rezervuoti</button></a>
+        <div class="services__description basic-text en-content">
+          Some salons do not provide all services.<br>For more information about services and price list, contact us by phone or e-mail.
+        </div>
+        <div class="services__description basic-text ru-content">
+          Некоторые салоны предоставляют не все услуги.<br>Для получения более подробной информации об услугах и прайс-листе свяжитесь с нами по телефону или электронной почте.
+        </div>
+        <a class="services__reservation lt-content" href="#reservation"><button class="btn">Rezervuoti</button></a>
+        <a class="services__reservation en-content" href="#reservation"><button class="btn">Reservation</button></a>
+        <a class="services__reservation ru-content" href="#reservation"><button class="btn">Резервация</button></a>
       </section>
   
       <section class="store-wrap shop" id="shop">
@@ -1175,7 +1194,9 @@
             </div>
             <div class="store-title store-header-element">
               <a href="/shop" class=""><img src="img/icons/e-shop-logo.svg" alt="VGKS Store Logo" class="store__logo"></a>
-              <div class="store__description">El. parduotuvė</div>
+              <div class="store__description lt-content">El. parduotuvė</div>
+              <div class="store__description en-content">E-shop</div>
+              <div class="store__description ru-content">Интернет-магазин</div>
             </div>
               <div class="store-header-element">
                 <a href="/shop.html#!/~/cart" style="color: unset;">
@@ -1235,9 +1256,17 @@
         </div>
         <div class="gift-certificate__text-container gift-certificate__container">
           <img loading="lazy" class="gift-certificate__poster" src="./img/logo-large-1.svg">
-          <div class="heading-1">Dovanų Kuponas</div>
-          <div class="gift-certificate__text basic-text">
-            Nudžiuginkite draugus ir artimuosius mūsų salono dovanų kuponu, kuriame profesionalūs plaukų stilistai ir nagų meistrai supakuoti į vieną elegantišką pakuotę. Kuponą galite įsigyti skaitmeniniu arba popieriniu formatu ir tik atvykę į mūsų saloną
+          <div class="heading-1 lt-content">Dovanų Kuponas</div>
+          <div class="heading-1 en-content">Gift Coupon</div>
+          <div class="heading-1 ru-content">Подарок-купон</div>
+          <div class="gift-certificate__text basic-text lt-content">
+            Nudžiuginkite draugus ir artimuosius mūsų salono dovanų kuponu, kuriame profesionalūs plaukų stilistai ir nagų meistrai supakuoti į vieną elegantišką pakuotę. Kuponą galite įsigyti skaitmeniniu arba popieriniu formatu ir tik atvykę į mūsų saloną.
+          </div>
+          <div class="gift-certificate__text basic-text en-content">
+						Delight your friends and family with our salon gift voucher, which combines professional hair stylists and nail artists in one elegant package. You can purchase the coupon in digital or paper format and only when you come to our salon.
+          </div>
+          <div class="gift-certificate__text basic-text ru-content">
+						Порадуйте своих друзей и семью нашим подарочным сертификатом для салона красоты, который объединяет профессиональных парикмахеров и мастеров маникюра в одной элегантной упаковке. Купон вы можете приобрести в цифровом или бумажном формате и только посетив наш салон.
           </div>
         </div>
       </div>
@@ -1248,7 +1277,9 @@
         <div class="social-wall__content" style="max-width: 120rem; margin:0 auto;">
           <div class="social-wall__header" style="padding-bottom: 1rem;">
             <h1 class="heading-1">
-            <p>Sekite mus socialiniuose tinkluose!<span> #vgks</span></p>
+            <p class="lt-content">Sekite mus socialiniuose tinkluose!<span> #vgks</span></p>
+            <p class="en-content">FOLLOW US ON SOCIAL MEDIA!<span> #vgks</span></p>
+            <p class="ru-content">ПОДПИСЫВАЙТЕСЬ НА НАС!<span> #vgks</span></p>
             </h1>
             <div  iv class="social-wall__social">
               <div class="footer__social-fb social-fb-2" id="">
@@ -1320,7 +1351,9 @@
                 <div class="footer__item__header">
                     <label for="footer__item__header-toggle" class="footer__item__header__button">
                         <img class="footer__item__header--collapse" src="img/icons/collapse-icon.svg" alt="Arrow">
-                        <h3 class="heading-3--footer">Adresai</h3>
+                        <h3 class="heading-3--footer lt-content">Adresai</h3>
+                        <h3 class="heading-3--footer en-content">Address</h3>
+                        <h3 class="heading-3--footer ru-content">Салоны</h3>
                     </label>
                 </div>
                 <div class="footer__item__content">
@@ -1348,7 +1381,9 @@
                 <div class="footer__item__header">
                     <label for="footer__item__header-toggle-2" class="footer__item__header__button">
                         <img class="footer__item__header--collapse" src="img/icons/collapse-icon.svg" alt="Arrow">
-                        <h3 class="heading-3--footer">Kontaktai</h3>
+                        <h3 class="heading-3--footer lt-content">Kontaktai</h3>
+                        <h3 class="heading-3--footer en-content">Contacts</h3>
+                        <h3 class="heading-3--footer ru-content">Контакты</h3>
                     </label>
                 </div>
                 <div class="footer__item__content">
@@ -1427,7 +1462,10 @@
                 
                   <label for="footer__item__header-toggle-5" class="footer__item__header__button">
                       <img class="footer__item__header--collapse" src="img/icons/collapse-icon.svg" alt="Arrow">
-                      <h3 class="heading-3--footer">Darbo laikas</h3>
+                      <h3 class="heading-3--footer lt-content">Darbo laikas</h3>
+                      <h3 class="heading-3--footer en-content">Working hours</h3>
+                      <h3 class="heading-3--footer ru-content">Рабочее время</h3>
+									
                   </label>
               </div>
               <div class="footer__item__content">
@@ -1453,18 +1491,26 @@
               <div class="footer__item__header">
                 <label for="footer__item__header-toggle-3" class="footer__item__header__button">
                     <img class="footer__item__header--collapse" src="img/icons/collapse-icon.svg" alt="Arrow">
-                    <h3 class="heading-3--footer">Naujienlaiškis</h3>
+                    <h3 class="heading-3--footer lt-content">Naujienlaiškis</h3>
+                    <h3 class="heading-3--footer en-content">Subscribe</h3>
+                    <h3 class="heading-3--footer ru-content">Подписаться</h3>
                 </label>
               </div>
               <div class="footer__item__content">
                 <p class="footer__item__sub-item-info">
-                    Sužinokite apie nuolaidas ir specialius pasiūlymus!
+                    <span class="lt-content">Sužinokite apie nuolaidas ir specialius pasiūlymus!</span>
+                    <span class="en-content">Find out about discounts and special offers!</span>
+                    <span class="ru-content">Узнайте о скидках и специальных предложениях!</span>
+                </p>
+             
                 </p>
                 <div id="mlb2-5151428" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-5151428" style="position: relative;">
                   <form class="ml-block-form footer__form" action="https://static.mailerlite.com/webforms/submit/p5q1p5" data-code="p5q1p5" method="post" target="_blank">
                     <div class="ml-form-formContent" style="flex: 1; border: 2px solid #fff;">
                         <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-                          <input aria-label="email" aria-required="true" type="email" class="form-control footer__newsletter__email js--newsletter-form" data-inputmask="" name="fields[email]" placeholder="El. paštas" autocomplete="email">
+                          <input aria-label="email" aria-required="true" type="email" class="form-control footer__newsletter__email js--newsletter-form lt-content" data-inputmask="" name="fields[email]" placeholder="El. paštas" autocomplete="email">
+                          <input aria-label="email" aria-required="true" type="email" class="form-control footer__newsletter__email js--newsletter-form en-content" data-inputmask="" name="fields[email]" placeholder="E-mail" autocomplete="email">
+                          <input aria-label="email" aria-required="true" type="email" class="form-control footer__newsletter__email js--newsletter-form ru-content" data-inputmask="" name="fields[email]" placeholder="Эл. почта" autocomplete="email">
                         </div>
                     </div>
                     <div class="ml-form-recaptcha ml-validate-required hidden" style="order:1;flex-basis: 100%;">
@@ -1476,14 +1522,22 @@
                     </div>
                     <input type="hidden" name="ml-submit" value="1">
                     <div class="ml-form-embedSubmit">
-                      <button type="submit" class="primary btn-newsletter">Gauti</button>
-                      <button disabled="disabled" style="display:none;height: 100%;position: relative;background: white;border-style: none;"" type="button" class="loading"> <div class="ml-form-embedSubmitLoad"></div> <span class="sr-only btn-newsletter">Loading...</span> </button>
+                      <button type="submit" class="primary btn-newsletter lt-content">Gauti</button>
+                      <button type="submit" class="primary btn-newsletter en-content">Go</button>
+                      <button type="submit" class="primary btn-newsletter ru-content">Вперёд</button>
+                      <button disabled="disabled" style="display:none;height: 100%;position: relative;background: white;border-style: none;"" type="button" class="loading"> <div class="ml-form-embedSubmitLoad"></div>
+												<span class="sr-only btn-newsletter lt-content">Loading...</span> 
+												<span class="sr-only btn-newsletter en-content">Loading...</span> 
+												<span class="sr-only btn-newsletter ru-content">Загрузка...</span> 
+										</button>
                     </div>
                     <input type="hidden" name="anticsrf" value="true">
                   </form>
                   <div class="ml-form-successBody row-success" style="display:none; position: absolute; top: 45px; right: 10px;">
                     <div class="ml-form-successContent">
-                      <div style="font-weight: 600; color: #9f7ec5;;font-size: 1.5rem;">Ačiū!</div>
+                      <div class="lt-content" style="font-weight: 600; color: #9f7ec5;;font-size: 1.5rem;">Ačiū!</div>
+                      <div class="en-content" style="font-weight: 600; color: #9f7ec5;;font-size: 1.5rem;">Thanks!</div>
+                      <div class="ru-content" style="font-weight: 600; color: #9f7ec5;;font-size: 1.5rem;">Спасибо!</div>
                     </div>
                   </div>
                 </div>
@@ -1502,12 +1556,16 @@
                 <div class="footer__item__header">
                     <label for="footer__item__header-toggle-4" class="footer__item__header__button">
                     <img class="footer__item__header--collapse" src="img/icons/collapse-icon.svg" alt="Arrow">
-                        <h3 class="heading-3--footer">Vip Card</h3>
+                        <h3 class="heading-3--footer lt-content">Vip Card</h3>
+                        <h3 class="heading-3--footer en-content">Vip Card</h3>
+                        <h3 class="heading-3--footer ru-content">Vip Карта</h3>
                     </label>
                 </div>
                 <div class="footer__item__content">
                     <p class="footer__item__sub-item-info">
-                        Gauk VIP kortelę ir sutaupyk 5% visų paslaugų!
+                        <span class="lt-content">Gauk VIP kortelę ir sutaupyk 5% visų paslaugų!</span>
+                        <span class="en-content">Get a VIP card and save 5% on all services!</span>
+                        <span class="ru-content">Получите VIP-карту и сэкономьте 5% на всех услугах!</span>
                     </p>
                     <div class="footer__item__sub-item-info">
                         <a href="#vip-card" class="popup__link"><img src="img/vip-card.svg" alt="Vip card" class="vip-card"></a>
@@ -1525,7 +1583,17 @@
                   <span class="copyright__address-text"> © Visagino Grožio Kūrėjų Studija, Lietuva</span>
               </div>
               <div class="copyright__info">
-                  <a href="#privacy-policy" class="privacy-policy">Privatumo politika</a><span class="copyright__divider">|</span><a href="#terms-of-use" class="terms-of-use">Paslaugų teikimo sąlygos</a><span class="copyright__divider">|</span><a href="#duk" class=" faq">DUK</a>
+                  <a href="#privacy-policy" class="privacy-policy lt-content">Privatumo politika</a>
+                  <a href="#privacy-policy" class="privacy-policy en-content">Privacy policy</a>
+                  <a href="#privacy-policy" class="privacy-policy ru-content">Политика конфиденциальности</a>
+									<span class="copyright__divider">|</span>
+									<a href="#terms-of-use" class="terms-of-use lt-content">Paslaugų teikimo sąlygos</a>
+									<a href="#terms-of-use" class="terms-of-use en-content">Terms of service</a>
+									<a href="#terms-of-use" class="terms-of-use ru-content">Условия пользования</a>
+									<span class="copyright__divider">|</span>
+									<a href="#duk" class="lt-content faq">DUK</a>
+									<a href="#duk" class="en-content faq">FAQ</a>
+									<a href="#duk" class="ru-content faq">FAQ</a>
                   </span>              
               </div>
               <!-- <div class="payment-icons">
@@ -1536,7 +1604,9 @@
           </div>
         </div>
         <div class="to-top" id="back-to-top"> 
-          <span>Į viršų</span>
+          <span class="lt-content">Į viršų</span>
+          <span class="en-content">Go up</span>
+          <span class="ru-content">Вверх</span>
           <img class="btn-to-top-arrow" src="img/vgks-back-to-top-arrow.svg" alt="Arrow">
         </div>
       </footer>
@@ -1544,8 +1614,12 @@
     <div class="popup" id='vip-card'>
       <div class="popup__content">
           <div class="popup__left">
-            <h2 class="heading-2">Gauk VIP kortelę!</h2>
-            <p class="heading-4 js-popup__vipcard-heading-4">Įsigykite „VIP“ kortelę tik už 5€ bet kuriame iš mūsų salonų ir sutaupykite 5% kiekvieno apsilankymo metu! :)</p> 
+            <h2 class="heading-2 lt-content">Gauk VIP kortelę!</h2>
+            <h2 class="heading-2 en-content">Get VIP card!</h2>
+            <h2 class="heading-2 ru-content">VIP-картa!</h2>
+            <p class="heading-4 js-popup__vipcard-heading-4 lt-content">Įsigykite „VIP“ kortelę tik už 5€ bet kuriame iš mūsų salonų ir sutaupykite 5% kiekvieno apsilankymo metu! :)</p> 
+            <p class="heading-4 js-popup__vipcard-heading-4 en-content">Puchase a VIP card for only €5 in any of our salons and save 5% on every visit! :)</p> 
+            <p class="heading-4 js-popup__vipcard-heading-4 ru-content">Купите VIP-карту всего за 5 евро в любом из наших салонов и экономьте 5% при каждом посещении! :)</p> 
           </div>
           <img class="popup__img-1" src="img/popup-image.jpg" alt="Vip card" class="vip-card">
           <img class="popup__img-2" src="img/vip-card.svg" alt="Vip card" class="vip-card">
@@ -1560,7 +1634,9 @@
           <div class="reservation__item">
             <img class="reservation__icon" src="img/phone.svg" alt="Phone icon">
             <div class="reservation__sub-item">
-              <div class="heading-4 js-popup__reservation-heading-4">Skambinkite telefonu</div>
+              <div class="heading-4 js-popup__reservation-heading-4 lt-content">Skambinkite telefonu</div>
+              <div class="heading-4 js-popup__reservation-heading-4 en-content">Call us</div>
+              <div class="heading-4 js-popup__reservation-heading-4 ru-content">Позвоните нам</div>
               <div class="basic-text">
                 <a href="tel:+370 (626) 55999" class="reservation__link">+370 (626) 55 999</a>
               </div>
@@ -1569,7 +1645,11 @@
           <div class="reservation__item">
             <img class="reservation__icon" src="img/messenger.svg" alt="Messenger icon">
             <div class="reservation__sub-item">
-              <div class="heading-4 heading-4--messenger">Rašykite į <a href="http://www.m.me/vgks.visaginas" class="reservation__link">Messenger</a></div>
+              <div class="heading-4 heading-4--messenger">
+								<span class="lt-content">Rašykite į</span>
+								<span class="en-content">Drop us a line on</span>
+								<span class="ru-content">Напишите нам в</span>
+								<a href="http://www.m.me/vgks.visaginas" class="reservation__link">Messenger</a></div>
               <div class="basic-text">
               </div>
             </div>
@@ -1577,9 +1657,13 @@
           <div class="reservation__item grey-out">
             <img class="reservation__icon" src="img/booking.svg" alt="Booking icon">
             <div class="reservation__sub-item ">
-              <div class="heading-4">Rezervuoti internetu</div>
+              <div class="heading-4 lt-content">Rezervuoti internetu</div>
+              <div class="heading-4 en-content">Online reservation</div>
+              <div class="heading-4 ru-content">Резервация онлайн</div>
               <div class="basic-text js-popup__reservation-basic-text">
-                Netrukus paleisime
+                <span class="lt-content">Netrukus paleisime</span>
+                <span class="en-content">Soon</span>
+                <span class="ru-content">Скоро</span>
               </div>
             </div>
           </div>
@@ -1762,14 +1846,35 @@
     </div>
     <div class="popup" id='duk'>
       <div class="popup__content privacy duk">
-          <h2 class="heading-2 reservation--heading-2">DUK</h2>
+          <h2 class="heading-2 reservation--heading-2">Dažniausiai užduodami klausimai</h2>
           <div class="reservation__item">
               <div class="basic-text" style="overflow: auto; height:55vh; text-align:justify; padding:0 2rem 0 2.5rem">
                 <ul class="basic-text-ul">
-                  <li style="list-style-type: disc;">
-                    <h4>Dažniausiai užduodami klausimai</h4>
-                      <p>Informacija ruošiama</p>
-                  </li> 
+                  <li>
+                    <h4>Kokias paslaugas siūlo jūsų grožio salonas?</h4>
+
+													<p>[Salon Name] teikia įvairias grožio paslaugas, atitinkančias jūsų poreikius. Mūsų paslaugų sąraše yra kirpimai, šukavimai, spalvinimas, manikiūras, pedikiūras, veido procedūros, depiliacijos ir daugiau. Ar ieškote madingo kirpimo, atpalaiduojančio spa pasiūlymo ar pilno stiliaus pokyčio? Mūsų patyrę specialistai yra čia, kad jūs jaustumėtės geriausiai.</p>
+											</li>
+									
+											<li>
+												<h4>Kaip galiu susitarti dėl vizito?</h4>
+
+													<p>Vizito susitarimas [Salon Name] yra paprastas ir patogus. Vizitą galite užsakyti internetu per mūsų svetainę paspaudę mygtuką „Užsakyti Dabar“. Taip pat galite paskambinti mums, numeriu [Salon Phone Number], kad pasikalbėtumėte su mūsų draugiškomis registratūros darbuotojomis, kurios su malonumu jums padės rasti tinkamą laiką vizitui.</p>
+											</li>
+									
+											<li>
+												<h4>Kokius produktus jūs naudojate savo salone?</h4>
+
+													<p>[Salon Name] salonas siekia naudoti aukštos kokybės ir gerai žinomus produktus, užtikrinančius geriausius rezultatus mūsų klientams. Mes naudojame tik [Brand Name] produkciją, žinomą dėl savo efektyvumo ir saugumo. Mūsų stilistai ir grožio specialistai yra gerai informuoti apie šiuos produktus ir gali suteikti individualias rekomendacijas pagal jūsų plaukų ir odos tipą.</p>
+											</li>
+									
+											<li>
+												<h4>Ar siūlote akcijas ar lojalumo programas?</h4>
+
+													<p>Taip, mes vertiname savo klientus ir norime tai parodyti. [Salon Name] reguliariai siūlo akcijas ir specialius pasiūlymus įvairioms paslaugoms. Be to, turime lojalumo programą, kuri apdovanoja mūsų nuolatinius klientus nuolaidomis, ekskliuzyviais pasiūlymais ir kitomis privilegijomis. Prisijunkite prie mūsų el. pašto sąrašo arba sekitės mūsų socialiniuose tinkluose, kad būtumėte informuoti apie naujausias akcijas ir lojalumo programos privalumus.</p>
+											</li>
+									
+									
                 </ul>
               </div>
           </div>

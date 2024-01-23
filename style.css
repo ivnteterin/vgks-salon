@@ -2974,11 +2974,32 @@ body {
 	-webkit-text-fill-color: transparent;
 }
 
-.ru-content,
-.en-content {
-	display: none;
-}
-
 .ru-content {
 	font-family: 'Montserrat', sans-serif !important;
+}
+
+#languageSelector {
+	position: absolute;
+	z-index: 999;
+	left: 10px;
+	top: 10px;
+	border: 0;
+	color: black;
+	opacity: 0.5;
+	font-weight: bold;
+	background: transparent;
+}
+
+#languageSelector:hover {
+	cursor: pointer;
+}
+
+#languageSelector:focus {
+	outline: none;
+}
+
+#languageSelector option {
+	color: black;
+	background-color: #ebdce7;
+	width: 10px;
 }
