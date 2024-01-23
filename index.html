@@ -22,11 +22,12 @@
     onload="this.onload=null;this.rel='stylesheet'"
     />
     <noscript>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Spartan:wght@200;400;600;700&family=Oranienbaum&display=swap"
-            rel="stylesheet"
-            type="text/css"
-        />
+		<link
+		href="https://fonts.googleapis.com/css2?family=Spartan:wght@200;400;600;700&family=Oranienbaum&display=swap"
+		rel="stylesheet"
+		type="text/css"
+		/>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
     </noscript>
 
     <link rel="stylesheet" href="style.css" />
@@ -37,9 +38,14 @@
     <title>VGKS | Beauty Salons</title>
   </head>
   <body>
+
+
     <div class="loader">
       <img id="loading-image" src="img/icons/loading.svg" alt="Loading..." />
     </div>  
+
+	
+
 
    <!-- Start cookieyes banner --> 
    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/010f7475117d31feefc7b240/script.js"></script> 
@@ -50,6 +56,16 @@
     <!-- Your Chat Plugin code -->
     <div id="fb-customer-chat" class="fb-customerchat">
     </div>
+
+
+
+
+    <select id="languageSelector" onchange="changeLanguage()">
+				<option value="lt">LT</option>
+        <option value="en">EN</option>
+        <option value="ru">RU</option>
+    </select>
+
     <div class="container transparent" id="body-container">
       <header class="header" id="header">
         <nav class="navigation">
@@ -61,21 +77,31 @@
 
           <ul class="navigation__list">
             <li class="navigation__list--item">
-              <a href="#services" class="navigation__list--item__link js--scroll-to-services">Paslaugos</a>
+              <a href="#services" class="navigation__list--item__link js--scroll-to-services lt-content" lang="lt">Paslaugos</a>
+              <a href="#services" class="navigation__list--item__link js--scroll-to-services en-content" lang="en">Services</a>
+              <a href="#services" class="navigation__list--item__link js--scroll-to-services ru-content" lang="ru">Услуги</a>
             </li>
             <li class="navigation__list--item">
-              <a href="#shop" class="navigation__list--item__link js--scroll-to-shop">El. parduotuvė</a >
+              <a href="#shop" class="navigation__list--item__link js--scroll-to-shop lt-content">El. parduotuvė</a >
+              <a href="#shop" class="navigation__list--item__link js--scroll-to-shop en-content">E-shop</a >
+              <a href="#shop" class="navigation__list--item__link js--scroll-to-shop ru-content">Интернет-магазин</a >
               <!-- <span class="coming-soon">Coming soon</span> -->
             </li>
             <li class="navigation__list--item">
               <a href="#contacts"
-                class="navigation__list--item__link js--scroll-to-contacts"
+                class="navigation__list--item__link js--scroll-to-contacts lt-content"
                >Kontaktai</a>
+              <a href="#contacts"
+                class="navigation__list--item__link js--scroll-to-contacts en-content"
+               >Contacts</a>
+              <a href="#contacts"
+                class="navigation__list--item__link js--scroll-to-contacts ru-content"
+               >Контакты</a>
             </li>
             <li class="navigation__list--item">
-              <a class="navigation__list--item__link--btn" href="#reservation"
-                ><button class="btn">Rezervuoti</button></a
-              >
+              <a class="navigation__list--item__link--btn lt-content" href="#reservation"><button class="btn">Rezervuoti</button></a>
+              <a class="navigation__list--item__link--btn en-content" href="#reservation"><button class="btn">Reservation</button></a>
+              <a class="navigation__list--item__link--btn ru-content" href="#reservation"><button class="btn">Резервация</button></a>
             </li>
           </ul>
 
@@ -148,7 +174,10 @@
 
           <div class="work-days">
             <p>
-              Darbo laikas<br />
+              <span class="lt-content">Darbo laikas</span>
+              <span class="en-content">Working hours</span>
+              <span class="ru-content">Рабочее время</span>
+							<br />
               <div class="work-days__weekdays">
                 <span class="work-days__days">I-VI</span>
                 <span class="work-days__hours">10 - 18</span>
@@ -181,7 +210,9 @@
         </div>
       </header>
       <section class="services" id="services">
-        <h1 class="heading-1">Paslaugos</h1>
+        <h1 class="heading-1 lt-content">Paslaugos</h1>
+        <h1 class="heading-1 en-content">Services</h1>
+        <h1 class="heading-1 ru-content">Услуги</h1>
         <div class="services__content-wrap">
           <div class="services__content">
             <div class="services__item nails" id="nails">
