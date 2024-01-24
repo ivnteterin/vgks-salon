@@ -10,6 +10,9 @@ const checkboxes = document.querySelectorAll('.footer__item__checkbox');
 const services = document.querySelectorAll('.services__item');
 const goTopBtn = document.getElementById('back-to-top');
 
+var clickableLangDiv = document.getElementById('clickableLangDiv');
+var selectLang = document.getElementById('languageSelector');
+
 //SHOP STATUS (CLOSED / OPEN)
 
 function runOnStart() {
@@ -257,29 +260,60 @@ const checkSize = function () {
 	// }
 
 	if (window.innerWidth < 700 && window.innerWidth > 415) {
-		document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
+		document.querySelector('.js-popup__vipcard-heading-4 lt-content').innerHTML =
 			'Įsigykite „VIP“ kortelę už 5€ viename iš mūsų salonų ir sutaupykite 5% kiekvieno vizito metu :)';
+		document.querySelector('.js-popup__vipcard-heading-4 en-content').innerHTML =
+			'Buy a VIP card for €5 in one of our salons and save 5% on every visit :)';
+		document.querySelector('.js-popup__vipcard-heading-4 ru-content').innerHTML =
+			'Купите VIP-карту за 5 евро в одном из наших салонов и экономьте 5% при каждом посещении :)';
 		document.querySelector('.copyright__address-text').innerHTML = ' © Visagino Grožio Kūrėjų Studija';
 	} else if (window.innerWidth < 415 && window.innerWidth >= 321) {
-		document.querySelector('.copyright__address-text').innerHTML = ' © VGKS, Lietuva';
-		document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
+		document.querySelector('.copyright__address-text lt-content').innerHTML = ' © VGKS, Lietuva';
+		document.querySelector('.copyright__address-text en-content').innerHTML = ' © VGKS, Lithuania';
+		document.querySelector('.copyright__address-text ru-content').innerHTML = ' © VGKS, Литва';
+		document.querySelector('.js-popup__vipcard-heading-4 lt-content').innerHTML =
 			'Įsigykite kortelę už 5€ viename iš mūsų salonų ir gaukite 5% nuolaidą visoms paslaugoms!';
+		document.querySelector('.js-popup__vipcard-heading-4 en-content').innerHTML =
+			'Buy a card for €5 in one of our salons and get a 5% discount on all services!';
+		document.querySelector('.js-popup__vipcard-heading-4 ru-content').innerHTML =
+			'Купите карту за 5 евро в одном из наших салонов и получите скидку 5% на все услуги!';
 	} else if (window.innerWidth < 321 && window.innerWidth > 280) {
-		document.querySelector('.js-popup__reservation-heading-4').innerHTML = 'Skambinkite';
+		document.querySelector('.js-popup__reservation-heading-4 lt-content').innerHTML = 'Skambinkite';
+		document.querySelector('.js-popup__reservation-heading-4 en-content').innerHTML = 'Call us on';
+		document.querySelector('.js-popup__reservation-heading-4 ru-content').innerHTML = 'Позвоните нам';
 		document.querySelector('.js-popup__reservation-basic-text').innerHTML = '';
 		document.querySelector('.copyright__address-text').innerHTML = '';
-		document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
+		document.querySelector('.js-popup__vipcard-heading-4 lt-content').innerHTML =
 			'Įsigykite kortelę už 5€ viename iš mūsų salonų ir gaukite 5% visoms paslaugoms!';
+		document.querySelector('.js-popup__vipcard-heading-4 en-content').innerHTML =
+			'Buy a card for €5 in one of our salons and get 5% for all services!';
+		document.querySelector('.js-popup__vipcard-heading-4 ru-content').innerHTML =
+			'Купите карту за 5 евро в одном из наших салонов и получите 5% на все услуги!';
 	} else if (window.innerWidth < 281) {
-		document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
+		document.querySelector('.js-popup__vipcard-heading-4 lt-content').innerHTML =
 			'Įsigykite kortelę tik už 5€ ir gaukite 5% visoms paslaugoms!';
+		document.querySelector('.js-popup__vipcard-heading-4 en-content').innerHTML =
+			'Buy a card for only €5 and get 5% for all services!';
+		document.querySelector('.js-popup__vipcard-heading-4 ru-content').innerHTML =
+			'Купите карту всего за 5 евро и получите 5% на все услуги!';
 		document.querySelector('.copyright__address-text').innerHTML = '';
 	} else {
-		document.querySelector('.copyright__address-text').innerHTML = ' © Visagino Grožio Kūrėjų Studija, Lietuva';
+		document.querySelector('.copyright__address-text lt-content').innerHTML =
+			' © Visagino Grožio Kūrėjų Studija, Lietuva';
+		document.querySelector('.copyright__address-text en-content').innerHTML =
+			' © Visagino Grožio Kūrėjų Studija, Lithuania';
+		document.querySelector('.copyright__address-text ru-content').innerHTML =
+			' © Visagino Grožio Kūrėjų Studija, Литва';
 		document.querySelector('.js-popup__reservation-heading-4').innerHTML = 'Skambinkite telefonu';
-		document.querySelector('.js-popup__reservation-basic-text').innerHTML = 'Netrukus paleisime';
-		document.querySelector('.js-popup__vipcard-heading-4').innerHTML =
+		document.querySelector('.js-popup__reservation-basic-text lt-content').innerHTML = 'Netrukus paleisime';
+		document.querySelector('.js-popup__reservation-basic-text en-content').innerHTML = 'Soon to be available';
+		document.querySelector('.js-popup__reservation-basic-text ru-content').innerHTML = 'Скоро';
+		document.querySelector('.js-popup__vipcard-heading-4 lt-content').innerHTML =
 			'Įsigykite „VIP“ kortelę tik už 5€ bet kuriame iš mūsų salonų ir sutaupykite 5% kiekvieno apsilankymo metu! :)';
+		document.querySelector('.js-popup__vipcard-heading-4 en-content').innerHTML =
+			'Buy a VIP card for only €5 in any of our salons and save 5% on every visit! :)';
+		document.querySelector('.js-popup__vipcard-heading-4 ru-content').innerHTML =
+			'Купите VIP-карту всего за 5 евро в любом из наших салонов и экономьте 5% при каждом посещении! :)';
 	}
 };
 let prevWidth = FOOTER_COLLAPSE_WIDTH;

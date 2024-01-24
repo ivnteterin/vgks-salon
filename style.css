@@ -2982,7 +2982,7 @@ body {
 	position: absolute;
 	z-index: 999;
 	left: 10px;
-	top: 10px;
+	top: 12px;
 	border: 0;
 	color: black;
 	opacity: 0.5;
@@ -3002,4 +3002,16 @@ body {
 	color: black;
 	background-color: #ebdce7;
 	width: 10px;
+}
+
+.lang {
+	cursor: pointer;
+}
+
+.arrow-lang {
+	left: 3.7rem;
+	top: 1rem;
+	z-index: 999;
+	pointer-events: none;
+	position: absolute;
 }

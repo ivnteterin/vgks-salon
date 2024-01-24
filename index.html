@@ -60,13 +60,21 @@
 
 
 
-    <select id="languageSelector" onchange="changeLanguage()">
-				<option value="lt">&nbsp;&nbsp;LT&nbsp;&nbsp;</option>
-        <option value="en">&nbsp;&nbsp;EN&nbsp;&nbsp;</option>
-        <option value="ru">&nbsp;&nbsp;RU&nbsp;&nbsp;</option>
-    </select>
-
     <div class="container transparent" id="body-container">
+
+			<div class="lang">
+				<select id="languageSelector" onchange="changeLanguage()">
+						<option value="lt">&nbsp;&nbsp;LT&nbsp;&nbsp;</option>
+						<option value="en">&nbsp;&nbsp;EN&nbsp;&nbsp;</option>
+						<option value="ru">&nbsp;&nbsp;RU&nbsp;&nbsp;</option>
+				</select>
+				<div class="arrow-lang" id="clickableLangDiv">
+					<span id="innerSpan">&#9662;</span>
+					<!-- <span>&#9666;</span> -->
+				</div>
+			</div>
+
+
       <header class="header" id="header">
         <nav class="navigation">
           <div class="navigation__logo-box">
@@ -174,7 +182,7 @@
           <div class="work-days">
             <p>
               <span class="lt-content">Darbo laikas</span>
-              <span class="en-content">Working hours</span>
+              <span class="en-content">Business hours</span>
               <span class="ru-content">Рабочее время</span>
 							<br />
               <div class="work-days__weekdays">
@@ -257,122 +265,190 @@
               </div>
             </div>
             <div class="pricelist__item pricelist__hidden" id="nails-pricelist">
-              <div class="heading-2--pricelist">
+              <div class="heading-2--pricelist lt-content">
                   MANIKIŪRAS
+              </div>
+              <div class="heading-2--pricelist en-content">
+								MANICURE
+              </div>
+              <div class="heading-2--pricelist ru-content">
+								МАНИКЮР
               </div>
               <div class="pricelist__sub-item">
                 <div class="heading-4--pricelist pricelist__item__description">
-                <span>Klasikinis manikiūras</span>
+                <span class="lt-content">Klasikinis manikiūras</span>
+                <span class="en-content">Classic manicure</span>
+                <span class="ru-content">Классический маникюр</span>
                 </div> 
                 <div class="heading-4--pricelist pricelist__item__price">
-                  <span>12</span>
+                  <span class="lt-content">12</span>
+                  <span class="en-content">12</span>
+                  <span class="ru-content">12</span>
                 </div>
               </div>
               <div class="pricelist__sub-item">
                 <div class="heading-4--pricelist pricelist__item__description">
-                <span>Manikiūras + gelinis lakavimas 1&nbsp;spalva</span>
+                <span class="lt-content">Manikiūras + gelinis lakavimas 1&nbsp;spalva</span>
+                <span class="en-content">Manicure + gel polish 1&nbsp;color</span>
+                <span class="ru-content">Маникюр + гель-лак 1&nbsp;цвет</span>
                 </div> 
                 <div class="heading-4--pricelist pricelist__item__price">
-                  <span>18</span>
+									<span class="lt-content">18</span>
+                  <span class="en-content">18</span>
+                  <span class="ru-content">18</span>
                 </div>
               </div>
               <div class="pricelist__sub-item">
                   <div class="heading-4--pricelist pricelist__item__description">
-                    <span>Manikiūras + gelinis lakavimas +&nbsp;dizainas</span>
+                    <span class="lt-content">Manicure + gel polish +&nbsp;design</span>
+                    <span class="en-content">Manikiūras + gelinis lakavimas +&nbsp;dizainas</span>
+                    <span class="ru-content">Маникюр + гель-лак +&nbsp;дизайн</span>
                   </div> 
                   <div class="heading-4--pricelist pricelist__item__price">
-                    <span>20</span>                  
+										<span class="lt-content">20</span>
+										<span class="en-content">20</span>
+										<span class="ru-content">20</span>                  
                   </div>
               </div>
               <div class="pricelist__sub-item">
                 <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Gelinių nagų korekcija +&nbsp;lakavimas</span>
+                  <span class="lt-content">Gelinių nagų korekcija +&nbsp;lakavimas</span>
+                  <span class="en-content">Correction of gel nails +&nbsp;varnishing</span>
+                  <span class="ru-content">Коррекция гелевых ногтей +&nbsp;покрытие лаком</span>
                 </div> 
                 <div class="heading-4--pricelist pricelist__item__price">
-                  <span>nuo 20</span>                  
+                  <span class="lt-content">nuo 20</span>                  
+                  <span class="en-content">from 20</span>                  
+                  <span class="ru-content">от 20</span>                  
                 </div>
             </div>
             <div class="pricelist__sub-item">
               <div class="heading-4--pricelist pricelist__item__description">
-                <span>Gelinių nagų korekcija +&nbsp;french</span>
+                <span class="lt-content">Gelinių nagų korekcija +&nbsp;french</span>
+                <span class="en-content">Correction of gel nails +&nbsp;french</span>
+                <span class="ru-content">Коррекция гелевых ногтей +&nbsp;френч</span>
               </div> 
               <div class="heading-4--pricelist pricelist__item__price">
-                <span>nuo 22</span>                  
+                <span class="lt-content">nuo 22</span>                  
+								<span class="en-content">from 22</span>                  
+								<span class="ru-content">от 22</span>                         
               </div>
             </div>
             <div class="pricelist__sub-item">
               <div class="heading-4--pricelist pricelist__item__description">
-                <span>Nagų dizainas</span>
+                <span class="lt-content">Nagų dizainas</span>
+                <span class="en-content">Nail design</span>
+                <span class="ru-content">Дизайн ногтей</span>
               </div> 
               <div class="heading-4--pricelist pricelist__item__price">
-                <span>1 - 4</span>                  
+								<span class="lt-content">1 - 4</span>
+								<span class="en-content">1 - 4</span>
+								<span class="ru-content">1 - 4</span>              
               </div>
             </div>
             <div class="pricelist__sub-item">
               <div class="heading-4--pricelist pricelist__item__description">
-                <span>Vieno nago taisymas</span>
+                <span class="lt-content">Vieno nago taisymas</span>
+                <span class="en-content">Fixing one nail</span>
+                <span class="ru-content">Починка одного ногтя</span>
               </div> 
               <div class="heading-4--pricelist pricelist__item__price">
-                <span>nuo 1</span>                  
+                <span class="lt-content">nuo 2</span>                  
+                <span class="en-content">from 2</span>                  
+                <span class="ru-content">от 2</span>                  
               </div>
             </div>
             <div class="pricelist__sub-item">
               <div class="heading-4--pricelist pricelist__item__description">
-                <span>Parafino terapija rankoms</span>
+                <span class="lt-content">Parafino terapija rankoms</span>
+                <span class="en-content">Paraffin therapy for hands</span>
+                <span class="ru-content">Парафинотерапия для рук</span>
               </div> 
               <div class="heading-4--pricelist pricelist__item__price">
-                <span>10</span>            
+								<span class="lt-content">10</span>
+								<span class="en-content">10</span>
+								<span class="ru-content">10</span>            
               </div>
             </div>
             <div class="pricelist__sub-item">
               <div class="heading-4--pricelist pricelist__item__description">
-                <span>Gelinio nagų lako nuėmimas</span>
+                <span class="lt-content">Gelinio nagų lako nuėmimas</span>
+                <span class="en-content">Removing gel nail polish</span>
+                <span class="ru-content">Снятие гель-лака с ногтей</span>
               </div> 
               <div class="heading-4--pricelist pricelist__item__price">
-                <span>5</span>                  
+								<span class="lt-content">5</span>
+								<span class="en-content">5</span>
+								<span class="ru-content">5</span>                  
               </div>
             </div>
             <div class="pricelist__sub-item">
               <div class="heading-4--pricelist pricelist__item__description">
-                <span>Gelinis nagų priauginimas</span>
+                <span class="lt-content">Gelinis nagų priauginimas</span>
+                <span class="en-content">Gel nail extension</span>
+                <span class="ru-content">Наращивание ногтей гелем</span>
               </div> 
               <div class="heading-4--pricelist pricelist__item__price">
-                <span>35</span>            
+								<span class="lt-content">35</span>
+								<span class="en-content">35</span>
+								<span class="ru-content">35</span>            
               </div>
             </div>
             <div class="pricelist__sub-item">
               <div class="heading-4--pricelist pricelist__item__description">
-                <span>Priaugintų nagų nuėmimas</span>
+                <span class="lt-content">Priaugintų nagų nuėmimas</span>
+                <span class="en-content">Removal of ingrown nails</span>
+                <span class="ru-content">Удаление вросших ногтей</span>
               </div> 
               <div class="heading-4--pricelist pricelist__item__price">
-                <span>10</span>                  
+								<span class="lt-content">10</span>
+								<span class="en-content">10</span>
+								<span class="ru-content">10</span>               
               </div>
             </div>
-            <div class="heading-2--pricelist">
+            <div class="heading-2--pricelist lt-content">
               PEDIKIŪRAS
             </div>
+            <div class="heading-2--pricelist en-content">
+              PEDICURE
+            </div>
+            <div class="heading-2--pricelist ru-content">
+              ПЕДИКЮР
+            </div>
             <div class="pricelist__sub-item">
               <div class="heading-4--pricelist pricelist__item__description">
-                <span>Gelinis kojų nagų lakavimas</span>
+                <span class="lt-content">Gelinis kojų nagų lakavimas</span>
+                <span class="en-content">Gel nail polish</span>
+                <span class="ru-content">Гель-лак</span>
               </div> 
               <div class="heading-4--pricelist pricelist__item__price">
-                <span>nuo 18</span>
+								<span class="lt-content">nuo 20</span>                  
+                <span class="en-content">from 20</span>                  
+                <span class="ru-content">от 20</span>     
               </div>
             </div>
             <div class="pricelist__sub-item">
               <div class="heading-4--pricelist pricelist__item__description">
-                <span>Klasikinis pedikiūras</span>
+                <span class="lt-content">Klasikinis pedikiūras</span>
+                <span class="en-content">Classic pedicure</span>
+                <span class="ru-content">Классический педикюр</span>
               </div> 
               <div class="heading-4--pricelist pricelist__item__price">
-                <span>30</span>
+								<span class="lt-content">35</span>
+								<span class="en-content">35</span>
+								<span class="ru-content">35</span>
               </div>
             </div>
             <div class="pricelist__sub-item">
               <div class="heading-4--pricelist pricelist__item__description">
-                <span>Pedikiūras ir gelinis lakavimas</span>
+                <span class="lt-content">Pedikiūras ir gelinis lakavimas</span>
+                <span class="en-content">Pedicure and gel polish</span>
+                <span class="ru-content">Педикюр и гель-лак</span>
               </div> 
               <div class="heading-4--pricelist pricelist__item__price">
-                <span>nuo 35</span>
+								<span class="lt-content">nuo 40</span>                  
+                <span class="en-content">from 40</span>                  
+                <span class="ru-content">от 40</span>   
               </div>
             </div>
             <div class="pricelist__item__details">
@@ -420,30 +496,59 @@
               
             </div>
             <div class="pricelist__item pricelist__hidden" id="massage-pricelist">
-              <div class="heading-2--pricelist">
-                Masažas
-              </div>
-              <div class="pricelist__sub-item">
-                <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Plastikinis kūno ir veido masažas</span>
-                </div> 
-                <div class="heading-4--pricelist pricelist__item__price">
-                  <span>35</span>
-                </div>
-              </div>
+							<div class="heading-2--pricelist">
+								<span class="lt-content">Masažas</span>
+								<span class="en-content">Massage</span>
+								<span class="ru-content">Массаж</span>
+							</div>
+							
+							<div class="pricelist__sub-item">
+								<div class="heading-4--pricelist pricelist__item__description">
+									<span class="lt-content">Plastikinis kūno ir veido masažas</span>
+									<span class="en-content">Plastic body and face massage</span>
+									<span class="ru-content">Пластический массаж тела и лица</span>
+								</div> 
+								<div class="heading-4--pricelist pricelist__item__price">
+									<span class="lt-content">35</span>
+									<span class="en-content">35</span>
+									<span class="ru-content">35</span>
+								</div>
+							</div>
               <div class="pricelist__item__details">
-              <p>Masažas prasideda audinių diagnostika ir leidžia nustatyti su amžiumi susijusių pokyčių priežastis. Veidas ir kūnas yra viena struktūra, todėl labai svarbu atkreipti dėmesį ne tik į veidą, bet ir į kūną. Dirbdami su „probleminėmis“ kūno vietomis, atveriame veidą, jį jauniname. Skulptūrinio-plastinio masažo procedūra susideda iš dviejų etapų per vieną seansą ir apima:</p> 
-                <ul>
-                  <li>Liftingo efektas</li>
-                  <li>Veido kontūro tobulinimas</li>
-                  <li>Odos atjauninimas</li>
-                  <li>Kolageno gamybos stimuliacija</li>
-                  <li>Pilvo korekcija</li>
-                  <li>Stuburo zonu atpalaidavimas</li>
-                  <li>Rankinis limfodrenažas</li>
-                  <li><span style="margin-top: unset; position: relative;">Laikysenos korekcija<span style="margin-top: unset; position: absolute; top: 0; right: -1rem;">*</span></span></li>
-                </ul>
-                <span class="pricelist__item__details-span">*Įskaitant vaikų ir paauglių.</span>
+								<p class="lt-content">Masažas prasideda audinių diagnostika ir leidžia nustatyti su amžiumi susijusių pokyčių priežastis. Veidas ir kūnas yra viena struktūra, todėl labai svarbu atkreipti dėmesį ne tik į veidą, bet ir į kūną. Dirbdami su „probleminėmis“ kūno vietomis, atveriame veidą, jį jauniname. Skulptūrinio-plastinio masažo procedūra susideda iš dviejų etapų per vieną seansą ir apima:</p>
+								<p class="en-content">Massage begins with tissue diagnostics and allows identifying the causes of age-related changes. The face and body are one structure, so it is crucial to pay attention not only to the face but also to the body. Working with "problematic" body areas, we open the face, rejuvenating it. The sculptural-plastic massage procedure consists of two stages in one session and includes:</p>
+								<p class="ru-content">Массаж начинается с диагностики тканей и позволяет выявить причины возрастных изменений.
+								
+							<ul>
+								<li class="lt-content">Liftingo efektas</li>
+								<li class="en-content">Lifting effect</li>
+								<li class="ru-content">Лифтинговый эффект</li>
+								<li class="lt-content">Veido kontūro tobulinimas</li>
+								<li class="en-content">Facial contour improvement</li>
+								<li class="ru-content">Улучшение контура лица</li>
+								<li class="lt-content">Odos atjauninimas</li>
+								<li class="en-content">Skin rejuvenation</li>
+								<li class="ru-content">Омоложение кожи</li>
+								<li class="lt-content">Kolageno gamybos stimuliacija</li>
+								<li class="en-content">Collagen production stimulation</li>
+								<li class="ru-content">Стимуляция производства коллагена</li>
+								<li class="lt-content">Pilvo korekcija</li>
+								<li class="en-content">Abdominal correction</li>
+								<li class="ru-content">Коррекция живота</li>
+								<li class="lt-content">Stuburo zonu atpalaidavimas</li>
+								<li class="en-content">Relaxation of spinal zones</li>
+								<li class="ru-content">Расслабление зон позвоночника</li>
+								<li class="lt-content">Rankinis limfodrenažas</li>
+								<li class="en-content">Manual lymphatic drainage</li>
+								<li class="ru-content">Ручной лимфодренаж</li>
+								<li class="lt-content"><span style="margin-top: unset; position: relative;">Laikysenos korekcija<span style="margin-top: unset; position: absolute; top: 0; right: -1rem;">*</span></span></li>
+								<li class="en-content"><span style="margin-top: unset; position: relative;">Posture correction<span style="margin-top: unset; position: absolute; top: 0; right: -1rem;">*</span></span></li>
+								<li class="ru-content"><span style="margin-top: unset; position: relative;">Коррекция осанки<span style="margin-top: unset; position: absolute; top: 0; right: -1rem;">*</span></span></li>
+							</ul>
+							<span class="pricelist__item__details-span lt-content">*Įskaitant vaikų ir paauglių.</span>
+							<span class="pricelist__item__details-span en-content">*Including children and teenagers.</span>
+							<span class="pricelist__item__details-span ru-content">*Включая детей и подростков.</span>
+							
               </div>
               <div id="my-gallery" class="gallery__item pswp-gallery gallery__massage">
                 
@@ -516,96 +621,101 @@
               </div>
             </div>
             <div class="pricelist__item pricelist__hidden" id="hair-pricelist">
-              <div class="heading-2--pricelist">
+              <div class="heading-2--pricelist lt-content">
                   KIRPIMAI
               </div>
-              <div class="pricelist__sub-item">
-                <div class="heading-4--pricelist pricelist__item__description">
-                <span>Moterų kirpimas</span>
-                </div> 
-                <div class="heading-4--pricelist pricelist__item__price">
-                  <span><span class="pricelist__item--number" style="vertical-align: unset;">15<span class="pricelist__item--star">*</span></span> / 20</span> 
-                </div>
+              <div class="heading-2--pricelist en-content">
+								HAIRCUT
               </div>
-              <div class="pricelist__sub-item">
-                  <div class="heading-4--pricelist pricelist__item__description">
-                    <span>Vyrų kirpimas</span>
-                  </div> 
-                  <div class="heading-4--pricelist pricelist__item__price">
-                    <span ><span class="pricelist__item--number" style="vertical-align: unset;">8<span class="pricelist__item--star">*</span></span> / 10</span>                 
-                  </div>
+              <div class="heading-2--pricelist ru-content">
+								СТРИЖКА
               </div>
-              <div class="pricelist__sub-item">
-                <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Vaikų kirpimas iki 11 metų</span> 
-                </div> 
-                <div class="heading-4--pricelist pricelist__item__price">
-                  <span>7</span>            
-                </div>
-              </div>
-              <div class="pricelist__sub-item">
-                <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Kirpčiukai</span> 
-                </div> 
-                <div class="heading-4--pricelist pricelist__item__price">
-                  <span>3</span>            
-                </div>
-              </div>
-              <div class="heading-2--pricelist heading-2--pricelist--wider">
-                Plaukų <span>dažymas</span> 
-              </div>
-              <div class="pricelist__sub-item">
-                <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Šaknų dažymas</span>
-                </div> 
-                <div class="heading-4--pricelist pricelist__item__price">
-                  <span>15 - 20</span>
-                </div>
-              </div>
-              <div class="pricelist__sub-item">
-                <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Vidutinio ilgio plaukų dažymas</span>
-                </div> 
-                <div class="heading-4--pricelist pricelist__item__price">
-                  <span>nuo 25</span>
-                </div>
-              </div>
-              <div class="pricelist__sub-item">
-                <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Ilgų plaukų dažymas</span>
-                </div> 
-                <div class="heading-4--pricelist pricelist__item__price">
-                  <span>nuo 30</span>
-                </div>
-              </div>
-              <div class="pricelist__sub-item">
-                <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Trumpų plaukų dažymas sruogelėmis</span>
-                </div> 
-                <div class="heading-4--pricelist pricelist__item__price">
-                  <span>nuo 20</span>
-                </div>
-              </div>
-              <div class="pricelist__sub-item">
-                <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Vid. ilgio plaukų dažymas sruogelėmis</span>
-                </div> 
-                <div class="heading-4--pricelist pricelist__item__price">
-                  <span>nuo 30</span>
-                </div>
-              </div>
-              <div class="pricelist__sub-item">
-                <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Ilgų plaukų dažymas sruogelėmis</span>
-                </div> 
-                <div class="heading-4--pricelist pricelist__item__price">
-                  <span>nuo 50</span>
-                </div>
-              </div>
+							<div class="pricelist__sub-item">
+								<div class="heading-4--pricelist pricelist__item__description">
+									<span class="lt-content">Moterų kirpimas</span>
+									<span class="en-content">Women's haircut</span>
+									<span class="ru-content">Женская стрижка</span>
+								</div> 
+								<div class="heading-4--pricelist pricelist__item__price">
+									<span class="lt-content"><span class="pricelist__item--number" style="vertical-align: unset;">15<span class="pricelist__item--star">*</span></span> / 25</span>
+									<span class="en-content"><span class="pricelist__item--number" style="vertical-align: unset;">15<span class="pricelist__item--star">*</span></span> / 25</span>
+									<span class="ru-content"><span class="pricelist__item--number" style="vertical-align: unset;">15<span class="pricelist__item--star">*</span></span> / 25</span>                 
+								</div>
+							</div>
+							<div class="pricelist__sub-item">
+								<div class="heading-4--pricelist pricelist__item__description">
+									<span class="lt-content">Vyrų kirpimas</span>
+									<span class="en-content">Men's haircut</span>
+									<span class="ru-content">Мужская стрижка</span>
+								</div> 
+								<div class="heading-4--pricelist pricelist__item__price">
+									<span class="lt-content"><span class="pricelist__item--number" style="vertical-align: unset;">10<span class="pricelist__item--star">*</span></span> / 15</span>
+									<span class="en-content"><span class="pricelist__item--number" style="vertical-align: unset;">10<span class="pricelist__item--star">*</span></span> / 15</span>
+									<span class="ru-content"><span class="pricelist__item--number" style="vertical-align: unset;">10<span class="pricelist__item--star">*</span></span> / 15</span>                 
+								</div>
+							</div>
+							<div class="pricelist__sub-item">
+								<div class="heading-4--pricelist pricelist__item__description">
+									<span class="lt-content">Vaikų kirpimas iki 11 metų</span> 
+									<span class="en-content">Children's haircut up to 11 years old</span>
+									<span class="ru-content">Детская стрижка до 11 лет</span>
+								</div> 
+								<div class="heading-4--pricelist pricelist__item__price">
+									<span class="lt-content">7</span>
+									<span class="en-content">7</span>
+									<span class="ru-content">7</span>            
+								</div>
+							</div>
+							<div class="pricelist__sub-item">
+									<div class="heading-4--pricelist pricelist__item__description">
+										<span class="lt-content">Kirpčiukai</span>
+										<span class="en-content">Bangs</span>
+										<span class="ru-content">Челка</span>
+									</div> 
+									<div class="heading-4--pricelist pricelist__item__price">
+										<span class="lt-content">3</span>
+										<span class="en-content">3</span>
+										<span class="ru-content">3</span>            
+									</div>
+							</div>
+							<div class="heading-2--pricelist heading-2--pricelist--wider">
+									<span class="lt-content">Plaukų dažymas</span>
+									<span class="en-content">Hair coloring</span>
+									<span class="ru-content">Окрашивание</span>
+							</div>
+							<div class="pricelist__sub-item">
+								<div class="heading-4--pricelist pricelist__item__description">
+									<span class="lt-content">Šaknų dažymas</span>
+									<span class="en-content">Root coloring</span>
+									<span class="ru-content">Окрашивание корней</span>
+								</div> 
+								<div class="heading-4--pricelist pricelist__item__price">
+									<span class="lt-content">15 - 20</span>
+									<span class="en-content">from 15</span>
+									<span class="ru-content">от 15</span>
+								</div>
+							</div>
+							<div class="pricelist__sub-item">
+								<div class="heading-4--pricelist pricelist__item__description">
+									<span class="lt-content">Vidutinio ilgio plaukų dažymas</span>
+									<span class="en-content">Dyeing medium length hair</span>
+									<span class="ru-content">Окрашивание волос средней длины</span>
+								</div> 
+								<div class="heading-4--pricelist pricelist__item__price">
+									<span class="lt-content">nuo 25</span>
+									<span class="en-content">from 25</span>
+									<span class="ru-content">от 25</span>
+								</div>
+							</div>
               <div class="pricelist__item__details">
-                <span class="pricelist__item__details-span">*Pensininkams.</span>
-                <span class="pricelist__item__details-span">**Kaina priklauso nuo plaukų apimties ir dažų kiekio.</span>
-              </div>
+								<span class="lt-content pricelist__item__details-span">*Pensininkams.</span>
+								<span class="en-content pricelist__item__details-span">**For pensioners.</span>
+								<span class="ru-content pricelist__item__details-span">**Для пенсионеров.</span>
+								<span class="lt-content pricelist__item__details-span">**Kaina priklauso nuo plaukų apimties ir dažų kiekio.</span>
+								<span class="en-content pricelist__item__details-span">**Price depends on hair volume and amount of dye used.</span>
+								<span class="ru-content pricelist__item__details-span">**Цена зависит от объема волос и количества используемой краски.</span>
+							</div>
+							
           
       <!-- ///////////////////////// -->
 
@@ -692,59 +802,89 @@
                 </div>
               </div>
               <div class="heading-2--pricelist heading-2--pricelist--wide">
-                Fotosesijos
-              </div>
+								<span class="lt-content">Fotosesijos</span>
+								<span class="en-content">Photosessions</span>
+								<span class="ru-content">Фотосессии</span>
+							</div>
+							
+							<div class="pricelist__sub-item">
+								<div class="heading-4--pricelist pricelist__item__description">
+									<span class="lt-content">Asmeninė fotosesija</span>
+									<span class="en-content">Personal photosession</span>
+									<span class="ru-content">Индивидуальная фотосессия</span>
+								</div> 
+								<div class="heading-4--pricelist pricelist__item__price">
+									<span class="lt-content">nuo 75</span>
+									<span class="en-content">from 75</span>
+									<span class="ru-content">от 75</span>
+								</div>
+							</div>
+							<div class="pricelist__sub-item">
+								<div class="heading-4--pricelist pricelist__item__description">
+									<span class="lt-content">Poros fotosesija / Love story</span>
+									<span class="en-content">Couples photosession / Love story</span>
+									<span class="ru-content">Фотосессия вдвоем / История любви</span>
+								</div> 
+								<div class="heading-4--pricelist pricelist__item__price">
+									<span class="lt-content">nuo 90</span>
+									<span class="en-content">from 90</span>
+									<span class="ru-content">от 90</span>
+								</div>
+							</div>
+							<div class="pricelist__sub-item">
+								<div class="heading-4--pricelist pricelist__item__description">
+									<span class="lt-content">Šeimos fotosesija</span>
+									<span class="en-content">Family photosession</span>
+									<span class="ru-content">Семейная фотосессия</span>
+								</div> 
+								<div class="heading-4--pricelist pricelist__item__price">
+									<span class="lt-content">nuo 100</span>
+									<span class="en-content">from 100</span>
+									<span class="ru-content">от 100</span>
+								</div>
+							</div>
+							
+							<div class="pricelist__sub-item">
+								<div class="heading-4--pricelist pricelist__item__description">
+									<span class="lt-content">Reportažas</span>
+									<span class="en-content">Reportage</span>
+									<span class="ru-content">Репортаж</span>
+								</div> 
+								<div class="heading-4--pricelist pricelist__item__price">
+									<span class="lt-content">nuo 75 / val.</span>
+									<span class="en-content">from 75 / hour</span>
+									<span class="ru-content">от 75 / час</span>
+								</div>
+							</div>
+							
+							<div class="pricelist__sub-item">
+								<div class="heading-4--pricelist pricelist__item__description">
+									<span class="lt-content">Krikštynų fotosesija</span>
+									<span class="en-content">Baptism photosession</span>
+									<span class="ru-content">Фотосессия крещения</span>
+								</div> 
+								<div class="heading-4--pricelist pricelist__item__price">
+									<span class="lt-content">nuo 150</span>
+									<span class="en-content">from 150</span>
+									<span class="ru-content">от 150</span>
+								</div>
+							</div>
                 <div class="pricelist__sub-item">
-                  <div class="heading-4--pricelist pricelist__item__description">
-                    <span>Asmeninė fotosesija</span>
-                  </div> 
-                  <div class="heading-4--pricelist pricelist__item__price">
-                    <span>nuo 75</span>
-                  </div>
-                </div>
-                <div class="pricelist__sub-item">
-                  <div class="heading-4--pricelist pricelist__item__description">
-                    <span>Poros fotosesija / Love story</span>
-                  </div> 
-                  <div class="heading-4--pricelist pricelist__item__price">
-                    <span>nuo 90</span>
-                  </div>
-                </div>
-                <div class="pricelist__sub-item">
-                  <div class="heading-4--pricelist pricelist__item__description">
-                    <span>Šeimos fotosesija</span>
-                  </div> 
-                  <div class="heading-4--pricelist pricelist__item__price">
-                    <span>nuo 100</span>
-                  </div>
-                </div>
-                <div class="pricelist__sub-item">
-                  <div class="heading-4--pricelist pricelist__item__description">
-                    <span>Reportažas</span>
-                  </div> 
-                  <div class="heading-4--pricelist pricelist__item__price">
-                    <span>nuo 75/val.</span>
-                  </div>
-                </div>
-                <div class="pricelist__sub-item">
-                  <div class="heading-4--pricelist pricelist__item__description">
-                    <span>Krikštynų fotosesija</span>
-                  </div> 
-                  <div class="heading-4--pricelist pricelist__item__price">
-                    <span>nuo 150</span>
-                  </div>
-                </div>
-                <div class="pricelist__sub-item">
-                  <div class="heading-4--pricelist pricelist__item__description">
-                    <span>Vestuvių fotosesija</span>
-                  </div> 
-                  <div class="heading-4--pricelist pricelist__item__price">
-                    <span>200 - 640</span>
-                  </div>
-                </div>
-                
+									<div class="heading-4--pricelist pricelist__item__description">
+										<span class="lt-content">Vestuvių fotosesija</span>
+										<span class="en-content">Wedding photosession</span>
+										<span class="ru-content">Свадебная фотосессия</span>
+									</div> 
+									<div class="heading-4--pricelist pricelist__item__price">
+										<span class="lt-content">200 - 640</span>
+										<span class="en-content">200 - 640</span>
+										<span class="ru-content">200 - 640</span>
+									</div>
+								</div>
                 <div class="pricelist__item__details">
-                  <p>Kainos gali keistis bet kuriuo metu. Daugiau informacijos apie paslaugas ir kainoraštį kreipkitės tiesiogiai į fotografą. Fotografo darbų publikavimas savo profilyje (įrašas / istorija) leidžiama tik patikrinus fotografo paskyrą:</p> 
+									<p class="lt-content">Kainos gali keistis bet kuriuo metu. Daugiau informacijos apie paslaugas ir kainoraštį kreipkitės tiesiogiai į fotografą. Fotografo darbų publikavimas savo profilyje (įrašas / istorija) leidžiama tik patikrinus fotografo paskyrą:</p>
+									<p class="en-content">Prices may change at any time. For more information about services and prices, please contact the photographer directly. Publishing a photographer’s work on your profile (post/story) is allowed only if you tag the photographer’s account on social media.</p>
+									<p class="ru-content">Цены могут изменяться в любое время. Для получения более подробной информации об услугах и ценах обращайтесь непосредственно к фотографу. Публикация работ фотографа в вашем профиле (пост/история) разрешена только с отметкой аккаунта фотографа в социальных сетях.</p>
                   <ul class="ul-left" style="columns: 1;">
                     <li>
                       Facebook: <a style="text-align: left; color: #ad7fc1;" href="https://www.facebook.com/somova.photography">JULIE SOMOVA PHOTOGRAPHY</a>
@@ -755,7 +895,9 @@
                   </ul>
                 </div>
                 <a style="margin: 2rem auto;" href="https://shor.by/somovaphotography" class="photographer__weblink">
-                  <button class="btn" style="display: inline-block;">Rezervuoti čia</button>
+                  <button class="btn lt-content" style="display: inline-block;">Rezervuoti čia</button>
+                  <button class="btn en-content" style="display: inline-block;">Booking</button>
+                  <button class="btn ru-content" style="display: inline-block;">Резервация </button>
                 </a>
 
           
@@ -834,22 +976,30 @@
             </div>
 
             <div class="pricelist__item pricelist__hidden" id="course-pricelist">
-              <div class="heading-2--pricelist heading-2--pricelist--wide">
-                Kirpėjų Kursai
-              </div>
-              <div class="pricelist__sub-item">
-                <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Kursų trukmė:</span>
-                </div> 
-                <div class="heading-4--pricelist pricelist__item__price">
-                  <span>5 mėn.</span>
-                </div>
-              </div>
-              <div class="pricelist__item__details">
-                <p>Kursas tinka pradedantiesiems ir meistrams, norintiems užpildyti žinių spragas ir galiausiai įgyti visišką pasitikėjimą ir laisvę dirbant su klientais. Kiekvienas būsimas kirpėjas gauna individualią darbo vietą ir dirba su realiais klientais. Baigusiems kursus išduodamas kursų baigimo pažymėjimas, patvirtinantis, kad baigėte plataus profilio kirpėjų kursus ir sugebate atlikti kirpėjo darbą. Apie artimiausias kursų datas galite sužinoti paskambinę telefonu arba parašę užklausą elektroniniu paštu:</p> 
+							<div class="heading-2--pricelist heading-2--pricelist--wide">
+								<span class="lt-content">Kirpėjų Kursai</span>
+								<span class="en-content">Courses</span>
+								<span class="ru-content">Курсы</span>
+							</div>
+							<div class="pricelist__sub-item">
+								<div class="heading-4--pricelist pricelist__item__description">
+									<span class="lt-content">Kursų trukmė:</span>
+									<span class="en-content">Course Duration:</span>
+									<span class="ru-content">Продолжительность курсов:</span>
+								</div>
+								<div class="heading-4--pricelist pricelist__item__price">
+									<span class="lt-content">5 mėn.</span>
+									<span class="en-content">5 months</span>
+									<span class="ru-content">5 месяцев</span>
+								</div>
+							</div>
+							<div class="pricelist__item__details">
+								<p class="lt-content">Kursas tinka pradedantiesiems ir meistrams, norintiems užpildyti žinių spragas ir galiausiai įgyti visišką pasitikėjimą ir laisvę dirbant su klientais. Kiekvienas būsimas kirpėjas gauna individualią darbo vietą ir dirba su realiais klientais. Baigusiems kursus išduodamas kursų baigimo pažymėjimas, patvirtinantis, kad baigėte plataus profilio kirpėjų kursus ir sugebate atlikti kirpėjo darbą. Apie artimiausias kursų datas galite sužinoti paskambinę telefonu arba parašę užklausą elektroniniu paštu:</p>
+								<p class="en-content">The course is suitable for beginners and professionals who want to fill knowledge gaps and ultimately gain complete confidence and freedom when working with clients. Each future hairdresser gets an individual workspace and works with real clients. Upon completion of the course, a certificate is issued confirming that you have completed comprehensive hairdressing courses and are able to perform hairdressing work. You can find out about the upcoming course dates by calling us or sending an inquiry via email:</p>
+								<p class="ru-content">Курс подходит для начинающих и профессионалов, желающих заполнить пробелы в знаниях и, в конечном итоге, приобрести полное доверие и свободу в работе с клиентами. Каждый будущий парикмахер получает индивидуальное рабочее место и работает с реальными клиентами. По окончании курса выдается сертификат, подтверждающий, что вы прошли комплексные курсы парикмахера и способны выполнять парикмахерские работы. О предстоящих датах курсов можно узнать, позвонив нам или отправив запрос по электронной почте:</p>
                 <ul class="ul-left" style="columns: 1;">
                   <li>
-                    Tel.: <a style="text-align: left; color: #ad7fc1;" href="tel:+370 (626) 55999">+370 (626) 55 999</a>
+                    Tel.: <a style="text-align: left; color: #ad7fc1;" href="tel:+370 (626) 55999">+370 (657) 54 821</a>
                   </li>
                   <li>
                     E-mail: <a  style="color: #ad7fc1;" href="mailto:hello@vgks.lt">hello@vgks.lt</a>
@@ -928,146 +1078,257 @@
               </div>
             </div>
             <div class="pricelist__item pricelist__hidden" id="other-pricelist">
-              <div class="heading-2--pricelist">
+              <div class="heading-2--pricelist lt-content">
                 Antakiai
               </div>
-              <div class="pricelist__sub-item">
+							<div class="heading-2--pricelist en-content">
+                Eyebrows 
+              </div>
+							<div class="heading-2--pricelist ru-content">
+                Брови
+              </div>
+							<div class="pricelist__sub-item">
+								<div class="heading-4--pricelist pricelist__item__description">
+									<span class="lt-content">Antakių dažymas +&nbsp;korekcija</span>
+									<span class="en-content">Eyebrow coloring + correction</span>
+									<span class="ru-content">Покраска бровей + коррекция</span>
+								</div> 
+								<div class="heading-4--pricelist pricelist__item__price">
+									<span class="lt-content">10</span>
+									<span class="en-content">10</span>
+									<span class="ru-content">10</span>
+								</div>
+							</div>
+							<div class="pricelist__sub-item">
+								<div class="heading-4--pricelist pricelist__item__description">
+									<span class="lt-content">Antakių, blakstienų dažymas +&nbsp;korekcija</span>
+									<span class="en-content">Eyebrow, eyelash coloring + correction</span>
+									<span class="ru-content">Покраска бровей и ресниц + коррекция</span>
+								</div> 
+								<div class="heading-4--pricelist pricelist__item__price">
+									<span class="lt-content">15</span>
+									<span class="en-content">15</span>
+									<span class="ru-content">15</span>
+								</div>
+							</div>
+              <div class="heading-2--pricelist heading-2--pricelist--wider lt-content">
+                Cukravimas
+              </div>
+              <div class="heading-2--pricelist heading-2--pricelist--wider en-content">
+                Sugaring
+              </div>
+              <div class="heading-2--pricelist heading-2--pricelist--wider ru-content">
+                Шугаринг
+              </div>
+              
+							
+							<div class="pricelist__sub-item">
                 <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Antakių dažymas +&nbsp;korekcija</span>
+                  <span class="lt-content">Viršutinė lūpa</span>
+                  <span class="en-content">Upper lip</span>
+                  <span class="ru-content">Верхняя губа</span>
                 </div> 
                 <div class="heading-4--pricelist pricelist__item__price">
-                  <span>7</span>
+                  <span class="lt-content">6</span>
+									<span class="en-content">6</span>
+									<span class="ru-content">6</span>
+                </div>
+              </div>
+							<div class="pricelist__sub-item">
+                <div class="heading-4--pricelist pricelist__item__description">
+                  <span class="lt-content">Veidas</span>
+                  <span class="en-content">Face</span>
+                  <span class="ru-content">Лицо</span>
+                </div> 
+                <div class="heading-4--pricelist pricelist__item__price">
+                  <span class="lt-content">8</span>
+									<span class="en-content">8</span>
+									<span class="ru-content">8</span>
                 </div>
               </div>
               <div class="pricelist__sub-item">
                 <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Antakių, blakstienų dažymas +&nbsp;korekcija</span>
+                  <span class="lt-content">Rankos iki alkūnės</span>
+                  <span class="en-content">Hands up to the elbow</span>
+                  <span class="ru-content">Руки до локтя</span>
                 </div> 
                 <div class="heading-4--pricelist pricelist__item__price">
-                  <span> 10</span>
-                </div>
-              </div>
-              <div class="heading-2--pricelist heading-2--pricelist--wider">
-                Kosmetologija
-              </div>
-              <div class="pricelist__sub-item">
-                <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Veido pilingas</span>
-                </div> 
-                <div class="heading-4--pricelist pricelist__item__price">
-                  <span>30 - 90</span>
+									<span class="lt-content">10</span>
+									<span class="en-content">10</span>
+									<span class="ru-content">10</span>
                 </div>
               </div>
               <div class="pricelist__sub-item">
                 <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Deguonies veido terapija</span>
+                  <span class="lt-content">Rankos visu ilgiu</span>
+                  <span class="en-content">Arms full length </span>
+                  <span class="ru-content">Руки полностью</span>
                 </div> 
                 <div class="heading-4--pricelist pricelist__item__price">
-                  <span>50 - 75</span>
+                  <span class="lt-content">15</span>
+									<span class="en-content">15</span>
+									<span class="ru-content">15</span>
                 </div>
               </div>
               <div class="pricelist__sub-item">
                 <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Veido odos valymas</span>
+                  <span class="lt-content">Klasikinis bikinis</span>
+                  <span class="en-content">Classic bikini</span>
+                  <span class="ru-content">Классическое бикини</span>
                 </div> 
                 <div class="heading-4--pricelist pricelist__item__price">
-                  <span>40 - 65</span>
+                  <span class="lt-content">12</span>
+									<span class="en-content">12</span>
+									<span class="ru-content">12</span>
                 </div>
               </div>
               <div class="pricelist__sub-item">
                 <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Lūpų revitalizacija</span>
+                  <span class="lt-content">Gilus bikinis</span>
+                  <span class="en-content">Deep bikini</span>
+                  <span class="ru-content">Глубокое бикини</span>
                 </div> 
                 <div class="heading-4--pricelist pricelist__item__price">
-                  <span>nuo 50</span>
+                  <span class="lt-content">25</span>
+									<span class="en-content">25</span>
+									<span class="ru-content">25</span>
                 </div>
               </div>
               <div class="pricelist__sub-item">
                 <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Veido patempimas</span>
+                  <span class="lt-content">Kojos šlaunys / blauzdos</span>
+                  <span class="en-content">Legs thigh / calf</span>
+                  <span class="ru-content">Ноги бедро / голень</span>
                 </div> 
                 <div class="heading-4--pricelist pricelist__item__price">
-                  <span>35 - 50</span>
+                  <span class="lt-content">17</span>
+									<span class="en-content">17</span>
+									<span class="ru-content">17</span>
                 </div>
               </div>
-              <div class="pricelist__sub-item">
+							<div class="pricelist__sub-item">
                 <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Kūno procedūros</span>
+                  <span class="lt-content">Kojos visu ilgiu</span>
+                  <span class="en-content">Legs full length</span>
+                  <span class="ru-content">Ноги полностью</span>
                 </div> 
                 <div class="heading-4--pricelist pricelist__item__price">
-                  <span>35 - 50</span>
+                  <span class="lt-content">27</span>
+									<span class="en-content">27</span>
+									<span class="ru-content">27</span>
                 </div>
               </div>
-              <div class="heading-2--pricelist">
+							<div class="pricelist__sub-item">
+                <div class="heading-4--pricelist pricelist__item__description">
+                  <span class="lt-content">Sėdmenys / pilvas / nugara</span>
+                  <span class="en-content">Buttocks / stomach / back</span>
+                  <span class="ru-content">Ягодицы / живот / спина</span>
+                </div> 
+                <div class="heading-4--pricelist pricelist__item__price">
+									<span class="lt-content">8</span>
+									<span class="en-content">8</span>
+									<span class="ru-content">8</span>
+                </div>
+              </div>
+              <div class="heading-2--pricelist lt-content">
                 Kitos paslaugos
               </div>
+              <div class="heading-2--pricelist en-content">
+                Other services
+              </div>
+              <div class="heading-2--pricelist ru-content">
+                Другие услуги
+              </div>
               <div class="pricelist__sub-item">
                 <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Plaukų ekranavimas</span>
+                  <span class="lt-content">Plaukų ekranavimas</span>
+                  <span class="en-content">Hair treatment with keratin</span>
+                  <span class="ru-content">Лечение волос кератином</span>
                 </div> 
                 <div class="heading-4--pricelist pricelist__item__price">
-                  <span>10 - 15</span>
+                  <span class="lt-content">10 - 15</span>
+									<span class="en-content">10 - 15</span>
+									<span class="ru-content">10 - 15</span>
+                </div>
+              </div>
+             
+              <div class="pricelist__sub-item">
+                <div class="heading-4--pricelist pricelist__item__description">
+                  <span class="lt-content">Sušukavimas fenu</span>
+                  <span class="en-content">Blow-dry hairstyling</span>
+                  <span class="ru-content">Укладка феном</span>
+                </div> 
+                <div class="heading-4--pricelist pricelist__item__price">
+                  <span class="lt-content">15</span>
+									<span class="en-content">15</span>
+									<span class="ru-content">15</span>
                 </div>
               </div>
               <div class="pricelist__sub-item">
                 <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Plaukų gydymas keratinu</span>
+                  <span class="lt-content">Trumpų plaukų sušukavimas</span>
+                  <span class="en-content">Short hair styling</span>
+                  <span class="ru-content">Укладка коротких волос</span>
                 </div> 
                 <div class="heading-4--pricelist pricelist__item__price">
-                  <span>10 - 15</span>
+                  <span class="lt-content">20</span>
+									<span class="en-content">20</span>
+									<span class="ru-content">20</span>
                 </div>
               </div>
               <div class="pricelist__sub-item">
                 <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Sušukavimas fenu</span>
+                  <span class="lt-content">Proginis sušukavimas</span>
+                  <span class="en-content">Festive hairstyling</span>
+                  <span class="ru-content">Праздничная укладка</span>
                 </div> 
                 <div class="heading-4--pricelist pricelist__item__price">
-                  <span>15</span>
+                  <span class="lt-content">30</span>
+									<span class="en-content">30</span>
+									<span class="ru-content">30</span>
                 </div>
               </div>
               <div class="pricelist__sub-item">
                 <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Trumpų plaukų sušukavimas</span>
+                  <span class="lt-content">Vestuvinis sušukavimas</span>
+                  <span class="en-content">Wedding hairstyle</span>
+                  <span class="ru-content">Свадебная прическа</span>
                 </div> 
                 <div class="heading-4--pricelist pricelist__item__price">
-                  <span>20</span>
+                  <span class="lt-content">40</span>
+									<span class="en-content">40</span>
+									<span class="ru-content">40</span>
                 </div>
               </div>
               <div class="pricelist__sub-item">
                 <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Proginis sušukavimas</span>
+                  <span class="lt-content">Ilgalaikis plaukų garbanojimas</span>
+                  <span class="en-content">Long-lasting hair curling</span>
+                  <span class="ru-content">Долговременная завивка волос</span>
                 </div> 
                 <div class="heading-4--pricelist pricelist__item__price">
-                  <span>30</span>
+                  <span class="lt-content">30</span>
+									<span class="en-content">30</span>
+									<span class="ru-content">30</span>
                 </div>
               </div>
               <div class="pricelist__sub-item">
                 <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Vestivinis sušukavimas</span>
+                  <span class="lt-content">Makiažas</span>
+                  <span class="en-content">Make-up</span>
+                  <span class="ru-content">Макияж</span>
                 </div> 
                 <div class="heading-4--pricelist pricelist__item__price">
-                  <span>40</span>
-                </div>
-              </div>
-              <div class="pricelist__sub-item">
-                <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Ilgalaikis plaukų garbanojimas</span>
-                </div> 
-                <div class="heading-4--pricelist pricelist__item__price">
-                  <span>nuo 30</span>
-                </div>
-              </div>
-              <div class="pricelist__sub-item">
-                <div class="heading-4--pricelist pricelist__item__description">
-                  <span>Makiažas</span>
-                </div> 
-                <div class="heading-4--pricelist pricelist__item__price">
-                  <span>25</span>
+                  <span class="lt-content">25</span>
+									<span class="en-content">25</span>
+									<span class="ru-content">25</span>
                 </div>
               </div>
 
               <div class="pricelist__item__details">
-                <p>Kainos gali keistis bet kuriuo metu. Daugiau informacijos apie paslaugas ir kainoraštį kreipkitės telefonu.</p> 
+                <p class="lt-content">Kainos gali keistis bet kuriuo metu. Daugiau informacijos apie paslaugas ir kainoraštį kreipkitės telefonu.</p> 
+                <Prices class="en-content">Prices are subject to change at any time. For more information about services and the price list, contact us by phone.</p> 
+                <p class="ru-content">Цены могут быть изменены в любое время. Для получения более подробной информации об услугах и прайс-листе свяжитесь с нами по телефону.</p> 
               </div>
 
               <!-- ///////////////////////// -->
@@ -1463,7 +1724,7 @@
                   <label for="footer__item__header-toggle-5" class="footer__item__header__button">
                       <img class="footer__item__header--collapse" src="img/icons/collapse-icon.svg" alt="Arrow">
                       <h3 class="heading-3--footer lt-content">Darbo laikas</h3>
-                      <h3 class="heading-3--footer en-content">Working hours</h3>
+                      <h3 class="heading-3--footer en-content">Business hours</h3>
                       <h3 class="heading-3--footer ru-content">Рабочее время</h3>
 									
                   </label>
@@ -1580,7 +1841,11 @@
                   <span class="copyright__year">
                     <script>document.write(new Date().getFullYear())</script>
                   </span>
-                  <span class="copyright__address-text"> © Visagino Grožio Kūrėjų Studija, Lietuva</span>
+                  <span class="copyright__address-text"> © Visagino Grožio Kūrėjų Studija, 
+										<span class="lt-content">Lietuva</span>
+										<span class="en-content">Lithuania</span>
+										<span class="ru-content">Литва</span>
+								</span>
               </div>
               <div class="copyright__info">
                   <a href="#privacy-policy" class="privacy-policy lt-content">Privatumo politika</a>
@@ -1674,10 +1939,13 @@
     </div>
     <div class="popup" id='privacy-policy'>
       <div class="popup__content privacy">
-          <h2 class="heading-2 reservation--heading-2">Privatumo politika</h2>
+          <h2 class="heading-2 reservation--heading-2 lt-content">Privatumo politika</h2>
+          <h2 class="heading-2 reservation--heading-2 en-content">Privacy policy</h2>
+          <h2 class="heading-2 reservation--heading-2 ru-content">Политика конфиденциальности</h2>
+
           <div class="reservation__item">
               <div class="basic-text" style="overflow: auto; height:55vh; text-align:justify; padding:0 2rem 0 2.5rem">
-                <ul class="basic-text-ul">
+                <ul class="basic-text-ul lt-content">
                   <li>
                     <p><b>VGKS</b> įmonei priklausančioje vgks.lt svetainėje yra renkami ir valdomi jūsų asmeniniai duomenys. Ši privatumo politika išaiškina, kaip vgks.lt naudoja jūsų asmeninius duomenis bei pateikia priežastis jūsų asmeninių duomenų rinkimui. Dėl to, prieš naršant vgks.lt svetainėje, perskaitykite šį dokumentą.</p>
                     <p>Mes užtikriname jūsų asmeninių duomenų saugumą ir konfidencialumą.</p>
@@ -1727,6 +1995,102 @@
                     <p>Jeigu norite gauti daugiau informacijos apie šią privatumo politiką arba apie jūsų asmeninius duomenis, kreipkitės į mus el. paštu hello@vgks.lt.</p>
                   </li>
                 </ul>
+								<ul class="basic-text-ul en-content">
+									<li>
+											<p><b>VGKS</b> website, owned by the company VGKS, collects and manages your personal data. This privacy policy explains how vgks.lt uses your personal data and provides reasons for collecting your personal data. Therefore, before browsing the vgks.lt website, please read this document.</p>
+											<p>We ensure the security and confidentiality of your personal data.</p>
+									</li>
+									<li>
+											<h4>Personal Data</h4>
+											<p>When you browse vgks.lt, we automatically collect certain information about your device - browser, IP address, time zone, and your device's cookies. We also collect statistical data about website navigation: pages you visit, products you view, and other website browsing information. This automatically collected information is referred to as "Device Information." Additionally, we may collect personal data that you provide to us (name, address, payment information, etc.) when creating an account on our website.</p>
+									</li>
+									<li>
+											<h4>Why Do We Collect Your Data?</h4>
+											<p>Your data security is crucial to us; therefore, we collect and manage only the necessary personal data without which we could not ensure the smooth operation of the website. Automatically collected data is used in website analytics. However, we ensure that it is impossible to identify the identity of specific users in statistical information.</p>
+											<p>You can visit our website without providing any information that could identify your personal identity. However, if you want to use the features of our website or receive our newsletter, you will fill out our contact form and provide us with your personal data: email address, name, surname, address, phone number. You have the choice not to provide us with your personal data, but in that case, you cannot use most of the website's features. Website visitors unaware of the information we need to collect can contact us via email at hello@vgks.lt.</p>
+									</li>
+									<li>
+											<h4>Your Rights:</h4>
+											<p>If you are a European, you have various rights related to the protection of your personal data:</p>
+											<ol>
+													<li>The right to be informed.</li>
+													<li>The right to access your processed information.</li>
+													<li>The right to correct inaccurate or incorrect information about you.</li>
+													<li>The right to delete all data about you.</li>
+													<li>The right to restrict data processing.</li>
+													<li>The right to transfer all collected data about you to another controller.</li>
+													<li>The right to object to the processing of personal data.</li>
+													<li>Rights related to automated data management.</li>
+													<li>If you want more information, please contact us using the contact information provided below.</li>
+											</ol>
+											<p>Please note that we process personal data of European residents to fulfill your orders or otherwise achieve the purposes listed at the beginning of the document. Be aware that your data may be transferred outside Europe (e.g., to Canada or the USA).</p>
+									</li>
+									<li>
+											<h4>Links to Other Websites:</h4>
+											<p>Our website may contain links to other websites that we do not control. Note that we are not responsible for the personal data collection processes of other websites or third parties. When leaving our website, we recommend reading the privacy policies of third-party websites.</p>
+									</li>
+									<li>
+											<h4>Data Protection:</h4>
+											<p>We use high-quality servers for the protection of your personal data, accessible only to authorized persons. We regularly monitor our systems to identify any vulnerabilities or security attacks that could compromise your personal data. Nevertheless, we do not guarantee absolute security of your personal data.</p>
+									</li>
+									<li>
+											<h4>Data Disclosure:</h4>
+											<p>In accordance with the law, we reserve the right to disclose your personal data if necessary to protect our rights, the safety of ourselves and others, investigate a crime, or respond to a government request to disclose your personal data.</p>
+									</li>
+									<li>
+											<h4>Contact Information:</h4>
+											<p>If you would like more information about this privacy policy or your personal data, please contact us at hello@vgks.lt.</p>
+									</li>
+							</ul>
+		<ul class="basic-text-ul ru-content">
+    <li>
+        <p><b>VGKS</b> владеет веб-сайтом vgks.lt, на котором собираются и управляются ваши персональные данные. В данной политике конфиденциальности поясняется, как vgks.lt использует ваши персональные данные и предоставляются причины сбора таких данных. Поэтому, прежде чем посещать веб-сайт vgks.lt, пожалуйста, ознакомьтесь с этим документом.</p>
+        <p>Мы обеспечиваем безопасность и конфиденциальность ваших персональных данных.</p>
+    </li>
+    <li>
+        <h4>Персональные данные</h4>
+        <p>При посещении вами vgks.lt мы автоматически собираем определенную информацию о вашем устройстве - браузер, IP-адрес, временную зону и файлы cookie вашего устройства. Мы также собираем статистические данные о вашем перемещении по сайту: страницы, которые вы посещаете, продукты, которые вы просматриваете, и другую информацию о ваших действиях на веб-сайте. Эту автоматически собираемую информацию мы называем "Информация об устройстве". Кроме того, мы можем собирать персональные данные, которые вы предоставляете нам (имя, адрес, платежные данные и т. д.) при создании учетной записи на нашем сайте.</p>
+    </li>
+    <li>
+        <h4>Почему мы собираем ваши данные?</h4>
+        <p>Безопасность ваших данных для нас крайне важна, поэтому мы собираем и управляем только необходимой персональной информацией, без которой невозможно обеспечить нормальную работу сайта. Автоматически собранные данные используются для аналитики веб-сайта. Однако мы гарантируем, что в статистической информации невозможно идентифицировать личность конкретных пользователей.</p>
+        <p>Вы можете посещать наш сайт, не предоставляя никакой информации, которая позволяла бы идентифицировать вас лично. Однако, если вы хотите воспользоваться функциями нашего сайта или получить нашу рассылку, вам придется заполнить нашу контактную форму и предоставить нам свои персональные данные: адрес электронной почты, имя, фамилию, адрес, номер телефона. У вас есть выбор не предоставлять нам свои персональные данные, но в этом случае вы не сможете воспользоваться большинством функций сайта. Посетители сайта, не зная, какую информацию мы обязаны собирать, могут связаться с нами по адресу электронной почты hello@vgks.lt.</p>
+    </li>
+    <li>
+        <h4>Ваши права:</h4>
+        <p>Если вы являетесь европейцем, у вас есть различные права, связанные с защитой ваших персональных данных:</p>
+        <ol>
+            <li>Право на получение информации.</li>
+            <li>Право на получение информации, которую мы обрабатываем о вас.</li>
+            <li>Право на исправление неточной или неправильной информации о вас.</li>
+            <li>Право удалить все данные о вас.</li>
+            <li>Право ограничить обработку данных.</li>
+            <li>Право передать все собранные о вас данные другому контролеру.</li>
+            <li>Право воспротивиться обработке персональных данных.</li>
+            <li>Права, связанные с автоматической обработкой данных.</li>
+            <li>Если вы хотите получить дополнительную информацию, свяжитесь с
+
+ нами, воспользовавшись указанными ниже контактными данными.</li>
+        </ol>
+        <p>Обратите внимание, что мы обрабатываем персональные данные европейских резидентов для выполнения ваших заказов или для достижения целей, указанных в начале документа. Имейте в виду, что ваши данные могут быть переданы за пределы Европы (например, в Канаду или США).</p>
+    </li>
+    <li>
+        <h4>Ссылки на другие веб-сайты:</h4>
+        <p>На нашем сайте могут быть ссылки на другие веб-сайты, которые мы не контролируем. Обратите внимание, что мы не несем ответственности за процессы сбора персональных данных на других веб-сайтах или со стороны третьих лиц. Покидая наш сайт, рекомендуем ознакомиться с политиками конфиденциальности веб-сайтов третьих сторон.</p>
+    </li>
+    <li>
+        <h4>Защита данных:</h4>
+        <p>Для защиты ваших персональных данных мы используем серверы высокого качества, доступные только уполномоченным лицам. Мы регулярно мониторим наши системы, чтобы выявить возможные уязвимости или атаки, которые могли бы поставить под угрозу ваши персональные данные. Тем не менее, мы не гарантируем абсолютной безопасности ваших персональных данных.</p>
+    </li>
+    <li>
+        <h4>Раскрытие данных:</h4>
+        <p>В соответствии с законом мы оставляем за собой право раскрывать ваши персональные данные, если это необходимо для защиты наших прав, безопасности себя и других, расследования преступления или ответа на запрос правительства о раскрытии ваших персональных данных.</p>
+    </li>
+    <li>
+        <h4>Контактная информация:</h4>
+        <p>Если вы хотите получить дополнительную информацию об этой политике конфиденциальности или о ваших персональных данных, пожалуйста, свяжитесь с нами по адресу эл. почты hello@vgks.lt.</p>
+    </li>
+</ul>
               </div>
           </div>
         <a href="#contacts" class="popup__close">&times;</a> 
@@ -1734,10 +2098,12 @@
     </div>
     <div class="popup" id='terms-of-use'>
       <div class="popup__content tou">
-          <h2 class="heading-2 reservation--heading-2">Paslaugų naudojimo sąlygos</h2>
+          <h2 class="heading-2 reservation--heading-2 lt-content">Paslaugų naudojimo sąlygos</h2>
+          <h2 class="heading-2 reservation--heading-2 en-content">Terms of service</h2>
+          <h2 class="heading-2 reservation--heading-2 ru-content">Условия пользования</h2>
           <div class="reservation__item">
               <div class="basic-text" style="overflow: auto; height:55vh; text-align:justify; padding:0 2rem 0 2.5rem">
-                <ul class="basic-text-ul">
+                <ul class="basic-text-ul lt-content">
                   <li>
                     <h4>Sveiki atvykę į <span>vgks.lt!</span></h4>
                       <p>Šiame dokumente yra apibrėžiamos įmonės VGKS svetainės https://vgks.lt naudojimo taisyklės. Svarbu suprasti šias sąlygas, nes turite su jomis sutikti, kad galėtumėte naudotis mūsų paslaugomis. Jeigu nesutinkate su šiame dokumente pateiktomis sąlygomis bei taisyklėmis privalote išeiti iš vgks.lt.</p>
@@ -1839,6 +2205,209 @@
                     <p>Tol, kol svetainėje bus teikiamos nemokamos paslaugos bei informacija, mes nebūsime atsakingi už bet kokius nuostolius bei praradimus.</p>
                   </li>
                 </ul>
+								<ul class="basic-text-ul en-content">
+									<li>
+											<h4>Welcome to <span>vgks.lt!</span></h4>
+											<p>This document outlines the terms of use for the VGKS website https://vgks.lt. It is important to understand these conditions, as you must agree to them in order to use our services. If you do not agree with the terms and conditions presented in this document, you must exit vgks.lt.</p>
+									</li>
+									<li>
+											<h4>Cookies:</h4>
+											<p>This website uses cookies to personalize content and ads, as well as to analyze visitor traffic on the vgks.lt website. By browsing vgks.lt, you accept mandatory cookies. Cookies are small pieces of information stored in your web browser. Cookies cannot transmit malicious programs or viruses.</p>
+											<p>We and our partners use cookies to collect and access personal data (e.g., browsing information) to personalize content and ads and analyze website traffic. You can change or revoke cookie consent at any time. Consent is not mandatory for mandatory cookies, as they operate continuously. By accepting cookies on our website, you also accept cookies from our partners.</p>
+									</li>
+									<li>
+											<h4>License:</h4>
+											<p>The entire vgks.lt website and its content are VGKS intellectual property. All intellectual property rights are reserved. You must adhere to the rules provided in this document.</p>
+											<p>You are prohibited from:</p>
+											<ol>
+													<li>Copying or reusing any content from vgks.lt</li>
+													<li>Reselling, leasing, or licensing content from vgks.lt</li>
+													<li>Duplicating or attempting to replicate vgks.lt content</li>
+													<li>Illegally distributing vgks.lt content in any way</li>
+													<li>This agreement is effective from the date of creating this document.</li>
+											</ol>
+											<p>In some sections of the website, you may share your opinions and information. VGKS does not edit, publish, or review visitor comments before they are posted on the website. Visitor comments do not reflect the views and positions of VGKS or its partners. VGKS is not responsible for visitor comments or any damage and losses caused by visitor comments.</p>
+											<p>VGKS reserves the right to monitor visitor comments and remove offensive, inappropriate, or rule-violating comments.</p>
+											<p>By agreeing to this document, you acknowledge that:</p>
+											<ol>
+													<li>You will post only appropriate comments on our website.</li>
+													<li>Your comments do not infringe on the company's intellectual property, violate third-party copyrights and trademark rules.</li>
+													<li>Your comments do not contain materials that violate laws or invade the privacy of others.</li>
+													<li>Your comments will not be used for the deliberate promotion of other companies or illegal activities.</li>
+											</ol>
+											<p>By agreeing to this document, you also grant VGKS the right to use, reproduce, edit, and grant others the right to use, edit, or reproduce your comments by all means and channels.</p>
+									</li>
+									<li>
+											<h4>Our Content Hyperlinks:</h4>
+											<p>These websites may direct visitors to our website through links without prior approval:</p>
+											<ol>
+													<li>Government organizations</li>
+													<li>Search engines</li>
+													<li>Media organizations</li>
+													<li>Internationally recognized businesses, excluding those offering services of non-profit organizations and charitable organizations, cannot redirect their website visitors to our website via hyperlinks.</li>
+											</ol>
+											<p>These organizations can redirect their visitors to our website's main page, publications, or other website content as long as the hyperlink:</p>
+											<ol>
+													<li>Is not deceptive</li>
+													<li>Does not imply false endorsement actions or false advertising of the linked website's products</li>
+													<li>The hyperlink is appropriate in the context of the website's content</li>
+											</ol>
+											<p>Our company may approve hyperlink sharing in these organizations:</p>
+											<ol>
+													<li>Widely known sources of consumer or business information</li>
+													<li>Dot.com community websites</li>
+													<li>Charity or group associations representing them</li>
+													<li>Digital directory distributors</li>
+													<li>Online news portals</li>
+													<li>Accounting, legal consulting companies</li>
+													<li>Educational institutions</li>
+											</ol>
+											<p>We will approve hyperlink requests from these organizations if we decide that:</p>
+											<ol>
+													<li>The hyperlink will not damage our or our partners' image</li>
+													<li>The organization, by posting the hyperlink, does not have harmful intentions towards our company</li>
+													<li>Visibility from the hyperlink contributes positively to VGKS</li>
+													<li>The hyperlink provides useful information</li>
+											</ol>
+											<p>These organizations can post hyperlinks to our website:</p>
+											<ol>
+													<li>Using our company name</li>
+													<li>Using the page name to which visitors will be directed</li>
+													<li>Using any other suitable description of the website's content that fits the context of the linking site</li>
+											</ol>
+											<p>The use of VGKS logos and other trademark elements is strictly prohibited without permission.</p>
+									</li>
+									<li>
+											<h4>Use of Content:</h4>
+											<p>We are not responsible for the content hosted on your website. You agree to defend us in any legal disputes arising from the use of your website. Links cannot appear on a website that is (or may be) interpreted as defamatory, criminal, or illegal and that violates or supports third-party rights violations.</p>
+									</li>
+									<li>
+											<h4>Additional Rights:</h4>
+											<p>We reserve the right to request the removal of a published hyperlink (or links) to our website. You agree to promptly remove links upon our request. We also reserve the right to change our terms of service and hyperlink placement policy at any time. By continuously providing links to our website, you agree to comply with these conditions and rules.</p>
+									</li>
+									<li>
+											<h4>Removal of Links from Our Website:</h4>
+											<p>If you find a link on our website that is unacceptable to you, please contact us immediately. We will consider removing your link from our website, but we reserve the right not to remove it or not to respond directly to your request.</p>
+											<p>We do not guarantee the accuracy of information on this website. We do not guarantee the completeness or accuracy of information, nor are we obligated to update website information.</p>
+									</li>
+									<li>
+										<h4>Warning:</h4>
+										<p>We do not guarantee that the content on this website is suitable in all countries or jurisdictions. This document:</p>
+										<ol>
+												<li>Does not limit or exempt our or your liability for death or injury;</li>
+												<li>Does not limit our or your liability for fraud;</li>
+												<li>Does not limit our or your liability against state laws;</li>
+												<li>Does not limit our or your liability not restricted by state laws.</li>
+										</ol>
+										
+										<p>The restrictions and prohibitions stated in this section and other parts of the document: (a) apply to previous sections of the document; and (b) establish liability for this warning, including liability arising from the violation of the agreement or specified rules.</p>
+										
+										<p>As long as free services and information are provided on the website, we will not be responsible for any losses and damages.</p>
+									</li>
+								</ul>
+										
+						
+						
+								<ul class="basic-text-ul ru-content">
+									<li>
+											<h4>Добро пожаловать на <span>vgks.lt!</span></h4>
+											<p>В этом документе изложены правила использования сайта компании VGKS по адресу https://vgks.lt. Важно понимать эти условия, так как для использования наших услуг необходимо согласие с ними. Если вы не согласны с условиями и правилами, изложенными в этом документе, вы должны покинуть vgks.lt.</p>
+									</li>
+									<li>
+											<h4>Файлы cookie:</h4>
+											<p>На этом сайте используются файлы cookie, которые помогают персонализировать контент и рекламу, а также анализировать трафик посетителей на сайте vgks.lt. Пользуясь сайтом vgks.lt, вы принимаете обязательные файлы cookie. Файлы cookie - это небольшие элементы информации, хранящиеся в вашем веб-браузере. Файлы cookie не могут передавать вредоносные программы или вирусы.</p>
+											<p>Мы и наши партнеры используем файлы cookie для сбора и доступа к личным данным (например, информации о просмотре), чтобы персонализировать контент и рекламу, а также анализировать трафик на сайте. Вы можете изменить или отозвать согласие на использование файлов cookie в любое время. Согласие не является обязательным для обязательных файлов cookie, поскольку они работают постоянно. Принимая файлы cookie на нашем сайте, вы также принимаете файлы cookie от наших партнеров.</p>
+									</li>
+									<li>
+											<h4>Лицензия:</h4>
+											<p>Весь сайт vgks.lt и его содержимое являются интеллектуальной собственностью VGKS. Все права на интеллектуальную собственность защищены. Вы обязаны соблюдать правила, изложенные в этом документе.</p>
+											<p>Вам запрещено:</p>
+											<ol>
+													<li>Копировать или повторно использовать любое содержимое с vgks.lt</li>
+													<li>Перепродавать, сдавать в аренду или предоставлять лицензию на содержимое с vgks.lt</li>
+													<li>Дублировать или пытаться воспроизвести содержимое сайта vgks.lt каким-либо образом</li>
+													<li>Незаконно распространять содержимое сайта vgks.lt любым способом</li>
+													<li>Этот договор действует с момента создания этого документа.</li>
+											</ol>
+											<p>В некоторых разделах сайта вы можете делиться своими мнениями и информацией. VGKS не редактирует, не публикует и не проверяет комментарии посетителей до их публикации на сайте. Комментарии посетителей не отражают точку зрения и позиции VGKS или ее партнеров. VGKS не несет ответственности за комментарии посетителей или любые ущерб и потери, вызванные комментариями посетителей.</p>
+											<p>VGKS оставляет за собой право отслеживать комментарии посетителей на сайте и удалять оскорбительные, неуместные или нарушающие правила комментарии.</p>
+											<p>Соглашаясь с этим документом, вы признаете, что:</p>
+											<ol>
+													<li>Вы будете публиковать только уместные комментарии на нашем сайте.</li>
+													<li>Ваши комментарии не нарушают интеллектуальную собственность компании, не нарушают авторских прав третьих сторон и правил торговых марок.</li>
+													<li>В ваших комментариях отсутствует материал, нарушающий законы или каким-либо образом вторгающийся в частную жизнь других лиц.</li>
+													<li>Ваши комментарии не будут использоваться для целенаправленной рекламы других компаний или незаконной деятельности.</li>
+											</ol>
+											<p>Соглашаясь с этим документом, вы также предоставляете VGKS право использовать, воспроизводить, редактировать и предоставлять другим лицам право использовать, редактировать или воспроизводить ваши комментарии любыми средствами и каналами.</p>
+									</li>
+									<li>
+											<h4>Гиперссылки на наш контент:</h4>
+											<p>Эти сайты могут направлять посетителей на наш сайт через ссылки без предварительного согласования:</p>
+											<ol>
+													<li>Государственные организации</li>
+													<li>Поисковые системы</li>
+													<li>Медийные организации</li>
+													<li>Признанные бизнесы, за исключением тех, которые предоставляют услуги некоммерческим организациям и благотворительным организациям, не могут направлять своих посетителей на наш сайт через гиперссылки.</li>
+											</ol>
+											<p>Эти организации могут направлять своих посетителей на главную страницу нашего сайта, публикации или другое содержимое сайта, при условии, что гиперссылка:</p>
+											<ol>
+													<li>Не является обманчивой</li>
+													<li>Не предполагает ложного поддержания акций или ложной рекламы продуктов связанного сайта</li>
+													<li>Гиперссылка соответствует контексту содержимого сайта</li>
+											</ol>
+											<p>Наша компания может утвердить обмен гиперссылками в этих организациях:</p>
+											<ol>
+													<li>Широко известные источники потребительской или деловой информации</li>
+													<li>Сайты сообщества dot.com</li>
+													<li>Благотворительные или групповые ассоциации, представляющие их</li>
+													<li>Цифровые каталоги распространителей</li>
+													<li>Онлайн порталы новостей</li>
+													<li>Бухгалтерские, юридические консультационные компании</li>
+													<li>Образовательные учреждения</li>
+											</ol>
+											<p>Мы утвердим запросы на гиперссылки от этих организаций, если решим, что:</p>
+											<ol>
+													<li>Гиперссылка не повредит нашему или нашим партнерам имиджу</li>
+													<li>Организация, размещая гиперссылку, не имеет вредных намерений в отношении нашей компании</li>
+													<li>Видимость от гиперссылки вносит положительный вклад в VGKS</li>
+													<li>Гиперссылка предоставляет полезную информацию</li>
+											</ol>
+											<p>Эти организации могут размещать гиперссылки на наш сайт:</p>
+											<ol>
+													<li>Используя наше название компании</li>
+													<li>Используя название страницы, на которую посетителей направят</li>
+													<li>Используя любое другое подходящее описание содержимого сайта, которое соответствует контексту связанного сайта</li>
+											</ol>
+											<p>Использование логотипа VGKS и других элементов товарного знака строго запрещено без разрешения.</p>
+									</li>
+									<li>
+											<h4>Использование контента:</h4>
+											<p>Мы не несем ответственности за контент, размещенный на вашем сайте. Вы соглашаетесь защищать нас в случае любых юридических споров, возникающих из-за использования вашего сайта. Ссылки не могут появляться на сайте, который (или может быть) трактуется как клеветнический, преступный или незаконный, а также который нарушает или поддерживает нарушение прав третьих лиц.</p>
+									</li>
+									<li>
+										```html
+										<li>
+												<h4>Дополнительные права:</h4>
+												<p>Мы оставляем за собой право запросить удаление опубликованной ссылки (или указания) на нашем сайте. Вы соглашаетесь незамедлительно убирать ссылки после нашего запроса. Мы также оставляем за собой право в любой момент изменять правила использования наших услуг и политику размещения ссылок. Постоянно предоставляя ссылки на наш сайт, вы соглашаетесь соблюдать эти условия и правила.</p>
+										</li>
+										<li>
+												<h4>Удаление ссылок с нашего сайта:</h4>
+												<p>Если вы обнаружили на нашем сайте ссылку, которая вам не нравится, немедленно свяжитесь с нами. Мы рассмотрим запрос о удалении вашей ссылки с нашего сайта, однако оставляем за собой право не удалять ее или не отвечать на ваш запрос непосредственно.</p>
+												<p>Мы не гарантируем точности информации на этом сайте. Мы не гарантируем полноту или точность информации, а также не обязуемся обновлять информацию на сайте.</p>
+										</li>
+										<li>
+												<h4>Предупреждение:</h4>
+												<p>Мы не гарантируем, что контент на этом сайте подходит во всех странах или юрисдикциях. Этот документ:</p>
+												<ol>
+														<li>Не ограничивает или освобождает нас или вас от ответственности за смерть или травмы;</li>
+														<li>Не ограничивает нашу или вашу ответственность за мошенничество;</li>
+														<li>Не ограничивает нашу или вашу ответственность по отношению к законам государства;</li>
+														<li>Не ограничивает нашу или вашу ответственность, которая не ограничена законами государства.</li>
+												</ol>
+												<p>Ограничения и запреты, указанные в этом разделе и других частях документа: (a) применяются к предыдущим разделам документа; и (b) устанавливают ответственность за это предупреждение, включая ответственность, возникающую из-за нарушения соглашения или установленных правил.</p>
+												<p>Пока на сайте предоставляются бесплатные услуги и информация, мы не будем нести ответственности за любые потери и ущерб.</p>
+										</li>
+									</ul>
               </div>
           </div>
         <a href="#contacts" class="popup__close">&times;</a> 
@@ -1846,10 +2415,12 @@
     </div>
     <div class="popup" id='duk'>
       <div class="popup__content privacy duk">
-          <h2 class="heading-2 reservation--heading-2">Dažniausiai užduodami klausimai</h2>
+          <h2 class="heading-2 reservation--heading-2 lt-content">Dažniausiai užduodami klausimai</h2>
+          <h2 class="heading-2 reservation--heading-2 en-content">Frequently Asked Questions</h2>
+          <h2 class="heading-2 reservation--heading-2 ru-content">Часто задаваемые вопросы</h2>
           <div class="reservation__item">
               <div class="basic-text" style="overflow: auto; height:55vh; text-align:justify; padding:0 2rem 0 2.5rem">
-                <ul class="basic-text-ul">
+                <ul class="basic-text-ul lt-content">
                   <li>
                     <h4>Kokias paslaugas siūlo jūsų grožio salonas?</h4>
 
@@ -1876,6 +2447,48 @@
 									
 									
                 </ul>
+								<ul class="basic-text-ul en-content">
+									<li>
+										<h4>What services does your beauty salon offer?</h4>
+										<p>[Salon Name] provides various beauty services that cater to your needs. Our service list includes haircuts, styling, coloring, manicures, pedicures, facial treatments, waxing, and more. Whether you're looking for a trendy haircut, a relaxing spa offer, or a complete style transformation, our experienced specialists are here to make you feel your best.</p>
+									</li>
+
+									<li>
+										<h4>How can I schedule an appointment?</h4>
+										<p>Scheduling an appointment at [Salon Name] is simple and convenient. You can book your visit online through our website by clicking the "Book Now" button. You can also call us at [Salon Phone Number] to speak with our friendly receptionists who will gladly help you find a suitable time for your visit.</p>
+									</li>
+
+									<li>
+										<h4>What products do you use in your salon?</h4>
+										<p>[Salon Name] aims to use high-quality and well-known products that ensure the best results for our clients. We exclusively use products from [Brand Name], known for their effectiveness and safety. Our stylists and beauty specialists are well-informed about these products and can provide individual recommendations based on your hair and skin type.</p>
+									</li>
+
+									<li>
+										<h4>Do you offer promotions or loyalty programs?</h4>
+										<p>Yes, we value our customers and want to show our appreciation. [Salon Name] regularly offers promotions and special deals on various services. Additionally, we have a loyalty program that rewards our regular clients with discounts, exclusive offers, and other privileges. Join our email list or follow us on social media to stay informed about the latest promotions and benefits of our loyalty program.</p>
+									</li>
+								</ul>
+								<ul class="basic-text-ul ru-content">
+									<li>
+										<h4>Какие услуги предоставляет ваш салон красоты?</h4>
+										<p>[Название салона] предоставляет различные услуги по уходу за красотой, отвечающие вашим потребностям. В нашем списке услуг включены стрижки, укладки, окрашивание, маникюр, педикюр, процедуры для лица, восковая депиляция и многое другое. Будь то модная стрижка, расслабляющее спа-предложение или полное преобразование стиля, наши опытные специалисты здесь, чтобы вы чувствовали себя наилучшим образом.</p>
+									</li>
+
+									<li>
+										<h4>Как я могу записаться на прием?</h4>
+										<p>Запись на прием в [Название салона] проста и удобна. Вы можете заказать визит онлайн через наш веб-сайт, нажав кнопку "Записаться сейчас". Также вы можете позвонить нам по номеру [Номер телефона салона], чтобы пообщаться с нашими дружелюбными регистраторами, которые с удовольствием помогут вам подобрать удобное время для визита.</p>
+									</li>
+
+									<li>
+										<h4>Какие продукты вы используете в своем салоне?</h4>
+										<p>[Название салона] стремится использовать продукты высокого качества и хорошо известные, обеспечивающие лучшие результаты для наших клиентов. Мы используем исключительно продукцию [Название бренда], известного своей эффективностью и безопасностью. Наши стилисты и специалисты по уходу за красотой хорошо осведомлены об этих продуктах и могут дать индивидуальные рекомендации, исходя из типа ваших волос и кожи.</p>
+									</li>
+
+									<li>
+										<h4>Предоставляете ли вы акции или программы лояльности?</h4>
+										<p>Да, мы ценим наших клиентов и хотим это продемонстрировать. [Название салона] регулярно предлагает акции и специальные предложения на различные услуги. Кроме того, у нас есть программа лояльности, которая награждает наших постоянных клиентов скидками, эксклюзивными предложениями и другими привилегиями. Присоединяйтесь к нашему списку рассылки или следите за нами в социальных сетях, чтобы быть в курсе последних акций и преимуществ нашей программы лояльности.</p>
+									</li>
+								</ul>
               </div>
           </div>
         <a href="#contacts" class="popup__close">&times;</a> 
