@@ -378,7 +378,7 @@ body {
 	}
 }
 .basic-text:nth-child(n):not(:last-child) {
-	margin-bottom: 1rem;
+	margin-bottom: 3rem;
 }
 .basic-text h4 {
 	margin-bottom: 1rem;
@@ -445,6 +445,7 @@ body {
 .poster {
 	position: relative;
 	height: 100%;
+	opacity: 0.8;
 	padding: 4rem;
 	top: 50%;
 	left: 50%;
@@ -955,7 +956,8 @@ body {
 .services {
 	background: linear-gradient(0deg, #f9f1f7 0%, white 100%);
 	position: relative;
-	padding: 5rem 5rem 2rem;
+	padding: 2rem 5rem 0rem 5rem;
+
 	min-width: 200px;
 	z-index: -1;
 }
@@ -1462,22 +1464,29 @@ body {
 	min-width: 200px;
 	position: relative;
 	left: 50%;
-	top: 20rem;
+	top: 17rem;
 	transform: translateX(-50%);
 	max-width: 140rem;
 	min-width: 200px;
 	width: 90%;
-	padding: 4rem 10rem 2rem;
+	padding: 4rem 10rem 0rem;
 	margin-top: 5rem;
 	border-top-left-radius: 5rem;
 	border-top-right-radius: 5rem;
 	background-color: white;
 	box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease-in-out;
 }
+
+.store:hover {
+	top: 2rem;
+}
+
 @media (max-width: 75em) {
 	.store {
 		width: 100%;
 		padding: 4.5rem 4.5rem 2rem;
+		top: 20.5rem;
 		border-top-left-radius: 4rem;
 		border-top-right-radius: 4rem;
 	}
@@ -1496,8 +1505,16 @@ body {
 		padding: 4.5rem 3rem 1rem;
 	}
 }
+
+@media (max-width: 37.5em) {
+	.store {
+		top: 11rem;
+	}
+}
+
 @media (max-width: 24em) {
 	.store {
+		top: 2rem;
 		border-top-left-radius: 2rem;
 		border-top-right-radius: 2rem;
 		padding: 4.5rem 1.5rem 1.5rem;
@@ -1629,12 +1646,12 @@ body {
 	}
 }
 .store-wrap {
-	padding-top: 3rem;
+	/* padding-top: 3rem; */
 	background-image: linear-gradient(to bottom, #f9f1f7 20%, rgba(244, 228, 240, 0.501961)), url(img/main-image.jpg);
 }
 .featured__title {
 	text-align: center;
-	margin-top: 2rem;
+	/* margin-top: 2rem; */
 	padding: 0 1rem 1rem;
 	font-size: 6rem;
 	font-family: 'Oranienbaum';
@@ -1669,7 +1686,13 @@ body {
 }
 @media (max-width: 37.5em) {
 	.product-brands {
+		display: none;
+	}
+}
+@media (max-width: 24em) {
+	.product-brands {
 		flex-flow: column;
+		display: block;
 		align-items: center;
 	}
 }
@@ -1687,12 +1710,12 @@ body {
 .product-brand {
 	width: 100%;
 	padding: 2rem;
-	max-width: 25rem;
+	max-width: 23rem;
 }
 .store-additional-text,
 .services__description {
 	opacity: 0.8;
-	padding-bottom: 3rem;
+	/* padding-bottom: 3rem; */
 	margin: 0 auto;
 	text-align: center;
 }
@@ -1721,7 +1744,7 @@ body {
 	position: relative;
 	min-width: 200px;
 	background-color: #fff;
-	box-shadow: rgba(0, 0, 0, 0.2) 0px 4rem 8rem;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 4rem 8rem;
 }
 .gift-certificate__content {
 	display: flex;
@@ -2756,14 +2779,14 @@ body {
 }
 .social-wall {
 	position: relative;
-	box-shadow: rgba(0, 0, 0, 0.2) 0px 4rem 8rem;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 4rem 8rem;
 }
 .social-wall__img,
 .social-wall__img-2 {
 	position: absolute;
 	top: 2.5rem;
 	left: 0;
-	opacity: 0.5;
+	opacity: 0.75;
 	width: auto;
 	height: 40rem;
 }
