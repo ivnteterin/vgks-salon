@@ -260,59 +260,107 @@ const checkSize = function () {
 	// }
 
 	if (window.innerWidth < 700 && window.innerWidth > 415) {
-		document.querySelector('.js-popup__vipcard-heading-4 lt-content').innerHTML =
+		document.getElementsByClassName('copyright__address-text lt-content')[0].innerHTML =
+			' © Visagino Grožio Kūrėjų Studija, Lietuva';
+		document.getElementsByClassName('copyright__address-text en-content')[0].innerHTML =
+			' © Visagino Grožio Kūrėjų Studija, Lithuania';
+		document.getElementsByClassName('copyright__address-text ru-content')[0].innerHTML =
+			' © Visagino Grožio Kūrėjų Studija, Литва';
+		document.getElementsByClassName('js-popup__vipcard-heading-4 lt-content')[0].innerHTML =
 			'Įsigykite „VIP“ kortelę už 5€ viename iš mūsų salonų ir sutaupykite 5% kiekvieno vizito metu :)';
-		document.querySelector('.js-popup__vipcard-heading-4 en-content').innerHTML =
+		document.getElementsByClassName('js-popup__vipcard-heading-4 en-content')[0].innerHTML =
 			'Buy a VIP card for €5 in one of our salons and save 5% on every visit :)';
-		document.querySelector('.js-popup__vipcard-heading-4 ru-content').innerHTML =
+		document.getElementsByClassName('js-popup__vipcard-heading-4 ru-content')[0].innerHTML =
 			'Купите VIP-карту за 5 евро в одном из наших салонов и экономьте 5% при каждом посещении :)';
-		document.querySelector('.copyright__address-text').innerHTML = ' © Visagino Grožio Kūrėjų Studija';
+		document.getElementsByClassName('copyright__address-text lt-content')[0].innerHTML =
+			' © Visagino Grožio Kūrėjų Studija, Lietuva';
+		document.getElementsByClassName('copyright__address-text en-content')[0].innerHTML =
+			' © Visagino Grožio Kūrėjų Studija, Lithuania';
+		document.getElementsByClassName('copyright__address-text ru-content')[0].innerHTML =
+			' © Visagino Grožio Kūrėjų Studija, Литва';
 	} else if (window.innerWidth < 415 && window.innerWidth >= 321) {
-		document.querySelector('.copyright__address-text lt-content').innerHTML = ' © VGKS, Lietuva';
-		document.querySelector('.copyright__address-text en-content').innerHTML = ' © VGKS, Lithuania';
-		document.querySelector('.copyright__address-text ru-content').innerHTML = ' © VGKS, Литва';
-		document.querySelector('.js-popup__vipcard-heading-4 lt-content').innerHTML =
+		document.getElementsByClassName('store-additional-text basic-text lt-content')[0].innerHTML =
+			'El.parduotuvė šiuo metu neveikia dėl suplanuotos priežiūros.';
+		document.getElementsByClassName('store-additional-text basic-text en-content')[0].innerHTML =
+			'The E-shop is not working due to planned maintenance.';
+		document.getElementsByClassName('store-additional-text basic-text ru-content')[0].innerHTML =
+			'Э-магазин сейчас не работает из-за планового тех. обслуживания.';
+		document.getElementsByClassName('copyright__address-text lt-content')[0].innerHTML = ' © VGKS, Lietuva';
+		document.getElementsByClassName('copyright__address-text en-content')[0].innerHTML = ' © VGKS, Lithuania';
+		document.getElementsByClassName('copyright__address-text ru-content')[0].innerHTML = ' © VGKS, Литва';
+		document.getElementsByClassName('js-popup__vipcard-heading-4 lt-content')[0].innerHTML =
 			'Įsigykite kortelę už 5€ viename iš mūsų salonų ir gaukite 5% nuolaidą visoms paslaugoms!';
-		document.querySelector('.js-popup__vipcard-heading-4 en-content').innerHTML =
+		document.getElementsByClassName('js-popup__vipcard-heading-4 en-content')[0].innerHTML =
 			'Buy a card for €5 in one of our salons and get a 5% discount on all services!';
-		document.querySelector('.js-popup__vipcard-heading-4 ru-content').innerHTML =
+		document.getElementsByClassName('js-popup__vipcard-heading-4 ru-content')[0].innerHTML =
 			'Купите карту за 5 евро в одном из наших салонов и получите скидку 5% на все услуги!';
+
+		// <div class="store-additional-text basic-text lt-content">
+		// 					El.parduotuvė šiuo metu neveikia dėl suplanuotos priežiūros. Dėl užsakymų kreipkitės telefonu, el.paštu arba Messenger.
+		//         </div>
+		//         <div class="store-additional-text basic-text en-content">
+		// 					The E-shop is not working due to planned maintenance. For orders, please contact us by phone, email, or Messenger.
+		//         </div>
+		//         <div class="store-additional-text basic-text ru-content">
+		// 					Э-магазин сейчас не работает из-за планового тех. обслуживания. Для заказов свяжитесь по тел., эл.почте или Messenger.
+		//         </div>
 	} else if (window.innerWidth < 321 && window.innerWidth > 280) {
-		document.querySelector('.js-popup__reservation-heading-4 lt-content').innerHTML = 'Skambinkite';
-		document.querySelector('.js-popup__reservation-heading-4 en-content').innerHTML = 'Call us on';
-		document.querySelector('.js-popup__reservation-heading-4 ru-content').innerHTML = 'Позвоните нам';
-		document.querySelector('.js-popup__reservation-basic-text').innerHTML = '';
-		document.querySelector('.copyright__address-text').innerHTML = '';
-		document.querySelector('.js-popup__vipcard-heading-4 lt-content').innerHTML =
+		document.getElementsByClassName('store-additional-text basic-text lt-content')[0].innerHTML =
+			'El.parduotuvė šiuo metu neveikia dėl suplanuotos priežiūros.';
+		document.getElementsByClassName('store-additional-text basic-text en-content')[0].innerHTML =
+			'The E-shop is not working due to planned maintenance.';
+		document.getElementsByClassName('store-additional-text basic-text ru-content')[0].innerHTML =
+			'Э-магазин сейчас не работает из-за планового тех. обслуживания.';
+		document.getElementsByClassName('js-popup__reservation-heading-4 lt-content')[0].innerHTML = 'Skambinkite';
+		document.getElementsByClassName('js-popup__reservation-heading-4 en-content')[0].innerHTML = 'Call us on';
+		document.getElementsByClassName('js-popup__reservation-heading-4 ru-content')[0].innerHTML = 'Позвоните нам';
+		document.getElementsByClassName('js-popup__reservation-basic-text')[0].innerHTML = '';
+		document.getElementsByClassName('copyright__address-text')[0].innerHTML = '';
+		document.getElementsByClassName('js-popup__vipcard-heading-4 lt-content')[0].innerHTML =
 			'Įsigykite kortelę už 5€ viename iš mūsų salonų ir gaukite 5% visoms paslaugoms!';
-		document.querySelector('.js-popup__vipcard-heading-4 en-content').innerHTML =
+		document.getElementsByClassName('js-popup__vipcard-heading-4 en-content')[0].innerHTML =
 			'Buy a card for €5 in one of our salons and get 5% for all services!';
-		document.querySelector('.js-popup__vipcard-heading-4 ru-content').innerHTML =
+		document.getElementsByClassName('js-popup__vipcard-heading-4 ru-content')[0].innerHTML =
 			'Купите карту за 5 евро в одном из наших салонов и получите 5% на все услуги!';
 	} else if (window.innerWidth < 281) {
-		document.querySelector('.js-popup__vipcard-heading-4 lt-content').innerHTML =
+		document.getElementsByClassName('store-additional-text basic-text lt-content')[0].innerHTML =
+			'El.parduotuvė šiuo metu neveikia dėl suplanuotos priežiūros.';
+		document.getElementsByClassName('store-additional-text basic-text en-content')[0].innerHTML =
+			'The E-shop is not working due to planned maintenance.';
+		document.getElementsByClassName('store-additional-text basic-text ru-content')[0].innerHTML =
+			'Э-магазин сейчас не работает из-за планового тех. обслуживания.';
+		document.getElementsByClassName('js-popup__vipcard-heading-4 lt-content')[0].innerHTML =
 			'Įsigykite kortelę tik už 5€ ir gaukite 5% visoms paslaugoms!';
-		document.querySelector('.js-popup__vipcard-heading-4 en-content').innerHTML =
+		document.getElementsByClassName('js-popup__vipcard-heading-4 en-content')[0].innerHTML =
 			'Buy a card for only €5 and get 5% for all services!';
-		document.querySelector('.js-popup__vipcard-heading-4 ru-content').innerHTML =
+		document.getElementsByClassName('js-popup__vipcard-heading-4 ru-content')[0].innerHTML =
 			'Купите карту всего за 5 евро и получите 5% на все услуги!';
-		document.querySelector('.copyright__address-text').innerHTML = '';
+		document.getElementsByClassName('copyright__address-text')[0].innerHTML = '';
 	} else {
-		document.querySelector('.copyright__address-text lt-content').innerHTML =
+		document.getElementsByClassName('copyright__address-text lt-content')[0].innerHTML =
 			' © Visagino Grožio Kūrėjų Studija, Lietuva';
-		document.querySelector('.copyright__address-text en-content').innerHTML =
+		document.getElementsByClassName('copyright__address-text en-content')[0].innerHTML =
 			' © Visagino Grožio Kūrėjų Studija, Lithuania';
-		document.querySelector('.copyright__address-text ru-content').innerHTML =
+		document.getElementsByClassName('copyright__address-text ru-content')[0].innerHTML =
 			' © Visagino Grožio Kūrėjų Studija, Литва';
-		document.querySelector('.js-popup__reservation-heading-4').innerHTML = 'Skambinkite telefonu';
-		document.querySelector('.js-popup__reservation-basic-text lt-content').innerHTML = 'Netrukus paleisime';
-		document.querySelector('.js-popup__reservation-basic-text en-content').innerHTML = 'Soon to be available';
-		document.querySelector('.js-popup__reservation-basic-text ru-content').innerHTML = 'Скоро';
-		document.querySelector('.js-popup__vipcard-heading-4 lt-content').innerHTML =
+
+		document.getElementsByClassName('store-additional-text basic-text lt-content')[0].innerHTML =
+			'El.parduotuvė šiuo metu neveikia dėl suplanuotos priežiūros. Dėl užsakymų kreipkitės telefonu, el.paštu arba Messenger.';
+		document.getElementsByClassName('store-additional-text basic-text en-content')[0].innerHTML =
+			'The E-shop is not working due to planned maintenance. For orders, please contact us by phone, email, or Messenger.';
+		document.getElementsByClassName('store-additional-text basic-text ru-content')[0].innerHTML =
+			'Э-магазин сейчас не работает из-за планового тех. обслуживания. Для заказов свяжитесь по тел., эл.почте или Messenger.';
+
+		document.getElementsByClassName('js-popup__reservation-heading-4')[0].innerHTML = 'Skambinkite telefonu';
+		document.getElementsByClassName('js-popup__reservation-basic-text lt-content')[0].innerHTML = 'Netrukus paleisime';
+		document.getElementsByClassName('js-popup__reservation-basic-text en-content')[0].innerHTML =
+			'Soon to be available';
+		document.getElementsByClassName('js-popup__reservation-basic-text ru-content')[0].innerHTML = 'Скоро';
+		document.getElementsByClassName('js-popup__vipcard-heading-4 lt-content')[0].innerHTML =
 			'Įsigykite „VIP“ kortelę tik už 5€ bet kuriame iš mūsų salonų ir sutaupykite 5% kiekvieno apsilankymo metu! :)';
-		document.querySelector('.js-popup__vipcard-heading-4 en-content').innerHTML =
+		document.getElementsByClassName('js-popup__vipcard-heading-4 en-content')[0].innerHTML =
 			'Buy a VIP card for only €5 in any of our salons and save 5% on every visit! :)';
-		document.querySelector('.js-popup__vipcard-heading-4 ru-content').innerHTML =
+		document.getElementsByClassName('js-popup__vipcard-heading-4 ru-content')[0].innerHTML =
 			'Купите VIP-карту всего за 5 евро в любом из наших салонов и экономьте 5% при каждом посещении! :)';
 	}
 };
@@ -436,6 +484,10 @@ document.querySelectorAll('.js--scroll-to-services').forEach((el) => {
 	});
 });
 
+function isInParent(node, parent) {
+	return node === parent ? false : parent.contains(node);
+}
+
 document.querySelectorAll('.js--scroll-to-contacts').forEach((el) => {
 	el.addEventListener('click', function () {
 		let preloadedHeight = document.body.clientHeight;
@@ -460,9 +512,15 @@ const getDymanicHeight = function (el) {
 const getHeightOfChildren = function (el) {
 	const children = Array.from(el.children);
 	let heightOfParent = 0;
+	// const pricelist_other = document.getElementById('other-pricelist');
 
+	// let sumOfOtherChildern = 0;
 	children.forEach((el) => {
-		const style = window.getComputedStyle(el);
+		// if (isInParent(el, pricelist_other)) {
+		// 	sumOfOtherChildern = sumOfOtherChildern + el.getBoundingClientRect().height;
+		// }
+
+		const style = getComputedStyle(el);
 		heightOfParent =
 			heightOfParent + el.getBoundingClientRect().height + parseFloat(style.marginBottom) + parseFloat(style.marginTop);
 	});

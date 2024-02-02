@@ -42,8 +42,9 @@
 	width: -moz-max-content;
 	width: max-content;
 	position: absolute;
-	bottom: 2rem;
-	left: -1.5rem;
+	bottom: 1.8rem;
+	line-height: 1;
+	left: -1.3rem;
 	font-size: 1.3rem;
 	transform: rotate(90deg);
 }
@@ -378,7 +379,7 @@ body {
 	}
 }
 .basic-text:nth-child(n):not(:last-child) {
-	margin-bottom: 3rem;
+	/* margin-bottom: 3rem; */
 }
 .basic-text h4 {
 	margin-bottom: 1rem;
@@ -445,7 +446,7 @@ body {
 .poster {
 	position: relative;
 	height: 100%;
-	opacity: 0.8;
+	opacity: 0.9;
 	padding: 4rem;
 	top: 50%;
 	left: 50%;
@@ -1024,8 +1025,10 @@ body {
 	text-align: center;
 }
 .services__reservation {
-	display: block;
-	text-align: center;
+	display: inline-block;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
 }
 .services__item {
 	overflow: hidden;
@@ -1482,11 +1485,18 @@ body {
 	top: 2rem;
 }
 
+@media (max-width: 95em) {
+	.store {
+		/* width: 100%; */
+		top: 19rem;
+	}
+}
+
 @media (max-width: 75em) {
 	.store {
-		width: 100%;
+		/* width: 100%; */
 		padding: 4.5rem 4.5rem 2rem;
-		top: 20.5rem;
+		top: 20.3rem;
 		border-top-left-radius: 4rem;
 		border-top-right-radius: 4rem;
 	}
@@ -1500,6 +1510,7 @@ body {
 }
 @media (max-width: 46.875em) {
 	.store {
+		top: 18.5rem;
 		border-top-left-radius: 3rem;
 		border-top-right-radius: 3rem;
 		padding: 4.5rem 3rem 1rem;
@@ -1508,18 +1519,58 @@ body {
 
 @media (max-width: 37.5em) {
 	.store {
-		top: 11rem;
+		top: 12rem;
+	}
+}
+
+@media (max-width: 30.5em) {
+	.store {
+		top: 14rem;
+	}
+}
+
+@media (max-width: 28.5em) {
+	.store {
+		top: 12rem;
+	}
+}
+
+@media (max-width: 27em) {
+	.store {
+		top: 10.5rem;
+	}
+}
+
+@media (max-width: 26em) {
+	.store {
+		top: 9.7rem;
+	}
+}
+
+@media (max-width: 25em) {
+	.store {
+		top: 10rem;
 	}
 }
 
 @media (max-width: 24em) {
 	.store {
-		top: 2rem;
+		top: 9rem;
 		border-top-left-radius: 2rem;
 		border-top-right-radius: 2rem;
 		padding: 4.5rem 1.5rem 1.5rem;
 	}
 }
+
+@media (max-width: 19em) {
+	.store {
+		top: 11rem;
+		border-top-left-radius: 2rem;
+		border-top-right-radius: 2rem;
+		padding: 4.5rem 1.5rem 1.5rem;
+	}
+}
+
 .store__header {
 	position: relative;
 	display: flex;
@@ -1692,7 +1743,7 @@ body {
 @media (max-width: 24em) {
 	.product-brands {
 		flex-flow: column;
-		display: block;
+		/* display: block; */
 		align-items: center;
 	}
 }
@@ -1715,7 +1766,7 @@ body {
 .store-additional-text,
 .services__description {
 	opacity: 0.8;
-	/* padding-bottom: 3rem; */
+	padding-bottom: 3rem;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -3001,7 +3052,10 @@ body {
 }
 
 .ru-content {
-	font-family: 'Montserrat', sans-serif !important;
+	font-family: 'Montserrat', sans-serif;
+}
+.pricelist__item .ru-content {
+	font-family: 'Times New Roman', Times, serif;
 }
 
 #languageSelector {
@@ -3009,6 +3063,7 @@ body {
 	left: 10px;
 	top: 12px;
 	border: 0;
+	font-size: 1.8rem;
 	color: black;
 	opacity: 0.3;
 	font-weight: bold;
@@ -3039,7 +3094,7 @@ body {
 .arrow-lang {
 	z-index: 999;
 	position: absolute;
-	left: 2.7rem;
+	left: 3.3rem;
 	top: -0.1rem;
 	pointer-events: none;
 }
