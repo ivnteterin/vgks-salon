@@ -395,16 +395,31 @@ const headerAdjust = function () {
 	}px`;
 };
 
+const adjustStoreHiddenHeight = () => {
+	const texts = document.querySelectorAll('.store-additional-text');
+	let textHeight = 0;
+	texts.forEach(function (element) {
+		textHeight = textHeight + element.clientHeight;
+	});
+	const brandsHeight = document.querySelector('.product-brands').clientHeight;
+	const storeContainerHeight = brandsHeight + textHeight + 10; //20 is to compensate outside paddings etc.
+
+	console.log(storeContainerHeight + 'px');
+	document.querySelector('.store-featured').style.top = storeContainerHeight + 'px';
+};
+
 window.addEventListener('load', () => {
 	headerAdjust();
 	checkSize();
 	adjustItemSizeOnResize();
+	adjustStoreHiddenHeight();
 });
 
 window.addEventListener('resize', () => {
 	headerAdjust();
 	checkSize();
 	adjustItemSizeOnResize();
+	adjustStoreHiddenHeight();
 });
 
 window.addEventListener('visibilitychange', () => {});

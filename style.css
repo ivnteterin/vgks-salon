@@ -1482,7 +1482,7 @@ body {
 }
 
 .store:hover {
-	top: 2rem;
+	top: 2rem !important;
 }
 
 @media (max-width: 95em) {
@@ -1763,8 +1763,14 @@ body {
 	padding: 2rem;
 	max-width: 23rem;
 }
-.store-additional-text,
+.store-additional-text {
+	opacity: 0.8;
+	padding-bottom: 3rem;
+	margin: 0 auto;
+	text-align: center;
+}
 .services__description {
+	padding-top: 1.5rem;
 	opacity: 0.8;
 	padding-bottom: 3rem;
 	margin: 0 auto;
@@ -2638,13 +2644,21 @@ body {
 	border: 2px solid #fff;
 	-webkit-appearance: none;
 	border-radius: 0;
-	padding: 0.5rem 1rem 0.5rem 1rem;
+	padding: 0.5rem 2rem;
 	background-color: #fff;
 	border-style: none;
 	color: #202020;
 	font-size: 1.4rem;
 	font-weight: 700;
 	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.btn-newsletter:hover {
+	color: #ad7fc1;
+}
+.btn-newsletter:active {
+	transform: translateY(0.2rem);
 }
 .cky-consent-bar {
 	width: 120rem !important;
@@ -3097,4 +3111,8 @@ body {
 	left: 3.3rem;
 	top: -0.1rem;
 	pointer-events: none;
+}
+
+.photographer__weblink .ru-content {
+	font-family: 'Montserrat', sans-serif;
 }
